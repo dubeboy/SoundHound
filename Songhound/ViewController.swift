@@ -17,7 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        locationManager.delegate = self as? CLLocationManagerDelegate
+        locationManager.delegate = self
+        print("assigning the self to the delegate")
         locationManager.requestWhenInUseAuthorization()
     }
 
@@ -43,8 +44,6 @@ extension ViewController : CLLocationManagerDelegate {
         }
         
         print("we know thw current location yoh \(location)")
-        
-        
         
         
         locationManager.stopUpdatingLocation()
