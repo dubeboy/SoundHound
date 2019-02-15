@@ -22,5 +22,8 @@ target 'Songhound' do
 
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'Alamofire', '4.8.1'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'ObjectMapper', '~> 3.4'
 
 end
