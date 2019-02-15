@@ -237,6 +237,11 @@
 				TargetAttributes = {
 					F336DDB12216B6DB0079B05D = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					F336DDC52216B6DE0079B05D = {
 						CreatedOnToolsVersion = 10.1;
