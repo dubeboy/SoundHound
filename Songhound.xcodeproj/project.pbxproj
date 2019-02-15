@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F336DDB62216B6DC0079B05D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDB52216B6DC0079B05D /* AppDelegate.swift */; };
+		F336DDB82216B6DC0079B05D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDB72216B6DC0079B05D /* ViewController.swift */; };
+		F336DDBB2216B6DC0079B05D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F336DDB92216B6DC0079B05D /* Main.storyboard */; };
+		F336DDBD2216B6DE0079B05D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F336DDBC2216B6DE0079B05D /* Assets.xcassets */; };
+		F336DDC02216B6DE0079B05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F336DDBE2216B6DE0079B05D /* LaunchScreen.storyboard */; };
+		F336DDCB2216B6DE0079B05D /* SonghoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDCA2216B6DE0079B05D /* SonghoundTests.swift */; };
+		F336DDD62216B6DE0079B05D /* SonghoundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDD52216B6DE0079B05D /* SonghoundUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F336DDC72216B6DE0079B05D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F336DDAA2216B6DB0079B05D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F336DDB12216B6DB0079B05D;
+			remoteInfo = Songhound;
+		};
+		F336DDD22216B6DE0079B05D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F336DDAA2216B6DB0079B05D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F336DDB12216B6DB0079B05D;
+			remoteInfo = Songhound;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F336DDB22216B6DC0079B05D /* Songhound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Songhound.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F336DDB52216B6DC0079B05D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F336DDB72216B6DC0079B05D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F336DDBA2216B6DC0079B05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F336DDBC2216B6DE0079B05D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F336DDBF2216B6DE0079B05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F336DDC12216B6DE0079B05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F336DDC62216B6DE0079B05D /* SonghoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SonghoundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F336DDCA2216B6DE0079B05D /* SonghoundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonghoundTests.swift; sourceTree = "<group>"; };
+		F336DDCC2216B6DE0079B05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F336DDD12216B6DE0079B05D /* SonghoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SonghoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F336DDD52216B6DE0079B05D /* SonghoundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonghoundUITests.swift; sourceTree = "<group>"; };
+		F336DDD72216B6DE0079B05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F336DDAF2216B6DB0079B05D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F336DDC32216B6DE0079B05D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F336DDCE2216B6DE0079B05D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F336DDA92216B6DB0079B05D = {
+			isa = PBXGroup;
+			children = (
+				F336DDB42216B6DC0079B05D /* Songhound */,
+				F336DDC92216B6DE0079B05D /* SonghoundTests */,
+				F336DDD42216B6DE0079B05D /* SonghoundUITests */,
+				F336DDB32216B6DC0079B05D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F336DDB32216B6DC0079B05D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F336DDB22216B6DC0079B05D /* Songhound.app */,
+				F336DDC62216B6DE0079B05D /* SonghoundTests.xctest */,
+				F336DDD12216B6DE0079B05D /* SonghoundUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F336DDB42216B6DC0079B05D /* Songhound */ = {
+			isa = PBXGroup;
+			children = (
+				F336DDB52216B6DC0079B05D /* AppDelegate.swift */,
+				F336DDB72216B6DC0079B05D /* ViewController.swift */,
+				F336DDB92216B6DC0079B05D /* Main.storyboard */,
+				F336DDBC2216B6DE0079B05D /* Assets.xcassets */,
+				F336DDBE2216B6DE0079B05D /* LaunchScreen.storyboard */,
+				F336DDC12216B6DE0079B05D /* Info.plist */,
+			);
+			path = Songhound;
+			sourceTree = "<group>";
+		};
+		F336DDC92216B6DE0079B05D /* SonghoundTests */ = {
+			isa = PBXGroup;
+			children = (
+				F336DDCA2216B6DE0079B05D /* SonghoundTests.swift */,
+				F336DDCC2216B6DE0079B05D /* Info.plist */,
+			);
+			path = SonghoundTests;
+			sourceTree = "<group>";
+		};
+		F336DDD42216B6DE0079B05D /* SonghoundUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F336DDD52216B6DE0079B05D /* SonghoundUITests.swift */,
+				F336DDD72216B6DE0079B05D /* Info.plist */,
+			);
+			path = SonghoundUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F336DDB12216B6DB0079B05D /* Songhound */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F336DDDA2216B6DE0079B05D /* Build configuration list for PBXNativeTarget "Songhound" */;
+			buildPhases = (
+				F336DDAE2216B6DB0079B05D /* Sources */,
+				F336DDAF2216B6DB0079B05D /* Frameworks */,
+				F336DDB02216B6DB0079B05D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Songhound;
+			productName = Songhound;
+			productReference = F336DDB22216B6DC0079B05D /* Songhound.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F336DDC52216B6DE0079B05D /* SonghoundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F336DDDD2216B6DE0079B05D /* Build configuration list for PBXNativeTarget "SonghoundTests" */;
+			buildPhases = (
+				F336DDC22216B6DE0079B05D /* Sources */,
+				F336DDC32216B6DE0079B05D /* Frameworks */,
+				F336DDC42216B6DE0079B05D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F336DDC82216B6DE0079B05D /* PBXTargetDependency */,
+			);
+			name = SonghoundTests;
+			productName = SonghoundTests;
+			productReference = F336DDC62216B6DE0079B05D /* SonghoundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F336DDD02216B6DE0079B05D /* SonghoundUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F336DDE02216B6DE0079B05D /* Build configuration list for PBXNativeTarget "SonghoundUITests" */;
+			buildPhases = (
+				F336DDCD2216B6DE0079B05D /* Sources */,
+				F336DDCE2216B6DE0079B05D /* Frameworks */,
+				F336DDCF2216B6DE0079B05D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F336DDD32216B6DE0079B05D /* PBXTargetDependency */,
+			);
+			name = SonghoundUITests;
+			productName = SonghoundUITests;
+			productReference = F336DDD12216B6DE0079B05D /* SonghoundUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F336DDAA2216B6DB0079B05D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Divine Dube";
+				TargetAttributes = {
+					F336DDB12216B6DB0079B05D = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F336DDC52216B6DE0079B05D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F336DDB12216B6DB0079B05D;
+					};
+					F336DDD02216B6DE0079B05D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F336DDB12216B6DB0079B05D;
+					};
+				};
+			};
+			buildConfigurationList = F336DDAD2216B6DB0079B05D /* Build configuration list for PBXProject "Songhound" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F336DDA92216B6DB0079B05D;
+			productRefGroup = F336DDB32216B6DC0079B05D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F336DDB12216B6DB0079B05D /* Songhound */,
+				F336DDC52216B6DE0079B05D /* SonghoundTests */,
+				F336DDD02216B6DE0079B05D /* SonghoundUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F336DDB02216B6DB0079B05D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F336DDC02216B6DE0079B05D /* LaunchScreen.storyboard in Resources */,
+				F336DDBD2216B6DE0079B05D /* Assets.xcassets in Resources */,
+				F336DDBB2216B6DC0079B05D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F336DDC42216B6DE0079B05D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F336DDCF2216B6DE0079B05D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F336DDAE2216B6DB0079B05D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F336DDB82216B6DC0079B05D /* ViewController.swift in Sources */,
+				F336DDB62216B6DC0079B05D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F336DDC22216B6DE0079B05D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F336DDCB2216B6DE0079B05D /* SonghoundTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F336DDCD2216B6DE0079B05D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F336DDD62216B6DE0079B05D /* SonghoundUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F336DDC82216B6DE0079B05D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F336DDB12216B6DB0079B05D /* Songhound */;
+			targetProxy = F336DDC72216B6DE0079B05D /* PBXContainerItemProxy */;
+		};
+		F336DDD32216B6DE0079B05D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F336DDB12216B6DB0079B05D /* Songhound */;
+			targetProxy = F336DDD22216B6DE0079B05D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F336DDB92216B6DC0079B05D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F336DDBA2216B6DC0079B05D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F336DDBE2216B6DE0079B05D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F336DDBF2216B6DE0079B05D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F336DDD82216B6DE0079B05D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F336DDD92216B6DE0079B05D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F336DDDB2216B6DE0079B05D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FA8D45S82T;
+				INFOPLIST_FILE = Songhound/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.Songhound;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F336DDDC2216B6DE0079B05D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FA8D45S82T;
+				INFOPLIST_FILE = Songhound/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.Songhound;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F336DDDE2216B6DE0079B05D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FA8D45S82T;
+				INFOPLIST_FILE = SonghoundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.SonghoundTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Songhound.app/Songhound";
+			};
+			name = Debug;
+		};
+		F336DDDF2216B6DE0079B05D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FA8D45S82T;
+				INFOPLIST_FILE = SonghoundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.SonghoundTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Songhound.app/Songhound";
+			};
+			name = Release;
+		};
+		F336DDE12216B6DE0079B05D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FA8D45S82T;
+				INFOPLIST_FILE = SonghoundUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.SonghoundUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Songhound;
+			};
+			name = Debug;
+		};
+		F336DDE22216B6DE0079B05D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FA8D45S82T;
+				INFOPLIST_FILE = SonghoundUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.SonghoundUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Songhound;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F336DDAD2216B6DB0079B05D /* Build configuration list for PBXProject "Songhound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F336DDD82216B6DE0079B05D /* Debug */,
+				F336DDD92216B6DE0079B05D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F336DDDA2216B6DE0079B05D /* Build configuration list for PBXNativeTarget "Songhound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F336DDDB2216B6DE0079B05D /* Debug */,
+				F336DDDC2216B6DE0079B05D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F336DDDD2216B6DE0079B05D /* Build configuration list for PBXNativeTarget "SonghoundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F336DDDE2216B6DE0079B05D /* Debug */,
+				F336DDDF2216B6DE0079B05D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F336DDE02216B6DE0079B05D /* Build configuration list for PBXNativeTarget "SonghoundUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F336DDE12216B6DE0079B05D /* Debug */,
+				F336DDE22216B6DE0079B05D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F336DDAA2216B6DB0079B05D /* Project object */;
+}
