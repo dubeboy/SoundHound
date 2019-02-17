@@ -17,6 +17,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var imgArtist3: UIImageView!
     @IBOutlet weak var imgArtist2: UIImageView!
     @IBOutlet weak var imgArtist1: UIImageView!
+    @IBOutlet weak var lblArtistName3: UILabel!
+    @IBOutlet weak var lblArtistName2: UILabel!
+    @IBOutlet weak var lblArtistName1: UILabel!
+    
     private let locationManager = CLLocationManager()
     
 
