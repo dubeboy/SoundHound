@@ -2,9 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="094bc00a-7666-47e4-a657-0b018fe519c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Songhound/Assets.xcassets/me.imageset/51726215_832053187126215_7774396782972239872_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Songhound/Assets.xcassets/me.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/Pods-Songhound.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/Pods-Songhound.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/SwiftyJSON.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/SwiftyJSON.xcscheme" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Songhound/Pods-Songhound-acknowledgements.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Songhound/Pods-Songhound-acknowledgements.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Songhound/Pods-Songhound-acknowledgements.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Songhound/Pods-Songhound-acknowledgements.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Songhound/Pods-Songhound-frameworks.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Songhound/Pods-Songhound-frameworks.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Songhound/Pods-Songhound.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Songhound/Pods-Songhound.debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Songhound/Pods-Songhound.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Songhound/Pods-Songhound.release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SonghoundTests/Pods-SonghoundTests.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SonghoundTests/Pods-SonghoundTests.debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SonghoundTests/Pods-SonghoundTests.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SonghoundTests/Pods-SonghoundTests.release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SonghoundUITests/Pods-SonghoundUITests.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SonghoundUITests/Pods-SonghoundUITests.debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SonghoundUITests/Pods-SonghoundUITests.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SonghoundUITests/Pods-SonghoundUITests.release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Songhound.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Songhound.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Songhound/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/Base.lproj/Main.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Songhound/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/ViewController.swift" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +32,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_3E7A84ED-CE27-47F8-8D2C-0219EF69F92F" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_8865485C-EABB-4BC7-B142-E7B283E981B1" />
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
@@ -23,11 +43,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Songhound/ViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="39">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#146#158#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Podfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -36,6 +65,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Podfile" />
+        <option value="$PROJECT_DIR$/Songhound/ViewController.swift" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="40" />
@@ -69,6 +106,11 @@
               <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
               <item name="Songhound" type="fcab9f18:XcodeViewNode" />
             </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
+              <item name="SonghoundTests" type="fcab9f18:XcodeViewNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -93,7 +135,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Unnamed">
     <configuration name="Songhound" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="Songhound" CONFIG_NAME="Debug" SCHEME_NAME="Songhound" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="Songhound" RUN_TARGET_NAME="Songhound" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
@@ -103,6 +145,19 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="AppleRunConfiguration" factoryName="Application" nameIsGenerated="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="Songhound" CONFIG_NAME="Debug" SCHEME_NAME="Unnamed" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" RUN_TARGET_PROJECT_NAME="Songhound" RUN_TARGET_NAME="Songhound" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Songhound" />
+      <item itemvalue="Application.Unnamed" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -114,15 +169,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550395070510</updated>
-      <workItem from="1550395074979" duration="467000" />
+      <workItem from="1550395074979" duration="2034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="467000" />
+    <option name="totallyTimeSpent" value="2034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="23" width="1400" height="764" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Favorites" side_tool="true" />
@@ -131,11 +187,11 @@
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" weight="0.32886904" />
       <window_info anchor="bottom" id="Messages" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32886904" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32886904" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32886904" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -157,14 +213,14 @@
     <entry file="file://$PROJECT_DIR$/Podfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Songhound/ViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="39">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#146#158#0" expanded="true" />
           </folding>
