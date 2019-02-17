@@ -14,6 +14,9 @@ import SwiftyJSON
 class ViewController: UIViewController {
     
     @IBOutlet weak var imgProfilePictue: UIImageView!
+    @IBOutlet weak var imgArtist3: UIImageView!
+    @IBOutlet weak var imgArtist2: UIImageView!
+    @IBOutlet weak var imgArtist1: UIImageView!
     private let locationManager = CLLocationManager()
     
 
@@ -26,10 +29,10 @@ class ViewController: UIViewController {
         locationManager.requestWhenInUseAuthorization()
         //Todo comment this out for now
         //getTracDetails(songName: "zeze", artistName : "kodak Black")
-
-        imgProfilePictue.layer.cornerRadius = 25
-        imgProfilePictue.layer.masksToBounds = true;
-        
+        makeUIImageViewCircle(imageView: imgProfilePictue, imgSize: 50)
+        makeUIImageViewCircle(imageView: imgArtist1, imgSize: 100)
+        makeUIImageViewCircle(imageView: imgArtist2, imgSize: 100)
+        makeUIImageViewCircle(imageView: imgArtist3, imgSize: 100)
     }
     
     private func reverseGeocoderCoordinates(_ coordinates: CLLocationCoordinate2D,_ didRespond: @escaping (_ response : String) -> Void) {
@@ -74,6 +77,11 @@ class ViewController: UIViewController {
                     print(error)
             }
         }
+    }
+    
+    private func makeUIImageViewCircle(imageView: UIImageView, imgSize: Int) {
+        imageView.layer.cornerRadius = CGFloat(imgSize / 2)
+        imageView.layer.masksToBounds = true;
     }
 
 }
