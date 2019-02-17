@@ -25,5 +25,6 @@ target 'Songhound' do
   pod 'Alamofire', '4.8.1'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'ObjectMapper', '~> 3.4'
+  pod 'CardParts'
 
 end

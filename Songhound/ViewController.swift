@@ -13,6 +13,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var imgProfilePictue: UIImageView!
     private let locationManager = CLLocationManager()
     
 
@@ -23,7 +24,12 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         print("assigning the self to the delegate")
         locationManager.requestWhenInUseAuthorization()
-        getTracDetails(songName: "zeze", artistName : "kodak Black")
+        //Todo comment this out for now
+        //getTracDetails(songName: "zeze", artistName : "kodak Black")
+
+        imgProfilePictue.layer.cornerRadius = 25
+        imgProfilePictue.layer.masksToBounds = true;
+        
     }
     
     private func reverseGeocoderCoordinates(_ coordinates: CLLocationCoordinate2D,_ didRespond: @escaping (_ response : String) -> Void) {
@@ -73,7 +79,7 @@ class ViewController: UIViewController {
 }
 
 //
-// EXTENTIONS
+// EXTENSIONS
 //
 
 // READ:  make sure the is conforms to the CLLocationManagerDelegate

@@ -1,5 +1,11 @@
 PODS:
   - Alamofire (4.8.1)
+  - CardParts (2.7.3):
+    - RxCocoa (~> 4.4)
+    - RxDataSources (~> 3.1)
+    - RxGesture (~> 2.1)
+    - RxSwift (~> 4.4)
+  - Differentiator (3.1.0)
   - GoogleMaps (3.0.2):
     - GoogleMaps/Maps (= 3.0.2)
   - GoogleMaps/Base (3.0.2)
@@ -8,10 +14,23 @@ PODS:
   - GooglePlaces (3.0.2):
     - GoogleMaps/Base (= 3.0.2)
   - ObjectMapper (3.4.2)
+  - RxAtomic (4.4.1)
+  - RxCocoa (4.4.1):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxGesture (2.1.0):
+    - RxCocoa (~> 4.4.0)
+    - RxSwift (~> 4.4.0)
+  - RxSwift (4.4.1):
+    - RxAtomic (~> 4.4)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.8.1)
+  - CardParts
   - GoogleMaps
   - GooglePlaces
   - ObjectMapper (~> 3.4)
@@ -20,18 +39,32 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - CardParts
+    - Differentiator
     - GoogleMaps
     - GooglePlaces
     - ObjectMapper
+    - RxAtomic
+    - RxCocoa
+    - RxDataSources
+    - RxGesture
+    - RxSwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  CardParts: 707a836d977b38e167c50d7c2d9dc38de8c5771f
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   GoogleMaps: 941cd655e009b4d8e42df19a3d749bc3fccec973
   GooglePlaces: c086e0055dc5f0177d7c9d65fc77a1734f9a4825
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxGesture: 7f6dfb45dbde06e618c24442d38493e3144f2c95
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 808dfa8db7b65ba35a3a789da46dfc10ff50dc43
+PODFILE CHECKSUM: bc7685f6a70e103e686f98f9e9f6d5748d6f8414
 
 COCOAPODS: 1.5.3
