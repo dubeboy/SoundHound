@@ -90,22 +90,99 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9fp-Xt-qqR">
+                                <rect key="frame" x="16" y="248.5" width="342" height="355.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" rowHeight="60" id="iFb-TK-LUs">
+                                        <rect key="frame" x="0.0" y="28" width="342" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iFb-TK-LUs" id="FRB-Qr-XaI">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kiki Song - Drake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQ4-M8-ERk">
+                                                    <rect key="frame" x="15" y="16" width="239" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popularity : 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yau-SB-OIa">
+                                                    <rect key="frame" x="15" y="38" width="239" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="XSr-Wg-WFc">
+                                                    <rect key="frame" x="282" y="-10" width="46" height="79.5"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yau-SB-OIa" firstAttribute="leading" secondItem="uQ4-M8-ERk" secondAttribute="leading" id="2SH-pz-Fxb"/>
+                                                <constraint firstItem="XSr-Wg-WFc" firstAttribute="top" secondItem="FRB-Qr-XaI" secondAttribute="topMargin" constant="-21" id="8jr-wW-oz0"/>
+                                                <constraint firstAttribute="trailing" secondItem="yau-SB-OIa" secondAttribute="trailing" constant="88" id="HGG-VV-ju2"/>
+                                                <constraint firstItem="yau-SB-OIa" firstAttribute="trailing" secondItem="uQ4-M8-ERk" secondAttribute="trailing" id="Ix8-7i-YX6"/>
+                                                <constraint firstAttribute="bottom" secondItem="uQ4-M8-ERk" secondAttribute="bottom" constant="22.5" id="JoG-CO-nx2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XSr-Wg-WFc" secondAttribute="trailing" constant="-1" id="L1w-wW-ENk"/>
+                                                <constraint firstItem="yau-SB-OIa" firstAttribute="leading" secondItem="uQ4-M8-ERk" secondAttribute="leading" id="NoG-WC-luk"/>
+                                                <constraint firstItem="XSr-Wg-WFc" firstAttribute="leading" secondItem="uQ4-M8-ERk" secondAttribute="trailing" constant="28" id="WJD-CI-o4q"/>
+                                                <constraint firstItem="yau-SB-OIa" firstAttribute="top" secondItem="uQ4-M8-ERk" secondAttribute="bottom" constant="1" id="czD-NO-sw7"/>
+                                                <constraint firstItem="uQ4-M8-ERk" firstAttribute="leading" secondItem="FRB-Qr-XaI" secondAttribute="leading" constant="15" id="n5S-fL-TfZ"/>
+                                                <constraint firstItem="XSr-Wg-WFc" firstAttribute="centerY" secondItem="FRB-Qr-XaI" secondAttribute="centerY" id="ssC-EE-iqS"/>
+                                            </constraints>
+                                            <connections>
+                                                <outlet property="ArtistImage" destination="XSr-Wg-WFc" id="tU0-BO-DIN"/>
+                                                <outlet property="lblArtistName2" destination="uQ4-M8-ERk" id="E8t-Ta-0sl"/>
+                                                <outlet property="popularity" destination="yau-SB-OIa" id="8xZ-Kk-f8F"/>
+                                            </connections>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ArtistImage" destination="XSr-Wg-WFc" id="qWe-Oz-Zbm"/>
+                                            <outlet property="artistName" destination="uQ4-M8-ERk" id="PUT-NK-ye2"/>
+                                            <outlet property="popularity" destination="yau-SB-OIa" id="XLG-Z7-hDD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playing: Taylor Swift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QM-wH-FXt">
+                                <rect key="frame" x="16" y="611.5" width="342" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Johannesburg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOi-43-d7P">
+                                <rect key="frame" x="16" y="634" width="342" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="GOi-43-d7P" firstAttribute="top" secondItem="4QM-wH-FXt" secondAttribute="bottom" constant="2" id="0xw-dy-8Gx"/>
+                            <constraint firstAttribute="bottom" secondItem="9fp-Xt-qqR" secondAttribute="bottom" constant="63" id="4HQ-yz-MKB"/>
+                            <constraint firstItem="9fp-Xt-qqR" firstAttribute="trailing" secondItem="E5z-qV-12H" secondAttribute="trailing" id="6C3-G3-QmP"/>
+                            <constraint firstItem="GOi-43-d7P" firstAttribute="trailing" secondItem="4QM-wH-FXt" secondAttribute="trailing" id="8OS-t3-XF4"/>
+                            <constraint firstItem="9fp-Xt-qqR" firstAttribute="leading" secondItem="E5z-qV-12H" secondAttribute="leading" id="ALx-Mf-jna"/>
                             <constraint firstItem="M18-B6-a9c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EP5-fT-Zo7"/>
                             <constraint firstItem="M18-B6-a9c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IcE-ur-qy4"/>
                             <constraint firstItem="E5z-qV-12H" firstAttribute="leading" secondItem="dhB-dh-b0D" secondAttribute="leading" id="JZY-mu-AQW"/>
                             <constraint firstItem="dhB-dh-b0D" firstAttribute="leading" secondItem="M18-B6-a9c" secondAttribute="leading" id="Nqa-GK-Mlj"/>
+                            <constraint firstAttribute="bottom" secondItem="4QM-wH-FXt" secondAttribute="bottom" constant="35" id="OEF-0t-Doz"/>
                             <constraint firstItem="E5z-qV-12H" firstAttribute="trailing" secondItem="dhB-dh-b0D" secondAttribute="trailing" id="OOx-ne-chM"/>
                             <constraint firstItem="E5z-qV-12H" firstAttribute="top" secondItem="dhB-dh-b0D" secondAttribute="bottom" constant="5" id="PKL-3L-dx9"/>
+                            <constraint firstItem="9fp-Xt-qqR" firstAttribute="top" secondItem="E5z-qV-12H" secondAttribute="bottom" constant="7" id="ZEQ-Fr-6tc"/>
+                            <constraint firstItem="4QM-wH-FXt" firstAttribute="leading" secondItem="9fp-Xt-qqR" secondAttribute="leading" id="fc0-Zx-bWx"/>
                             <constraint firstItem="dhB-dh-b0D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kca-Ix-iFF"/>
                             <constraint firstItem="dhB-dh-b0D" firstAttribute="top" secondItem="M18-B6-a9c" secondAttribute="bottom" constant="16" id="mF4-kP-2Nc"/>
+                            <constraint firstItem="GOi-43-d7P" firstAttribute="leading" secondItem="4QM-wH-FXt" secondAttribute="leading" id="om1-zU-rID"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dhB-dh-b0D" secondAttribute="trailing" constant="17" id="rgj-yQ-2Yi"/>
+                            <constraint firstItem="4QM-wH-FXt" firstAttribute="trailing" secondItem="9fp-Xt-qqR" secondAttribute="trailing" id="yyd-9u-2qq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="currentLocation" destination="GOi-43-d7P" id="cAJ-8i-nD5"/>
                         <outlet property="imgArtist1" destination="eOp-gc-GaD" id="LkR-3X-DBm"/>
                         <outlet property="imgArtist2" destination="bOr-y3-KbH" id="P85-bV-j3V"/>
                         <outlet property="imgArtist3" destination="ZBm-em-qBC" id="SvP-zj-1Fh"/>
@@ -113,6 +190,8 @@
                         <outlet property="lblArtistName1" destination="BwQ-IC-Tvq" id="GHu-yi-yME"/>
                         <outlet property="lblArtistName2" destination="GoK-xc-YZh" id="7nQ-Na-BIY"/>
                         <outlet property="lblArtistName3" destination="ZSK-CV-Szd" id="f1k-ZN-bNU"/>
+                        <outlet property="lblPlaying" destination="4QM-wH-FXt" id="Wxs-oB-D89"/>
+                        <outlet property="tableViewSongs" destination="9fp-Xt-qqR" id="SQ1-sO-m18"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

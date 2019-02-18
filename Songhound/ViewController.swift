@@ -11,7 +11,8 @@ import GoogleMaps
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
     
     @IBOutlet weak var imgProfilePictue: UIImageView!
     @IBOutlet weak var imgArtist3: UIImageView!
@@ -20,8 +21,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblArtistName3: UILabel!
     @IBOutlet weak var lblArtistName2: UILabel!
     @IBOutlet weak var lblArtistName1: UILabel!
+    @IBOutlet weak var tableViewSongs: UITableView!
+    @IBOutlet weak var lblPlaying: UILabel!
+    @IBOutlet weak var currentLocation: UILabel!
+    
+    //CELL
+  
     
     private let locationManager = CLLocationManager()
+    private var data: [Song] = []
     
 
     override func viewDidLoad() {
@@ -29,15 +37,79 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         locationManager.delegate = self
+//        tableViewSongs.delegate = self
+
         print("assigning the self to the delegate")
         locationManager.requestWhenInUseAuthorization()
         //Todo comment this out for now
-        //getTracDetails(songName: "zeze", artistName : "kodak Black")
+        getTracDetails(songName: "love", artistName : "") { response in
+            
+            
+            
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("here is the json: ")
+                print(json)
+                //get the first track
+                //bad was should use the provided way
+                for i in 0..<10 {
+                    let track = json["message"]["body"]["track_list"][i]["track"]
+                    //TODO retrieve the value that I want to actually post to firebase
+                    //push the whole track object but should also collect the current seek time
+                    // should also save the track ID fro easy search
+                    let trackName = track["track_name"].stringValue
+                    let albumName = track["album_name"].stringValue
+                    let artistName = track["artist_name"].stringValue
+                    let genre = track["primary_genres"]["music_genre_list"][0]["music_genre"]["music_genre_name"].stringValue
+                    
+                    let popularity = track["num_favourite"].intValue
+                    
+                    
+                    self.data.append(Song(name: trackName ?? "oops", artistName: artistName ?? "oops" , genre: genre ?? "oops" ,popularity: popularity ?? 0 ,albumName: albumName ?? "oops" ))
+                    
+                    print("trackName: \(String(describing: trackName))")
+                }
+                
+                print("the data is \(self.data)")
+                
+//                self.tableViewSongs.dataSource = self
+                
+                
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
         makeUIImageViewCircle(imageView: imgProfilePictue, imgSize: 50)
         makeUIImageViewCircle(imageView: imgArtist1, imgSize: 100)
         makeUIImageViewCircle(imageView: imgArtist2, imgSize: 100)
         makeUIImageViewCircle(imageView: imgArtist3, imgSize: 100)
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("data \(data.count)")
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableViewSongs.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) as! SongTableViewCell
+        
+        let artistName: String = data[indexPath.row].artistName
+        let songName: String = data[indexPath.row].name
+        let popularity: Int = data[indexPath.row].popularity
+        let genre: String = data[indexPath.row].genre
+        
+        cell.artistName.text = "\(songName ) - \(artistName ) - \(genre )"
+//        cell.artistName.text = "\("Hello")"
+
+        cell.popularity.text = "12"
+        
+        return cell
+        
+    }
+    
     
     private func reverseGeocoderCoordinates(_ coordinates: CLLocationCoordinate2D,_ didRespond: @escaping (_ response : String) -> Void) {
         
@@ -61,7 +133,7 @@ class ViewController: UIViewController {
       example request
      http://api.musixmatch.com/ws/1.1/track.search?q_artist=justin bieber&page_size=3&page=1&s_track_rating=desc
      */
-    private func getTracDetails(songName : String, artistName : String) {
+    private func getTracDetails(songName : String, artistName : String, responseCallback:  @escaping (_ response: (DataResponse<Any>) ) -> Void) {
         // this is requesting for a particular artist but it should search for a particualer song
         // validate() ??
         // should be able to also search by artist name
@@ -69,17 +141,9 @@ class ViewController: UIViewController {
         let req = "http://api.musixmatch.com/ws/1.1/track.search?q_track=" +
             (songName.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!) +
             "&q_artist=" + (artistName.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!) +
-            "&page_size=3&page=1&s_track_rating=desc&apikey=" + (apiKey)
+            "&page_size=10&page=1&s_track_rating=desc&apikey=" + (apiKey)
         Alamofire.request(req).responseJSON { (response) in
-            switch response.result {
-                case .success(let value):
-                    let json = JSON(value)
-                    //TODO retrieve the value that I want to actually post to firebase
-                    //push the whole track object but should also collect the current seek time
-                    print(json)
-                case .failure(let error):
-                    print(error)
-            }
+           responseCallback(response)
         }
     }
     
@@ -87,8 +151,15 @@ class ViewController: UIViewController {
         imageView.layer.cornerRadius = CGFloat(imgSize / 2)
         imageView.layer.masksToBounds = true;
     }
-
+    
+    private func showCurrentPlayingSong() {
+        
+    }
 }
+
+
+
+
 
 //
 // EXTENSIONS
@@ -110,8 +181,10 @@ class ViewController: UIViewController {
             return
         }
         print("we know the current location yoh \(location)")
+        // MY OWN CLOSURE
         reverseGeocoderCoordinates(location.coordinate) { fullAddressresponse in
             // do something with the response
+            self.currentLocation.text = "In \(fullAddressresponse)"
             
         }
         // use GMSGeocoder to get the address of the user yeah?
