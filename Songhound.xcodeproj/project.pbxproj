@@ -16,6 +16,8 @@
 		F336DDC02216B6DE0079B05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F336DDBE2216B6DE0079B05D /* LaunchScreen.storyboard */; };
 		F336DDCB2216B6DE0079B05D /* SonghoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDCA2216B6DE0079B05D /* SonghoundTests.swift */; };
 		F336DDD62216B6DE0079B05D /* SonghoundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDD52216B6DE0079B05D /* SonghoundUITests.swift */; };
+		F397DD87221A02B500D28E3C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD86221A02B500D28E3C /* Song.swift */; };
+		F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */; };
 		F8E5BC3BAF256DE7CD755BEE /* Pods_SonghoundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D14AE6B7E5F0876C64E3747 /* Pods_SonghoundTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		F336DDD12216B6DE0079B05D /* SonghoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SonghoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F336DDD52216B6DE0079B05D /* SonghoundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonghoundUITests.swift; sourceTree = "<group>"; };
 		F336DDD72216B6DE0079B05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F397DD86221A02B500D28E3C /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +144,11 @@
 				F336DDB52216B6DC0079B05D /* AppDelegate.swift */,
 				F336DDB72216B6DC0079B05D /* ViewController.swift */,
 				F336DDB92216B6DC0079B05D /* Main.storyboard */,
+				F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */,
 				F336DDBC2216B6DE0079B05D /* Assets.xcassets */,
 				F336DDBE2216B6DE0079B05D /* LaunchScreen.storyboard */,
 				F336DDC12216B6DE0079B05D /* Info.plist */,
+				F397DD86221A02B500D28E3C /* Song.swift */,
 			);
 			path = Songhound;
 			sourceTree = "<group>";
@@ -439,6 +445,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */,
+				F397DD87221A02B500D28E3C /* Song.swift in Sources */,
 				F336DDB82216B6DC0079B05D /* ViewController.swift in Sources */,
 				F336DDB62216B6DC0079B05D /* AppDelegate.swift in Sources */,
 			);
