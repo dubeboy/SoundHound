@@ -31,13 +31,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     private let locationManager = CLLocationManager()
     private var data: [Song] = []
     
+   
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         locationManager.delegate = self
-//        tableViewSongs.delegate = self
+         self.tableViewSongs.delegate = self
 
         print("assigning the self to the delegate")
         locationManager.requestWhenInUseAuthorization()
@@ -72,9 +74,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 }
                 
                 print("the data is \(self.data)")
-                
-//                self.tableViewSongs.dataSource = self
-                
+           
+                 self.tableViewSongs.dataSource = self
                 
                 
             case .failure(let error):
@@ -101,10 +102,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let popularity: Int = data[indexPath.row].popularity
         let genre: String = data[indexPath.row].genre
         
-        cell.artistName.text = "\(songName ) - \(artistName ) - \(genre )"
+        cell.lblArtistName.text = "\(songName ) - \(artistName ) - \(genre )"
 //        cell.artistName.text = "\("Hello")"
 
-        cell.popularity.text = "12"
+        cell.lblPopularity.text = String(popularity)
         
         return cell
         
