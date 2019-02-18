@@ -10,10 +10,10 @@ import UIKit
 
 class SongTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var artistName: UILabel!
-    @IBOutlet weak var popularity: UILabel!
-    @IBOutlet weak var ArtistImage: UIImageView!
 
+    @IBOutlet weak var lblArtistName: UILabel!
+    @IBOutlet weak var lblPopularity: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
