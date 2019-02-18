@@ -11,8 +11,11 @@ import UIKit
 class SongTableViewCell: UITableViewCell {
     
 
+    @IBOutlet weak var lblSongName: UILabel!
     @IBOutlet weak var lblArtistName: UILabel!
-    @IBOutlet weak var lblPopularity: UILabel!
+    @IBOutlet weak var lblAlbumName: UILabel!
+    @IBOutlet weak var lblGenre: UILabel!
+    @IBOutlet weak var imgAlbumCover: UIImageView!
     
     
     override func awakeFromNib() {

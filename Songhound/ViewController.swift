@@ -101,11 +101,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let songName: String = data[indexPath.row].name
         let popularity: Int = data[indexPath.row].popularity
         let genre: String = data[indexPath.row].genre
+        let albumName: String = data[indexPath.row].albumName
         
-        cell.lblArtistName.text = "\(songName ) - \(artistName ) - \(genre )"
-//        cell.artistName.text = "\("Hello")"
-
-        cell.lblPopularity.text = String(popularity)
+//        cell.lblArtistName.text = "\(songName ) - \(artistName ) - \(genre )"
+        
+////        cell.artistName.text = "\("Hello")"
+//
+     //   cell.lblPopularity.text = String(popularity)
+        
+        cell.lblArtistName.text = artistName
+        cell.lblSongName.text = songName
+        cell.lblGenre.text = genre
+        cell.lblAlbumName.text = albumName
         
         return cell
         
