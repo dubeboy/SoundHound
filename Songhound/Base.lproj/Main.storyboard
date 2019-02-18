@@ -94,39 +94,77 @@
                                 <rect key="frame" x="16" y="248.5" width="342" height="355.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" rowHeight="60" id="iFb-TK-LUs" customClass="SongTableViewCell" customModule="Songhound" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="342" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" rowHeight="83" id="iFb-TK-LUs" customClass="SongTableViewCell" customModule="Songhound" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="342" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iFb-TK-LUs" id="FRB-Qr-XaI">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="82.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kiki Song - Drake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQ4-M8-ERk">
-                                                    <rect key="frame" x="15" y="16" width="312" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-Cd-1a6">
+                                                    <rect key="frame" x="15" y="30.5" width="183" height="41.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRAKE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnC-od-ryh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="183" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Blue Sky Hillsgggggggg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVV-TT-XdZ">
+                                                            <rect key="frame" x="0.0" y="21" width="183" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qT3-6H-ad1">
+                                                    <rect key="frame" x="284" y="31" width="47" height="47"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="47" id="NWp-8P-4rS"/>
+                                                        <constraint firstAttribute="height" constant="47" id="rRq-MR-tY2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Song nameyyyyyyy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08w-TF-7gS">
+                                                    <rect key="frame" x="15" y="0.0" width="266" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="29" id="oCD-U0-h77"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popularity : 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yau-SB-OIa">
-                                                    <rect key="frame" x="15" y="38" width="239" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgE-wM-h9V">
+                                                    <rect key="frame" x="289" y="4" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Eaa-Se-hFj"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="yau-SB-OIa" firstAttribute="leading" secondItem="uQ4-M8-ERk" secondAttribute="leading" id="2SH-pz-Fxb"/>
-                                                <constraint firstAttribute="trailing" secondItem="yau-SB-OIa" secondAttribute="trailing" constant="88" id="HGG-VV-ju2"/>
-                                                <constraint firstItem="yau-SB-OIa" firstAttribute="trailing" secondItem="uQ4-M8-ERk" secondAttribute="trailing" id="Ix8-7i-YX6"/>
-                                                <constraint firstAttribute="bottom" secondItem="uQ4-M8-ERk" secondAttribute="bottom" constant="22.5" id="JoG-CO-nx2"/>
-                                                <constraint firstItem="yau-SB-OIa" firstAttribute="leading" secondItem="uQ4-M8-ERk" secondAttribute="leading" id="NoG-WC-luk"/>
-                                                <constraint firstItem="yau-SB-OIa" firstAttribute="top" secondItem="uQ4-M8-ERk" secondAttribute="bottom" constant="1" id="czD-NO-sw7"/>
-                                                <constraint firstItem="uQ4-M8-ERk" firstAttribute="leading" secondItem="FRB-Qr-XaI" secondAttribute="leading" constant="15" id="n5S-fL-TfZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="qT3-6H-ad1" secondAttribute="bottom" constant="4.5" id="2VY-hB-pa5"/>
+                                                <constraint firstItem="hBe-Cd-1a6" firstAttribute="bottom" secondItem="FRB-Qr-XaI" secondAttribute="bottomMargin" id="4JC-uz-IQs"/>
+                                                <constraint firstAttribute="trailing" secondItem="LgE-wM-h9V" secondAttribute="trailing" constant="11" id="98q-wA-L4W"/>
+                                                <constraint firstItem="LgE-wM-h9V" firstAttribute="top" secondItem="FRB-Qr-XaI" secondAttribute="top" constant="4" id="Df6-JZ-lNY"/>
+                                                <constraint firstAttribute="trailing" secondItem="qT3-6H-ad1" secondAttribute="trailing" constant="11" id="Fbe-5D-bxF"/>
+                                                <constraint firstItem="08w-TF-7gS" firstAttribute="top" secondItem="FRB-Qr-XaI" secondAttribute="top" id="Gy7-GB-F0n"/>
+                                                <constraint firstItem="qT3-6H-ad1" firstAttribute="top" secondItem="LgE-wM-h9V" secondAttribute="bottom" constant="6" id="YId-SH-Ves"/>
+                                                <constraint firstItem="LgE-wM-h9V" firstAttribute="leading" secondItem="08w-TF-7gS" secondAttribute="trailing" constant="8" id="b4W-CP-2Rb"/>
+                                                <constraint firstItem="hBe-Cd-1a6" firstAttribute="leading" secondItem="08w-TF-7gS" secondAttribute="leading" id="bfb-88-6d7"/>
+                                                <constraint firstItem="hBe-Cd-1a6" firstAttribute="top" secondItem="08w-TF-7gS" secondAttribute="bottom" constant="1.5" id="kNb-qB-pI9"/>
+                                                <constraint firstItem="08w-TF-7gS" firstAttribute="leading" secondItem="FRB-Qr-XaI" secondAttribute="leading" constant="15" id="pnc-Bd-719"/>
+                                                <constraint firstItem="LgE-wM-h9V" firstAttribute="leading" secondItem="08w-TF-7gS" secondAttribute="trailing" constant="8" id="zg7-Fz-yZZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="lblArtistName" destination="uQ4-M8-ERk" id="b2a-ox-Tcz"/>
-                                            <outlet property="lblPopularity" destination="yau-SB-OIa" id="qbz-0S-OUI"/>
+                                            <outlet property="imgAlbumCover" destination="qT3-6H-ad1" id="DpS-ON-8GS"/>
+                                            <outlet property="lblAlbumName" destination="QVV-TT-XdZ" id="EEp-dy-5cZ"/>
+                                            <outlet property="lblArtistName" destination="bnC-od-ryh" id="CRN-mD-rQI"/>
+                                            <outlet property="lblGenre" destination="LgE-wM-h9V" id="7t9-0X-UVt"/>
+                                            <outlet property="lblSongName" destination="08w-TF-7gS" id="w2S-VP-HKV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
