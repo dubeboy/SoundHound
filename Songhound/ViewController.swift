@@ -10,6 +10,7 @@ import UIKit
 import GoogleMaps
 import Alamofire
 import SwiftyJSON
+import MediaPlayer
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -25,28 +26,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var lblPlaying: UILabel!
     @IBOutlet weak var currentLocation: UILabel!
     
-    //CELL
-  
-    
     private let locationManager = CLLocationManager()
     private var data: [Song] = []
-    
-   
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         locationManager.delegate = self
+        
          self.tableViewSongs.delegate = self
+        self.tableViewSongs.dataSource = self
 
         print("assigning the self to the delegate")
         locationManager.requestWhenInUseAuthorization()
         //Todo comment this out for now
         getTracDetails(songName: "love", artistName : "") { response in
-            
-            
             
             switch response.result {
             case .success(let value):
@@ -75,7 +70,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 
                 print("the data is \(self.data)")
            
-                 self.tableViewSongs.dataSource = self
+                self.tableViewSongs.reloadData()
                 
                 
             case .failure(let error):
@@ -99,16 +94,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let artistName: String = data[indexPath.row].artistName
         let songName: String = data[indexPath.row].name
-        let popularity: Int = data[indexPath.row].popularity
+//        I will implement something like this in the future but for now what we have is cool so I will cmt it out
+//        let popularity: Int = data[indexPath.row].popularity
         let genre: String = data[indexPath.row].genre
         let albumName: String = data[indexPath.row].albumName
-        
-//        cell.lblArtistName.text = "\(songName ) - \(artistName ) - \(genre )"
-        
-////        cell.artistName.text = "\("Hello")"
-//
-     //   cell.lblPopularity.text = String(popularity)
-        
         cell.lblArtistName.text = artistName
         cell.lblSongName.text = songName
         cell.lblGenre.text = genre
@@ -161,7 +150,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     private func showCurrentPlayingSong() {
-        
+        let player = MPMusicPlayerController.systemMusicPlayer
+        if let mediaItem = player.nowPlayingItem {
+            let title: String = mediaItem.value(forKey: MPMediaItemPropertyTitle) as! String
+            let albumTitle: String = mediaItem.value(forKey: MPMediaItemPropertyTitle) as! String
+            let artist: String = mediaItem.value(forKey: MPMediaItemPropertyArtist) as! String
+            
+            print("the title \(title) and albt \(albumTitle) and artist \(artist)")
+        }
     }
 }
 
@@ -192,7 +188,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // MY OWN CLOSURE
         reverseGeocoderCoordinates(location.coordinate) { fullAddressresponse in
             // do something with the response
-            self.currentLocation.text = "In \(fullAddressresponse)"
+            // baddd
+            self.currentLocation.text = "\(String(describing: fullAddressresponse.components(separatedBy: ",").first!)), \(fullAddressresponse.components(separatedBy: ",")[1]) "
             
         }
         // use GMSGeocoder to get the address of the user yeah?
