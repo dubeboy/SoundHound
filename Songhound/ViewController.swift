@@ -29,6 +29,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     private let locationManager = CLLocationManager()
     private var data: [Song] = []
 
+    @IBAction func onSeeMoreClick(_ sender: UIButton) {
+        
+//        performSegue(withIdentifier: "seeMoreTopArtistsSegue", sender: self)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -63,7 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     let popularity = track["num_favourite"].intValue
                     
                     
-                    self.data.append(Song(name: trackName ?? "oops", artistName: artistName ?? "oops" , genre: genre ?? "oops" ,popularity: popularity ?? 0 ,albumName: albumName ?? "oops" ))
+                    self.data.append(Song(name: trackName ?? "oops", artistName: artistName ?? "oops" , genre: genre ?? "oops" ,popularity: popularity ,albumName: albumName ?? "oops" ))
                     
                     print("trackName: \(String(describing: trackName))")
                 }
@@ -144,10 +149,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    private func makeUIImageViewCircle(imageView: UIImageView, imgSize: Int) {
-        imageView.layer.cornerRadius = CGFloat(imgSize / 2)
-        imageView.layer.masksToBounds = true;
-    }
+   
     
     private func showCurrentPlayingSong() {
         let player = MPMusicPlayerController.systemMusicPlayer
