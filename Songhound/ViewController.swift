@@ -112,6 +112,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+      //  performSegue(withIdentifier: "viewSongsOfArtist", sender: self)
+    }
+    
     
     private func reverseGeocoderCoordinates(_ coordinates: CLLocationCoordinate2D,_ didRespond: @escaping (_ response : String) -> Void) {
         
@@ -192,8 +197,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             // do something with the response
             // baddd
             self.currentLocation.text = "\(String(describing: fullAddressresponse.components(separatedBy: ",").first!)), \(fullAddressresponse.components(separatedBy: ",")[1]) "
-            
-        }
+            }
         // use GMSGeocoder to get the address of the user yeah?
         locationManager.stopUpdatingLocation()
     }
