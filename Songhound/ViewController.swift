@@ -181,10 +181,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             switch tag {
                 case 0:
                     print("img one openi")
+                    selectedImage = 0
+                    performSegue(withIdentifier: "viewSongsForArtist", sender: self )
+                
                 case 1:
                      print("img one open")
+                     selectedImage = 1
+                     performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+                
                 case 2:
                      print("img one opennn")
+                     selectedImage = 2
+                     performSegue(withIdentifier: "viewSongsForArtist", sender: self )
                 default:
                     print("ooops")
                 }
@@ -214,12 +222,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    
+    // this prepare is for the 3 top artists
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("called bro")
         if segue.identifier == "viewSongsForArtist" {
             if selectedImage >= 0 {
                 let controller = segue.destination as! SongsViewController
                 controller.artist = topThreeArtists[selectedImage]
+            } else {
+                print("this image is bad selected image is still 0 ")
             }
         }
     }
