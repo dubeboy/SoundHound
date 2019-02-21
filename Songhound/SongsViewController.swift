@@ -11,7 +11,9 @@ import UIKit
 class SongsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     private var songs: [Song] = []
+    var artist: Artist? = nil
     
+    @IBOutlet weak var arti: UILabel!
     @IBOutlet weak var songsTableView: UITableView!
     
     
@@ -45,6 +47,15 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.songsTableView.delegate = self
         self.songsTableView.dataSource = self
         // Do any additional setup after loading the view.
+        
+        guard artist != nil else {
+            print("ooops could not populate the view properly bro")
+            return
+        }
+        
+        arti.text = artist?.name
+        
+        
     }
     
     private func populateSongs() {

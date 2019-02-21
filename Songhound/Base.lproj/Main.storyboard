@@ -482,6 +482,7 @@
                         <viewLayoutGuide key="safeArea" id="yud-23-xsf"/>
                     </view>
                     <connections>
+                        <outlet property="arti" destination="AdB-Vb-RjE" id="J4q-lX-WbW"/>
                         <outlet property="songsTableView" destination="wde-vl-OfO" id="ycO-Bg-gLm"/>
                     </connections>
                 </viewController>
