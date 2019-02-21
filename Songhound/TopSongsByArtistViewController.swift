@@ -55,6 +55,16 @@ class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, U
         print("clicked bro")
         performSegue(withIdentifier: "viewSongsOfArtist", sender: self )
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("called bro")
+        if segue.identifier == "viewSongsOfArtist" {
+            if let indexPath = self.artistsTableView.indexPathForSelectedRow {
+                let controller = segue.destination as! SongsViewController
+                controller.artist = artists[indexPath.row]
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 
