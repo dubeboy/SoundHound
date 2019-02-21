@@ -11,6 +11,7 @@ import UIKit
 class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var artistsTableView: UITableView!
+   
     var artists: [Artist] = []
     
     override func viewDidLoad() {
@@ -23,9 +24,9 @@ class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, U
     }
     
     func populateArtists() {
-        for i in 1...10 {
-          let isItHot = i % 2 == 0 || i % 3 == 0
-            artists.append(Artist(name: "John \(i)", numHits: i, isHot: isItHot ))
+        for index in (1...10) {
+          let isItHot = index % 2 == 0 || index % 3 == 0
+            artists.append(Artist(name: "John \(index)", numHits: index, isHot: isItHot ))
         }
     }
     
@@ -45,11 +46,14 @@ class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, U
         
         return cell
     }
-    
-    
 
     @IBAction func onBackButtonClick(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("clicked bro")
+        performSegue(withIdentifier: "viewSongsOfArtist", sender: self )
     }
     /*
     // MARK: - Navigation

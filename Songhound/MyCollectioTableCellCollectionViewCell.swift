@@ -12,12 +12,7 @@ class MyCollectioTableCellCollectionViewCell: UICollectionViewCell {
     weak var lblSong : UILabel!
     weak var lblArtistName : UILabel!
     weak var lblGenre : UILabel!
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-    }
-    
+ 
     override init(frame: CGRect) {
         super.init(frame: frame)
        
@@ -31,9 +26,31 @@ class MyCollectioTableCellCollectionViewCell: UICollectionViewCell {
             lblSong.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
             lblSong.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor)
         ])
+        self.lblSong = lblSong
         
-        
+        self.contentView.backgroundColor = .lightGray
+        self.lblSong.textAlignment = .center
     }
+    
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        print("Interface builder is not supported")
+        return
+    }
+    
+    override func awakeFromNib() {
+        print("Interface builder is not supported")
+        return
+    }
+    
+    override func prepareForReuse() {
+        self.lblSong.text = nil
+    }
+    
+    
+    
+    
     
     
 }
