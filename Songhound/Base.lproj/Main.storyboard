@@ -52,11 +52,12 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="eOp-gc-GaD">
                                         <rect key="frame" x="0.0" y="0.0" width="107.5" height="100"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kim" translatesAutoresizingMaskIntoConstraints="NO" id="bOr-y3-KbH">
+                                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kim" translatesAutoresizingMaskIntoConstraints="NO" id="bOr-y3-KbH">
                                         <rect key="frame" x="117.5" y="0.0" width="107" height="100"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swift" translatesAutoresizingMaskIntoConstraints="NO" id="ZBm-em-qBC">
+                                    <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swift" translatesAutoresizingMaskIntoConstraints="NO" id="ZBm-em-qBC">
                                         <rect key="frame" x="234.5" y="0.0" width="107.5" height="100"/>
+                                        <gestureRecognizers/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -232,6 +233,7 @@
                         <outlet property="lblArtistName3" destination="ZSK-CV-Szd" id="f1k-ZN-bNU"/>
                         <outlet property="lblPlaying" destination="4QM-wH-FXt" id="Wxs-oB-D89"/>
                         <outlet property="tableViewSongs" destination="9fp-Xt-qqR" id="SQ1-sO-m18"/>
+                        <segue destination="xSv-cM-AGW" kind="show" identifier="viewSongsForArtist" id="yjr-bq-zeX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -354,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BwE-pn-qAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192.8" y="-29.23538230884558"/>
+            <point key="canvasLocation" x="1657" y="-263"/>
         </scene>
         <!--Songs View Controller-->
         <scene sceneID="vaZ-jq-Htr">
@@ -365,7 +367,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wde-vl-OfO">
-                                <rect key="frame" x="16" y="113" width="343" height="510"/>
+                                <rect key="frame" x="16" y="113" width="343" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" rowHeight="83" id="vrT-MT-tnh" customClass="SongTableViewCell" customModule="Songhound" customModuleProvider="target">
@@ -488,7 +490,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t28-61-ABC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2117.5999999999999" y="377.36131934032989"/>
+            <point key="canvasLocation" x="1658" y="528"/>
         </scene>
     </scenes>
     <resources>
@@ -497,4 +499,7 @@
         <image name="me" width="1346" height="1057"/>
         <image name="swift" width="79.199996948242188" height="98.879997253417969"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yjr-bq-zeX"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -26,8 +26,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var lblPlaying: UILabel!
     @IBOutlet weak var currentLocation: UILabel!
     
+    @IBAction func helloThere(_ sender: Any) {
+        print("clciked")
+    }
+    
+    @IBAction func helloThere11(_ sender: Any) {
+        print("clcikeddd")
+    }
+    
     private let locationManager = CLLocationManager()
     private var data: [Song] = []
+    //-1 means no image was selected
+    private var selectedImage = -1
+    // prefill it with defined artists
+    // we will get them from the api once we have the good data!
+    private var topThreeArtists: [Artist] = [Artist(name: "Taylor", numHits: 10, isHot: true), Artist(name: "Dot", numHits: 1, isHot: false), Artist(name: "Swift", numHits: 100, isHot: true)]
 
     @IBAction func onSeeMoreClick(_ sender: UIButton) {
         
@@ -86,6 +99,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         makeUIImageViewCircle(imageView: imgArtist1, imgSize: 100)
         makeUIImageViewCircle(imageView: imgArtist2, imgSize: 100)
         makeUIImageViewCircle(imageView: imgArtist3, imgSize: 100)
+        
+        addTapGestureToAnImageView(imageView: imgArtist3, imgId:  1)
+        addTapGestureToAnImageView(imageView: imgArtist1, imgId:  2)
+        addTapGestureToAnImageView(imageView: imgArtist2, imgId:  3)
     }
     
     
@@ -154,6 +171,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    @objc func imageTapped(gesture: UIGestureRecognizer) {
+        if let imageView = gesture.view as? UIImageView {
+            print("Hello ")
+            // niot sure if this is a good idea on getting by tag
+            let tag = imageView.tag
+            print("the tag is \(tag)")
+            
+            switch tag {
+                case 0:
+                    print("img one openi")
+                case 1:
+                     print("img one open")
+                case 2:
+                     print("img one opennn")
+                default:
+                    print("ooops")
+                }
+        }
+    }
+    
+    func addTapGestureToAnImageView(imageView: UIImageView, imgId: Int) {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(gesture:)))
+        imageView.addGestureRecognizer(tapGesture)
+        imageView.isUserInteractionEnabled = true
+        
+      //  imageTapped(gesture: tapGesture)
+    }
+    
+    
+    
    
     
     private func showCurrentPlayingSong() {
@@ -164,6 +211,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let artist: String = mediaItem.value(forKey: MPMediaItemPropertyArtist) as! String
             
             print("the title \(title) and albt \(albumTitle) and artist \(artist)")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("called bro")
+        if segue.identifier == "viewSongsForArtist" {
+            if selectedImage >= 0 {
+                let controller = segue.destination as! SongsViewController
+                controller.artist = topThreeArtists[selectedImage]
+            }
         }
     }
 }
