@@ -20,8 +20,12 @@
 		F33E6CF3221BF07F00CFBB23 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */; };
 		F33E6CF5221BF3A300CFBB23 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF4221BF3A300CFBB23 /* Artist.swift */; };
 		F33E6CF7221BFBD100CFBB23 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */; };
+		F33E6D00221D604700CFBB23 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33E6CFF221D604700CFBB23 /* CardView.xib */; };
+		F33E6D02221D605B00CFBB23 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6D01221D605B00CFBB23 /* CardView.swift */; };
+		F345CC7A221EB5CA00E2BDFA /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */; };
 		F397DD87221A02B500D28E3C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD86221A02B500D28E3C /* Song.swift */; };
 		F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */; };
+		F399EB61221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399EB60221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift */; };
 		F8E5BC3BAF256DE7CD755BEE /* Pods_SonghoundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D14AE6B7E5F0876C64E3747 /* Pods_SonghoundTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +73,12 @@
 		F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 		F33E6CF4221BF3A300CFBB23 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		F33E6CFF221D604700CFBB23 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		F33E6D01221D605B00CFBB23 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
 		F397DD86221A02B500D28E3C /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		F399EB60221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectioTableCellCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +162,7 @@
 				F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */,
 				F33E6CD2221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift */,
 				F336DDB92216B6DC0079B05D /* Main.storyboard */,
+				F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */,
 				F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */,
 				F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */,
 				F336DDBC2216B6DE0079B05D /* Assets.xcassets */,
@@ -161,6 +170,9 @@
 				F336DDC12216B6DE0079B05D /* Info.plist */,
 				F397DD86221A02B500D28E3C /* Song.swift */,
 				F33E6CF4221BF3A300CFBB23 /* Artist.swift */,
+				F33E6CFF221D604700CFBB23 /* CardView.xib */,
+				F33E6D01221D605B00CFBB23 /* CardView.swift */,
+				F399EB60221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift */,
 			);
 			path = Songhound;
 			sourceTree = "<group>";
@@ -196,6 +208,7 @@
 				F336DDB02216B6DB0079B05D /* Resources */,
 				FAAA36D89E16A8B253200C1F /* [CP] Copy Pods Resources */,
 				52F5BAF05FDE84EF0DCC50B6 /* [CP] Embed Pods Frameworks */,
+				F33E6D03221D6E9000CFBB23 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -299,6 +312,7 @@
 			files = (
 				F336DDC02216B6DE0079B05D /* LaunchScreen.storyboard in Resources */,
 				F336DDBD2216B6DE0079B05D /* Assets.xcassets in Resources */,
+				F33E6D00221D604700CFBB23 /* CardView.xib in Resources */,
 				F336DDBB2216B6DC0079B05D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +440,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F33E6D03221D6E9000CFBB23 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
 		FAAA36D89E16A8B253200C1F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,13 +489,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F345CC7A221EB5CA00E2BDFA /* SongsViewController.swift in Sources */,
 				F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */,
+				F33E6D02221D605B00CFBB23 /* CardView.swift in Sources */,
 				F397DD87221A02B500D28E3C /* Song.swift in Sources */,
 				F33E6CD3221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift in Sources */,
 				F336DDB82216B6DC0079B05D /* ViewController.swift in Sources */,
 				F33E6CF3221BF07F00CFBB23 /* ArtistTableViewCell.swift in Sources */,
 				F336DDB62216B6DC0079B05D /* AppDelegate.swift in Sources */,
 				F33E6CF5221BF3A300CFBB23 /* Artist.swift in Sources */,
+				F399EB61221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift in Sources */,
 				F33E6CF7221BFBD100CFBB23 /* UIUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

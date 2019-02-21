@@ -25,8 +25,8 @@ class CardView: UIView {
     func initSubviews() {
         let nib = UINib(nibName: "CaptionableImageView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
-        contentView.frame = bounds
-        addSubview(contentMode)
+//        contentView.frame = bounds
+//        addSubview(contentMode)
         
     }
 }
