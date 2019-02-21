@@ -27,11 +27,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var currentLocation: UILabel!
     
     @IBAction func helloThere(_ sender: Any) {
-        print("clciked")
+        print("cliciked")
     }
     
     @IBAction func helloThere11(_ sender: Any) {
-        print("clcikeddd")
+        print("clicked")
     }
     
     private let locationManager = CLLocationManager()
@@ -40,13 +40,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     private var selectedImage = -1
     // prefill it with defined artists
     // we will get them from the api once we have the good data!
-    private var topThreeArtists: [Artist] = [Artist(name: "Taylor", numHits: 10, isHot: true), Artist(name: "Dot", numHits: 1, isHot: false), Artist(name: "Swift", numHits: 100, isHot: true)]
+    private var topThreeArtists: [Artist] = [Artist(name: "Taylor", numHits: 10, isHot: true),
+                                             Artist(name: "Dot", numHits: 1, isHot: false),
+                                             Artist(name: "Swift", numHits: 100, isHot: true)]
 
     @IBAction func onSeeMoreClick(_ sender: UIButton) {
         
-//        performSegue(withIdentifier: "seeMoreTopArtistsSegue", sender: self)
-        
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -57,6 +58,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableViewSongs.dataSource = self
 
         print("assigning the self to the delegate")
+        showCurrentPlayingSong()
+
         locationManager.requestWhenInUseAuthorization()
         //Todo comment this out for now
         getTracDetails(songName: "love", artistName : "") { response in
@@ -103,6 +106,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         addTapGestureToAnImageView(imageView: imgArtist3, imgId:  1)
         addTapGestureToAnImageView(imageView: imgArtist1, imgId:  2)
         addTapGestureToAnImageView(imageView: imgArtist2, imgId:  3)
+
     }
     
     
@@ -130,7 +134,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        // I dont know what to show
       //  performSegue(withIdentifier: "viewSongsOfArtist", sender: self)
     }
     
@@ -212,7 +216,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
    
     
     private func showCurrentPlayingSong() {
+
+        print("show currently Playing song")
+
         let player = MPMusicPlayerController.systemMusicPlayer
+
+
         if let mediaItem = player.nowPlayingItem {
             let title: String = mediaItem.value(forKey: MPMediaItemPropertyTitle) as! String
             let albumTitle: String = mediaItem.value(forKey: MPMediaItemPropertyTitle) as! String
