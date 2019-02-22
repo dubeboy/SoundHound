@@ -8,22 +8,27 @@
 
 import UIKit
 
-class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var artistsTableView: UITableView!
-   
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var artists: [Artist] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         populateArtists()
+
         self.artistsTableView.delegate = self
         self.artistsTableView.dataSource = self
+        self.searchBar.delegate = self
 
         // Do any additional setup after loading the view.
     }
     
     func populateArtists() {
+
+        artists = []
         for index in (1...10) {
           let isItHot = index % 2 == 0 || index % 3 == 0
             artists.append(Artist(name: "John \(index)", numHits: index, isHot: isItHot ))
@@ -65,6 +70,31 @@ class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, U
             }
         }
     }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // bad code!!!
+        if !searchText.isEmpty {
+            artists = artists.filter { (artist: Artist) -> Bool in
+                return artist.name.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+            }
+        } else {
+            populateArtists()
+        }
+
+        artistsTableView.reloadData()
+    }
+
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        populateArtists()
+    }
+
     /*
     // MARK: - Navigation
 
