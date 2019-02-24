@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		229EF629C524C7E6994B64A6 /* Pods_SonghoundUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70EE039CCAEAA79B85A1C04 /* Pods_SonghoundUITests.framework */; };
+		25721CE2FA20FFF9A4FEB921 /* Pods_Songhound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F868351CECD45F62855E8FB /* Pods_Songhound.framework */; };
 		F336DDB62216B6DC0079B05D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDB52216B6DC0079B05D /* AppDelegate.swift */; };
 		F336DDB82216B6DC0079B05D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDB72216B6DC0079B05D /* ViewController.swift */; };
 		F336DDBB2216B6DC0079B05D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F336DDB92216B6DC0079B05D /* Main.storyboard */; };
@@ -14,6 +16,17 @@
 		F336DDC02216B6DE0079B05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F336DDBE2216B6DE0079B05D /* LaunchScreen.storyboard */; };
 		F336DDCB2216B6DE0079B05D /* SonghoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDCA2216B6DE0079B05D /* SonghoundTests.swift */; };
 		F336DDD62216B6DE0079B05D /* SonghoundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDD52216B6DE0079B05D /* SonghoundUITests.swift */; };
+		F33E6CD3221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CD2221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift */; };
+		F33E6CF3221BF07F00CFBB23 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */; };
+		F33E6CF5221BF3A300CFBB23 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF4221BF3A300CFBB23 /* Artist.swift */; };
+		F33E6CF7221BFBD100CFBB23 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */; };
+		F33E6D00221D604700CFBB23 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33E6CFF221D604700CFBB23 /* CardView.xib */; };
+		F33E6D02221D605B00CFBB23 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6D01221D605B00CFBB23 /* CardView.swift */; };
+		F345CC7A221EB5CA00E2BDFA /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */; };
+		F397DD87221A02B500D28E3C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD86221A02B500D28E3C /* Song.swift */; };
+		F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */; };
+		F399EB61221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399EB60221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift */; };
+		F8E5BC3BAF256DE7CD755BEE /* Pods_SonghoundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D14AE6B7E5F0876C64E3747 /* Pods_SonghoundTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35A7146061DFA13E2DCDB271 /* Pods-SonghoundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonghoundTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SonghoundTests/Pods-SonghoundTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3D14AE6B7E5F0876C64E3747 /* Pods_SonghoundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SonghoundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F8C8DE05285C4A9B94D2D0B /* Pods-SonghoundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonghoundUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SonghoundUITests/Pods-SonghoundUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5BD6616F14749191B222BD7E /* Pods-SonghoundUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonghoundUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SonghoundUITests/Pods-SonghoundUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9366AFB3BFA62569BD22C06B /* Pods-SonghoundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonghoundTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SonghoundTests/Pods-SonghoundTests.release.xcconfig"; sourceTree = "<group>"; };
+		9F868351CECD45F62855E8FB /* Pods_Songhound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Songhound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B478303C652C5DEA866E0B01 /* Pods-Songhound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Songhound.release.xcconfig"; path = "Pods/Target Support Files/Pods-Songhound/Pods-Songhound.release.xcconfig"; sourceTree = "<group>"; };
+		E70EE039CCAEAA79B85A1C04 /* Pods_SonghoundUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SonghoundUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7D85EBB81430C08D32CCBD8 /* Pods-Songhound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Songhound.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Songhound/Pods-Songhound.debug.xcconfig"; sourceTree = "<group>"; };
 		F336DDB22216B6DC0079B05D /* Songhound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Songhound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F336DDB52216B6DC0079B05D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F336DDB72216B6DC0079B05D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +69,16 @@
 		F336DDD12216B6DE0079B05D /* SonghoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SonghoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F336DDD52216B6DE0079B05D /* SonghoundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonghoundUITests.swift; sourceTree = "<group>"; };
 		F336DDD72216B6DE0079B05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F33E6CD2221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSongsByArtistViewController.swift; sourceTree = "<group>"; };
+		F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
+		F33E6CF4221BF3A300CFBB23 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		F33E6CFF221D604700CFBB23 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		F33E6D01221D605B00CFBB23 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
+		F397DD86221A02B500D28E3C /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		F399EB60221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectioTableCellCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25721CE2FA20FFF9A4FEB921 /* Pods_Songhound.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E5BC3BAF256DE7CD755BEE /* Pods_SonghoundTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +102,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229EF629C524C7E6994B64A6 /* Pods_SonghoundUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02823C65958189E19B3E275B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7D85EBB81430C08D32CCBD8 /* Pods-Songhound.debug.xcconfig */,
+				B478303C652C5DEA866E0B01 /* Pods-Songhound.release.xcconfig */,
+				35A7146061DFA13E2DCDB271 /* Pods-SonghoundTests.debug.xcconfig */,
+				9366AFB3BFA62569BD22C06B /* Pods-SonghoundTests.release.xcconfig */,
+				5BD6616F14749191B222BD7E /* Pods-SonghoundUITests.debug.xcconfig */,
+				3F8C8DE05285C4A9B94D2D0B /* Pods-SonghoundUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AA34D13C9F725FF30AA10255 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F868351CECD45F62855E8FB /* Pods_Songhound.framework */,
+				3D14AE6B7E5F0876C64E3747 /* Pods_SonghoundTests.framework */,
+				E70EE039CCAEAA79B85A1C04 /* Pods_SonghoundUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F336DDA92216B6DB0079B05D = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +139,8 @@
 				F336DDC92216B6DE0079B05D /* SonghoundTests */,
 				F336DDD42216B6DE0079B05D /* SonghoundUITests */,
 				F336DDB32216B6DC0079B05D /* Products */,
+				02823C65958189E19B3E275B /* Pods */,
+				AA34D13C9F725FF30AA10255 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +159,20 @@
 			children = (
 				F336DDB52216B6DC0079B05D /* AppDelegate.swift */,
 				F336DDB72216B6DC0079B05D /* ViewController.swift */,
+				F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */,
+				F33E6CD2221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift */,
 				F336DDB92216B6DC0079B05D /* Main.storyboard */,
+				F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */,
+				F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */,
+				F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */,
 				F336DDBC2216B6DE0079B05D /* Assets.xcassets */,
 				F336DDBE2216B6DE0079B05D /* LaunchScreen.storyboard */,
 				F336DDC12216B6DE0079B05D /* Info.plist */,
+				F397DD86221A02B500D28E3C /* Song.swift */,
+				F33E6CF4221BF3A300CFBB23 /* Artist.swift */,
+				F33E6CFF221D604700CFBB23 /* CardView.xib */,
+				F33E6D01221D605B00CFBB23 /* CardView.swift */,
+				F399EB60221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift */,
 			);
 			path = Songhound;
 			sourceTree = "<group>";
@@ -132,9 +202,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F336DDDA2216B6DE0079B05D /* Build configuration list for PBXNativeTarget "Songhound" */;
 			buildPhases = (
+				D2D85150A956D11540BD4F4A /* [CP] Check Pods Manifest.lock */,
 				F336DDAE2216B6DB0079B05D /* Sources */,
 				F336DDAF2216B6DB0079B05D /* Frameworks */,
 				F336DDB02216B6DB0079B05D /* Resources */,
+				FAAA36D89E16A8B253200C1F /* [CP] Copy Pods Resources */,
+				52F5BAF05FDE84EF0DCC50B6 /* [CP] Embed Pods Frameworks */,
+				F33E6D03221D6E9000CFBB23 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -149,6 +223,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F336DDDD2216B6DE0079B05D /* Build configuration list for PBXNativeTarget "SonghoundTests" */;
 			buildPhases = (
+				7FF14267EB31521F98A0B318 /* [CP] Check Pods Manifest.lock */,
 				F336DDC22216B6DE0079B05D /* Sources */,
 				F336DDC32216B6DE0079B05D /* Frameworks */,
 				F336DDC42216B6DE0079B05D /* Resources */,
@@ -167,6 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F336DDE02216B6DE0079B05D /* Build configuration list for PBXNativeTarget "SonghoundUITests" */;
 			buildPhases = (
+				82A6D335E2FAECC64E19166A /* [CP] Check Pods Manifest.lock */,
 				F336DDCD2216B6DE0079B05D /* Sources */,
 				F336DDCE2216B6DE0079B05D /* Frameworks */,
 				F336DDCF2216B6DE0079B05D /* Resources */,
@@ -193,6 +269,11 @@
 				TargetAttributes = {
 					F336DDB12216B6DB0079B05D = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					F336DDC52216B6DE0079B05D = {
 						CreatedOnToolsVersion = 10.1;
@@ -231,6 +312,7 @@
 			files = (
 				F336DDC02216B6DE0079B05D /* LaunchScreen.storyboard in Resources */,
 				F336DDBD2216B6DE0079B05D /* Assets.xcassets in Resources */,
+				F33E6D00221D604700CFBB23 /* CardView.xib in Resources */,
 				F336DDBB2216B6DC0079B05D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,13 +333,173 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		52F5BAF05FDE84EF0DCC50B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Songhound/Pods-Songhound-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CardParts/CardParts.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardParts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Songhound/Pods-Songhound-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FF14267EB31521F98A0B318 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SonghoundTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82A6D335E2FAECC64E19166A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SonghoundUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2D85150A956D11540BD4F4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Songhound-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F33E6D03221D6E9000CFBB23 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+		FAAA36D89E16A8B253200C1F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Songhound/Pods-Songhound-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Songhound/Pods-Songhound-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F336DDAE2216B6DB0079B05D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F345CC7A221EB5CA00E2BDFA /* SongsViewController.swift in Sources */,
+				F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */,
+				F33E6D02221D605B00CFBB23 /* CardView.swift in Sources */,
+				F397DD87221A02B500D28E3C /* Song.swift in Sources */,
+				F33E6CD3221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift in Sources */,
 				F336DDB82216B6DC0079B05D /* ViewController.swift in Sources */,
+				F33E6CF3221BF07F00CFBB23 /* ArtistTableViewCell.swift in Sources */,
 				F336DDB62216B6DC0079B05D /* AppDelegate.swift in Sources */,
+				F33E6CF5221BF3A300CFBB23 /* Artist.swift in Sources */,
+				F399EB61221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift in Sources */,
+				F33E6CF7221BFBD100CFBB23 /* UIUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +672,7 @@
 		};
 		F336DDDB2216B6DE0079B05D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7D85EBB81430C08D32CCBD8 /* Pods-Songhound.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +691,7 @@
 		};
 		F336DDDC2216B6DE0079B05D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B478303C652C5DEA866E0B01 /* Pods-Songhound.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +710,7 @@
 		};
 		F336DDDE2216B6DE0079B05D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35A7146061DFA13E2DCDB271 /* Pods-SonghoundTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +732,7 @@
 		};
 		F336DDDF2216B6DE0079B05D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9366AFB3BFA62569BD22C06B /* Pods-SonghoundTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +754,7 @@
 		};
 		F336DDE12216B6DE0079B05D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BD6616F14749191B222BD7E /* Pods-SonghoundUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +775,7 @@
 		};
 		F336DDE22216B6DE0079B05D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F8C8DE05285C4A9B94D2D0B /* Pods-SonghoundUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
