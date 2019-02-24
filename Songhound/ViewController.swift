@@ -15,7 +15,7 @@ import MediaPlayer
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
-    @IBOutlet weak var imgProfilePictue: UIImageView!
+    @IBOutlet weak var imgProfilePicture: UIImageView!
     @IBOutlet weak var imgArtist3: UIImageView!
     @IBOutlet weak var imgArtist2: UIImageView!
     @IBOutlet weak var imgArtist1: UIImageView!
@@ -25,15 +25,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableViewSongs: UITableView!
     @IBOutlet weak var lblPlaying: UILabel!
     @IBOutlet weak var currentLocation: UILabel!
-    
-    @IBAction func helloThere(_ sender: Any) {
-        print("cliciked")
-    }
-    
-    @IBAction func helloThere11(_ sender: Any) {
-        print("clicked")
-    }
-    
+
+
+    private let dispatcher = DispatchQueue(label: "execution-queue", qos: .default, attributes: .concurrent)
     private let locationManager = CLLocationManager()
     private var data: [Song] = []
     //-1 means no image was selected
@@ -43,6 +37,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     private var topThreeArtists: [Artist] = [Artist(name: "Taylor", numHits: 10, isHot: true),
                                              Artist(name: "Dot", numHits: 1, isHot: false),
                                              Artist(name: "Swift", numHits: 100, isHot: true)]
+
+    private let apiKey = "566c477a33b65757c982ebd5782c3377"
+
 
     @IBAction func onSeeMoreClick(_ sender: UIButton) {
         
@@ -80,11 +77,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     let albumName = track["album_name"].stringValue
                     let artistName = track["artist_name"].stringValue
                     let genre = track["primary_genres"]["music_genre_list"][0]["music_genre"]["music_genre_name"].stringValue
-                    
                     let popularity = track["num_favourite"].intValue
-                    
-                    
-                    self.data.append(Song(name: trackName ?? "oops", artistName: artistName ?? "oops" , genre: genre ?? "oops" ,popularity: popularity ,albumName: albumName ?? "oops" ))
+                    let albumId = track["album_id"].int64Value
+
+                    print("the album id is \(albumId)")
+
+                    self.data.append(Song(name: trackName, artistName: artistName , genre: genre ,popularity: popularity ,albumName: albumName, albumId: albumId))
                     
                     print("trackName: \(String(describing: trackName))")
                 }
@@ -98,7 +96,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 print(error)
             }
         }
-        makeUIImageViewCircle(imageView: imgProfilePictue, imgSize: 50)
+        makeUIImageViewCircle(imageView: imgProfilePicture, imgSize: 50)
         makeUIImageViewCircle(imageView: imgArtist1, imgSize: 100)
         makeUIImageViewCircle(imageView: imgArtist2, imgSize: 100)
         makeUIImageViewCircle(imageView: imgArtist3, imgSize: 100)
@@ -117,9 +115,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableViewSongs.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) as! SongTableViewCell
-        
         let artistName: String = data[indexPath.row].artistName
         let songName: String = data[indexPath.row].name
+        let albumId: Int64 = data[indexPath.row].albumId
 //        I will implement something like this in the future but for now what we have is cool so I will cmt it out
 //        let popularity: Int = data[indexPath.row].popularity
         let genre: String = data[indexPath.row].genre
@@ -128,14 +126,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.lblSongName.text = songName
         cell.lblGenre.text = genre
         cell.lblAlbumName.text = albumName
+
+        //ASK: I dont get why this whould be forced to unwrapped
+        let cellImageView = cell.imgAlbumCover!
+        
+        downloadImage(uiImageView: cellImageView, albumId: albumId)
+        
         
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // I dont know what to show
       //  performSegue(withIdentifier: "viewSongsOfArtist", sender: self)
+        
     }
     
     
@@ -165,7 +169,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // this is requesting for a particular artist but it should search for a particualer song
         // validate() ??
         // should be able to also search by artist name
-        let apiKey = "566c477a33b65757c982ebd5782c3377"
         let req = "http://api.musixmatch.com/ws/1.1/track.search?q_track=" +
             (songName.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!) +
             "&q_artist=" + (artistName.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!) +
@@ -210,11 +213,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
       //  imageTapped(gesture: tapGesture)
     }
-    
-    
-    
-   
-    
+
     private func showCurrentPlayingSong() {
 
         print("show currently Playing song")
@@ -245,17 +244,51 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
+    
+
+    // TODO: should be an extension function
+    private func downloadImage(uiImageView: UIImageView, albumId: Int64 ) {
+        
+        // capture the imageview bro
+        dispatcher.async {
+            print("downloadImage: the album id: \(albumId)")
+            Alamofire.request("http://api.musixmatch.com/ws/1.1/album.get?album_id=\(albumId)&apikey=\(self.apiKey)").responseJSON(completionHandler: { response in
+                switch response.result {
+                case .success(let v):
+                    // populate this to artist model TODO
+                    let artistJSON = JSON(v)
+                    print("\n")
+                    print("artist data bro")
+                    print("artist data: \(artistJSON)")
+                    let albumCover = artistJSON["album_coverart_100x100"].stringValue // get the image cover
+                    print("the extracted album cover is \(albumCover)")
+                    let url = URL(string: albumCover) // url of the image
+                    print("the url is \(url)")
+                    if let url = url {
+                        let data = try? Data(contentsOf: url)
+                        if let data = data { // unwrap this data or our on the background thread yoh
+                            // go to main thread bro
+                            DispatchQueue.main.async {
+                                // display the downloaded image
+                                uiImageView.image = UIImage(data: data)
+                            }
+                        }
+                    }
+                    print("queue")
+                case .failure:
+                    print("oops failure")
+                }
+            })
+        }
+
+    }
 }
-
-
-
-
 
 //
 // EXTENSIONS
 //
-
 // READ:  make sure the is conforms to the CLLocationManagerDelegate
+
  extension ViewController : CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         guard status == .authorizedWhenInUse else {

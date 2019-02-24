@@ -60,7 +60,7 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     private func populateSongs() {
     for i in 0...12 {
-        songs.append(Song(name: "Sample song \(i)", artistName: "Drake\(i)", genre: "Hip/Hop", popularity: 20, albumName: "Hello"))
+        songs.append(Song(name: "Sample song \(i)", artistName: "Drake\(i)", genre: "Hip/Hop", popularity: 20, albumName: "Hello", albumId: 1234342))
         }
     }
     

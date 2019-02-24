@@ -227,7 +227,7 @@
                         <outlet property="imgArtist1" destination="eOp-gc-GaD" id="LkR-3X-DBm"/>
                         <outlet property="imgArtist2" destination="bOr-y3-KbH" id="P85-bV-j3V"/>
                         <outlet property="imgArtist3" destination="ZBm-em-qBC" id="SvP-zj-1Fh"/>
-                        <outlet property="imgProfilePictue" destination="Pe8-rJ-QlH" id="Edd-mY-CoG"/>
+                        <outlet property="imgProfilePicture" destination="Pe8-rJ-QlH" id="Edd-mY-CoG"/>
                         <outlet property="lblArtistName1" destination="BwQ-IC-Tvq" id="GHu-yi-yME"/>
                         <outlet property="lblArtistName2" destination="GoK-xc-YZh" id="7nQ-Na-BIY"/>
                         <outlet property="lblArtistName3" destination="ZSK-CV-Szd" id="f1k-ZN-bNU"/>
@@ -373,7 +373,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wde-vl-OfO">
-                                <rect key="frame" x="16" y="113" width="343" height="510"/>
+                                <rect key="frame" x="16" y="113" width="343" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" rowHeight="83" id="vrT-MT-tnh" customClass="SongTableViewCell" customModule="Songhound" customModuleProvider="target">
@@ -456,7 +456,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taylor Swift" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdB-Vb-RjE">
-                                <rect key="frame" x="16" y="43" width="343" height="43"/>
+                                <rect key="frame" x="71" y="43" width="288" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -467,7 +467,7 @@
                                     <constraint firstAttribute="width" constant="48" id="7Gf-nL-E9E"/>
                                     <constraint firstAttribute="height" constant="30" id="wOm-ge-Evw"/>
                                 </constraints>
-                                <state key="normal" title="&lt; Back"/>
+                                <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="backButton:" destination="xSv-cM-AGW" eventType="touchUpInside" id="5yP-oI-fqY"/>
                                 </connections>
@@ -483,7 +483,7 @@
                             <constraint firstItem="wde-vl-OfO" firstAttribute="top" secondItem="AdB-Vb-RjE" secondAttribute="bottom" constant="27" id="Lh3-UK-BjO"/>
                             <constraint firstItem="wde-vl-OfO" firstAttribute="bottom" secondItem="yud-23-xsf" secondAttribute="bottom" id="Qsm-zl-sA7"/>
                             <constraint firstItem="Wgk-Zd-Ld8" firstAttribute="top" secondItem="yud-23-xsf" secondAttribute="top" constant="29" id="UHp-dp-8qE"/>
-                            <constraint firstItem="AdB-Vb-RjE" firstAttribute="leading" secondItem="yud-23-xsf" secondAttribute="leading" constant="16" id="lHo-YJ-AXY"/>
+                            <constraint firstItem="AdB-Vb-RjE" firstAttribute="leading" secondItem="yud-23-xsf" secondAttribute="leading" constant="71" id="lHo-YJ-AXY"/>
                             <constraint firstItem="AdB-Vb-RjE" firstAttribute="top" secondItem="yud-23-xsf" secondAttribute="top" constant="23" id="t97-aw-X2J"/>
                             <constraint firstItem="wde-vl-OfO" firstAttribute="leading" secondItem="yud-23-xsf" secondAttribute="leading" constant="16" id="zy3-bz-uPb"/>
                         </constraints>
@@ -496,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t28-61-ABC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1658" y="528"/>
+            <point key="canvasLocation" x="1656.8" y="527.58620689655174"/>
         </scene>
     </scenes>
     <resources>
@@ -506,6 +506,6 @@
         <image name="swift" width="79.199996948242188" height="98.879997253417969"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1qj-ib-BIs"/>
+        <segue reference="yjr-bq-zeX"/>
     </inferredMetricsTieBreakers>
 </document>
