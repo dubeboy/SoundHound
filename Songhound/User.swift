@@ -6,14 +6,22 @@
 import Foundation
 
 class User : NSCoder {
-    var userId: String?
+    var userId: String? = "" {
+        willSet(newTotalSteps) {
+            print("About to set totalSteps to \(String(describing: newTotalSteps))")
+        }
+        didSet {
+            
+        }
+    }
     var idToken: String?
     var fullName: String?
     var givenName: String?
     var familyName: String?
     var email: String?
+    var profileURL: String?
 
-    init(userId: String?, idToken: String?, fullName: String?, givenName: String?, familyName: String?, email: String?) {
+    init(userId: String?, idToken: String?, fullName: String?, givenName: String?, familyName: String?, email: String?, profileURL: String?) {
         self.userId = userId
         self.idToken = idToken
         self.fullName = fullName
@@ -22,7 +30,9 @@ class User : NSCoder {
         self.email = email
     }
     
-    //try this new property watchers
+    //try this new property observers
+    
+    
 
 
 }

@@ -14,6 +14,7 @@ let FULL_NAME = "full_name"
 let GIVEN_NAME = "given_name"
 let FAMILY_NAME = "family_name"
 let EMAIL = "email"
+let PROFILE_URL = "profile_url"
 
 
 func makeUIImageViewCircle(imageView: UIImageView, imgSize: Int) {
@@ -36,13 +37,15 @@ func getSignedInUser() -> User? {
     let givenName = pref.string(forKey:  GIVEN_NAME)
     let familyName = pref.string(forKey:  FAMILY_NAME)
     let email = pref.string(forKey:  EMAIL)
+    let profileURL = pref.string(forKey:  PROFILE_URL)
     
     let user = User(userId: userId,
                             idToken: idToken,
                             fullName: fullName,
                             givenName: givenName,
                             familyName: familyName,
-                            email: email)
+                            email: email,
+                            profileURL: profileURL)
     
     return user
 }
