@@ -1,0 +1,37 @@
+GET http://curl%20-v%20-H%20'Authorization:Bearer%20[developer%20token]'%20"https:/api.music.apple.com/v1/catalog/us/songs/203709340"
+
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET https://api.music.apple.com/v1/catalog/en/search?term=james br
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET https://api.spotify.com/v1/search?q=roadhouse blues
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-25T095922.401.json
+
+###
+
+GET https://api.spotify.com/v1/search?q=roadhouse%20blues
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-25T095855.401.json
+
+###
+
+GET https://api.spotify.com/v1/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-25T095728.401.json
+
+###
+

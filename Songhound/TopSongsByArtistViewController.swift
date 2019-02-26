@@ -17,7 +17,6 @@ class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateArtists()
 
         self.artistsTableView.delegate = self
         self.artistsTableView.dataSource = self
@@ -25,15 +24,7 @@ class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, U
 
         // Do any additional setup after loading the view.
     }
-    
-    func populateArtists() {
 
-        artists = []
-        for index in (1...10) {
-          let isItHot = index % 2 == 0 || index % 3 == 0
-            artists.append(Artist(name: "John \(index)", numHits: index, isHot: isItHot ))
-        }
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return artists.count
@@ -43,9 +34,9 @@ class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, U
         let cell = self.artistsTableView.dequeueReusableCell(withIdentifier: "artistTableViewCell", for: indexPath) as! ArtistTableViewCell
         
         cell.lblArtistName.text = artists[indexPath.row].name
-        cell.lblNumHits.text = "\(artists[indexPath.row].numHits) hot songs"
-        let str = artists[indexPath.row].isHot ? "🔥" :  "";
-        cell.lblEmoji.text = str
+        //cell.lblNumHits.text = "\(artists[indexPath.row].numHits) hot songs"
+      //  let str = artists[indexPath.row].isHot ? "🔥" :  "";
+      //  cell.lblEmoji.text = str
         
 //        cell.imgArtist. = // set the artist image 
         
@@ -78,7 +69,7 @@ class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, U
                 return artist.name.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
             }
         } else {
-            populateArtists()
+           // populateArtists()
         }
 
         artistsTableView.reloadData()
@@ -92,7 +83,7 @@ class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, U
         searchBar.showsCancelButton = false
         searchBar.text = ""
         searchBar.resignFirstResponder()
-        populateArtists()
+        //populateArtists()
     }
 
     /*
