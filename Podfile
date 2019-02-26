@@ -26,5 +26,8 @@ target 'Songhound' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'ObjectMapper', '~> 3.4'
   pod 'CardParts'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
+  pod 'Firebase/Core'
 
 end

@@ -8,12 +8,10 @@
 
 class Artist {
     var name: String = ""
-    var numHits: Int
-    var isHot: Bool
-    
-    init(name: String, numHits: Int, isHot: Bool) {
+    var artistID: Int64
+
+    init(name: String, artistID: Int64) {
         self.name = name
-        self.numHits = numHits
-        self.isHot = isHot
+        self.artistID = artistID
     }
 }
