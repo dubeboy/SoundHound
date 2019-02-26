@@ -13,7 +13,7 @@ import GoogleSignIn
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate  {
 
     var window: UIWindow?
 
@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // My personal key to access the maps service
         GMSServices.provideAPIKey("AIzaSyBqwX1XCTzvEdNZH-WydmpTf3dVgUgUhes")
         GIDSignIn.sharedInstance().clientID = "288110944258-ridgqi0r03ttme394kd3ch2s7toggpa9.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().delegate = self
+       
         // activate firebase core
         FirebaseApp.configure()
         return true
@@ -34,64 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 annotation: options[UIApplication.OpenURLOptionsKey.annotation])
     }
 
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-            print("\(error.localizedDescription)")
-        } else {
-           saveGoogleUserInfo(user: user)
-        }
-    }
-    
-    private func saveGoogleUserInfo(user: GIDGoogleUser) {
-        let userId = user.userID
-        let idToken = user.authentication.idToken
-        let fullName = user.profile.name
-        let givenName = user.profile.givenName
-        let familyName = user.profile.familyName
-        let email = user.profile.email
-        
-//        let user = User(userId: userId,
-//                        idToken: idToken,
-//                        fullName: fullName,
-//                        givenName: givenName,
-//                        familyName: familyName,
-//                        email: email)
-        
-        let preferences = UserDefaults.standard
-        // pitty I cannot do this save one by one
-        //preferences.set(user, forKey: USER_DEFAULTS_KEY)  // save the user object permantaly on a simple storage
-        //
-      //  preferences.se
-        
-        
-        
-        preferences.set(userId, forKey: USER_ID)
-        preferences.set(idToken, forKey: ID_TOKEN)
-        preferences.set(fullName, forKey: FULL_NAME)
-        preferences.set(givenName, forKey: GIVEN_NAME)
-        preferences.set(familyName, forKey: FAMILY_NAME)
-        preferences.set(email, forKey: EMAIL)
-
-        let sync = preferences.synchronize()
-        print("it sycned \(sync)")
-    }
-
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        print("oopps user signed out yoh")
-        
-        guard let authentication = user.authentication else { return }
-        
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                accessToken: authentication.accessToken)
-        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
-            if let error = error {
-                print("user not signed in there was an error bro \(error)")
-                return
-            }
-            print("Yey user signed in bro")
-            self.saveGoogleUserInfo(user: user)
-        }
-    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

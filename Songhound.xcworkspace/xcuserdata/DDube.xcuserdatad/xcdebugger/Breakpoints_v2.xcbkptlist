@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/ViewController.swift"
-            timestampString = "572858508.110255"
+            timestampString = "572871233.739297"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "8"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/ViewController.swift"
-            timestampString = "572858508.1103491"
+            timestampString = "572871233.739767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "12"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/ViewController.swift"
-            timestampString = "572858508.110391"
+            timestampString = "572871233.74008"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "6"
@@ -57,24 +57,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Songhound/ViewController.swift"
-            timestampString = "572858508.110428"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "ViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Songhound/TopSongsByArtistViewController.swift"
-            timestampString = "572450880.907029"
+            timestampString = "572871233.740389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -106,7 +90,7 @@
                   moduleName = "Songhound"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/DDube/Developer/iOS/Songhound/Songhound/SongsViewController.swift"
-                  timestampString = "572858508.298219"
+                  timestampString = "572871233.9402651"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -121,7 +105,7 @@
                   moduleName = "Songhound"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/DDube/Developer/iOS/Songhound/Songhound/SongsViewController.swift"
-                  timestampString = "572858508.3010989"
+                  timestampString = "572871233.942412"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -136,7 +120,7 @@
                   moduleName = "Songhound"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/DDube/Developer/iOS/Songhound/Songhound/SongsViewController.swift"
-                  timestampString = "572858508.30338"
+                  timestampString = "572871233.944638"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -151,7 +135,7 @@
                   moduleName = "Songhound"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/DDube/Developer/iOS/Songhound/Songhound/SongsViewController.swift"
-                  timestampString = "572858508.305462"
+                  timestampString = "572871233.94681"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -166,7 +150,7 @@
                   moduleName = "Songhound"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/DDube/Developer/iOS/Songhound/Songhound/SongsViewController.swift"
-                  timestampString = "572858508.307441"
+                  timestampString = "572871233.948875"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -189,6 +173,22 @@
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Songhound/ViewController.swift"
+            timestampString = "572871233.740484"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
+            landmarkName = "downloadImage(uiImageView:albumId:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

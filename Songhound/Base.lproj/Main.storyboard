@@ -237,6 +237,7 @@
                         <outlet property="lblArtistName2" destination="GoK-xc-YZh" id="7nQ-Na-BIY"/>
                         <outlet property="lblArtistName3" destination="ZSK-CV-Szd" id="f1k-ZN-bNU"/>
                         <outlet property="lblPlaying" destination="4QM-wH-FXt" id="Wxs-oB-D89"/>
+                        <outlet property="lblUserName" destination="FeB-kY-1kg" id="1O0-Fj-sFP"/>
                         <outlet property="tableViewSongs" destination="9fp-Xt-qqR" id="SQ1-sO-m18"/>
                         <segue destination="xSv-cM-AGW" kind="show" identifier="viewSongsForArtist" id="yjr-bq-zeX"/>
                     </connections>

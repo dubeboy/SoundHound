@@ -12,10 +12,16 @@ import Alamofire
 import SwiftyJSON
 import MediaPlayer
 import GoogleSignIn
+import Firebase
+import GoogleSignIn
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GIDSignInUIDelegate {
+class ViewController: UIViewController,
+                                    UITableViewDataSource,
+                                    UITableViewDelegate, GIDSignInUIDelegate, GIDSignInDelegate {
 
+    
 
+    @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var imgProfilePicture: UIImageView!
     @IBOutlet weak var imgArtist3: UIImageView!
     @IBOutlet weak var imgArtist2: UIImageView!
@@ -53,13 +59,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         locationManager.delegate = self
         self.tableViewSongs.delegate = self
         self.tableViewSongs.dataSource = self
+        GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
+        
 
         print("assigning the self to the delegate")
         showCurrentPlayingSong()
 
         locationManager.requestWhenInUseAuthorization()
-        //Todo comment this out for now
+      
         getTracDetails(songName: "love", artistName: "") { response in
             switch response.result {
             case .success(let value):
@@ -113,8 +121,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         addTapGestureToAnImageView(imageView: imgArtist2)
 
         addTapGestureToAnImageView(imageView: imgProfilePicture)
-
-
+        
+       let user = getSignedInUser()
+        if let user = user {
+            lblUserName.text = user.fullName
+            print("user details \(user.fullName!)")
+            let prof = user.profileURL ?? ""
+            print("the profile is \(prof)")
+            downloadImage(urlString: prof )
+        }
     }
 
     private func setupTopThreeArtists() {
@@ -169,11 +184,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.lblSongName.text = songName
         cell.lblGenre.text = genre
         cell.lblAlbumName.text = albumName
-
         //ASK: I dont get why this whould be forced to unwrapped
-        let cellImageView = cell.imgAlbumCover!
-        // will download image later
-       // downloadImage(uiImageView: cellImageView, albumId: albumId)
+              //  let cellImageView = cell.imgAlbumCover!
+                // will download image later
+               // downloadImage(uiImageView: cellImageView, albumId: albumId)
 
 
         return cell
@@ -232,12 +246,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 print("img one openi")
                 selectedImage = 0
                 performSegue(withIdentifier: "viewSongsForArtist", sender: self)
-
             case 1:
                 print("img one open")
                 selectedImage = 1
                 performSegue(withIdentifier: "viewSongsForArtist", sender: self)
-
             case 2:
                 print("img one opennn")
                 selectedImage = 2
@@ -248,6 +260,84 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             default:
                 print("ooops")
                 
+            }
+        }
+    }
+
+
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print("\(error.localizedDescription)")
+        } else {
+            saveGoogleUserInfo(user: user)
+        }
+    }
+
+    private func saveGoogleUserInfo(user: GIDGoogleUser) {
+        let userId = user.userID
+        let idToken = user.authentication.idToken
+        let fullName = user.profile.name
+        let givenName = user.profile.givenName
+        let familyName = user.profile.familyName
+        let email = user.profile.email
+        let profileURL = user.profile.imageURL(withDimension: 100).absoluteString
+        let preferences = UserDefaults.standard
+        
+        preferences.set(userId, forKey: USER_ID)
+        preferences.set(idToken, forKey: ID_TOKEN)
+        preferences.set(fullName, forKey: FULL_NAME)
+        preferences.set(givenName, forKey: GIVEN_NAME)
+        preferences.set(familyName, forKey: FAMILY_NAME)
+        preferences.set(email, forKey: EMAIL)
+        preferences.set(profileURL, forKey: PROFILE_URL)
+    
+        let sync = preferences.synchronize()
+        print("it sycned \(sync)")
+    }
+
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print("oopps user signed out yoh")
+        
+        guard let authentication = user.authentication else { return }
+        
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+            if let error = error {
+                print("user not signed in there was an error bro \(error)")
+                return
+            }
+            print("Yey user signed in bro")
+            self.saveGoogleUserInfo(user: user)
+            print("the user is \(String(describing: user?.userID))")
+            if let user = getSignedInUser() {
+                self.lblUserName.text = user.fullName
+                if let profileUrl = user.profileURL {
+                    self.downloadImage(urlString: profileUrl )
+                } else {
+                    // TODO: I want to set a default image
+                }
+            } else {
+                print("failed to load user man")
+                self.lblUserName.text = ""
+            }
+        }
+    }
+    
+    private func downloadImage(urlString: String) {
+        // assuming that its dowloading the image
+        dispatcher.async {
+            let url = URL(string: urlString)
+            print("the image of the profile picture is: \(String(describing: url))")
+            if let url = url {
+                let data = try? Data(contentsOf: url)
+                if let data = data { // unwrap this data or our on the background thread yoh
+                    // go to main thread bro
+                    DispatchQueue.main.async {
+                        // display the downloaded image
+                        self.imgProfilePicture.image = UIImage(data: data)
+                    }
+                }
             }
         }
     }
@@ -290,7 +380,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
-
 
     // TODO: should be an extension function
     private func downloadImage(uiImageView: UIImageView, albumId: Int64) {
@@ -342,7 +431,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     }
                 })
     }
-
 }
 
 //
