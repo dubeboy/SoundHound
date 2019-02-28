@@ -89,9 +89,9 @@ class ViewController: UIViewController,
     
     
     private func setupTopThreeArtists(songs: [Song]) {
-        topThreeArtists[0] = songs[0]
-        topThreeArtists[1] = songs[1]
-        topThreeArtists[2] = songs[2]
+        topThreeArtists.append(Artist(name: songs[0].artistName, artistID: 000))
+        topThreeArtists.append(Artist(name: songs[1].artistName, artistID: 000))
+        topThreeArtists.append(Artist(name: songs[2].artistName, artistID: 000))
         
         let name = topThreeArtists[0].name
         let name1 = topThreeArtists[1].name
