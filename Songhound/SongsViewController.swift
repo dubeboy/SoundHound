@@ -38,12 +38,8 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
-    
-
-  
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateSongs()
         self.songsTableView.delegate = self
         self.songsTableView.dataSource = self
         // Do any additional setup after loading the view.
@@ -57,24 +53,6 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
     }
-    
-    private func populateSongs() {
-    for i in 0...12 {
-        songs.append(Song(name: "Sample song \(i)", artistName: "Drake\(i)", genre: "Hip/Hop", popularity: 20, albumName: "Hello", albumId: 1234342))
-        }
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     
     @IBAction func backButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)

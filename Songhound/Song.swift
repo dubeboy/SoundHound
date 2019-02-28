@@ -12,15 +12,15 @@ class Song {
     var albumName: String
     var genre: String
     var popularity: Int
-    var albumId: Int64
+    var artworkURL: String
     
-    init( name: String,  artistName: String, genre: String, popularity: Int, albumName: String,  albumId: Int64) {
+    init( name: String,  artistName: String, genre: String, popularity: Int, albumName: String,  artworkURL: String) {
         self.name = name
         self.artistName = artistName
         self.genre = genre  // TODO change spelling
         self.popularity = popularity
         self.albumName = albumName
-        self.albumId = albumId
+        self.artworkURL = artworkURL
     }
 
 }

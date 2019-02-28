@@ -19,8 +19,6 @@ class ViewController: UIViewController,
                                     UITableViewDataSource,
                                     UITableViewDelegate, GIDSignInUIDelegate, GIDSignInDelegate {
 
-    
-
     @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var imgProfilePicture: UIImageView!
     @IBOutlet weak var imgArtist3: UIImageView!
@@ -45,13 +43,6 @@ class ViewController: UIViewController,
 
     private let apiKey = "566c477a33b65757c982ebd5782c3377"
 
-
-    @IBAction func onSeeMoreClick(_ sender: UIButton) {
-
-    }
-
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -62,55 +53,13 @@ class ViewController: UIViewController,
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         
+      
 
         print("assigning the self to the delegate")
         showCurrentPlayingSong()
 
         locationManager.requestWhenInUseAuthorization()
       
-        getTracDetails(songName: "love", artistName: "") { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("here is the json: ")
-                print(json)
-                //get the first track
-                //bad was should use the provided way
-                for i in 0..<10 {
-                    let track = json["message"]["body"]["track_list"][i]["track"]
-                    //TODO retrieve the value that I want to actually post to firebase
-                    //push the whole track object but should also collect the current seek time
-                    // should also save the track ID fro easy search
-                    let trackName = track["track_name"].stringValue
-                    let albumName = track["album_name"].stringValue
-                    let artistName = track["artist_name"].stringValue
-                    let genre = track["primary_genres"]["music_genre_list"][0]["music_genre"]["music_genre_name"].stringValue
-                    let popularity = track["num_favourite"].intValue
-                    let albumId = track["album_id"].int64Value
-                    print("the album id is \(albumId)")
-
-                    // pick the first 3 artists
-                    if i < 3 {
-                        let artist = self.createArtist(artist: track)
-                        self.topThreeArtists.append(artist)
-                    }
-
-                    self.data.append(Song(name: trackName, artistName: artistName, genre: genre, popularity: popularity, albumName: albumName, albumId: albumId))
-
-                    print("trackName: \(String(describing: trackName))")
-                }
-
-                print("the data is \(self.data)")
-
-                // setup up the top 3 people
-                self.setupTopThreeArtists()
-                self.tableViewSongs.reloadData()
-
-
-            case .failure(let error):
-                print(error)
-            }
-        }
         makeUIImageViewCircle(imageView: imgProfilePicture, imgSize: 50)
         makeUIImageViewCircle(imageView: imgArtist1, imgSize: 100)
         makeUIImageViewCircle(imageView: imgArtist2, imgSize: 100)
@@ -130,9 +79,20 @@ class ViewController: UIViewController,
             print("the profile is \(prof)")
             downloadImage(urlString: prof )
         }
+        
+        searchForSongByArtist(songName: "Swift", callback: {songs in
+            self.data = songs
+            self.setupTopThreeArtists(songs: songs)
+            self.tableViewSongs.reloadData()
+        })
     }
-
-    private func setupTopThreeArtists() {
+    
+    
+    private func setupTopThreeArtists(songs: [Song]) {
+        topThreeArtists[0] = songs[0]
+        topThreeArtists[1] = songs[1]
+        topThreeArtists[2] = songs[2]
+        
         let name = topThreeArtists[0].name
         let name1 = topThreeArtists[1].name
         let name2 = topThreeArtists[2].name
@@ -175,9 +135,7 @@ class ViewController: UIViewController,
         let cell = self.tableViewSongs.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) as! SongTableViewCell
         let artistName: String = data[indexPath.row].artistName
         let songName: String = data[indexPath.row].name
-        let albumId: Int64 = data[indexPath.row].albumId
-//        I will implement something like this in the future but for now what we have is cool so I will cmt it out
-//        let popularity: Int = data[indexPath.row].popularity
+
         let genre: String = data[indexPath.row].genre
         let albumName: String = data[indexPath.row].albumName
         cell.lblArtistName.text = artistName
@@ -185,9 +143,10 @@ class ViewController: UIViewController,
         cell.lblGenre.text = genre
         cell.lblAlbumName.text = albumName
         //ASK: I dont get why this whould be forced to unwrapped
-              //  let cellImageView = cell.imgAlbumCover!
+        let cellImageView = cell.imgAlbumCover!
                 // will download image later
-               // downloadImage(uiImageView: cellImageView, albumId: albumId)
+        let albumCoverURL = data[indexPath.row].artworkURL
+        cellImageView.dowloadFromServer(link: albumCoverURL)
 
 
         return cell
@@ -381,62 +340,34 @@ class ViewController: UIViewController,
         }
     }
 
-    // TODO: should be an extension function
-    private func downloadImage(uiImageView: UIImageView, albumId: Int64) {
-        // capture the imageview bro
-        print("downloadImage: the album id: \(albumId)")
-        Alamofire.request("http://api.musixmatch.com/ws/1.1/album.get?album_id=\(albumId)&apikey=\(self.apiKey)")
-                .responseJSON(completionHandler: { response in
-                    switch response.result {
-                    case .success(let v):
-                        // populate this to artist model TODO
-                        let artistJSON = JSON(v)  // make json out of this response
-                        print()
-                        print("the artist JSON \(artistJSON)")
-                        let albumData = artistJSON["message"]["body"]["album"]
 
-                        let mbid = albumData["album_mbid"].stringValue // get the mbID so that we can get the album cover
-                        print("the mbid \(mbid)")
-                        // there are cases where the mbID is blank yoh
-                        if !mbid.isEmpty {
-                            Alamofire.request("http://coverartarchive.org/release/\(mbid)")
-                                    .responseJSON(completionHandler: { response in
-                                        switch response.result {
-                                        case .success(let cj):
-                                            let artistCoverArtJSON = JSON(cj)
-                                            let imageStringUrl = artistCoverArtJSON["images"]["image"].stringValue
-                                            print("the cover art String URL is \(imageStringUrl)")
-                                            let url = URL(string: imageStringUrl)
-                                            print("the cover art URL is \(String(describing: url))")
-                                            if let url = url {
-                                                let data = try? Data(contentsOf: url)
-                                                if let data = data { // unwrap this data or our on the background thread yoh
-                                                    // go to main thread bro
-                                                    DispatchQueue.main.async {
-                                                        // display the downloaded image
-                                                        uiImageView.image = UIImage(data: data)
-                                                    }
-                                                }
-                                            }
-                                        case .failure:
-                                            print("oops failure could not get the cover art bro")
-                                                // still gonna throw proper errors rarely happens though
-                                        }
-                                    })
-                        }
-                        print("queue")
-                    case .failure:
-                        print("oops failure")
-                            // still gonna throw proper errors rarely happens though
-                    }
-                })
-    }
 }
 
 //
 // EXTENSIONS
 //
 // READ:  make sure the is conforms to the CLLocationManagerDelegate
+
+extension UIImageView {
+    func dowloadFromServer(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() {
+                self.image = image
+            }
+            }.resume()
+    }
+    func dowloadFromServer(link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        dowloadFromServer(url: url, contentMode: mode)
+    }
+}
 
 extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
