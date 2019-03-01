@@ -23,12 +23,9 @@
 		F33E6CF3221BF07F00CFBB23 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */; };
 		F33E6CF5221BF3A300CFBB23 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF4221BF3A300CFBB23 /* Artist.swift */; };
 		F33E6CF7221BFBD100CFBB23 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */; };
-		F33E6D00221D604700CFBB23 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33E6CFF221D604700CFBB23 /* CardView.xib */; };
-		F33E6D02221D605B00CFBB23 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6D01221D605B00CFBB23 /* CardView.swift */; };
 		F345CC7A221EB5CA00E2BDFA /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */; };
 		F397DD87221A02B500D28E3C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD86221A02B500D28E3C /* Song.swift */; };
 		F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */; };
-		F399EB61221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399EB60221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift */; };
 		F8E5BC3BAF256DE7CD755BEE /* Pods_SonghoundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D14AE6B7E5F0876C64E3747 /* Pods_SonghoundTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,12 +76,9 @@
 		F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 		F33E6CF4221BF3A300CFBB23 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
-		F33E6CFF221D604700CFBB23 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
-		F33E6D01221D605B00CFBB23 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
 		F397DD86221A02B500D28E3C /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
-		F399EB60221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectioTableCellCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,25 +157,17 @@
 		F336DDB42216B6DC0079B05D /* Songhound */ = {
 			isa = PBXGroup;
 			children = (
+				F36EE492222928D40083B2B8 /* ArtistDetails */,
+				F36EE48F222928790083B2B8 /* Common */,
+				F36EE4902229289C0083B2B8 /* Entities */,
+				F36EE491222928B70083B2B8 /* SongsDetails */,
+				F36EE493222928E20083B2B8 /* SongsList */,
 				F336DDB52216B6DC0079B05D /* AppDelegate.swift */,
-				F336DDB72216B6DC0079B05D /* ViewController.swift */,
-				F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */,
-				F33E6CD2221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift */,
-				F336DDB92216B6DC0079B05D /* Main.storyboard */,
-				F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */,
-				F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */,
-				F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */,
 				F336DDBC2216B6DE0079B05D /* Assets.xcassets */,
+				F336DDB92216B6DC0079B05D /* Main.storyboard */,
 				F336DDBE2216B6DE0079B05D /* LaunchScreen.storyboard */,
 				F336DDC12216B6DE0079B05D /* Info.plist */,
-				F397DD86221A02B500D28E3C /* Song.swift */,
-				F33E6CF4221BF3A300CFBB23 /* Artist.swift */,
-				F33E6CFF221D604700CFBB23 /* CardView.xib */,
-				F33E6D01221D605B00CFBB23 /* CardView.swift */,
-				F399EB60221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift */,
-				3DEEA681AF5B42104EA229E4 /* RESTClient.swift */,
 				3DEEAA013A8E2F14973CB22A /* GoogleService-Info.plist */,
-				3DEEAEC37B554FECEBB2749F /* User.swift */,
 			);
 			path = Songhound;
 			sourceTree = "<group>";
@@ -202,6 +188,99 @@
 				F336DDD72216B6DE0079B05D /* Info.plist */,
 			);
 			path = SonghoundUITests;
+			sourceTree = "<group>";
+		};
+		F36EE48F222928790083B2B8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */,
+				F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */,
+				3DEEA681AF5B42104EA229E4 /* RESTClient.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F36EE4902229289C0083B2B8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F397DD86221A02B500D28E3C /* Song.swift */,
+				3DEEAEC37B554FECEBB2749F /* User.swift */,
+				F33E6CF4221BF3A300CFBB23 /* Artist.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F36EE491222928B70083B2B8 /* SongsDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */,
+			);
+			path = SongsDetails;
+			sourceTree = "<group>";
+		};
+		F36EE492222928D40083B2B8 /* ArtistDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F33E6CD2221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift */,
+				F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */,
+			);
+			path = ArtistDetails;
+			sourceTree = "<group>";
+		};
+		F36EE493222928E20083B2B8 /* SongsList */ = {
+			isa = PBXGroup;
+			children = (
+				F36EE49422292C5B0083B2B8 /* DataManager */,
+				F36EE49522292C880083B2B8 /* Interactor */,
+				F36EE49622292CAB0083B2B8 /* Presenter */,
+				F36EE49722292CB70083B2B8 /* Protocols */,
+				F36EE49922292CE00083B2B8 /* View */,
+				F36EE49822292CC50083B2B8 /* WireFrame */,
+			);
+			path = SongsList;
+			sourceTree = "<group>";
+		};
+		F36EE49422292C5B0083B2B8 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		F36EE49522292C880083B2B8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F36EE49622292CAB0083B2B8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F36EE49722292CB70083B2B8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F36EE49822292CC50083B2B8 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		F36EE49922292CE00083B2B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F336DDB72216B6DC0079B05D /* ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,7 +400,6 @@
 			files = (
 				F336DDC02216B6DE0079B05D /* LaunchScreen.storyboard in Resources */,
 				F336DDBD2216B6DE0079B05D /* Assets.xcassets in Resources */,
-				F33E6D00221D604700CFBB23 /* CardView.xib in Resources */,
 				F336DDBB2216B6DC0079B05D /* Main.storyboard in Resources */,
 				3DEEA78A48252B1B213C57A5 /* GoogleService-Info.plist in Resources */,
 			);
@@ -511,14 +589,12 @@
 			files = (
 				F345CC7A221EB5CA00E2BDFA /* SongsViewController.swift in Sources */,
 				F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */,
-				F33E6D02221D605B00CFBB23 /* CardView.swift in Sources */,
 				F397DD87221A02B500D28E3C /* Song.swift in Sources */,
 				F33E6CD3221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift in Sources */,
 				F336DDB82216B6DC0079B05D /* ViewController.swift in Sources */,
 				F33E6CF3221BF07F00CFBB23 /* ArtistTableViewCell.swift in Sources */,
 				F336DDB62216B6DC0079B05D /* AppDelegate.swift in Sources */,
 				F33E6CF5221BF3A300CFBB23 /* Artist.swift in Sources */,
-				F399EB61221D885700DDCECF /* MyCollectioTableCellCollectionViewCell.swift in Sources */,
 				F33E6CF7221BFBD100CFBB23 /* UIUtils.swift in Sources */,
 				3DEEAC1085D2738D777A54FF /* RESTClient.swift in Sources */,
 				3DEEAB0EA2AE6CA6208CBC27 /* User.swift in Sources */,
