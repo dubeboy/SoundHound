@@ -7,7 +7,26 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class SongModel {
+struct SongModel {
+    var id = 0
+    var name: String = ""
+    var artistName: String = ""
+    var albumName: String = ""
+    var genre: String = ""
+    var popularity: Int = 0
+    var artworkURL: String = ""
+}
+
+extension SongModel: Mappable {
+    init?(map: Map) {}
     
+    mutating func mapping(map: Map) {
+        id      <- map["id"]
+        name       <- map["title"]
+        artworkURL      <- map["artworkURL"]
+        artistName          <- map["name"]
+        
+    }
 }

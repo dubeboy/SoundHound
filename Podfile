@@ -29,5 +29,7 @@ target 'Songhound' do
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
   pod 'Firebase/Core'
+  pod 'PKHUD', '~> 5.0'
+  pod 'AlamofireObjectMapper', '~> 5.2'
 
 end
