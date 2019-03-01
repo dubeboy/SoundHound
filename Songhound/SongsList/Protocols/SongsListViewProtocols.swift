@@ -15,7 +15,7 @@ import UIKit
 // these are the functions that are doable by our view when it interacts with the presenter
 protocol SongsListViewProtocol: class {
     // maybe should be lazy ?
-    var presenter: SongsListViewProtocol? { get set }
+    var presenter: SongListPresenterProtocol? { get set }
     
     //presenter -> view
     func showSongsList(songs: [SongModel])
@@ -25,17 +25,6 @@ protocol SongsListViewProtocol: class {
     func showLoading()
     // we want to be able to hide the loading progress bar
     func hideLoading()
-}
-
-// we need the wireframe protocal so that this presenter can route to it desired page
-
-protocol SongsListViewWireFrameProtocol: class {
-    // TODO what does this do
-    static func createSongsListModule() -> UIViewController
-    // this function will actually route to the next screen
-    // also give it the required data
-    func presentSongDetailsScreen(from view: SongsListViewProtocol, forSong song: SongModel)
-    
 }
 
 //Song List presenter protocol
@@ -48,6 +37,18 @@ protocol SongListPresenterProtocol {
     func viewDidLoad()
     func showSongDetail(forSong song: SongModel)
 }
+
+// we need the wireframe protocal so that this presenter can route to it desired page
+protocol SongsListViewWireFrameProtocol: class {
+    // TODO what does this do
+    static func createSongsListModule() -> UIViewController
+    // this function will actually route to the next screen
+    // also give it the required data
+    func presentSongDetailsScreen(from view: SongsListViewProtocol, forSong song: SongModel)
+    
+}
+
+
 
 
 protocol SongsListInteratorOutputProtocol: class {

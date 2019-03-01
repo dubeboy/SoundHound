@@ -25,17 +25,8 @@ class SongsListViewController: UIViewController {
     }
 }
 
+//Song list view protocol
 extension SongsListViewController: SongsListViewProtocol {
-    var presenter: SongsListViewProtocol? {
-        get {
-            <#code#>
-        }
-        set {
-            <#code#>
-        }
-    }
-    
-    
     func showSongsList(songs: [SongModel]) {
         songList = songs
     }

@@ -14,11 +14,14 @@ class SongsListInterator: SongsListInteratorInputProtocol {
     var remoteDataManager: SongsListRemoteDataManagerInputProtocol?
     
     func retrieveSongsList() {
+        
+        remoteDataManager?.retrieveSongsList()
+
 //        do {
-//            // try loading from local storage yohh!
+            // try loading from local storage yohh!
 //            if let songsList = try localDataManager?.retriveSongList() {
 //                // Cool 😎
-//                let songsModelList = songsList.map() {song in
+//                let songsModelList = songsList.map() { song in
 //                    return SongModel(id: Int(song.id), title: song.title, imageURL: song.imageURL, artistName: song.artistName)
 //                }
 //                if songsModelList.isEmpty {
@@ -39,14 +42,16 @@ extension SongsListInterator: SongsListRemoteDataManagerOutputProtocol {
     func onSongsRetrieved(_ songs: [SongModel]) {
         presenter?.didRetrieveSongs(songs)
         
-        for songModel in songs {
+        // should do local data later bro
+        
+//        for songModel in songs {
 //            do {
 //                // saves should happen on another thread
-//                try localDataManager?.saveSong(id: songModel.id, title: songModel.title, artistName: songModel.artistName, imageURL: songModel.imageURL)
+//                try localDataManager?.saveSong(id: songModel.id, name: songModel.name, artistName: songModel.artistName, imageURL: songModel.imageURL)
 //            } catch {
 //                print("oops could not save songs bro")
 //            }
-        }
+//        }
     }
     func onError() {
         presenter?.onError()

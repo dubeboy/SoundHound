@@ -26,7 +26,8 @@ extension SongModel: Mappable {
         id      <- map["id"]
         name       <- map["title"]
         artworkURL      <- map["artworkURL"]
-        artistName          <- map["name"]
-        
+        artistName      <- map["artistName"]
+        albumName       <- map["albumName"]
+        genre       <- map["genre"]
     }
 }
