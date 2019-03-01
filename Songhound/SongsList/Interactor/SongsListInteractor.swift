@@ -37,11 +37,13 @@ class SongsListInterator: SongsListInteratorInputProtocol {
 
 extension SongsListInterator: SongsListRemoteDataManagerOutputProtocol {
     func onSongsRetrieved(_ songs: [SongModel]) {
-        presenter?.didRetrieveSongs(posts)
+        presenter?.didRetrieveSongs(songs)
         
         for songModel in songs {
+            
             do {
-                
+                // saves should happen on another thread
+                try localDataManager?.saveSong(id: songModel.id, title: songModel.title, artistName: songModel.artistName, imageURL: songModel.imageURL)
             } catch {
                 
             }
@@ -51,6 +53,4 @@ extension SongsListInterator: SongsListRemoteDataManagerOutputProtocol {
     func onError() {
         presenter?.onError()
     }
-    
-    
 }
