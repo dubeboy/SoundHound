@@ -24,6 +24,10 @@
 		F33E6CF5221BF3A300CFBB23 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF4221BF3A300CFBB23 /* Artist.swift */; };
 		F33E6CF7221BFBD100CFBB23 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */; };
 		F345CC7A221EB5CA00E2BDFA /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */; };
+		F36EE49B222935930083B2B8 /* SongsListViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EE49A222935930083B2B8 /* SongsListViewProtocols.swift */; };
+		F36EE49D222938930083B2B8 /* SongsListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EE49C222938930083B2B8 /* SongsListViewPresenter.swift */; };
+		F36EE49F222940A60083B2B8 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EE49E222940A60083B2B8 /* SongModel.swift */; };
+		F36EE4A1222956C20083B2B8 /* SongsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EE4A0222956C20083B2B8 /* SongsListInteractor.swift */; };
 		F397DD87221A02B500D28E3C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD86221A02B500D28E3C /* Song.swift */; };
 		F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */; };
 		F8E5BC3BAF256DE7CD755BEE /* Pods_SonghoundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D14AE6B7E5F0876C64E3747 /* Pods_SonghoundTests.framework */; };
@@ -77,6 +81,10 @@
 		F33E6CF4221BF3A300CFBB23 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
+		F36EE49A222935930083B2B8 /* SongsListViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListViewProtocols.swift; sourceTree = "<group>"; };
+		F36EE49C222938930083B2B8 /* SongsListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListViewPresenter.swift; sourceTree = "<group>"; };
+		F36EE49E222940A60083B2B8 /* SongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
+		F36EE4A0222956C20083B2B8 /* SongsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListInteractor.swift; sourceTree = "<group>"; };
 		F397DD86221A02B500D28E3C /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +214,7 @@
 				F397DD86221A02B500D28E3C /* Song.swift */,
 				3DEEAEC37B554FECEBB2749F /* User.swift */,
 				F33E6CF4221BF3A300CFBB23 /* Artist.swift */,
+				F36EE49E222940A60083B2B8 /* SongModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -250,6 +259,7 @@
 		F36EE49522292C880083B2B8 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				F36EE4A0222956C20083B2B8 /* SongsListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -257,6 +267,7 @@
 		F36EE49622292CAB0083B2B8 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				F36EE49C222938930083B2B8 /* SongsListViewPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 		F36EE49722292CB70083B2B8 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				F36EE49A222935930083B2B8 /* SongsListViewProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -588,13 +600,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F345CC7A221EB5CA00E2BDFA /* SongsViewController.swift in Sources */,
+				F36EE49B222935930083B2B8 /* SongsListViewProtocols.swift in Sources */,
 				F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */,
+				F36EE4A1222956C20083B2B8 /* SongsListInteractor.swift in Sources */,
 				F397DD87221A02B500D28E3C /* Song.swift in Sources */,
 				F33E6CD3221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift in Sources */,
+				F36EE49D222938930083B2B8 /* SongsListViewPresenter.swift in Sources */,
 				F336DDB82216B6DC0079B05D /* ViewController.swift in Sources */,
 				F33E6CF3221BF07F00CFBB23 /* ArtistTableViewCell.swift in Sources */,
 				F336DDB62216B6DC0079B05D /* AppDelegate.swift in Sources */,
 				F33E6CF5221BF3A300CFBB23 /* Artist.swift in Sources */,
+				F36EE49F222940A60083B2B8 /* SongModel.swift in Sources */,
 				F33E6CF7221BFBD100CFBB23 /* UIUtils.swift in Sources */,
 				3DEEAC1085D2738D777A54FF /* RESTClient.swift in Sources */,
 				3DEEAB0EA2AE6CA6208CBC27 /* User.swift in Sources */,
