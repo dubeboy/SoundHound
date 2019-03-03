@@ -30,6 +30,7 @@ class SongsListWireFrame: SongsListViewWireFrameProtocol {
             interactor.presenter = presenter
             interactor.remoteDataManager = remoteDataManager
             remoteDataManager.remoteRequestHandler = interactor
+            
             return navController
         }
         return UIViewController()

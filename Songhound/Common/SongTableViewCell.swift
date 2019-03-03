@@ -28,5 +28,14 @@ class SongTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func set(forSong song: SongModel) {
+        self.selectionStyle = .none
+        self.lblArtistName.text = song.artistName
+        self.lblSongName.text = song.name
+        self.lblGenre.text = song.genre
+        self.lblAlbumName.text = song.albumName
+        self.imgAlbumCover.dowloadFromServer(link: song.artworkURL)
+    }
 
 }

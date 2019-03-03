@@ -24,19 +24,80 @@ class SongsListViewController: UIViewController {
     @IBOutlet weak var lblArtistName1: UILabel!
     @IBOutlet weak var lblPlaying: UILabel!
     @IBOutlet weak var currentLocation: UILabel!
-    
     @IBOutlet weak var tableViewSongs: UITableView!
+    
     var presenter: SongListPresenterProtocol?
     var songList: [SongModel] = []
+    //-1 means no image was selected
+    private var selectedImage = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
+        // TODO: Investigate this please why does it not show list with out this
+        // also why does it not show the cell separators
+        self.tableViewSongs.delegate = self
+        self.tableViewSongs.dataSource = self
         tableViewSongs.tableFooterView = UIView()
 
         // Do any additional setup after loading the view.
+        setUpTopThreeImages()
     }
+    
+    private func setUpTopThreeImages() {
+        makeUIImageViewCircle(imageView: imgProfilePicture, imgSize: 50)
+        makeUIImageViewCircle(imageView: imgArtist1, imgSize: 100)
+        makeUIImageViewCircle(imageView: imgArtist2, imgSize: 100)
+        makeUIImageViewCircle(imageView: imgArtist3, imgSize: 100)
+        
+        addTapGestureToAnImageView(imageView: imgArtist3)
+        addTapGestureToAnImageView(imageView: imgArtist1)
+        addTapGestureToAnImageView(imageView: imgArtist2)
+    }
+    
+    
+    func addTapGestureToAnImageView(imageView: UIImageView) {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(gesture:)))
+        imageView.addGestureRecognizer(tapGesture)
+        imageView.isUserInteractionEnabled = true
+        
+        //  imageTapped(gesture: tapGesture)
+    }
+    
+    @objc func imageTapped(gesture: UIGestureRecognizer) {
+        if let imageView = gesture.view as? UIImageView {
+            print("Hello ")
+            // niot sure if this is a good idea on getting by tag
+            let tag = imageView.tag
+            print("the tag is \(tag)")
+            
+            switch tag {
+            case 0:
+                print("img one openi")
+                selectedImage = 0
+                performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+            case 1:
+                print("img one open")
+                selectedImage = 1
+                performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+            case 2:
+                print("img one opennn")
+                selectedImage = 2
+                performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+            case 3:
+                print("profile picture selected bro ")
+            //    GIDSignIn.sharedInstance().signIn()
+            default:
+                print("ooops")
+                
+            }
+        }
+    }
+    
+    
 }
+
+
 
 //Song list view protocol
 extension SongsListViewController: SongsListViewProtocol {
@@ -65,20 +126,8 @@ extension SongsListViewController:  UITableViewDataSource, UITableViewDelegate  
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableViewSongs.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) as! SongTableViewCell
-        let artistName: String = songList[indexPath.row].artistName
-        let songName: String = songList[indexPath.row].name
-        let genre: String = songList[indexPath.row].genre
-        let albumName: String = songList[indexPath.row].albumName
-        cell.lblArtistName.text = artistName
-        cell.lblSongName.text = songName
-        cell.lblGenre.text = genre
-        cell.lblAlbumName.text = albumName
-        //ASK: I dont get why this whould be forced to unwrapped
-        let cellImageView = cell.imgAlbumCover!
-        // will download image later
-        let albumCoverURL = songList[indexPath.row].artworkURL
-        cellImageView.dowloadFromServer(link: albumCoverURL)
-        
+        let song = songList[indexPath.row]
+        cell.set(forSong: song)
         return cell
     }
     

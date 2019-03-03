@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 struct SongModel {
-    var id = 0
+    var id: UInt = 0
     var name: String = ""
     var artistName: String = ""
     var albumName: String = ""
@@ -31,11 +31,11 @@ extension SongModel: Mappable {
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {
-        id      <- map["id"]
-        name       <- map["title"]
-        artworkURL      <- map["artworkURL"]
+        id      <- map["collectionId"]
+        name       <- map["trackName"]
+        artworkURL      <- map["artworkUrl100"]
         artistName      <- map["artistName"]
-        albumName       <- map["albumName"]
+        albumName       <- map["collectionName"]
         genre       <- map["genre"]
     }
 }

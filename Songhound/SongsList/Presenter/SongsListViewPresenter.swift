@@ -17,6 +17,7 @@ class SongsListViewPresenter: SongListPresenterProtocol {
     
     func viewDidLoad() {
         view?.showLoading()
+        interactor?.retrieveSongsList()
     }
     
     func showSongDetail(forSong song: SongModel) {
