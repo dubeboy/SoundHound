@@ -343,13 +343,6 @@ class ViewController: UIViewController,
 
 }
 
-//
-// EXTENSIONS
-//
-// READ:  make sure the is conforms to the CLLocationManagerDelegate
-
-
-
 extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         guard status == .authorizedWhenInUse else {
