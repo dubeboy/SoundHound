@@ -9,21 +9,23 @@
 import Foundation
 
 struct API {
-   static let baseURL = ""
+   static let baseURL = "https://itunes.apple.com/search?media=music&entity=song"
 }
 
+// this is the structure of how a any url should look like
 protocol Endpoint {
     var path: String { get }
     var url: String { get }
 }
-
+// these are all my end points
 enum Endpoints {
     enum Songs: Endpoint {
-        case fetch
+        case fetch(songName: String)
     
+        // these are functions of this enum!
         public var path: String {
             switch self {
-            case .fetch: return "/getAllPSongs"
+            case .fetch(let songName): return "&term=\(songName)"
          }
         }
         
@@ -32,6 +34,7 @@ enum Endpoints {
             case .fetch: return "\(API.baseURL)\(path)"
             }
         }
+        
     }
 }
 
