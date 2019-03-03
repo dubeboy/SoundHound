@@ -16,7 +16,7 @@ class SongListRemoteDataManager : SongsListRemoteDataManagerInputProtocol {
     func retrieveSongsList() {
         Alamofire
             .request(Endpoints.Songs.fetch(songName: "swift").url, method: .get)
-            .validate() // no need for this but anyway..
+//            .validate() // no need for this but anyway..
             .responseObject { (response: DataResponse<SongModelResponse>) in
                 switch response.result {
                 case .success(let res):
