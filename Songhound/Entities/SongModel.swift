@@ -19,6 +19,14 @@ struct SongModel {
     var artworkURL: String = ""
 }
 
+/*
+     try this so that we can remove the songs model
+ 
+     func mapping(map: Map) {
+     distance <- map["distance.value"]
+     }
+ */
+
 extension SongModel: Mappable {
     init?(map: Map) {}
     

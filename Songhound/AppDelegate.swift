@@ -26,6 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
        
         // activate firebase core
         FirebaseApp.configure()
+        
+        // init our 
+        let songsList = SongsListWireFrame.createSongsListModule()
+        // I guess this is where we set the windows size when we open apps for iPhone on iPad ie. Instagram
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController =  songsList
+        // what is a key window is it the laucher screen?
+        window?.makeKeyAndVisible()
         return true
     }
 
