@@ -9,12 +9,25 @@
 import UIKit
 import PKHUD
 
+// TODO must be ablke to mod the navigation controller
+
 class SongsListViewController: UIViewController {
+    
+    //top Items for the songs list view controller
+    @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var imgProfilePicture: UIImageView!
+    @IBOutlet weak var imgArtist3: UIImageView!
+    @IBOutlet weak var imgArtist2: UIImageView!
+    @IBOutlet weak var imgArtist1: UIImageView!
+    @IBOutlet weak var lblArtistName3: UILabel!
+    @IBOutlet weak var lblArtistName2: UILabel!
+    @IBOutlet weak var lblArtistName1: UILabel!
+    @IBOutlet weak var lblPlaying: UILabel!
+    @IBOutlet weak var currentLocation: UILabel!
     
     @IBOutlet weak var tableViewSongs: UITableView!
     var presenter: SongListPresenterProtocol?
     var songList: [SongModel] = []
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +42,7 @@ class SongsListViewController: UIViewController {
 extension SongsListViewController: SongsListViewProtocol {
     func showSongsList(songs: [SongModel]) {
         songList = songs
+        tableViewSongs.reloadData()
     }
     
     func showError() {
@@ -66,5 +80,9 @@ extension SongsListViewController:  UITableViewDataSource, UITableViewDelegate  
         cellImageView.dowloadFromServer(link: albumCoverURL)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // do stuff when a cell is selected
     }
 }

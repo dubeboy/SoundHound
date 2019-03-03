@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="I1A-gf-wT1">
             <objects>
-                <navigationController id="ikd-3n-UWF" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SongsViewNavigationController" id="ikd-3n-UWF" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TGg-DS-J12">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="551" y="-388"/>
         </scene>
-        <!--View Controller-->
+        <!--Songs List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Songhound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SongsListViewController" customModule="Songhound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
