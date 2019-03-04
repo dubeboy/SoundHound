@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>288110944258-v4dbvagvi9nro8dvm7gfaaquja4la1p3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.288110944258-v4dbvagvi9nro8dvm7gfaaquja4la1p3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDT9RpEeU1of49ZkQvJqhlb1nGzvHBcj2k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>288110944258</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>za.co.dubedivine.ios.Songhound</string>
+	<key>PROJECT_ID</key>
+	<string>soundhound-1550224703779</string>
+	<key>STORAGE_BUCKET</key>
+	<string>soundhound-1550224703779.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:288110944258:ios:fef8a7821d1eabb9</string>
+	<key>DATABASE_URL</key>
+	<string>https://soundhound-1550224703779.firebaseio.com</string>
+</dict>
+</plist>
