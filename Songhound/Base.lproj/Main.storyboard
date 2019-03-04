@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="551" y="-388"/>
         </scene>
-        <!--Songs List View Controller-->
+        <!--🔥Hot Songs & Artists🔥-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SongsListViewController" customModule="Songhound" customModuleProvider="target" sceneMemberID="viewController">
@@ -224,7 +224,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="68C-p5-kgL"/>
+                    <navigationItem key="navigationItem" title="🔥Hot Songs &amp; Artists🔥" id="68C-p5-kgL"/>
                     <connections>
                         <outlet property="currentLocation" destination="GOi-43-d7P" id="cAJ-8i-nD5"/>
                         <outlet property="imgArtist1" destination="eOp-gc-GaD" id="LkR-3X-DBm"/>
