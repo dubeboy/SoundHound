@@ -17,6 +17,8 @@ let EMAIL = "email"
 let PROFILE_URL = "profile_url"
 
 
+
+
 func makeUIImageViewCircle(imageView: UIImageView, imgSize: Int) {
         imageView.layer.cornerRadius = CGFloat(imgSize / 2)
         imageView.layer.masksToBounds = true;
