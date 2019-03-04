@@ -40,7 +40,7 @@ protocol SongListPresenterProtocol {
     // VIEW -> Presenter
     func viewDidLoad()
     func showSongDetail(forSong song: SongModel)
-    func showArtistSongs(forArtist artist: ArtistModel)
+    func showSongs(forArtist artist: ArtistModel)
 }
 
 // we need the wireframe protocal so that this presenter can route to it desired page
@@ -50,6 +50,7 @@ protocol SongsListViewWireFrameProtocol: class {
     // this function will actually route to the next screen
     // also give it the required data
     func presentSongDetailsScreen(from view: SongsListViewProtocol, forSong song: SongModel)
+    func presentSongsListViewScreen(from view: SongsListViewProtocol, forArtist artist: ArtistModel)
     
 }
 

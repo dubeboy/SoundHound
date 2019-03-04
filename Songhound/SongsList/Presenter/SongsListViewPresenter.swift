@@ -12,6 +12,7 @@
 // this class communicates with the other classes
 // get the user response from the View
 class SongsListViewPresenter: SongListPresenterProtocol {
+
     weak var view: SongsListViewProtocol?
     var interactor: SongsListInteratorInputProtocol?
     var wireframe: SongsListViewWireFrameProtocol?
@@ -24,7 +25,10 @@ class SongsListViewPresenter: SongListPresenterProtocol {
     func showSongDetail(forSong song: SongModel) {
         wireframe?.presentSongDetailsScreen(from: view!, forSong: song)
     }
-
+    
+    func showSongs(forArtist artist: ArtistModel) {
+        // call the wireframe to show the details
+    }
 }
 
 extension SongsListViewPresenter: SongsListInteratorOutputProtocol {

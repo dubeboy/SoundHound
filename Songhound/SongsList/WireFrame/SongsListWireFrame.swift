@@ -9,7 +9,7 @@
 import UIKit
 
 class SongsListWireFrame: SongsListViewWireFrameProtocol {
-    
+   
     // some how this is static yoh
     class func createSongsListModule() -> UIViewController {
         // instatiate the main view controller
@@ -36,8 +36,14 @@ class SongsListWireFrame: SongsListViewWireFrameProtocol {
         return UIViewController()
     }
     
+    //actuall wireframing methods
+    
     func presentSongDetailsScreen(from view: SongsListViewProtocol, forSong song: SongModel) {
       //  let songDetailController = songDetailController
+    }
+    
+    func presentSongsListViewScreen(from view: SongsListViewProtocol, forArtist artist: ArtistModel) {
+        
     }
     
      static var mainStoryBoard: UIStoryboard {
