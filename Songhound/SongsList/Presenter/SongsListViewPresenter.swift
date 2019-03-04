@@ -8,8 +8,9 @@
 
 import UIKit
 
-// so this classes charectoristic is defined by this protocol that it inherits from
-//
+// so this classes characteristic is defined by this protocol that it inherits from
+// this class communicates with the other classes
+// get the user response from the View
 class SongsListViewPresenter: SongListPresenterProtocol {
     weak var view: SongsListViewProtocol?
     var interactor: SongsListInteratorInputProtocol?

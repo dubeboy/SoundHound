@@ -16,9 +16,13 @@ import UIKit
 protocol SongsListViewProtocol: class {
     // maybe should be lazy ?
     var presenter: SongListPresenterProtocol? { get set }
-    
     //presenter -> view
     func showSongsList(songs: [SongModel])
+
+    //onTopThreeTopArtistsClicked
+
+    func onTopThreeArtistClicked()
+
     // must be able to show a friendly error when it ocours so that we dont make our users cry
     func showError()
     // show that we loading some data
@@ -36,6 +40,7 @@ protocol SongListPresenterProtocol {
     // VIEW -> Presenter
     func viewDidLoad()
     func showSongDetail(forSong song: SongModel)
+   // func showArtistSongs(forArtist artist: ArtistModel)
 }
 
 // we need the wireframe protocal so that this presenter can route to it desired page
