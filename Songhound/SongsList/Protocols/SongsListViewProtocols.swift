@@ -13,22 +13,15 @@
 import UIKit
 
 // these are the functions that are doable by our view when it interacts with the presenter
-protocol SongsListViewProtocol: class {
+protocol SongsListViewProtocol: class, CommonNetworkProtocol {
     // maybe should be lazy ?
     var presenter: SongListPresenterProtocol? { get set }
     //presenter -> view
     func showSongsList(songs: [SongModel])
-
     //onTopThreeTopArtistsClicked
-
     func onTopThreeArtistClicked()
+    
 
-    // must be able to show a friendly error when it ocours so that we dont make our users cry
-    func showError()
-    // show that we loading some data
-    func showLoading()
-    // we want to be able to hide the loading progress bar
-    func hideLoading()
 }
 
 //Song List presenter protocol
@@ -51,11 +44,7 @@ protocol SongsListViewWireFrameProtocol: class {
     // also give it the required data
     func presentSongDetailsScreen(from view: SongsListViewProtocol, forSong song: SongModel)
     func presentSongsListViewScreen(from view: SongsListViewProtocol, forArtist artist: ArtistModel)
-    
 }
-
-
-
 
 protocol SongsListInteratorOutputProtocol: class {
     func didRetrieveSongs(_ songs: [SongModel])
