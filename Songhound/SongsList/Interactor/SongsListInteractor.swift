@@ -8,6 +8,9 @@
 
 import Foundation
 
+
+// the buss logic goes here
+
 class SongsListInterator: SongsListInteratorInputProtocol {
     var presenter: SongsListInteratorOutputProtocol?
     var localDataManager: SongsListLocalDataManagerInputProtocol?

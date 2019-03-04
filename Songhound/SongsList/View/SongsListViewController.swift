@@ -11,6 +11,8 @@ import PKHUD
 
 // TODO must be ablke to mod the navigation controller
 
+// TODO GET APP back to the state that it was before VIPER
+
 class SongsListViewController: UIViewController {
     
     //top Items for the songs list view controller
@@ -38,7 +40,7 @@ class SongsListViewController: UIViewController {
         // also why does it not show the cell separators
         self.tableViewSongs.delegate = self
         self.tableViewSongs.dataSource = self
-        tableViewSongs.tableFooterView = UIView()
+       // tableViewSongs.tableFooterView = UIView()
 
         // Do any additional setup after loading the view.
         setUpTopThreeImages()
@@ -61,7 +63,7 @@ class SongsListViewController: UIViewController {
         imageView.addGestureRecognizer(tapGesture)
         imageView.isUserInteractionEnabled = true
         
-        //  imageTapped(gesture: tapGesture)
+        imageTapped(gesture: tapGesture)
     }
     
     @objc func imageTapped(gesture: UIGestureRecognizer) {
@@ -75,15 +77,16 @@ class SongsListViewController: UIViewController {
             case 0:
                 print("img one openi")
                 selectedImage = 0
-                performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+                    //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+                    // will perform segue on the presenter since its the only one which can do so
             case 1:
                 print("img one open")
                 selectedImage = 1
-                performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+               // performSegue(withIdentifier: "viewSongsForArtist", sender: self)
             case 2:
                 print("img one opennn")
                 selectedImage = 2
-                performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+              //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
             case 3:
                 print("profile picture selected bro ")
             //    GIDSignIn.sharedInstance().signIn()
@@ -101,6 +104,10 @@ class SongsListViewController: UIViewController {
 
 //Song list view protocol
 extension SongsListViewController: SongsListViewProtocol {
+    func onTopThreeArtistClicked() {
+        
+    }
+    
     func showSongsList(songs: [SongModel]) {
         songList = songs
         tableViewSongs.reloadData()
