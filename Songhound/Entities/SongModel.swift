@@ -17,6 +17,7 @@ struct SongModel {
     var genre: String = ""
     var popularity: Int = 0
     var artworkURL: String = ""
+    var artist: ArtistModel = ArtistModel()
 }
 
 /*
@@ -37,5 +38,8 @@ extension SongModel: Mappable {
         artistName      <- map["artistName"]
         albumName       <- map["collectionName"]
         genre       <- map["genre"]
+        // initialise the artist also
+        artist.name     <-  map["artistName"]
+        artist.artistID     <- map["artistId"]
     }
 }
