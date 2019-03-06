@@ -14,9 +14,18 @@ class ArtistsListViewWireFrame: ArtistsListViewWireFrameProtocol {
         let viewController = mainStoryboard.instantiateViewController(withIdentifier: "ArtistListViewController")
         
         if let view = viewController as? ArtistsListViewController {
-            let presenter = 
+            var presenter: ArtistSongsListViewPresenterProtocol = ArtistSongListViewPresenter()
+            var wireframe: ArtistsListViewWireFrameProtocol = ArtistsListViewWireFrame()
+            
+            view.presenter = presenter
+            presenter.view = view
+            presenter.artist = artist
+            presenter.wireFrame = wireframe
+            
+            return viewController
+            
         }
-        return UIViewController
+        return UIViewController()
     }
     
     

@@ -9,5 +9,13 @@
 import Foundation
 
 class ArtistSongListViewPresenter: ArtistSongsListViewPresenterProtocol {
+    var view: ArtistsListViewProtocol?
+    var interactor: ArtistSongsListViewInteractorInputProtocol?
+    var wireFrame: ArtistsListViewWireFrameProtocol?
+    var artist: ArtistModel?
     
+    func viewDidLoad() {
+        view?.showLoading(forArtist: artist!)
+        interactor?.retriveSongsList()
+    }
 }

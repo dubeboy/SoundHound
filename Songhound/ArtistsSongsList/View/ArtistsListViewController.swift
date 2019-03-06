@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import PKHUD
 
 class ArtistsListViewController: UIViewController {
 
+    @IBOutlet weak var songsTableView: UITableView!
+    @IBOutlet weak var artistName: UILabel!
+    
+    var songList: [SongModel] = []
+    
+    var presenter: ArtistSongsListViewPresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       // songsTableView.footerView = UIView()
 
         // Do any additional setup after loading the view.
     }
@@ -19,26 +28,35 @@ class ArtistsListViewController: UIViewController {
 
 extension ArtistsListViewController: ArtistsListViewProtocol {
 
-   
-    func showSongsList(songs: [SongModel]) {
-        
+    func showSongs(with songs: [SongModel]) {
+        songList = songs
+        self.songsTableView.reloadData()
     }
     
-    func onTopThreeArtistClicked() {
-        <#code#>
+    func showLoading(forArtist artist: ArtistModel) {
+        HUD.show(.progress)
+        self.artistName.text = artist.name
     }
     
+    // they should be refactored to another page
     func showError() {
-        <#code#>
-    }
-    
-    func showLoading() {
-        <#code#>
+        HUD.flash(.label("Internet not connect"), delay: 2.0)
     }
     
     func hideLoading() {
-        <#code#>
+        HUD.hide()
+    }
+}
+
+extension ArtistsListViewController:  UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return songList.count
     }
     
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.songsTableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) as! SongTableViewCell
+        let song = songList[indexPath.row]
+        cell.set(forSong: song)
+        return cell
+    }
 }

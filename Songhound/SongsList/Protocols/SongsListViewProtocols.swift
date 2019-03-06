@@ -13,13 +13,14 @@
 import UIKit
 
 // these are the functions that are doable by our view when it interacts with the presenter
-protocol SongsListViewProtocol: class, CommonNetworkProtocol {
+protocol SongsListViewProtocol: CommonNetworkProtocol {
     // maybe should be lazy ?
     var presenter: SongListPresenterProtocol? { get set }
     //presenter -> view
     func showSongsList(songs: [SongModel])
     //onTopThreeTopArtistsClicked
     func onTopThreeArtistClicked()
+     func showLoading()
     
 
 }
