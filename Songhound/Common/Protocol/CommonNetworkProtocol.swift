@@ -8,11 +8,10 @@
 
 import Foundation
 
-protocol CommonNetworkProtocol: class {
+@objc protocol CommonNetworkProtocol: class {
     // must be able to show a friendly error when it ocours so that we dont make our users cry
     func showError()
     // show that we loading some data
-    func showLoading()
     // we want to be able to hide the loading progress bar
     func hideLoading()
 }

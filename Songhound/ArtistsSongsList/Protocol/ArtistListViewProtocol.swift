@@ -10,9 +10,14 @@ import Foundation
 import UIKit
 
 // TODO should probably extract the common methods of these protocols
-// did this so that we can build our own methods for the ArtistList if need be
+// did this for ease of customization
 protocol ArtistsListViewProtocol: CommonNetworkProtocol {
+
+    var presenter: ArtistSongsListViewPresenterProtocol? { get set }
     
+    // PRESENTER -> VIEW
+    func showSongs(with songs: [SongModel])
+    func showLoading(forArtist artist: ArtistModel)
 }
 
 // TODO a bit of inconsitencey this module is called the ArtistsList
@@ -30,10 +35,10 @@ protocol ArtistSongsListViewPresenterProtocol {
     // i.e the interactor. this interactor has an output in which it has a reference to this presenter
     var interactor: ArtistSongsListViewInteractorInputProtocol? { get set }
     var wireFrame: ArtistsListViewWireFrameProtocol? { get set }
+    var artist: ArtistModel? { get set }
     
     //VIEW -> PRESENT
-    func viewDidLoa()
-    func showSongsList(forArtist artist: ArtistModel)
+    func viewDidLoad()
 }
 
 
@@ -41,18 +46,30 @@ protocol ArtistSongsListViewPresenterProtocol {
 protocol ArtistSongsListViewInteractorInputProtocol: class {
     var presenter: ArtistSongsListViewInteractorOutputProtocol? { get set }
     var remoteDataManager: ArtistListRemoteDataManagerInputProtocol? { get set }
+    
+    // From PRESENTER -> INTERACTOR asking for input
+    // will callback presenter when its done
+    func retriveSongsList()
 }
 
 // this protocol defines what happens to the data that goes out of the interactor
 // define how the data goes out of the interactor
 protocol ArtistSongsListViewInteractorOutputProtocol  {
-    // Interactor -> Presenter
+    // from the interactor -> Presenter
+    // this is how the interactor responds to the presenter
     func didRetrieveSongs(_ songs: [SongModel])
     func onError()
 }
 
 protocol ArtistListRemoteDataManagerInputProtocol {
+    
+    var remoteRequestHandler: ArtistSongsListDataManagerOutputProtocol? { get set }
     // RemoteData manager -> Interactor
-    func onArtistSongsRetrieved(_ posts: [SongModel])
+    func retriveSongsList()
+}
+
+protocol ArtistSongsListDataManagerOutputProtocol {
+    func onArtistSongsListRetrieved(_ songs: [SongModel])
     func onError()
 }
+

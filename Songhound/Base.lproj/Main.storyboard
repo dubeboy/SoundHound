@@ -17,6 +17,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TGg-DS-J12">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aY8-0m-fkX"/>
@@ -469,7 +470,8 @@
                     </view>
                     <connections>
                         <outlet property="arti" destination="AdB-Vb-RjE" id="J4q-lX-WbW"/>
-                        <outlet property="songsTableView" destination="wde-vl-OfO" id="ycO-Bg-gLm"/>
+                        <outlet property="artistName" destination="AdB-Vb-RjE" id="B8Z-OA-dAm"/>
+                        <outlet property="songsTableView" destination="wde-vl-OfO" id="Wyu-8Q-DVI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t28-61-ABC" userLabel="First Responder" sceneMemberID="firstResponder"/>
