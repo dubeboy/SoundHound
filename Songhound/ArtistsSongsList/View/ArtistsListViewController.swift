@@ -20,6 +20,7 @@ class ArtistsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.viewDidLoad()
        // songsTableView.footerView = UIView()
 
         // Do any additional setup after loading the view.
