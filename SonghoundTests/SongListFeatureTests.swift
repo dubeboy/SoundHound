@@ -1,17 +1,15 @@
 //
-//  SonghoundTests.swift
-//  SonghoundTests
+//  SongListFeatureTests.swift
+//  Songhound
 //
-//  Created by Divine Dube on 2019/02/15.
+//  Created by Divine Dube on 2019-03-07.
 //  Copyright © 2019 Divine Dube. All rights reserved.
 //
 
 import XCTest
-@testable import Songhound
 
-class SonghoundTests: XCTestCase {
+class SongListFeatureTests: XCTestCase {
 
-    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
