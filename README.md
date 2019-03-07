@@ -21,4 +21,4 @@ You can also login using your google account and set your music preference.
  
 ### How it looks like(for now )
 
-<img src="song.png" alt="screenshot" width="320">
+<img src="song1.png" alt="screenshot" width="320"> <img src="song2.png" alt="screenshot" width="320">
