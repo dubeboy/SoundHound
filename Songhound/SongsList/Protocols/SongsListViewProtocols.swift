@@ -20,9 +20,7 @@ protocol SongsListViewProtocol: CommonNetworkProtocol {
     func showSongsList(songs: [SongModel])
     //onTopThreeTopArtistsClicked
     func onTopThreeArtistClicked()
-     func showLoading()
-    
-
+    func showLoading()
 }
 
 //Song List presenter protocol
@@ -34,7 +32,8 @@ protocol SongListPresenterProtocol {
     // VIEW -> Presenter
     func viewDidLoad()
     func showSongDetail(forSong song: SongModel)
-    func showSongs(forArtist artist: ArtistModel)
+    func showSongs(forSelectedArtistId: Int)
+    //TODO show awesome stuff
 }
 
 // we need the wireframe protocal so that this presenter can route to it desired page
@@ -49,6 +48,7 @@ protocol SongsListViewWireFrameProtocol: class {
 
 protocol SongsListInteratorOutputProtocol: class {
     func didRetrieveSongs(_ songs: [SongModel])
+    func didSelectArtist(artist: ArtistModel)
     func onError()
 }
 
@@ -59,6 +59,7 @@ protocol SongsListInteratorInputProtocol {
     
     // PRESENTER - INTERACTOR
     func retrieveSongsList()
+    func getArtist(top selectedId: Int)
 }
 
 protocol SongsListDataManagerInputProtocol {
@@ -74,7 +75,9 @@ protocol SongsListRemoteDataManagerInputProtocol: class {
 protocol SongsListRemoteDataManagerOutputProtocol: class {
     //REMOTEDATAMODEEL -> INTERACTOR
     func onSongsRetrieved(_ songs: [SongModel])
+    func onArtistSelected(artist: ArtistModel)
     func onError()
+
 }
 
 protocol SongsListLocalDataManagerInputProtocol {

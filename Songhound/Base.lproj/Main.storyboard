@@ -469,7 +469,6 @@
                         <viewLayoutGuide key="safeArea" id="yud-23-xsf"/>
                     </view>
                     <connections>
-                        <outlet property="arti" destination="AdB-Vb-RjE" id="J4q-lX-WbW"/>
                         <outlet property="artistName" destination="AdB-Vb-RjE" id="B8Z-OA-dAm"/>
                         <outlet property="songsTableView" destination="wde-vl-OfO" id="Wyu-8Q-DVI"/>
                     </connections>
