@@ -77,15 +77,18 @@ class SongsListViewController: UIViewController {
             case 0:
                 print("img one openi")
                 selectedImage = 0
+                presenter?.showSongs(forSelectedArtistId: selectedImage)
                     //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
                     // will perform segue on the presenter since its the only one which can do so
             case 1:
                 print("img one open")
                 selectedImage = 1
+                presenter?.showSongs(forSelectedArtistId: selectedImage)
                // performSegue(withIdentifier: "viewSongsForArtist", sender: self)
             case 2:
                 print("img one opennn")
                 selectedImage = 2
+                presenter?.showSongs(forSelectedArtistId: selectedImage)
               //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
             case 3:
                 print("profile picture selected bro ")

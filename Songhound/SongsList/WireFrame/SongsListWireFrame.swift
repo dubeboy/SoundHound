@@ -43,6 +43,10 @@ class SongsListWireFrame: SongsListViewWireFrameProtocol {
     }
     
     func presentSongsListViewScreen(from view: SongsListViewProtocol, forArtist artist: ArtistModel) {
-        
+        let artistSongsList = ArtistsListViewWireFrame.createArtistListViewModule(forArtist: artist)
+
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(artistSongsList, animated: true)
+        }
     }
 }

@@ -26,12 +26,14 @@ class SongsListViewPresenter: SongListPresenterProtocol {
         wireframe?.presentSongDetailsScreen(from: view!, forSong: song)
     }
     
-    func showSongs(forArtist artist: ArtistModel) {
-        // call the wireframe to show the details
+    func showSongs(forSelectedArtistId: Int) {
+        interactor?.getArtist(top: forSelectedArtistId)
     }
 }
 
 extension SongsListViewPresenter: SongsListInteratorOutputProtocol {
+
+
     func didRetrieveSongs(_ songs: [SongModel]) {
         view?.hideLoading()
         view?.showSongsList(songs: songs)
@@ -40,5 +42,9 @@ extension SongsListViewPresenter: SongsListInteratorOutputProtocol {
     func onError() {
         view?.hideLoading()
         view?.showError()
+    }
+
+    func didSelectArtist(artist: ArtistModel) {
+        wireframe?.presentSongsListViewScreen(from:  view!, forArtist: artist)
     }
 }
