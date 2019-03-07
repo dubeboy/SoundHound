@@ -13,7 +13,8 @@ class ArtistSongListViewPresenter: ArtistSongsListViewPresenterProtocol {
     var interactor: ArtistSongsListViewInteractorInputProtocol?
     var wireFrame: ArtistsListViewWireFrameProtocol?
     var artist: ArtistModel?
-    
+
+    // begin genesis
     func viewDidLoad() {
         view?.showLoading(forArtist: artist!)
         interactor?.retriveSongsList()
