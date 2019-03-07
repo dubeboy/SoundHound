@@ -6,13 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2eee9e1-9dc2-454d-9a1e-894351fabda3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Songhound.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/Unnamed.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/Unnamed.xcscheme" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Songhound.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound.xcodeproj/xcuserdata/DDube.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songhound/ArtistsSongsList/Presenter/ArtistSongListViewPresenter.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/ArtistsSongsList/Presenter/ArtistSongListViewPresenter.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songhound/Common/Endpoints.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/Common/Endpoints.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songhound/Common/UIUtils.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/Common/UIUtils.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SonghoundTests/SonghoundTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SonghoundTests/SonghoundTests.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/song.png" beforeDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2018.3/DerivedData/Songhound-elqamlmfncjwytfemhsofhaxastt/" />
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/Songhound-elqamlmfncjwytfemhsofhaxastt/Build/Intermediates.noindex/" />
@@ -52,7 +48,7 @@
             <entry file="file://$PROJECT_DIR$/SonghoundTests/SonghoundTests.swift">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="201">
-                  <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+                  <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
                   <folding>
                     <element signature="e#151#164#0" expanded="true" />
                   </folding>
@@ -63,8 +59,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/View/TopSongsByArtistViewController.swift">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="218">
-                  <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+                <state relative-caret-position="225">
+                  <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -175,8 +171,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Songhound/Entities/SongModel.swift">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="397">
-                  <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+                <state relative-caret-position="232">
+                  <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
@@ -241,57 +237,6 @@
               <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
               <item name="Songhound" type="fcab9f18:XcodeViewNode" />
             </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-              <item name="Songhound" type="fcab9f18:XcodeViewNode" />
-              <item name="Common" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-              <item name="Songhound" type="fcab9f18:XcodeViewNode" />
-              <item name="Entities" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-              <item name="Songhound" type="fcab9f18:XcodeViewNode" />
-              <item name="SongsList" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-              <item name="Songhound" type="fcab9f18:XcodeViewNode" />
-              <item name="SongsList" type="fcab9f18:XcodeViewNode" />
-              <item name="DataManager" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-              <item name="Songhound" type="fcab9f18:XcodeViewNode" />
-              <item name="SongsList" type="fcab9f18:XcodeViewNode" />
-              <item name="Presenter" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-              <item name="Songhound" type="fcab9f18:XcodeViewNode" />
-              <item name="SongsList" type="fcab9f18:XcodeViewNode" />
-              <item name="View" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-              <item name="Songhound" type="fcab9f18:XcodeViewNode" />
-              <item name="SongsList" type="fcab9f18:XcodeViewNode" />
-              <item name="WireFrame" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-              <item name="SonghoundTests" type="fcab9f18:XcodeViewNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -331,30 +276,15 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="Songhound" CONFIG_NAME="Debug" SCHEME_NAME="Unnamed" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" RUN_TARGET_PROJECT_NAME="Songhound" RUN_TARGET_NAME="Songhound" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <embedded_app_extension_list />
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SonghoundTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="SonghoundTests" CONFIG_NAME="Debug" SCHEME_NAME="SonghoundTests" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="SonghoundTests" TEST_MODE="SUITE_TEST">
+    <configuration name="SonghoundTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="SonghoundTests" CONFIG_NAME="Debug" SCHEME_NAME="SonghoundTests" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.Songhound" />
-      <item itemvalue="Application.Unnamed" />
       <item itemvalue="XCTest.SonghoundTests" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="XCTest.SonghoundTests" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -370,7 +300,7 @@
       <workItem from="1551621714718" duration="187000" />
       <workItem from="1551621923557" duration="548000" />
       <workItem from="1551869732327" duration="422000" />
-      <workItem from="1551881905259" duration="13732000" />
+      <workItem from="1551881905259" duration="14263000" />
     </task>
     <servers />
   </component>
@@ -380,7 +310,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16504000" />
+    <option name="totallyTimeSpent" value="17035000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -395,13 +325,13 @@
     <frame x="0" y="23" width="1440" height="809" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23390558" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23390558" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31380752" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.31241283" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39888424" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -409,7 +339,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32914925" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.32914925" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.7810321" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32914925" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -591,7 +521,7 @@
     <entry file="file://$PROJECT_DIR$/SonghoundTests/SonghoundTests.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding>
             <element signature="e#151#164#0" expanded="true" />
           </folding>
@@ -600,15 +530,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Songhound/Entities/SongModel.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        <state relative-caret-position="232">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/View/TopSongsByArtistViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="225">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
         </state>
       </provider>
     </entry>
