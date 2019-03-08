@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		229EF629C524C7E6994B64A6 /* Pods_SonghoundUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70EE039CCAEAA79B85A1C04 /* Pods_SonghoundUITests.framework */; };
 		25721CE2FA20FFF9A4FEB921 /* Pods_Songhound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F868351CECD45F62855E8FB /* Pods_Songhound.framework */; };
 		3DEEA36EBD0201F665B86258 /* SongListFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA55DB13DB618F6D1E0CB /* SongListFeatureTests.swift */; };
 		3DEEA78A48252B1B213C57A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DEEAA013A8E2F14973CB22A /* GoogleService-Info.plist */; };
@@ -55,13 +54,6 @@
 			remoteGlobalIDString = F336DDB12216B6DB0079B05D;
 			remoteInfo = Songhound;
 		};
-		F336DDD22216B6DE0079B05D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F336DDAA2216B6DB0079B05D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F336DDB12216B6DB0079B05D;
-			remoteInfo = Songhound;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -92,7 +84,6 @@
 		F336DDC12216B6DE0079B05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F336DDC62216B6DE0079B05D /* SonghoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SonghoundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F336DDCC2216B6DE0079B05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F336DDD12216B6DE0079B05D /* SonghoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SonghoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33E6CD2221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSongsByArtistViewController.swift; sourceTree = "<group>"; };
 		F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 		F33E6CF4221BF3A300CFBB23 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
@@ -130,14 +121,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8E5BC3BAF256DE7CD755BEE /* Pods_SonghoundTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F336DDCE2216B6DE0079B05D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				229EF629C524C7E6994B64A6 /* Pods_SonghoundUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +166,6 @@
 			children = (
 				F336DDB22216B6DC0079B05D /* Songhound.app */,
 				F336DDC62216B6DE0079B05D /* SonghoundTests.xctest */,
-				F336DDD12216B6DE0079B05D /* SonghoundUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -474,25 +456,6 @@
 			productReference = F336DDC62216B6DE0079B05D /* SonghoundTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F336DDD02216B6DE0079B05D /* SonghoundUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F336DDE02216B6DE0079B05D /* Build configuration list for PBXNativeTarget "SonghoundUITests" */;
-			buildPhases = (
-				82A6D335E2FAECC64E19166A /* [CP] Check Pods Manifest.lock */,
-				F336DDCD2216B6DE0079B05D /* Sources */,
-				F336DDCE2216B6DE0079B05D /* Frameworks */,
-				F336DDCF2216B6DE0079B05D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F336DDD32216B6DE0079B05D /* PBXTargetDependency */,
-			);
-			name = SonghoundUITests;
-			productName = SonghoundUITests;
-			productReference = F336DDD12216B6DE0079B05D /* SonghoundUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -515,10 +478,6 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = F336DDB12216B6DB0079B05D;
 					};
-					F336DDD02216B6DE0079B05D = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = F336DDB12216B6DB0079B05D;
-					};
 				};
 			};
 			buildConfigurationList = F336DDAD2216B6DB0079B05D /* Build configuration list for PBXProject "Songhound" */;
@@ -536,7 +495,6 @@
 			targets = (
 				F336DDB12216B6DB0079B05D /* Songhound */,
 				F336DDC52216B6DE0079B05D /* SonghoundTests */,
-				F336DDD02216B6DE0079B05D /* SonghoundUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -560,13 +518,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F336DDCF2216B6DE0079B05D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -581,18 +532,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Songhound/Pods-Songhound-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/CardParts/CardParts.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
-				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -602,18 +546,11 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardParts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -638,28 +575,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SonghoundTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		82A6D335E2FAECC64E19166A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SonghoundUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -779,13 +694,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F336DDCD2216B6DE0079B05D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -793,11 +701,6 @@
 			isa = PBXTargetDependency;
 			target = F336DDB12216B6DB0079B05D /* Songhound */;
 			targetProxy = F336DDC72216B6DE0079B05D /* PBXContainerItemProxy */;
-		};
-		F336DDD32216B6DE0079B05D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F336DDB12216B6DB0079B05D /* Songhound */;
-			targetProxy = F336DDD22216B6DE0079B05D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1019,48 +922,6 @@
 			};
 			name = Release;
 		};
-		F336DDE12216B6DE0079B05D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BD6616F14749191B222BD7E /* Pods-SonghoundUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FA8D45S82T;
-				INFOPLIST_FILE = SonghoundUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.SonghoundUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Songhound;
-			};
-			name = Debug;
-		};
-		F336DDE22216B6DE0079B05D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F8C8DE05285C4A9B94D2D0B /* Pods-SonghoundUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FA8D45S82T;
-				INFOPLIST_FILE = SonghoundUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.SonghoundUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Songhound;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1087,15 +948,6 @@
 			buildConfigurations = (
 				F336DDDE2216B6DE0079B05D /* Debug */,
 				F336DDDF2216B6DE0079B05D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F336DDE02216B6DE0079B05D /* Build configuration list for PBXNativeTarget "SonghoundUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F336DDE12216B6DE0079B05D /* Debug */,
-				F336DDE22216B6DE0079B05D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
