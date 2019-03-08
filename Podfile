@@ -13,10 +13,10 @@ target 'Songhound' do
     # Pods for testing
   end
 
-  target 'SonghoundUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+#  target 'SonghoundUITests' do
+#    inherit! :search_paths
+#    # Pods for testing
+#  end
 
   # google pods
 
@@ -25,7 +25,6 @@ target 'Songhound' do
   pod 'Alamofire', '4.8.1'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'ObjectMapper', '~> 3.4'
-  pod 'CardParts'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
   pod 'Firebase/Core'

@@ -25,3 +25,7 @@ comment:
   behavior: default
   require_changes: no
 
+ignore:
+  - "Pods"  # ignore Pods folders and all its contents
+  - "SonghoundTests" # i means you wanna go into an infinite loop
+

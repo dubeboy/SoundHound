@@ -3,12 +3,6 @@ PODS:
   - AlamofireObjectMapper (5.2.0):
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
-  - CardParts (2.7.3):
-    - RxCocoa (~> 4.4)
-    - RxDataSources (~> 3.1)
-    - RxGesture (~> 2.1)
-    - RxSwift (~> 4.4)
-  - Differentiator (3.1.0)
   - Firebase/Auth (5.16.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.3.0)
@@ -89,24 +83,11 @@ PODS:
   - nanopb/encode (0.3.901)
   - ObjectMapper (3.4.2)
   - PKHUD (5.2.1)
-  - RxAtomic (4.4.1)
-  - RxCocoa (4.4.1):
-    - RxSwift (~> 4.0)
-  - RxDataSources (3.1.0):
-    - Differentiator (~> 3.0)
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
-  - RxGesture (2.1.0):
-    - RxCocoa (~> 4.4.0)
-    - RxSwift (~> 4.4.0)
-  - RxSwift (4.4.1):
-    - RxAtomic (~> 4.4)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.8.1)
   - AlamofireObjectMapper (~> 5.2)
-  - CardParts
   - Firebase/Auth
   - Firebase/Core
   - GoogleMaps
@@ -120,8 +101,6 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireObjectMapper
-    - CardParts
-    - Differentiator
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -138,18 +117,11 @@ SPEC REPOS:
     - nanopb
     - ObjectMapper
     - PKHUD
-    - RxAtomic
-    - RxCocoa
-    - RxDataSources
-    - RxGesture
-    - RxSwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
-  CardParts: 707a836d977b38e167c50d7c2d9dc38de8c5771f
-  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Firebase: 749a8ff4962f9d8c79dda1966de20f6f77583d67
   FirebaseAnalytics: d35d47c03c50c73c14a7fd31463c5775843e78a9
   FirebaseAuth: c9b3ff063c223d2841d97240af547ce511bce19a
@@ -166,13 +138,8 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
-  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
-  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
-  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
-  RxGesture: 7f6dfb45dbde06e618c24442d38493e3144f2c95
-  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: cf6654aad787e6d47013c0a6ecdbc5bed7889874
+PODFILE CHECKSUM: bec7c5eac45cc6f6b38f0e98a9b2b02b1db09133
 
 COCOAPODS: 1.5.3
