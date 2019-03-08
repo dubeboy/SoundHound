@@ -15,7 +15,7 @@ class ArtistsListViewWireFrame: ArtistsListViewWireFrameProtocol {
         
         if let view = viewController as? ArtistsListViewController {
             var presenter: ArtistSongsListViewPresenterProtocol = ArtistSongListViewPresenter()
-            var wireframe: ArtistsListViewWireFrameProtocol = ArtistsListViewWireFrame()
+            let wireframe: ArtistsListViewWireFrameProtocol = ArtistsListViewWireFrame()
             
             view.presenter = presenter
             presenter.view = view
