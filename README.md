@@ -1,6 +1,10 @@
-[![Build Status](https://app.bitrise.io/app/3c59200d66a4f1b8/status.svg?token=GYK5zKNj3dlQUpjEa_By5w)](https://app.bitrise.io/app/3c59200d66a4f1b8)
 
 ## Songhound
+
+[![Build Status](https://app.bitrise.io/app/3c59200d66a4f1b8/status.svg?token=GYK5zKNj3dlQUpjEa_By5w)](https://app.bitrise.io/app/3c59200d66a4f1b8)
+[![codecov](https://codecov.io/gh/dubeboy/SoundHound/branch/develop/graph/badge.svg)](https://codecov.io/gh/dubeboy/SoundHound)
+
+## About
 
 Songhound is an iOS app that help you discover new music and artist based on the area that you are in.
 
@@ -14,11 +18,11 @@ You can also login using your google account and set your music preference.
  We using itunes music API
  We using Firebase for google login and soon Realtime Database
  NOT using Alamofire images
- 
+
 #### Future
  Build UI in code
  integrate local storage
- 
+
 ### How it looks like(for now )
 
 <img src="song1.png" alt="screenshot" width="320"> <img src="song2.png" alt="screenshot" width="320">
