@@ -105,7 +105,6 @@ class SongsListViewController: UIViewController {
 //Song list view protocol
 extension SongsListViewController: SongsListViewProtocol {
     func onTopThreeArtistClicked() {
-        
     }
     
     func showSongsList(songs: [SongModel]) {

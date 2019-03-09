@@ -17,7 +17,7 @@ You can also login using your google account and set your music preference.
  We using the VIPER architecture
  We using itunes music API
  We using Firebase for google login and soon Realtime Database
- NOT using Alamofire images
+ NOT using Alamofire for images
 
 #### Future
  Build UI in code
