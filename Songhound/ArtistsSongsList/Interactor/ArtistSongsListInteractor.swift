@@ -15,19 +15,27 @@ class ArtistSongsListInteractor : ArtistSongsListViewInteractorInputProtocol {
     var remoteDataManager: ArtistListRemoteDataManagerInputProtocol?
     
     func retriveSongsList(artistName: String) {
-        // no logic here yet
-        // just calling the remote data manager to fetch the data
-         remoteDataManager?.retriveSongsList(artistName: artistName)
+        //All logic goes here
+
+
+        let encodedArtistName = artistName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ??
+                String(artistName.split(separator: " ").first!)
+
+        remoteDataManager?.retriveSongsList(artistName: encodedArtistName)
+
+
+
     }
 }
 
-extension ArtistSongsListInteractor : ArtistSongsListViewInteractorOutputProtocol {
+extension ArtistSongsListInteractor : ArtistSongsListDataManagerOutputProtocol {
 
-    func didRetrieveSongs(_ songs: [SongModel]) {
+    func onArtistSongsListRetrieved(_ songs: [SongModel]) {
         presenter?.didRetrieveSongs(songs)
     }
 
     func onError() {
         presenter?.onError()
     }
+
 }

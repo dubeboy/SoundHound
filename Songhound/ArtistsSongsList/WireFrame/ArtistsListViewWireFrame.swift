@@ -14,14 +14,21 @@ class ArtistsListViewWireFrame: ArtistsListViewWireFrameProtocol {
         let viewController = mainStoryboard.instantiateViewController(withIdentifier: "ArtistListViewController")
         
         if let view = viewController as? ArtistsListViewController {
-            var presenter: ArtistSongsListViewPresenterProtocol = ArtistSongListViewPresenter()
+            var presenter: (ArtistSongsListViewPresenterProtocol & ArtistSongsListViewInteractorOutputProtocol) = ArtistSongListViewPresenter()
             let wireframe: ArtistsListViewWireFrameProtocol = ArtistsListViewWireFrame()
-            
+            let interactor: (ArtistSongsListViewInteractorInputProtocol & ArtistSongsListDataManagerOutputProtocol) = ArtistSongsListInteractor()
+            var remoteDataManager: ArtistListRemoteDataManagerInputProtocol = ArtistsSongsListRemoteDataManager()
+
+
             view.presenter = presenter
             presenter.view = view
-            presenter.artist = artist
             presenter.wireFrame = wireframe
-            
+            presenter.interactor = interactor
+            interactor.presenter = presenter
+            interactor.remoteDataManager = remoteDataManager
+            remoteDataManager.remoteRequestHandler = interactor
+
+            presenter.artist = artist
             return viewController
             
         }
