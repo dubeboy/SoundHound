@@ -14,11 +14,20 @@ class ArtistSongsListInteractor : ArtistSongsListViewInteractorInputProtocol {
     var presenter: ArtistSongsListViewInteractorOutputProtocol?
     var remoteDataManager: ArtistListRemoteDataManagerInputProtocol?
     
-    func retriveSongsList() {
+    func retriveSongsList(artistName: String) {
         // no logic here yet
         // just calling the remote data manager to fetch the data
-        
-         remoteDataManager?.retriveSongsList()
-        
+         remoteDataManager?.retriveSongsList(artistName: artistName)
+    }
+}
+
+extension ArtistSongsListInteractor : ArtistSongsListViewInteractorOutputProtocol {
+
+    func didRetrieveSongs(_ songs: [SongModel]) {
+        presenter?.didRetrieveSongs(songs)
+    }
+
+    func onError() {
+        presenter?.onError()
     }
 }

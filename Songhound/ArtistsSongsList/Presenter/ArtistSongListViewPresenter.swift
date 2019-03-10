@@ -17,6 +17,6 @@ class ArtistSongListViewPresenter: ArtistSongsListViewPresenterProtocol {
     // begin genesis
     func viewDidLoad() {
         view?.showLoading(forArtist: artist!)
-        interactor?.retriveSongsList()
+        interactor?.retriveSongsList(artistName: artist!.name)
     }
 }

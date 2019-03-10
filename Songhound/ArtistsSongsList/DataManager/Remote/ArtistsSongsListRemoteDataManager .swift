@@ -13,8 +13,7 @@ import AlamofireObjectMapper
 class ArtistsSongsListRemoteDataManager: ArtistListRemoteDataManagerInputProtocol  {
     var remoteRequestHandler: ArtistSongsListDataManagerOutputProtocol?
     
-    func retriveSongsList() {
-        let artistName = ""
+    func retriveSongsList(artistName: String) {
         Alamofire
             .request(Endpoints.Songs.fetch(songName: artistName).url, method: .get)
             .responseObject { (response: DataResponse<SongModelResponse>) in
