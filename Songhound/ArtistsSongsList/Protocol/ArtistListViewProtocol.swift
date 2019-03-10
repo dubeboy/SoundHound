@@ -49,7 +49,7 @@ protocol ArtistSongsListViewInteractorInputProtocol: class {
     
     // From PRESENTER -> INTERACTOR asking for input
     // will callback presenter when its done
-    func retriveSongsList()
+    func retriveSongsList(artistName: String)
 }
 
 // this protocol defines what happens to the data that goes out of the interactor
@@ -65,7 +65,7 @@ protocol ArtistListRemoteDataManagerInputProtocol {
     
     var remoteRequestHandler: ArtistSongsListDataManagerOutputProtocol? { get set }
     // RemoteData manager -> Interactor
-    func retriveSongsList()
+    func retriveSongsList(artistName: String)
 }
 
 protocol ArtistSongsListDataManagerOutputProtocol {

@@ -70,6 +70,7 @@ class SongListPresenterTests: XCTestCase {
     }
 
     // could also test if the
+    // need to test the error cases!!
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
@@ -77,6 +78,9 @@ class SongListPresenterTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+
+    
 
 }
 

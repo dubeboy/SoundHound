@@ -160,6 +160,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F325AB662234338A00C3E344 /* InteractorTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InteractorTests;
+			sourceTree = "<group>";
+		};
 		F336DDA92216B6DB0079B05D = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +208,7 @@
 		F336DDC92216B6DE0079B05D /* SonghoundTests */ = {
 			isa = PBXGroup;
 			children = (
+				F325AB662234338A00C3E344 /* InteractorTests */,
 				F336DDCC2216B6DE0079B05D /* Info.plist */,
 				3DEEA55DB13DB618F6D1E0CB /* SongListFeatureTests.swift */,
 				3DEEA73932B63B1AA814B93E /* PresenterTests */,
@@ -629,7 +637,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n";
+			shellScript = "
+";
 		};
 		FAAA36D89E16A8B253200C1F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
