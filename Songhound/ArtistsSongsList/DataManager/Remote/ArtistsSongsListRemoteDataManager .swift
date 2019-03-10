@@ -22,6 +22,7 @@ class ArtistsSongsListRemoteDataManager: ArtistListRemoteDataManagerInputProtoco
                     let songs = res.songs!
                     self.remoteRequestHandler?.onArtistSongsListRetrieved(songs)
                 case .failure(let error):
+                    self.remoteRequestHandler?.onError()
                     print(error)
                 }
         }

@@ -357,6 +357,27 @@
             </objects>
             <point key="canvasLocation" x="1614" y="386"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="don-kt-dqe">
+            <objects>
+                <viewController id="nF7-dn-IVx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zmb-gF-ikr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJE-xf-8lS">
+                                <rect key="frame" x="67" y="44" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7q6-c0-e3i"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kIf-kW-xgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="371"/>
+        </scene>
         <!--Artists List View Controller-->
         <scene sceneID="vaZ-jq-Htr">
             <objects>
