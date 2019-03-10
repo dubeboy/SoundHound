@@ -52,14 +52,14 @@ class ViewController: UIViewController,
         self.tableViewSongs.dataSource = self
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
-        
-      
+
+
 
         print("assigning the self to the delegate")
         showCurrentPlayingSong()
 
         locationManager.requestWhenInUseAuthorization()
-      
+
         makeUIImageViewCircle(imageView: imgProfilePicture, imgSize: 50)
         makeUIImageViewCircle(imageView: imgArtist1, imgSize: 100)
         makeUIImageViewCircle(imageView: imgArtist2, imgSize: 100)
@@ -70,7 +70,7 @@ class ViewController: UIViewController,
         addTapGestureToAnImageView(imageView: imgArtist2)
 
         addTapGestureToAnImageView(imageView: imgProfilePicture)
-        
+
        let user = getSignedInUser()
         if let user = user {
             lblUserName.text = user.fullName
@@ -79,20 +79,20 @@ class ViewController: UIViewController,
             print("the profile is \(prof)")
             downloadImage(urlString: prof )
         }
-        
+
         searchForSongByArtist(songName: "Swift", callback: {songs in
             self.data = songs
             self.setupTopThreeArtists(songs: songs)
             self.tableViewSongs.reloadData()
         })
     }
-    
-    
+
+
     private func setupTopThreeArtists(songs: [Song]) {
         topThreeArtists.append(Artist(name: songs[0].artistName, artistID: 000))
         topThreeArtists.append(Artist(name: songs[1].artistName, artistID: 000))
         topThreeArtists.append(Artist(name: songs[2].artistName, artistID: 000))
-        
+
         let name = topThreeArtists[0].name
         let name1 = topThreeArtists[1].name
         let name2 = topThreeArtists[2].name
@@ -218,7 +218,7 @@ class ViewController: UIViewController,
                 GIDSignIn.sharedInstance().signIn()
             default:
                 print("ooops")
-                
+
             }
         }
     }
@@ -241,7 +241,7 @@ class ViewController: UIViewController,
         let email = user.profile.email
         let profileURL = user.profile.imageURL(withDimension: 100).absoluteString
         let preferences = UserDefaults.standard
-        
+
         preferences.set(userId, forKey: USER_ID)
         preferences.set(idToken, forKey: ID_TOKEN)
         preferences.set(fullName, forKey: FULL_NAME)
@@ -249,16 +249,16 @@ class ViewController: UIViewController,
         preferences.set(familyName, forKey: FAMILY_NAME)
         preferences.set(email, forKey: EMAIL)
         preferences.set(profileURL, forKey: PROFILE_URL)
-    
+
         let sync = preferences.synchronize()
         print("it sycned \(sync)")
     }
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         print("oopps user signed out yoh")
-        
+
         guard let authentication = user.authentication else { return }
-        
+
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                        accessToken: authentication.accessToken)
         Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
@@ -282,7 +282,7 @@ class ViewController: UIViewController,
             }
         }
     }
-    
+
     private func downloadImage(urlString: String) {
         // assuming that its dowloading the image
         dispatcher.async {

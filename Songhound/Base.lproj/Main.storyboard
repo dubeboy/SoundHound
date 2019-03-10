@@ -231,7 +231,7 @@
                         <outlet property="imgArtist1" destination="eOp-gc-GaD" id="LkR-3X-DBm"/>
                         <outlet property="imgArtist2" destination="bOr-y3-KbH" id="P85-bV-j3V"/>
                         <outlet property="imgArtist3" destination="ZBm-em-qBC" id="SvP-zj-1Fh"/>
-                        <outlet property="imgProfilePicture" destination="Pe8-rJ-QlH" id="Edd-mY-CoG"/>
+                        <outlet property="imgProfilePicture" destination="Pe8-rJ-QlH" id="UGT-PO-Rzp"/>
                         <outlet property="lblArtistName1" destination="BwQ-IC-Tvq" id="GHu-yi-yME"/>
                         <outlet property="lblArtistName2" destination="GoK-xc-YZh" id="7nQ-Na-BIY"/>
                         <outlet property="lblArtistName3" destination="ZSK-CV-Szd" id="f1k-ZN-bNU"/>
