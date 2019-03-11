@@ -14,7 +14,7 @@ class SongListPresenterTests: XCTestCase {
     var presenter: (SongListPresenterProtocol & SongsListInteratorOutputProtocol)!
     var interactor: MockTestSongListInteractor!
     var wireFrame: MockTestSongListWireFrame!
-    var remoteDataManager: SongsListRemoteDataManagerInputProtocol!
+    var remoteDataManager: MockTestSongListRemoteDataManager!
     var view: TestSongsListViewController!
 
     // begin unit genesis
@@ -34,27 +34,30 @@ class SongListPresenterTests: XCTestCase {
         interactor.remoteDataManager = remoteDataManager
         remoteDataManager.remoteRequestHandler = interactor
 
+        presenter.viewDidLoad()
+
     }
 
     override func tearDown() {
         super.tearDown()
 
+        //pop stack
+        presenter.wireframe = nil
+        presenter.interactor = nil
+        interactor.presenter = nil
+        interactor.remoteDataManager = nil
+        view.presenter = nil
+        presenter.view = nil
+        remoteDataManager.remoteRequestHandler = nil
         view = nil
         interactor = nil
         wireFrame = nil
         remoteDataManager = nil
         presenter = nil // since we testing the presenter it makes sense to have a concrete class of the presenter
-//        presenter.wireframe = nil
-//        presenter.interactor = nil
-//        interactor.presenter = nil
-//        interactor.remoteDataManager = nil
-        //        view.presenter = nil
-        //        presenter.view = nil
-//        remoteDataManager.remoteRequestHandler = nil
+
     }
 
     func testViewDidLoad() {
-        presenter.viewDidLoad()
         XCTAssertTrue(view.isLoading)
     }
 
@@ -71,6 +74,13 @@ class SongListPresenterTests: XCTestCase {
 
     // could also test if the
     // need to test the error cases!!
+
+    func testShowsErrorOnError() {
+        // simulate network error
+        remoteDataManager.songs = nil
+        presenter.viewDidLoad() // initiaste all the seqence of getting the data
+        XCTAssertTrue(view.isShowingError)
+    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
@@ -150,8 +160,15 @@ extension SongListPresenterTests {
 
         var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol?
 
+        var songs: [SongModel]? =  [SongModel(id: 100, name: "Blank Space", artistName: "Taylor Swift", albumName: "Single", genre: "Hip Hop", popularity: 100, artworkURL: "exampleUrl.com/assets/image.jpg", artist: ArtistModel(name: "Taylor Swift", artistID: 200000))]
+
         func retrieveSongsList() {
-            remoteRequestHandler?.onSongsRetrieved([SongModel(id: 100, name: "Blank Space", artistName: "Taylor Swift", albumName: "Single", genre: "Hip Hop", popularity: 100, artworkURL: "exampleUrl.com/assets/image.jpg", artist: ArtistModel(name: "Taylor Swift", artistID: 200000))])
+            // simulate network error
+            if let songs = songs {
+                remoteRequestHandler?.onSongsRetrieved(songs)
+            } else {
+                remoteRequestHandler?.onError()
+            }
         }
     }
     class TestSongsListViewController : SongsListViewProtocol {
@@ -188,8 +205,6 @@ extension SongListPresenterTests {
             print("deinit TestSongsListViewController")   
             songs = nil
         }
-
-
     }
 }
 // must also add the output protocol bro
