@@ -26,6 +26,7 @@ protocol ArtistsListViewWireFrameProtocol {
     static func createArtistListViewModule(forArtist artist: ArtistModel)  -> UIViewController
     
     // any routing that I need should be stated here!
+    func presentSongDetailsScreen(from view: ArtistsListViewProtocol, forSong song: SongModel)
 }
 
 protocol ArtistSongsListViewPresenterProtocol {
@@ -39,6 +40,10 @@ protocol ArtistSongsListViewPresenterProtocol {
     
     //VIEW -> PRESENT
     func viewDidLoad()
+
+    func showSongDetail(forSong song: SongModel)
+
+
 }
 
 

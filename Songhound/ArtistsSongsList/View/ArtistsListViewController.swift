@@ -64,4 +64,8 @@ extension ArtistsListViewController:  UITableViewDataSource, UITableViewDelegate
         cell.set(forSong: song)
         return cell
     }
+
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.showSongDetail(forSong: songList[indexPath.row])
+    }
 }
