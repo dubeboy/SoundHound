@@ -3,6 +3,7 @@
 
 [![Build Status](https://app.bitrise.io/app/3c59200d66a4f1b8/status.svg?token=GYK5zKNj3dlQUpjEa_By5w)](https://app.bitrise.io/app/3c59200d66a4f1b8)
 [![codecov](https://codecov.io/gh/dubeboy/SoundHound/branch/develop/graph/badge.svg)](https://codecov.io/gh/dubeboy/SoundHound)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/667f6e22c5ee4a728524ceb97979e5c9)](https://www.codacy.com/app/dubeboy/SoundHound?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dubeboy/SoundHound&amp;utm_campaign=Badge_Grade)
 
 ## About
 
