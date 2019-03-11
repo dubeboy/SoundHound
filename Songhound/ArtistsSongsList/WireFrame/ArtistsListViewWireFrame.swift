@@ -34,6 +34,14 @@ class ArtistsListViewWireFrame: ArtistsListViewWireFrameProtocol {
         }
         return UIViewController()
     }
+
+
+    func presentSongDetailsScreen(from view: ArtistsListViewProtocol, forSong song: SongModel) {
+        let songDetails = SongDetailsWireFrame.createSongDetailModule(forSong: song)
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(songDetails, animated: true)
+        }
+    }
     
     
     

@@ -39,7 +39,10 @@ class SongsListWireFrame: SongsListViewWireFrameProtocol {
     //actuall wireframing methods
     
     func presentSongDetailsScreen(from view: SongsListViewProtocol, forSong song: SongModel) {
-      //  let songDetailController = songDetailController
+        let songDetails = SongDetailsWireFrame.createSongDetailModule(forSong: song)
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(songDetails, animated: true)
+        }
     }
     
     func presentSongsListViewScreen(from view: SongsListViewProtocol, forArtist artist: ArtistModel) {

@@ -20,6 +20,10 @@ class ArtistSongListViewPresenter: ArtistSongsListViewPresenterProtocol {
         view?.showLoading(forArtist: artist!)
         interactor?.retriveSongsList(artistName: artist!.name) ?? print("this is nil bro deadly nil!!!")
     }
+
+    func showSongDetail(forSong song: SongModel) {
+        wireFrame?.presentSongDetailsScreen(from: view!, forSong: song)
+    }
 }
 
 extension ArtistSongListViewPresenter: ArtistSongsListViewInteractorOutputProtocol {

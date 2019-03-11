@@ -78,8 +78,7 @@ class SongsListViewController: UIViewController {
         addTapGestureToAnImageView(imageView: imgArtist2)
         addTapGestureToAnImageView(imageView: imgProfilePicture)
     }
-    
-    
+
     func addTapGestureToAnImageView(imageView: UIImageView) {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SongsListViewController.imageTapped(gesture:)))
         imageView.addGestureRecognizer(tapGesture)
@@ -175,7 +174,7 @@ extension SongsListViewController:  UITableViewDataSource, UITableViewDelegate  
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // do stuff when a cell is selected present song detail
+        presenter?.showSongDetail(forSong: songList[indexPath.row])
     }
 }
 
@@ -250,10 +249,10 @@ extension SongsListViewController: CLLocationManagerDelegate {
         }
         print("we know the current location yoh \(location)")
         // MY OWN CLOSURE
-        reverseGeocoderCoordinates(location.coordinate) { fullAddressresponse in
+        reverseGeocoderCoordinates(location.coordinate) { fullAddressResponse in
             // do something with the response
             // baddd
-            self.currentLocation.text = "\(String(describing: fullAddressresponse.components(separatedBy: ",").first!)), \(fullAddressresponse.components(separatedBy: ",")[1]) "
+            self.currentLocation.text = "\(String(describing: fullAddressResponse.components(separatedBy: ",").first!)), \(fullAddressResponse.components(separatedBy: ",")[1]) "
         }
         // use GMSGeocoder to get the address of the user yeah?
         locationManager.stopUpdatingLocation()
@@ -262,7 +261,6 @@ extension SongsListViewController: CLLocationManagerDelegate {
     private func reverseGeocoderCoordinates(_ coordinates: CLLocationCoordinate2D, _ didRespond: @escaping (_ response: String) -> Void) {
 
         let geocoder = GMSGeocoder()
-
 
         //the closure is a callback because this does niot exec in the main thread
         geocoder.reverseGeocodeCoordinate(coordinates) { response, error in

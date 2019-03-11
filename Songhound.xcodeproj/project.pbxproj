@@ -9,15 +9,19 @@
 /* Begin PBXBuildFile section */
 		25721CE2FA20FFF9A4FEB921 /* Pods_Songhound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F868351CECD45F62855E8FB /* Pods_Songhound.framework */; };
 		3DEEA36EBD0201F665B86258 /* SongListFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA55DB13DB618F6D1E0CB /* SongListFeatureTests.swift */; };
+		3DEEA4A7DD517E79690D929E /* SongDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA2ECF1E37AFC80826791 /* SongDetailPresenter.swift */; };
 		3DEEA78A48252B1B213C57A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DEEAA013A8E2F14973CB22A /* GoogleService-Info.plist */; };
 		3DEEAB0EA2AE6CA6208CBC27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEAEC37B554FECEBB2749F /* User.swift */; };
 		3DEEAC1085D2738D777A54FF /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA681AF5B42104EA229E4 /* RESTClient.swift */; };
 		3DEEAC28D16A7E489B24D262 /* SongListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA5FDD4AE0A2AF5E160D6 /* SongListPresenterTests.swift */; };
+		3DEEAED0EF9B4CAB7B24212A /* SongDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA90E5FC965572DBE6A97 /* SongDetailsProtocols.swift */; };
 		F30FDB6A2229CC7600D48E96 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDB692229CC7600D48E96 /* Extensions.swift */; };
 		F30FDB6C2229E39300D48E96 /* SongsListWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDB6B2229E39300D48E96 /* SongsListWireFrame.swift */; };
 		F30FDB6E222A1D4100D48E96 /* SongListRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDB6D222A1D4100D48E96 /* SongListRemoteDataManager.swift */; };
 		F30FDB70222A1F1300D48E96 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDB6F222A1F1300D48E96 /* Endpoints.swift */; };
 		F30FDB72222BCA7300D48E96 /* SongModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDB71222BCA7300D48E96 /* SongModelResponse.swift */; };
+		F325AB6822365CB700C3E344 /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325AB6722365CB700C3E344 /* SongDetailViewController.swift */; };
+		F325AB6A22365F5000C3E344 /* SongDetailsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325AB6922365F5000C3E344 /* SongDetailsWireFrame.swift */; };
 		F336DDB62216B6DC0079B05D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDB52216B6DC0079B05D /* AppDelegate.swift */; };
 		F336DDB82216B6DC0079B05D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDB72216B6DC0079B05D /* ViewController.swift */; };
 		F336DDBB2216B6DC0079B05D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F336DDB92216B6DC0079B05D /* Main.storyboard */; };
@@ -60,9 +64,11 @@
 /* Begin PBXFileReference section */
 		35A7146061DFA13E2DCDB271 /* Pods-SonghoundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonghoundTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SonghoundTests/Pods-SonghoundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3D14AE6B7E5F0876C64E3747 /* Pods_SonghoundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SonghoundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DEEA2ECF1E37AFC80826791 /* SongDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailPresenter.swift; sourceTree = "<group>"; };
 		3DEEA55DB13DB618F6D1E0CB /* SongListFeatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListFeatureTests.swift; sourceTree = "<group>"; };
 		3DEEA5FDD4AE0A2AF5E160D6 /* SongListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListPresenterTests.swift; sourceTree = "<group>"; };
 		3DEEA681AF5B42104EA229E4 /* RESTClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTClient.swift; sourceTree = "<group>"; };
+		3DEEA90E5FC965572DBE6A97 /* SongDetailsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailsProtocols.swift; sourceTree = "<group>"; };
 		3DEEAA013A8E2F14973CB22A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3DEEAEC37B554FECEBB2749F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3F8C8DE05285C4A9B94D2D0B /* Pods-SonghoundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonghoundUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SonghoundUITests/Pods-SonghoundUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +83,8 @@
 		F30FDB6D222A1D4100D48E96 /* SongListRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListRemoteDataManager.swift; sourceTree = "<group>"; };
 		F30FDB6F222A1F1300D48E96 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		F30FDB71222BCA7300D48E96 /* SongModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModelResponse.swift; sourceTree = "<group>"; };
+		F325AB6722365CB700C3E344 /* SongDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
+		F325AB6922365F5000C3E344 /* SongDetailsWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailsWireFrame.swift; sourceTree = "<group>"; };
 		F336DDB22216B6DC0079B05D /* Songhound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Songhound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F336DDB52216B6DC0079B05D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F336DDB72216B6DC0079B05D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +227,7 @@
 		F365F13F222D128600F447A6 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				3DEEA2ECF1E37AFC80826791 /* SongDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -226,6 +235,7 @@
 		F365F140222D12A000F447A6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				3DEEA90E5FC965572DBE6A97 /* SongDetailsProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -233,6 +243,7 @@
 		F365F141222D12AE00F447A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F325AB6722365CB700C3E344 /* SongDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,6 +251,7 @@
 		F365F142222D12BA00F447A6 /* WireFrame */ = {
 			isa = PBXGroup;
 			children = (
+				F325AB6922365F5000C3E344 /* SongDetailsWireFrame.swift */,
 			);
 			path = WireFrame;
 			sourceTree = "<group>";
@@ -637,8 +649,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\n";
 		};
 		FAAA36D89E16A8B253200C1F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -693,6 +704,7 @@
 				F36EE49F222940A60083B2B8 /* SongModel.swift in Sources */,
 				F365F14C222D201900F447A6 /* ArtistListViewProtocol.swift in Sources */,
 				F33E6CF7221BFBD100CFBB23 /* UIUtils.swift in Sources */,
+				F325AB6A22365F5000C3E344 /* SongDetailsWireFrame.swift in Sources */,
 				F365F158222D2E1D00F447A6 /* ArtistSongListViewPresenter.swift in Sources */,
 				F30FDB70222A1F1300D48E96 /* Endpoints.swift in Sources */,
 				F38D20EC222FAA38002BD13D /* ArtistsSongsListRemoteDataManager .swift in Sources */,
@@ -703,6 +715,9 @@
 				F365F156222D2A3D00F447A6 /* WireFrameUtils.swift in Sources */,
 				3DEEAB0EA2AE6CA6208CBC27 /* User.swift in Sources */,
 				F30FDB6E222A1D4100D48E96 /* SongListRemoteDataManager.swift in Sources */,
+				F325AB6822365CB700C3E344 /* SongDetailViewController.swift in Sources */,
+				3DEEAED0EF9B4CAB7B24212A /* SongDetailsProtocols.swift in Sources */,
+				3DEEA4A7DD517E79690D929E /* SongDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
