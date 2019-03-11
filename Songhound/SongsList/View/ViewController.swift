@@ -52,9 +52,7 @@ class ViewController: UIViewController,
         self.tableViewSongs.dataSource = self
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
-
-
-
+        
         print("assigning the self to the delegate")
         showCurrentPlayingSong()
 
@@ -80,7 +78,7 @@ class ViewController: UIViewController,
             downloadImage(urlString: prof )
         }
 
-        searchForSongByArtist(songName: "Swift", callback: {songs in
+        searchForSongByArtist(songName: "Swift", callback: { songs in
             self.data = songs
             self.setupTopThreeArtists(songs: songs)
             self.tableViewSongs.reloadData()
