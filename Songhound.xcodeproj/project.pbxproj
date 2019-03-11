@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		229EF629C524C7E6994B64A6 /* Pods_SonghoundUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70EE039CCAEAA79B85A1C04 /* Pods_SonghoundUITests.framework */; };
 		25721CE2FA20FFF9A4FEB921 /* Pods_Songhound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F868351CECD45F62855E8FB /* Pods_Songhound.framework */; };
+		3DEEA36EBD0201F665B86258 /* SongListFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA55DB13DB618F6D1E0CB /* SongListFeatureTests.swift */; };
 		3DEEA78A48252B1B213C57A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DEEAA013A8E2F14973CB22A /* GoogleService-Info.plist */; };
 		3DEEAB0EA2AE6CA6208CBC27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEAEC37B554FECEBB2749F /* User.swift */; };
 		3DEEAC1085D2738D777A54FF /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA681AF5B42104EA229E4 /* RESTClient.swift */; };
+		3DEEAC28D16A7E489B24D262 /* SongListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA5FDD4AE0A2AF5E160D6 /* SongListPresenterTests.swift */; };
 		F30FDB6A2229CC7600D48E96 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDB692229CC7600D48E96 /* Extensions.swift */; };
 		F30FDB6C2229E39300D48E96 /* SongsListWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDB6B2229E39300D48E96 /* SongsListWireFrame.swift */; };
 		F30FDB6E222A1D4100D48E96 /* SongListRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30FDB6D222A1D4100D48E96 /* SongListRemoteDataManager.swift */; };
@@ -22,19 +23,25 @@
 		F336DDBB2216B6DC0079B05D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F336DDB92216B6DC0079B05D /* Main.storyboard */; };
 		F336DDBD2216B6DE0079B05D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F336DDBC2216B6DE0079B05D /* Assets.xcassets */; };
 		F336DDC02216B6DE0079B05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F336DDBE2216B6DE0079B05D /* LaunchScreen.storyboard */; };
-		F336DDCB2216B6DE0079B05D /* SonghoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDCA2216B6DE0079B05D /* SonghoundTests.swift */; };
-		F336DDD62216B6DE0079B05D /* SonghoundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDD52216B6DE0079B05D /* SonghoundUITests.swift */; };
 		F33E6CD3221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CD2221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift */; };
 		F33E6CF3221BF07F00CFBB23 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */; };
 		F33E6CF5221BF3A300CFBB23 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF4221BF3A300CFBB23 /* Artist.swift */; };
 		F33E6CF7221BFBD100CFBB23 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */; };
 		F345CC7A221EB5CA00E2BDFA /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */; };
 		F365F13E222D0BBB00F447A6 /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F365F13D222D0BBB00F447A6 /* ArtistModel.swift */; };
+		F365F149222D1E5C00F447A6 /* ArtistsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F365F148222D1E5C00F447A6 /* ArtistsListViewController.swift */; };
+		F365F14C222D201900F447A6 /* ArtistListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F365F14B222D201900F447A6 /* ArtistListViewProtocol.swift */; };
+		F365F151222D22BA00F447A6 /* CommonNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F365F150222D22BA00F447A6 /* CommonNetworkProtocol.swift */; };
+		F365F153222D271800F447A6 /* ArtistsListViewWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F365F152222D271800F447A6 /* ArtistsListViewWireFrame.swift */; };
+		F365F156222D2A3D00F447A6 /* WireFrameUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F365F155222D2A3D00F447A6 /* WireFrameUtils.swift */; };
+		F365F158222D2E1D00F447A6 /* ArtistSongListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F365F157222D2E1D00F447A6 /* ArtistSongListViewPresenter.swift */; };
 		F36EE49B222935930083B2B8 /* SongsListViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EE49A222935930083B2B8 /* SongsListViewProtocols.swift */; };
 		F36EE49D222938930083B2B8 /* SongsListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EE49C222938930083B2B8 /* SongsListViewPresenter.swift */; };
 		F36EE49F222940A60083B2B8 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EE49E222940A60083B2B8 /* SongModel.swift */; };
 		F36EE4A1222956C20083B2B8 /* SongsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EE4A0222956C20083B2B8 /* SongsListInteractor.swift */; };
 		F36EE4A3222970690083B2B8 /* SongsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EE4A2222970690083B2B8 /* SongsListViewController.swift */; };
+		F38D20E8222FA051002BD13D /* ArtistSongsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38D20E7222FA051002BD13D /* ArtistSongsListInteractor.swift */; };
+		F38D20EC222FAA38002BD13D /* ArtistsSongsListRemoteDataManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = F38D20EB222FAA38002BD13D /* ArtistsSongsListRemoteDataManager .swift */; };
 		F397DD87221A02B500D28E3C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD86221A02B500D28E3C /* Song.swift */; };
 		F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */; };
 		F8E5BC3BAF256DE7CD755BEE /* Pods_SonghoundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D14AE6B7E5F0876C64E3747 /* Pods_SonghoundTests.framework */; };
@@ -48,18 +55,13 @@
 			remoteGlobalIDString = F336DDB12216B6DB0079B05D;
 			remoteInfo = Songhound;
 		};
-		F336DDD22216B6DE0079B05D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F336DDAA2216B6DB0079B05D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F336DDB12216B6DB0079B05D;
-			remoteInfo = Songhound;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		35A7146061DFA13E2DCDB271 /* Pods-SonghoundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonghoundTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SonghoundTests/Pods-SonghoundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3D14AE6B7E5F0876C64E3747 /* Pods_SonghoundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SonghoundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DEEA55DB13DB618F6D1E0CB /* SongListFeatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListFeatureTests.swift; sourceTree = "<group>"; };
+		3DEEA5FDD4AE0A2AF5E160D6 /* SongListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListPresenterTests.swift; sourceTree = "<group>"; };
 		3DEEA681AF5B42104EA229E4 /* RESTClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTClient.swift; sourceTree = "<group>"; };
 		3DEEAA013A8E2F14973CB22A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3DEEAEC37B554FECEBB2749F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -83,22 +85,26 @@
 		F336DDBF2216B6DE0079B05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F336DDC12216B6DE0079B05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F336DDC62216B6DE0079B05D /* SonghoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SonghoundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F336DDCA2216B6DE0079B05D /* SonghoundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonghoundTests.swift; sourceTree = "<group>"; };
 		F336DDCC2216B6DE0079B05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F336DDD12216B6DE0079B05D /* SonghoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SonghoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F336DDD52216B6DE0079B05D /* SonghoundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonghoundUITests.swift; sourceTree = "<group>"; };
-		F336DDD72216B6DE0079B05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F33E6CD2221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSongsByArtistViewController.swift; sourceTree = "<group>"; };
 		F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 		F33E6CF4221BF3A300CFBB23 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		F345CC79221EB5CA00E2BDFA /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
 		F365F13D222D0BBB00F447A6 /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
+		F365F148222D1E5C00F447A6 /* ArtistsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListViewController.swift; sourceTree = "<group>"; };
+		F365F14B222D201900F447A6 /* ArtistListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListViewProtocol.swift; sourceTree = "<group>"; };
+		F365F150222D22BA00F447A6 /* CommonNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNetworkProtocol.swift; sourceTree = "<group>"; };
+		F365F152222D271800F447A6 /* ArtistsListViewWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListViewWireFrame.swift; sourceTree = "<group>"; };
+		F365F155222D2A3D00F447A6 /* WireFrameUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireFrameUtils.swift; sourceTree = "<group>"; };
+		F365F157222D2E1D00F447A6 /* ArtistSongListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSongListViewPresenter.swift; sourceTree = "<group>"; };
 		F36EE49A222935930083B2B8 /* SongsListViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListViewProtocols.swift; sourceTree = "<group>"; };
 		F36EE49C222938930083B2B8 /* SongsListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListViewPresenter.swift; sourceTree = "<group>"; };
 		F36EE49E222940A60083B2B8 /* SongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
 		F36EE4A0222956C20083B2B8 /* SongsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListInteractor.swift; sourceTree = "<group>"; };
 		F36EE4A2222970690083B2B8 /* SongsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListViewController.swift; sourceTree = "<group>"; };
+		F38D20E7222FA051002BD13D /* ArtistSongsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSongsListInteractor.swift; sourceTree = "<group>"; };
+		F38D20EB222FAA38002BD13D /* ArtistsSongsListRemoteDataManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistsSongsListRemoteDataManager .swift"; sourceTree = "<group>"; };
 		F397DD86221A02B500D28E3C /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,14 +126,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F336DDCE2216B6DE0079B05D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				229EF629C524C7E6994B64A6 /* Pods_SonghoundUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -144,6 +142,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3DEEA73932B63B1AA814B93E /* PresenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DEEA5FDD4AE0A2AF5E160D6 /* SongListPresenterTests.swift */,
+			);
+			path = PresenterTests;
+			sourceTree = "<group>";
+		};
 		AA34D13C9F725FF30AA10255 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,12 +160,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F325AB662234338A00C3E344 /* InteractorTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InteractorTests;
+			sourceTree = "<group>";
+		};
 		F336DDA92216B6DB0079B05D = {
 			isa = PBXGroup;
 			children = (
 				F336DDB42216B6DC0079B05D /* Songhound */,
 				F336DDC92216B6DE0079B05D /* SonghoundTests */,
-				F336DDD42216B6DE0079B05D /* SonghoundUITests */,
 				F336DDB32216B6DC0079B05D /* Products */,
 				02823C65958189E19B3E275B /* Pods */,
 				AA34D13C9F725FF30AA10255 /* Frameworks */,
@@ -171,7 +183,6 @@
 			children = (
 				F336DDB22216B6DC0079B05D /* Songhound.app */,
 				F336DDC62216B6DE0079B05D /* SonghoundTests.xctest */,
-				F336DDD12216B6DE0079B05D /* SonghoundUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,7 +193,7 @@
 				F36EE48F222928790083B2B8 /* Common */,
 				F36EE4902229289C0083B2B8 /* Entities */,
 				F36EE493222928E20083B2B8 /* SongsList */,
-				F365F143222D130F00F447A6 /* ArtistsList */,
+				F365F143222D130F00F447A6 /* ArtistsSongsList */,
 				F36EE491222928B70083B2B8 /* SongsDetails */,
 				F336DDB52216B6DC0079B05D /* AppDelegate.swift */,
 				F336DDBC2216B6DE0079B05D /* Assets.xcassets */,
@@ -197,19 +208,12 @@
 		F336DDC92216B6DE0079B05D /* SonghoundTests */ = {
 			isa = PBXGroup;
 			children = (
-				F336DDCA2216B6DE0079B05D /* SonghoundTests.swift */,
+				F325AB662234338A00C3E344 /* InteractorTests */,
 				F336DDCC2216B6DE0079B05D /* Info.plist */,
+				3DEEA55DB13DB618F6D1E0CB /* SongListFeatureTests.swift */,
+				3DEEA73932B63B1AA814B93E /* PresenterTests */,
 			);
 			path = SonghoundTests;
-			sourceTree = "<group>";
-		};
-		F336DDD42216B6DE0079B05D /* SonghoundUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F336DDD52216B6DE0079B05D /* SonghoundUITests.swift */,
-				F336DDD72216B6DE0079B05D /* Info.plist */,
-			);
-			path = SonghoundUITests;
 			sourceTree = "<group>";
 		};
 		F365F13F222D128600F447A6 /* Presenter */ = {
@@ -240,20 +244,23 @@
 			path = WireFrame;
 			sourceTree = "<group>";
 		};
-		F365F143222D130F00F447A6 /* ArtistsList */ = {
+		F365F143222D130F00F447A6 /* ArtistsSongsList */ = {
 			isa = PBXGroup;
 			children = (
+				F38D20E9222FA91B002BD13D /* DataManager */,
+				F365F14A222D1FEC00F447A6 /* Protocol */,
 				F365F147222D13AA00F447A6 /* View */,
 				F365F145222D139000F447A6 /* Interactor */,
 				F365F146222D139900F447A6 /* WireFrame */,
 				F365F144222D137600F447A6 /* Presenter */,
 			);
-			path = ArtistsList;
+			path = ArtistsSongsList;
 			sourceTree = "<group>";
 		};
 		F365F144222D137600F447A6 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				F365F157222D2E1D00F447A6 /* ArtistSongListViewPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -261,6 +268,7 @@
 		F365F145222D139000F447A6 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				F38D20E7222FA051002BD13D /* ArtistSongsListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 		F365F146222D139900F447A6 /* WireFrame */ = {
 			isa = PBXGroup;
 			children = (
+				F365F152222D271800F447A6 /* ArtistsListViewWireFrame.swift */,
 			);
 			path = WireFrame;
 			sourceTree = "<group>";
@@ -277,13 +286,40 @@
 			children = (
 				F33E6CD2221AFD2B00CFBB23 /* TopSongsByArtistViewController.swift */,
 				F33E6CF2221BF07F00CFBB23 /* ArtistTableViewCell.swift */,
+				F365F148222D1E5C00F447A6 /* ArtistsListViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F365F14A222D1FEC00F447A6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F365F14B222D201900F447A6 /* ArtistListViewProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F365F14F222D228500F447A6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F365F150222D22BA00F447A6 /* CommonNetworkProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F365F154222D2A2400F447A6 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				F365F155222D2A3D00F447A6 /* WireFrameUtils.swift */,
+			);
+			path = WireFrame;
 			sourceTree = "<group>";
 		};
 		F36EE48F222928790083B2B8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F365F154222D2A2400F447A6 /* WireFrame */,
+				F365F14F222D228500F447A6 /* Protocol */,
 				F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */,
 				F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */,
 				3DEEA681AF5B42104EA229E4 /* RESTClient.swift */,
@@ -380,6 +416,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F38D20E9222FA91B002BD13D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				F38D20EA222FA949002BD13D /* Remote */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		F38D20EA222FA949002BD13D /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				F38D20EB222FAA38002BD13D /* ArtistsSongsListRemoteDataManager .swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -423,25 +475,6 @@
 			productReference = F336DDC62216B6DE0079B05D /* SonghoundTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F336DDD02216B6DE0079B05D /* SonghoundUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F336DDE02216B6DE0079B05D /* Build configuration list for PBXNativeTarget "SonghoundUITests" */;
-			buildPhases = (
-				82A6D335E2FAECC64E19166A /* [CP] Check Pods Manifest.lock */,
-				F336DDCD2216B6DE0079B05D /* Sources */,
-				F336DDCE2216B6DE0079B05D /* Frameworks */,
-				F336DDCF2216B6DE0079B05D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F336DDD32216B6DE0079B05D /* PBXTargetDependency */,
-			);
-			name = SonghoundUITests;
-			productName = SonghoundUITests;
-			productReference = F336DDD12216B6DE0079B05D /* SonghoundUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -464,10 +497,6 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = F336DDB12216B6DB0079B05D;
 					};
-					F336DDD02216B6DE0079B05D = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = F336DDB12216B6DB0079B05D;
-					};
 				};
 			};
 			buildConfigurationList = F336DDAD2216B6DB0079B05D /* Build configuration list for PBXProject "Songhound" */;
@@ -485,7 +514,6 @@
 			targets = (
 				F336DDB12216B6DB0079B05D /* Songhound */,
 				F336DDC52216B6DE0079B05D /* SonghoundTests */,
-				F336DDD02216B6DE0079B05D /* SonghoundUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -509,13 +537,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F336DDCF2216B6DE0079B05D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -530,18 +551,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Songhound/Pods-Songhound-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/CardParts/CardParts.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
-				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -551,18 +565,11 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardParts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -587,28 +594,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SonghoundTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		82A6D335E2FAECC64E19166A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SonghoundUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -690,7 +675,10 @@
 			files = (
 				F345CC7A221EB5CA00E2BDFA /* SongsViewController.swift in Sources */,
 				F36EE49B222935930083B2B8 /* SongsListViewProtocols.swift in Sources */,
+				F365F151222D22BA00F447A6 /* CommonNetworkProtocol.swift in Sources */,
+				F38D20E8222FA051002BD13D /* ArtistSongsListInteractor.swift in Sources */,
 				F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */,
+				F365F149222D1E5C00F447A6 /* ArtistsListViewController.swift in Sources */,
 				F36EE4A1222956C20083B2B8 /* SongsListInteractor.swift in Sources */,
 				F36EE4A3222970690083B2B8 /* SongsListViewController.swift in Sources */,
 				F397DD87221A02B500D28E3C /* Song.swift in Sources */,
@@ -701,13 +689,18 @@
 				F33E6CF3221BF07F00CFBB23 /* ArtistTableViewCell.swift in Sources */,
 				F336DDB62216B6DC0079B05D /* AppDelegate.swift in Sources */,
 				F33E6CF5221BF3A300CFBB23 /* Artist.swift in Sources */,
+				F365F153222D271800F447A6 /* ArtistsListViewWireFrame.swift in Sources */,
 				F36EE49F222940A60083B2B8 /* SongModel.swift in Sources */,
+				F365F14C222D201900F447A6 /* ArtistListViewProtocol.swift in Sources */,
 				F33E6CF7221BFBD100CFBB23 /* UIUtils.swift in Sources */,
+				F365F158222D2E1D00F447A6 /* ArtistSongListViewPresenter.swift in Sources */,
 				F30FDB70222A1F1300D48E96 /* Endpoints.swift in Sources */,
+				F38D20EC222FAA38002BD13D /* ArtistsSongsListRemoteDataManager .swift in Sources */,
 				F30FDB72222BCA7300D48E96 /* SongModelResponse.swift in Sources */,
 				F30FDB6A2229CC7600D48E96 /* Extensions.swift in Sources */,
 				F30FDB6C2229E39300D48E96 /* SongsListWireFrame.swift in Sources */,
 				3DEEAC1085D2738D777A54FF /* RESTClient.swift in Sources */,
+				F365F156222D2A3D00F447A6 /* WireFrameUtils.swift in Sources */,
 				3DEEAB0EA2AE6CA6208CBC27 /* User.swift in Sources */,
 				F30FDB6E222A1D4100D48E96 /* SongListRemoteDataManager.swift in Sources */,
 			);
@@ -717,15 +710,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F336DDCB2216B6DE0079B05D /* SonghoundTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F336DDCD2216B6DE0079B05D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F336DDD62216B6DE0079B05D /* SonghoundUITests.swift in Sources */,
+				3DEEA36EBD0201F665B86258 /* SongListFeatureTests.swift in Sources */,
+				3DEEAC28D16A7E489B24D262 /* SongListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,11 +722,6 @@
 			isa = PBXTargetDependency;
 			target = F336DDB12216B6DB0079B05D /* Songhound */;
 			targetProxy = F336DDC72216B6DE0079B05D /* PBXContainerItemProxy */;
-		};
-		F336DDD32216B6DE0079B05D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F336DDB12216B6DB0079B05D /* Songhound */;
-			targetProxy = F336DDD22216B6DE0079B05D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -962,48 +943,6 @@
 			};
 			name = Release;
 		};
-		F336DDE12216B6DE0079B05D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BD6616F14749191B222BD7E /* Pods-SonghoundUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FA8D45S82T;
-				INFOPLIST_FILE = SonghoundUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.SonghoundUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Songhound;
-			};
-			name = Debug;
-		};
-		F336DDE22216B6DE0079B05D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F8C8DE05285C4A9B94D2D0B /* Pods-SonghoundUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FA8D45S82T;
-				INFOPLIST_FILE = SonghoundUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.SonghoundUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Songhound;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1030,15 +969,6 @@
 			buildConfigurations = (
 				F336DDDE2216B6DE0079B05D /* Debug */,
 				F336DDDF2216B6DE0079B05D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F336DDE02216B6DE0079B05D /* Build configuration list for PBXNativeTarget "SonghoundUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F336DDE12216B6DE0079B05D /* Debug */,
-				F336DDE22216B6DE0079B05D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

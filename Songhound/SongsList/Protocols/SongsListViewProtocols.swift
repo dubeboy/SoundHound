@@ -13,22 +13,14 @@
 import UIKit
 
 // these are the functions that are doable by our view when it interacts with the presenter
-protocol SongsListViewProtocol: class {
+protocol SongsListViewProtocol: CommonNetworkProtocol {
     // maybe should be lazy ?
     var presenter: SongListPresenterProtocol? { get set }
     //presenter -> view
     func showSongsList(songs: [SongModel])
-
     //onTopThreeTopArtistsClicked
-
     func onTopThreeArtistClicked()
-
-    // must be able to show a friendly error when it ocours so that we dont make our users cry
-    func showError()
-    // show that we loading some data
     func showLoading()
-    // we want to be able to hide the loading progress bar
-    func hideLoading()
 }
 
 //Song List presenter protocol
@@ -40,7 +32,8 @@ protocol SongListPresenterProtocol {
     // VIEW -> Presenter
     func viewDidLoad()
     func showSongDetail(forSong song: SongModel)
-    func showSongs(forArtist artist: ArtistModel)
+    func showSongs(forSelectedArtistId: Int)
+    //TODO show awesome stuff
 }
 
 // we need the wireframe protocal so that this presenter can route to it desired page
@@ -51,14 +44,11 @@ protocol SongsListViewWireFrameProtocol: class {
     // also give it the required data
     func presentSongDetailsScreen(from view: SongsListViewProtocol, forSong song: SongModel)
     func presentSongsListViewScreen(from view: SongsListViewProtocol, forArtist artist: ArtistModel)
-    
 }
-
-
-
 
 protocol SongsListInteratorOutputProtocol: class {
     func didRetrieveSongs(_ songs: [SongModel])
+    func didSelectArtist(artist: ArtistModel)
     func onError()
 }
 
@@ -69,6 +59,7 @@ protocol SongsListInteratorInputProtocol {
     
     // PRESENTER - INTERACTOR
     func retrieveSongsList()
+    func getArtist(top selectedId: Int)
 }
 
 protocol SongsListDataManagerInputProtocol {
@@ -84,7 +75,9 @@ protocol SongsListRemoteDataManagerInputProtocol: class {
 protocol SongsListRemoteDataManagerOutputProtocol: class {
     //REMOTEDATAMODEEL -> INTERACTOR
     func onSongsRetrieved(_ songs: [SongModel])
+    func onArtistSelected(artist: ArtistModel)
     func onError()
+
 }
 
 protocol SongsListLocalDataManagerInputProtocol {

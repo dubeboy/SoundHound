@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   version = "1.7">
+   LastUpgradeVersion = "1010"
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -8,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F336DDB12216B6DB0079B05D"
-               BuildableName = "Songhound.app"
-               BlueprintName = "Songhound"
+               BlueprintIdentifier = "F336DDC52216B6DE0079B05D"
+               BuildableName = "SonghoundTests.xctest"
+               BlueprintName = "SonghoundTests"
                ReferencedContainer = "container:Songhound.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -25,8 +26,20 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      userAttachmentLifetime = "keepAlways"
+      codeCoverageEnabled = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F336DDC52216B6DE0079B05D"
+               BuildableName = "SonghoundTests.xctest"
+               BlueprintName = "SonghoundTests"
+               ReferencedContainer = "container:Songhound.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <AdditionalOptions>
       </AdditionalOptions>
@@ -41,22 +54,17 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F336DDB12216B6DB0079B05D"
-            BuildableName = "Songhound.app"
-            BlueprintName = "Songhound"
+            BlueprintIdentifier = "F336DDC52216B6DE0079B05D"
+            BuildableName = "SonghoundTests.xctest"
+            BlueprintName = "SonghoundTests"
             ReferencedContainer = "container:Songhound.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
-      <LocationScenarioReference
-         identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
-         referenceType = "1">
-      </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -64,6 +72,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F336DDC52216B6DE0079B05D"
+            BuildableName = "SonghoundTests.xctest"
+            BlueprintName = "SonghoundTests"
+            ReferencedContainer = "container:Songhound.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

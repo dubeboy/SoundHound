@@ -25,7 +25,7 @@ extension UIImageView {
             DispatchQueue.main.async() {
                 self.image = image
             }
-            }.resume()
+        }.resume()
     }
     func dowloadFromServer(link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         guard let url = URL(string: link) else { return }

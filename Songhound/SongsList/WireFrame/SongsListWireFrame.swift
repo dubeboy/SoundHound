@@ -13,7 +13,7 @@ class SongsListWireFrame: SongsListViewWireFrameProtocol {
     // some how this is static yoh
     class func createSongsListModule() -> UIViewController {
         // instatiate the main view controller
-        let navController = mainStoryBoard.instantiateViewController(withIdentifier: "SongsViewNavigationController")
+        let navController = mainStoryboard.instantiateViewController(withIdentifier: "SongsViewNavigationController")
         
         if let view = navController.children.first as? SongsListViewController {
             // instatiate the presenter here bro
@@ -43,10 +43,10 @@ class SongsListWireFrame: SongsListViewWireFrameProtocol {
     }
     
     func presentSongsListViewScreen(from view: SongsListViewProtocol, forArtist artist: ArtistModel) {
-        
-    }
-    
-     static var mainStoryBoard: UIStoryboard {
-        return UIStoryboard(name: "Main", bundle: Bundle.main)
+        let artistSongsList = ArtistsListViewWireFrame.createArtistListViewModule(forArtist: artist)
+
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(artistSongsList, animated: true)
+        }
     }
 }

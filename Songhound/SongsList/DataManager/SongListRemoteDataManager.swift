@@ -11,6 +11,7 @@ import Alamofire
 import AlamofireObjectMapper
 
 class SongListRemoteDataManager : SongsListRemoteDataManagerInputProtocol {
+    // this protocol is the one responsible for sending data the presenter
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol?
     
     func retrieveSongsList() {
