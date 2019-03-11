@@ -1,0 +1,2 @@
+# SoundHound
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/99cd9f170c9c40dfb42e77a71ae9a584)](https://app.codacy.com/app/dubeboy/SoundHound?utm_source=github.com&utm_medium=referral&utm_content=dubeboy/SoundHound&utm_campaign=Badge_Grade_Dashboard)
