@@ -19,7 +19,7 @@ import GoogleSignIn
 // TODO GET APP back to the state that it was before VIPER
 
 class SongsListViewController: UIViewController {
-    
+
     //top Items for the songs list view controller
     @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var imgArtist3: UIImageView!
@@ -136,6 +136,17 @@ extension SongsListViewController: SongsListViewProtocol {
     func showSongsList(songs: [SongModel]) {
         songList = songs
         tableViewSongs.reloadData()
+        // we want to also load the top three images
+        imgArtist1.dowloadFromServer(link: songList.first?.artworkURL ?? "")
+        imgArtist2.dowloadFromServer(link: songList[1].artworkURL)
+        imgArtist3.dowloadFromServer(link: songList[2].artworkURL)
+        // we also want to set the names of the images here
+
+        lblArtistName1.text = songList.first?.artistName
+        lblArtistName2.text = songList[1].artistName
+        lblArtistName3.text = songList[2].artistName
+
+
     }
     
     func showError() {
