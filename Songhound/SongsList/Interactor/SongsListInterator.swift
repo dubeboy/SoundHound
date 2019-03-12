@@ -1,5 +1,5 @@
 //
-//  SongsListInteractor.swift
+//  SongsListInterator.swift
 //  Songhound
 //
 //  Created by Divine Dube on 2019/03/01.
@@ -25,7 +25,7 @@ class SongsListInterator: SongsListInteratorInputProtocol {
     }
 
     func getArtist(top selectedId: Int) {
-        guard cache != nil, selectedId < cache!.count else {return}
+        guard cache != nil, selectedId < cache!.count else { return }
         // TODO elegant way to force unwrap using the guard statement
         onArtistSelected(artist: cache![selectedId].artist)
     }
