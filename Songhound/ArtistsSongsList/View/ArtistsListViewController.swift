@@ -1,5 +1,5 @@
 //
-//  ArtistsListViewController.swift
+//  ArtistListViewController.swift
 //  Songhound
 //
 //  Created by Divine Dube on 2019/03/04.
