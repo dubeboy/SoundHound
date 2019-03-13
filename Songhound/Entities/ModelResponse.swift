@@ -1,5 +1,5 @@
 //
-//  SongModelResponse.swift
+//  ModelResponse.swift
 //  Songhound
 //
 //  Created by Divine Dube on 2019/03/03.
@@ -8,12 +8,12 @@
 import Foundation
 import ObjectMapper
 
-struct SongModelResponse {
+struct ModelResponse<T> {
     var resultCount: Int? = 0
-    var songs: [SongModel]? = nil
+    var entityList: [T]? = nil
 }
 
-extension SongModelResponse: Mappable {
+extension ModelResponse: Mappable {
     
     init?(map: Map) {
         
@@ -21,6 +21,6 @@ extension SongModelResponse: Mappable {
     
     mutating func mapping(map: Map) {
         resultCount     <- map["resultCount"]
-        songs       <- map["results"]
+        entityList       <- map["results"]
     }
 }

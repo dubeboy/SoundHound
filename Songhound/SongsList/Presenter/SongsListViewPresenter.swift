@@ -13,6 +13,7 @@
 // get the user response from the View
 class SongsListViewPresenter: SongListPresenterProtocol {
 
+
     weak var view: SongsListViewProtocol?
     var interactor: SongsListInteratorInputProtocol?
     var wireframe: SongsListViewWireFrameProtocol?
@@ -28,6 +29,10 @@ class SongsListViewPresenter: SongListPresenterProtocol {
     
     func showSongs(forSelectedArtistId: Int) {
         interactor?.getArtist(top: forSelectedArtistId)
+    }
+
+    func presentMoreArtists() {
+        wireframe?.presentMoreArtists(from: view!)
     }
 }
 

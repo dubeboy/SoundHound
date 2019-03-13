@@ -33,6 +33,7 @@ protocol SongListPresenterProtocol {
     func viewDidLoad()
     func showSongDetail(forSong song: SongModel)
     func showSongs(forSelectedArtistId: Int)
+    func presentMoreArtists()
     //TODO show awesome stuff
 }
 
@@ -44,6 +45,8 @@ protocol SongsListViewWireFrameProtocol: class {
     // also give it the required data
     func presentSongDetailsScreen(from view: SongsListViewProtocol, forSong song: SongModel)
     func presentSongsListViewScreen(from view: SongsListViewProtocol, forArtist artist: ArtistModel)
+    func presentMoreArtists(from view: SongsListViewProtocol)
+
 }
 
 protocol SongsListInteratorOutputProtocol: class {

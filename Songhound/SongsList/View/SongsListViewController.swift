@@ -33,6 +33,10 @@ class SongsListViewController: UIViewController {
     @IBOutlet weak var tableViewSongs: UITableView!
     @IBOutlet weak var imgProfilePicture: UIImageView!
     
+    
+    @IBOutlet weak var moreArtistButton: UIButton!
+    
+    
     var presenter: SongListPresenterProtocol?
     var songList: [SongModel] = []
     //-1 means no image was selected

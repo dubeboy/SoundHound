@@ -247,6 +247,7 @@
                         <outlet property="lblArtistName3" destination="ZSK-CV-Szd" id="f1k-ZN-bNU"/>
                         <outlet property="lblPlaying" destination="4QM-wH-FXt" id="Wxs-oB-D89"/>
                         <outlet property="lblUserName" destination="FeB-kY-1kg" id="1O0-Fj-sFP"/>
+                        <outlet property="moreArtistButton" destination="Rlm-pY-Zqx" id="FDP-tF-609"/>
                         <outlet property="tableViewSongs" destination="9fp-Xt-qqR" id="SQ1-sO-m18"/>
                     </connections>
                 </viewController>
@@ -254,10 +255,10 @@
             </objects>
             <point key="canvasLocation" x="1613.5999999999999" y="-388.66995073891627"/>
         </scene>
-        <!--Songs List View Controller-->
+        <!--Artist List View Controller-->
         <scene sceneID="dmQ-2T-4aY">
             <objects>
-                <viewController id="sLg-qD-I4Z" customClass="SongsListViewController" customModule="Songhound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArtistListViewController" id="sLg-qD-I4Z" customClass="ArtistListViewController" customModule="Songhound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AVv-nP-IgW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,7 +360,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="artistsTableView" destination="mTZ-C6-UND" id="dUT-Gd-IHC"/>
+                        <outlet property="artistTableView" destination="mTZ-C6-UND" id="VXS-4E-BXF"/>
                         <outlet property="searchBar" destination="PFc-Ys-K6z" id="zoQ-Vl-3Gk"/>
                     </connections>
                 </viewController>
@@ -450,7 +451,7 @@
         <!--Artists List View Controller-->
         <scene sceneID="vaZ-jq-Htr">
             <objects>
-                <viewController storyboardIdentifier="ArtistListViewController" id="xSv-cM-AGW" customClass="ArtistsListViewController" customModule="Songhound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArtistSongsListViewController" id="xSv-cM-AGW" customClass="ArtistsListViewController" customModule="Songhound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0nm-xF-bhI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

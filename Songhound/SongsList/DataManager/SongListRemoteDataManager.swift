@@ -18,10 +18,10 @@ class SongListRemoteDataManager : SongsListRemoteDataManagerInputProtocol {
         Alamofire
             .request(Endpoints.Songs.fetch(songName: "swift").url, method: .get)
 //            .validate() // no need for this but anyway..
-            .responseObject { (response: DataResponse<SongModelResponse>) in
+            .responseObject { (response: DataResponse<ModelResponse<SongModel>>) in
                 switch response.result {
                 case .success(let res):
-                    let songs = res.songs!
+                    let songs = res.entityList!
                     self.remoteRequestHandler?.onSongsRetrieved(songs)
                 case .failure(let error):
                     print(error)

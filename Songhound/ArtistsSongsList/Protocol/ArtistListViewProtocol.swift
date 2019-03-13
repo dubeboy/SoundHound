@@ -70,7 +70,7 @@ protocol ArtistListRemoteDataManagerInputProtocol {
     
     var remoteRequestHandler: ArtistSongsListDataManagerOutputProtocol? { get set }
     // RemoteData manager -> Interactor
-    func retriveSongsList(artistName: String)
+    func retrieveSongsList(artistName: String)
 }
 
 protocol ArtistSongsListDataManagerOutputProtocol {
