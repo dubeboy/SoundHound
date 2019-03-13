@@ -29,6 +29,7 @@ protocol ArtistListRemoteDataManagerOutputProtocol {
 protocol ArtistListRemoteDataManagerInputProtocol2 {
     var remoteRequestHandler: ArtistListRemoteDataManagerOutputProtocol? { get set }
     func retrieveArtists()
+    func searchForArtist(artistName: String)
 
 }
 
@@ -37,6 +38,7 @@ protocol ArtistListInteractorInputProtocol {
     var remoteDataManager:  ArtistListRemoteDataManagerInputProtocol2? { get set }
 
     func retrieveArtists()
+    func searchForArtist(artistName: String)
 
 }
 
@@ -49,7 +51,9 @@ protocol ArtistListPresenterProtocol {
 
     // wireframe
 
-    func showArtistsSongs(artists: ArtistModel)
+    func presentArtistsSongs(artists: [ArtistModel])
+
+    func viewDidLoad()
 }
 
 protocol  ArtistListViewProtocol: CommonNetworkProtocol {

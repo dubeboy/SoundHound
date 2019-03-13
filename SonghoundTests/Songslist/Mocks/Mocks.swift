@@ -64,6 +64,10 @@ class MockTestSongListWireFrame: SongsListViewWireFrameProtocol  {
         song = nil
         artist = nil
     }
+
+    func presentMoreArtists(from view: SongsListViewProtocol) {
+
+    }
 }
 class MockTestSongListRemoteDataManager:  SongsListRemoteDataManagerInputProtocol {
 
@@ -119,6 +123,7 @@ class MockSongsListViewController: SongsListViewProtocol {
 
 class MockSongsListViewPresenter: SongListPresenterProtocol, SongsListInteratorOutputProtocol {
 
+
     var view: SongsListViewProtocol?
     var interactor: SongsListInteratorInputProtocol?
     var wireframe: SongsListViewWireFrameProtocol?
@@ -151,6 +156,11 @@ class MockSongsListViewPresenter: SongListPresenterProtocol, SongsListInteratorO
     func showSongs(forSelectedArtistId: Int) {
         wireframe?.presentSongsListViewScreen(from: view!, forArtist: ArtistModel(name: "John", artistID: 1000))
     }
+
+    func presentMoreArtists() {
+
+    }
+
 
 }
 

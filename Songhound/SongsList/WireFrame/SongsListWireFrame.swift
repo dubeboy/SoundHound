@@ -9,6 +9,8 @@
 import UIKit
 
 class SongsListWireFrame: SongsListViewWireFrameProtocol {
+
+
    
     // some how this is static yoh
     class func createSongsListModule() -> UIViewController {
@@ -50,6 +52,14 @@ class SongsListWireFrame: SongsListViewWireFrameProtocol {
 
         if let sourceView = view as? UIViewController {
             sourceView.navigationController?.pushViewController(artistSongsList, animated: true)
+        }
+    }
+
+    func presentMoreArtists(from view: SongsListViewProtocol) {
+        let artistList = ArtistListWireFrame.createArtistListModule()
+
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(artistList, animated: true)
         }
     }
 }

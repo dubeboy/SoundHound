@@ -21,7 +21,7 @@ class ArtistSongsListInteractor : ArtistSongsListViewInteractorInputProtocol {
         let encodedArtistName = artistName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ??
                 String(artistName.split(separator: " ").first!)
 
-        remoteDataManager?.retriveSongsList(artistName: encodedArtistName)
+        remoteDataManager?.retrieveSongsList(artistName: encodedArtistName)
 
 
 

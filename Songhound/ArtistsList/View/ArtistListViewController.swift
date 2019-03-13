@@ -9,18 +9,23 @@
 import UIKit
 import PKHUD
 
-class ArtistListViewController: ViewController {
+class ArtistListViewController: UIViewController {
 
+    var artists: [ArtistModel]!
     var presenter: ArtistListPresenterProtocol?
-
+    @IBOutlet weak var artistTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.viewDidLoad()
+        artistTableView.delegate = self
+        artistTableView.dataSource = self
     }
 }
 
 extension ArtistListViewController: ArtistListViewProtocol {
     func showArtists(artists: [ArtistModel]) {
-        
+        self.artists = artists
     }
 
     func showError() {
@@ -35,5 +40,26 @@ extension ArtistListViewController: ArtistListViewProtocol {
         HUD.hide()
     }
 }
+// UITable extenstion
+extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return artists.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.artistTableView.dequeueReusableCell(withIdentifier: "artistTableViewCell", for: indexPath) as! ArtistTableViewCell
+
+        cell.lblArtistName.text = artists[indexPath.row].name
+        //cell.lblNumHits.text = "\(artists[indexPath.row].numHits) hot songs"
+        //  let str = artists[indexPath.row].isHot ? "🔥" :  "";
+        //  cell.lblEmoji.text = str
+
+//        cell.imgArtist. = // set the artist image
+
+        return cell
+    }
+}
+
 
 

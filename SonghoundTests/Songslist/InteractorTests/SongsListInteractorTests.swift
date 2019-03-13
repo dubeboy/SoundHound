@@ -34,6 +34,12 @@ class SongsListInteractorTest : XCTestCase {
 
     override func tearDown() {
         super.tearDown()
+        interactor = nil
+        wireFrame = nil
+        remoteDataManager = nil
+        view = nil
+        presenter = nil
+
     }
 
 
@@ -48,15 +54,11 @@ class SongsListInteractorTest : XCTestCase {
         XCTAssertTrue(wireFrame.presentSongsListViewScreen)
     }
 
-//    func testOutputOnSongsRetrieved() {
-//
-//    }
-//
-//    func testOutputOnError() {
-//
-//    }
-//
-//    func testOutputWhenArtistIsSelected() {
-//
-//    }
+    func testOutputOnError() {
+        remoteDataManager.songs = nil
+        presenter.viewDidLoad()
+        XCTAssertTrue(view.isShowingError)
+    }
+
+
 }
