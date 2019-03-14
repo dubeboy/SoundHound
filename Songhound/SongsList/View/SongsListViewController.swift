@@ -50,7 +50,7 @@ class SongsListViewController: UIViewController {
         // also why does it not show the cell separators
         self.tableViewSongs.delegate = self
         self.tableViewSongs.dataSource = self
-        tableViewSongs.tableFooterView = UIView()
+       // tableViewSongs.tableFooterView = UIView()
 
         print("assigning the self to the delegate")
        // showCurrentPlayingSong()

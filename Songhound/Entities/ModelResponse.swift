@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-struct ModelResponse<T> {
+struct ModelResponse<T : Mappable> {
     var resultCount: Int? = 0
     var entityList: [T]? = nil
 }
