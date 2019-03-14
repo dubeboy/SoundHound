@@ -6,19 +6,21 @@
 import Foundation
 
 class ArtistListPresenter: ArtistListPresenterProtocol {
-
-
     var view: ArtistListViewProtocol? = nil
     var interactor: ArtistListInteractorInputProtocol? = nil
     var wireFrame: ArtistListWireFrameProtocol? = nil
 
-    func presentArtistsSongs(artists: [ArtistModel]) {
-       //TODO Implement some cool stuff here
+    func presentArtistsSongs(artist: ArtistModel) {
+       wireFrame?.presentArtistSongView(from: view!, forArtist: artist)
     }
 
     func viewDidLoad() {
         view?.showLoading()
         interactor?.retrieveArtists()
+    }
+
+    func searchForArtists(by name: String) {
+        interactor?.searchForArtist(artistName: name)
     }
 }
 

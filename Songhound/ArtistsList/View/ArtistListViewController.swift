@@ -12,7 +12,6 @@ import PKHUD
 class ArtistListViewController: UIViewController {
 
     var artists: [ArtistModel] = []
-    var originalArtistListFromServer: [ArtistModel] = [] // sure could be done better yoh
     var presenter: ArtistListPresenterProtocol?
     @IBOutlet weak var artistTableView: UITableView!
     @IBOutlet weak var artistsSearchbar: UISearchBar!
@@ -31,7 +30,6 @@ extension ArtistListViewController: ArtistListViewProtocol {
     func showArtists(artists: [ArtistModel]) {
         self.artists = artists
         artistTableView.reloadData()
-        originalArtistListFromServer = artists // can also be done on a background thread bro!
     }
 
     func showError() {
@@ -66,20 +64,15 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
+
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.presentArtistsSongs(artist: artists[indexPath.row])
+    }
 }
 
 extension ArtistListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // bad code!!!
-        if !searchText.isEmpty {
-            artists = artists.filter { (artist: ArtistModel) -> Bool in
-                return artist.name.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
-            }
-        } else {
-            artists = originalArtistListFromServer
-        }
-
-        artistTableView.reloadData()
+       presenter?.searchForArtists(by: searchText)
     }
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -90,6 +83,7 @@ extension ArtistListViewController: UISearchBarDelegate {
         searchBar.showsCancelButton = false
         searchBar.text = ""
         searchBar.resignFirstResponder()
+        presenter?.searchForArtists(by: "")
         //populateArtists()
     }
 }
