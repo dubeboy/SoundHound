@@ -29,6 +29,11 @@ class ArtistListWireFrame: ArtistListWireFrameProtocol {
     }
 
     // will have a func that actually routes to the artist page for song by that artist
+    func presentArtistSongView(from view: ArtistListViewProtocol, forArtist artist: ArtistModel) {
+        let artistSongsList = ArtistsListViewWireFrame.createArtistListViewModule(forArtist: artist)
 
-
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(artistSongsList, animated: true)
+        }
+    }
 }

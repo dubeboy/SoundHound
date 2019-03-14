@@ -13,6 +13,7 @@ protocol ArtistListWireFrameProtocol {
     static func createArtistListModule() -> UIViewController
 
     // this is where we do the rourtng
+    func presentArtistSongView(from view: ArtistListViewProtocol, forArtist artist: ArtistModel)
 }
 
 protocol ArtistsListInteractorOutputProtocol {
@@ -51,9 +52,9 @@ protocol ArtistListPresenterProtocol {
 
     // wireframe
 
-    func presentArtistsSongs(artists: [ArtistModel])
-
+    func presentArtistsSongs(artist: ArtistModel)
     func viewDidLoad()
+    func searchForArtists(by name: String)
 }
 
 protocol  ArtistListViewProtocol: CommonNetworkProtocol {

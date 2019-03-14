@@ -11,7 +11,7 @@ class ArtistListRemoteDataManager: ArtistListRemoteDataManagerInputProtocol2 {
 
     func retrieveArtists() {
         Alamofire
-                .request(Endpoints.Artists.fetch(artistName: "a").url)
+                .request(Endpoints.Artists.fetch(artistName: "Swift").url)
                 .responseObject { (response: DataResponse<ModelResponse<ArtistModel>>) in
                     switch response.result {
                     case .success(let res):
@@ -25,6 +25,17 @@ class ArtistListRemoteDataManager: ArtistListRemoteDataManagerInputProtocol2 {
     }
 
     func searchForArtist(artistName: String) {
-
+        Alamofire
+                .request(Endpoints.Artists.fetch(artistName: artistName).url)
+                .responseObject { (response: DataResponse<ModelResponse<ArtistModel>>) in
+                    switch response.result {
+                        case .success(let res):
+                            let artists = res.entityList
+                            self.remoteRequestHandler?.didRetrieveArtists(artists: artists!)
+                        case .failure(let error):
+                            self.remoteRequestHandler?.onError()
+                            print(error)
+                        }
+                }
     }
 }
