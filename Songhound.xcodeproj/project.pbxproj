@@ -13,6 +13,7 @@
 		3DEEA36EBD0201F665B86258 /* SongListFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA55DB13DB618F6D1E0CB /* SongListFeatureTests.swift */; };
 		3DEEA4A7DD517E79690D929E /* SongDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA2ECF1E37AFC80826791 /* SongDetailPresenter.swift */; };
 		3DEEA52AE375D6A75323D45B /* ArtistListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA400EF3CBA7D7D215D65 /* ArtistListInteractor.swift */; };
+		3DEEA55BAD2385E63DF93465 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEAE5FF26EB3EC23EE200D /* SongTableViewCell.swift */; };
 		3DEEA76CD49126F2C8067DA6 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEAFB13A5F76BA0B9FFF60 /* Mocks.swift */; };
 		3DEEA78A48252B1B213C57A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DEEAA013A8E2F14973CB22A /* GoogleService-Info.plist */; };
 		3DEEA8656BE2BED91F653AE1 /* ArtistListRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEAD78D920FD77ED0CFAB1 /* ArtistListRemoteDataManager.swift */; };
@@ -54,7 +55,6 @@
 		F38D20E8222FA051002BD13D /* ArtistSongsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38D20E7222FA051002BD13D /* ArtistSongsListInteractor.swift */; };
 		F38D20EC222FAA38002BD13D /* ArtistsSongsListRemoteDataManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = F38D20EB222FAA38002BD13D /* ArtistsSongsListRemoteDataManager .swift */; };
 		F397DD87221A02B500D28E3C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD86221A02B500D28E3C /* Song.swift */; };
-		F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */; };
 		F3F91CCC2237E8EA006C0D6D /* ArtistsListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F91CCB2237E8EA006C0D6D /* ArtistsListProtocols.swift */; };
 		F8E5BC3BAF256DE7CD755BEE /* Pods_SonghoundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D14AE6B7E5F0876C64E3747 /* Pods_SonghoundTests.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +85,7 @@
 		3DEEA9A4A963D2A744B98069 /* ArtistListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistListPresenter.swift; sourceTree = "<group>"; };
 		3DEEAA013A8E2F14973CB22A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3DEEAD78D920FD77ED0CFAB1 /* ArtistListRemoteDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistListRemoteDataManager.swift; sourceTree = "<group>"; };
+		3DEEAE5FF26EB3EC23EE200D /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		3DEEAEC37B554FECEBB2749F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3DEEAFB13A5F76BA0B9FFF60 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		3F8C8DE05285C4A9B94D2D0B /* Pods-SonghoundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonghoundUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SonghoundUITests/Pods-SonghoundUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,7 +130,6 @@
 		F38D20E7222FA051002BD13D /* ArtistSongsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSongsListInteractor.swift; sourceTree = "<group>"; };
 		F38D20EB222FAA38002BD13D /* ArtistsSongsListRemoteDataManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistsSongsListRemoteDataManager .swift"; sourceTree = "<group>"; };
 		F397DD86221A02B500D28E3C /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		F3F91CCB2237E8EA006C0D6D /* ArtistsListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -383,7 +383,6 @@
 				F365F154222D2A2400F447A6 /* WireFrame */,
 				F365F14F222D228500F447A6 /* Protocol */,
 				F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */,
-				F397DD88221A8C4C00D28E3C /* SongTableViewCell.swift */,
 				3DEEA681AF5B42104EA229E4 /* RESTClient.swift */,
 				F30FDB692229CC7600D48E96 /* Extensions.swift */,
 				F30FDB6F222A1F1300D48E96 /* Endpoints.swift */,
@@ -520,6 +519,7 @@
 			children = (
 				3DEEA1BE49DB22FC0488807D /* ArtistListViewController.swift */,
 				3DEEA0782460153FDF0D7021 /* TopSongsByArtistViewController.swift */,
+				3DEEAE5FF26EB3EC23EE200D /* SongTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -792,7 +792,6 @@
 				F36EE49B222935930083B2B8 /* SongsListViewProtocols.swift in Sources */,
 				F365F151222D22BA00F447A6 /* CommonNetworkProtocol.swift in Sources */,
 				F38D20E8222FA051002BD13D /* ArtistSongsListInteractor.swift in Sources */,
-				F397DD89221A8C4C00D28E3C /* SongTableViewCell.swift in Sources */,
 				F365F149222D1E5C00F447A6 /* ArtistsListViewController.swift in Sources */,
 				F36EE4A1222956C20083B2B8 /* SongsListInterator.swift in Sources */,
 				F36EE4A3222970690083B2B8 /* SongsListViewController.swift in Sources */,
@@ -828,6 +827,7 @@
 				3DEEA52AE375D6A75323D45B /* ArtistListInteractor.swift in Sources */,
 				3DEEA8656BE2BED91F653AE1 /* ArtistListRemoteDataManager.swift in Sources */,
 				3DEEA111347B126E3B430038 /* ArtistListWireFrame.swift in Sources */,
+				3DEEA55BAD2385E63DF93465 /* SongTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

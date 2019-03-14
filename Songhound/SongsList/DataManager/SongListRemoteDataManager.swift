@@ -20,13 +20,17 @@ class SongListRemoteDataManager : SongsListRemoteDataManagerInputProtocol {
 //            .validate() // no need for this but anyway..
             .responseObject { (response: DataResponse<ModelResponse<SongModel>>) in
                 switch response.result {
-                case .success(let res):
-                    let i = 0
-                    let songs = res.entityList!
-                    self.remoteRequestHandler?.onSongsRetrieved(songs)
-                case .failure(let error):
-                    print(error)
-                }
+                    case .success(let res):
+                        if let songs = res.entityList {
+                            self.remoteRequestHandler?.onSongsRetrieved(songs)
+                        } else {
+                            // should probably pass back an error type yoh
+                            self.remoteRequestHandler?.onError()
+                        }
+                    case .failure(let error):
+                        print(error)
+                        self.remoteRequestHandler?.onError()
+                    }
             }
     }
 }
