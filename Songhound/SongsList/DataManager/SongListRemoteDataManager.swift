@@ -21,6 +21,7 @@ class SongListRemoteDataManager : SongsListRemoteDataManagerInputProtocol {
             .responseObject { (response: DataResponse<ModelResponse<SongModel>>) in
                 switch response.result {
                 case .success(let res):
+                    let i = 0
                     let songs = res.entityList!
                     self.remoteRequestHandler?.onSongsRetrieved(songs)
                 case .failure(let error):
