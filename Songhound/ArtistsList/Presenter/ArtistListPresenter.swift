@@ -13,7 +13,7 @@ class ArtistListPresenter: ArtistListPresenterProtocol {
     var wireFrame: ArtistListWireFrameProtocol? = nil
 
     func presentArtistsSongs(artists: [ArtistModel]) {
-        view?.showArtists(artists: artists)
+       //TODO Implement some cool stuff here
     }
 
     func viewDidLoad() {
@@ -25,10 +25,12 @@ class ArtistListPresenter: ArtistListPresenterProtocol {
 extension ArtistListPresenter : ArtistsListInteractorOutputProtocol {
 
     func didRetrieveArtists(artists: [ArtistModel]) {
+        view?.hideLoading()
         view?.showArtists(artists: artists)
     }
 
     func onError() {
+        view?.hideLoading()
         view?.showError()
     }
 }

@@ -11,21 +11,27 @@ import PKHUD
 
 class ArtistListViewController: UIViewController {
 
-    var artists: [ArtistModel]!
+    var artists: [ArtistModel] = []
+    var originalArtistListFromServer: [ArtistModel] = [] // sure could be done better yoh
     var presenter: ArtistListPresenterProtocol?
     @IBOutlet weak var artistTableView: UITableView!
-    
+    @IBOutlet weak var artistsSearchbar: UISearchBar!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         artistTableView.delegate = self
         artistTableView.dataSource = self
+        artistsSearchbar.delegate = self
+
     }
 }
 
 extension ArtistListViewController: ArtistListViewProtocol {
     func showArtists(artists: [ArtistModel]) {
         self.artists = artists
+        artistTableView.reloadData()
+        originalArtistListFromServer = artists // can also be done on a background thread bro!
     }
 
     func showError() {
@@ -51,6 +57,7 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = self.artistTableView.dequeueReusableCell(withIdentifier: "artistTableViewCell", for: indexPath) as! ArtistTableViewCell
 
         cell.lblArtistName.text = artists[indexPath.row].name
+       // cell.imgArtist.dowloadFromServer(link: )
         //cell.lblNumHits.text = "\(artists[indexPath.row].numHits) hot songs"
         //  let str = artists[indexPath.row].isHot ? "🔥" :  "";
         //  cell.lblEmoji.text = str
@@ -58,6 +65,32 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
 //        cell.imgArtist. = // set the artist image
 
         return cell
+    }
+}
+
+extension ArtistListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // bad code!!!
+        if !searchText.isEmpty {
+            artists = artists.filter { (artist: ArtistModel) -> Bool in
+                return artist.name.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+            }
+        } else {
+            artists = originalArtistListFromServer
+        }
+
+        artistTableView.reloadData()
+    }
+
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.artistsSearchbar.showsCancelButton = true
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        //populateArtists()
     }
 }
 

@@ -33,10 +33,6 @@ class SongsListViewController: UIViewController {
     @IBOutlet weak var tableViewSongs: UITableView!
     @IBOutlet weak var imgProfilePicture: UIImageView!
     
-    
-    @IBOutlet weak var moreArtistButton: UIButton!
-    
-    
     var presenter: SongListPresenterProtocol?
     var songList: [SongModel] = []
     //-1 means no image was selected
@@ -83,6 +79,7 @@ class SongsListViewController: UIViewController {
         addTapGestureToAnImageView(imageView: imgProfilePicture)
     }
 
+  
     func addTapGestureToAnImageView(imageView: UIImageView) {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SongsListViewController.imageTapped(gesture:)))
         imageView.addGestureRecognizer(tapGesture)
@@ -129,7 +126,9 @@ class SongsListViewController: UIViewController {
         }
     }
     
-    
+    @IBAction func onMoreArtistsClick(_ sender: Any) {
+        presenter?.presentMoreArtists()
+    }
 }
 //Song list view protocol
 extension SongsListViewController: SongsListViewProtocol {
