@@ -54,7 +54,7 @@ protocol ArtistListPresenterProtocol {
     func searchForArtists(by name: String)
 }
 
-protocol  ArtistListViewProtocol: CommonNetworkProtocol {
+protocol ArtistListViewProtocol: CommonNetworkProtocol {
     // reference to the intermediator
     var presenter: ArtistListPresenterProtocol? { get set }
     func showLoading()

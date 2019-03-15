@@ -16,8 +16,8 @@ import Firebase
 import GoogleSignIn
 
 class ViewController: UIViewController,
-                                    UITableViewDataSource,
-                                    UITableViewDelegate, GIDSignInUIDelegate, GIDSignInDelegate {
+        UITableViewDataSource,
+        UITableViewDelegate, GIDSignInUIDelegate, GIDSignInDelegate {
 
     @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var imgProfilePicture: UIImageView!
@@ -52,7 +52,7 @@ class ViewController: UIViewController,
         self.tableViewSongs.dataSource = self
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
-        
+
         print("assigning the self to the delegate")
         showCurrentPlayingSong()
 
@@ -69,13 +69,13 @@ class ViewController: UIViewController,
 
         addTapGestureToAnImageView(imageView: imgProfilePicture)
 
-       let user = getSignedInUser()
+        let user = getSignedInUser()
         if let user = user {
             lblUserName.text = user.fullName
             print("user details \(user.fullName!)")
             let prof = user.profileURL ?? ""
             print("the profile is \(prof)")
-            downloadImage(urlString: prof )
+            downloadImage(urlString: prof)
         }
 
         searchForSongByArtist(songName: "Swift", callback: { songs in
@@ -142,7 +142,7 @@ class ViewController: UIViewController,
         cell.lblAlbumName.text = albumName
         //ASK: I dont get why this whould be forced to unwrapped
         let cellImageView = cell.imgAlbumCover!
-                // will download image later
+        // will download image later
         let albumCoverURL = data[indexPath.row].artworkURL
         cellImageView.dowloadFromServer(link: albumCoverURL)
 
@@ -191,7 +191,7 @@ class ViewController: UIViewController,
         }
     }
 
-     @objc func imageTapped(gesture: UIGestureRecognizer) {
+    @objc func imageTapped(gesture: UIGestureRecognizer) {
         if let imageView = gesture.view as? UIImageView {
             print("Hello ")
             // niot sure if this is a good idea on getting by tag
@@ -255,10 +255,12 @@ class ViewController: UIViewController,
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         print("oopps user signed out yoh")
 
-        guard let authentication = user.authentication else { return }
+        guard let authentication = user.authentication else {
+            return
+        }
 
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                       accessToken: authentication.accessToken)
+                accessToken: authentication.accessToken)
         Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
             if let error = error {
                 print("user not signed in there was an error bro \(error)")
@@ -270,7 +272,7 @@ class ViewController: UIViewController,
             if let user = getSignedInUser() {
                 self.lblUserName.text = user.fullName
                 if let profileUrl = user.profileURL {
-                    self.downloadImage(urlString: profileUrl )
+                    self.downloadImage(urlString: profileUrl)
                 } else {
                     // TODO: I want to set a default image
                 }

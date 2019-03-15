@@ -5,13 +5,13 @@
 
 import Foundation
 
-class User : NSCoder {
+class User: NSCoder {
     var userId: String? = "" {
         willSet(newTotalSteps) {
             print("About to set totalSteps to \(String(describing: newTotalSteps))")
         }
         didSet {
-            
+
         }
     }
     var idToken: String?
@@ -29,10 +29,8 @@ class User : NSCoder {
         self.familyName = familyName
         self.email = email
     }
-    
+
     //try this new property observers
-    
-    
 
 
 }

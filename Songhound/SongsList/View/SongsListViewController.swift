@@ -32,13 +32,13 @@ class SongsListViewController: UIViewController {
     @IBOutlet weak var currentLocation: UILabel!
     @IBOutlet weak var tableViewSongs: UITableView!
     @IBOutlet weak var imgProfilePicture: UIImageView!
-    
+
     var presenter: SongListPresenterProtocol?
     var songList: [SongModel] = []
     //-1 means no image was selected
     private var selectedImage = -1
     private let locationManager = CLLocationManager()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
@@ -46,10 +46,10 @@ class SongsListViewController: UIViewController {
         // also why does it not show the cell separators
         self.tableViewSongs.delegate = self
         self.tableViewSongs.dataSource = self
-       // tableViewSongs.tableFooterView = UIView()
+        // tableViewSongs.tableFooterView = UIView()
 
         print("assigning the self to the delegate")
-       // showCurrentPlayingSong()
+        // showCurrentPlayingSong()
 
         locationManager.requestWhenInUseAuthorization()
 
@@ -66,35 +66,35 @@ class SongsListViewController: UIViewController {
         // Do any additional setup after loading the view.
         setUpTopThreeImages()
     }
-    
+
     private func setUpTopThreeImages() {
         makeUIImageViewCircle(imageView: imgProfilePicture, imgSize: 50)
         makeUIImageViewCircle(imageView: imgArtist1, imgSize: 100)
         makeUIImageViewCircle(imageView: imgArtist2, imgSize: 100)
         makeUIImageViewCircle(imageView: imgArtist3, imgSize: 100)
-        
+
         addTapGestureToAnImageView(imageView: imgArtist3)
         addTapGestureToAnImageView(imageView: imgArtist1)
         addTapGestureToAnImageView(imageView: imgArtist2)
         addTapGestureToAnImageView(imageView: imgProfilePicture)
     }
 
-  
+
     func addTapGestureToAnImageView(imageView: UIImageView) {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SongsListViewController.imageTapped(gesture:)))
         imageView.addGestureRecognizer(tapGesture)
         imageView.isUserInteractionEnabled = true
-        
+
         imageTapped(gesture: tapGesture)
     }
-    
+
     @objc func imageTapped(gesture: UIGestureRecognizer) {
         if let imageView = gesture.view as? UIImageView {
             print("Hello ")
             // niot sure if this is a good idea on getting by tag
             let tag = imageView.tag
             print("the tag is \(tag)")
-            
+
             switch tag {
             case 0:
                 print("img one openi")
@@ -106,12 +106,12 @@ class SongsListViewController: UIViewController {
                 print("img one open")
                 selectedImage = 1
                 presenter?.showSongs(forSelectedArtistId: selectedImage)
-               // performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+                    // performSegue(withIdentifier: "viewSongsForArtist", sender: self)
             case 2:
                 print("img one opennn")
                 selectedImage = 2
                 presenter?.showSongs(forSelectedArtistId: selectedImage)
-              //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+                    //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
             case 3:
                 print("profile picture selected bro ")
                 selectedImage = 3
@@ -121,20 +121,21 @@ class SongsListViewController: UIViewController {
 
             default:
                 print("ooops")
-                
+
             }
         }
     }
-    
+
     @IBAction func onMoreArtistsClick(_ sender: Any) {
         presenter?.presentMoreArtists()
     }
 }
+
 //Song list view protocol
 extension SongsListViewController: SongsListViewProtocol {
     func onTopThreeArtistClicked() {
     }
-    
+
     func showSongsList(songs: [SongModel]) {
         songList = songs
         tableViewSongs.reloadData()
@@ -150,42 +151,44 @@ extension SongsListViewController: SongsListViewProtocol {
 
 
     }
-    
+
     func showError() {
         HUD.flash(.label("Internet not connect"), delay: 2.0)
     }
-    
+
     func showLoading() {
         HUD.show(.progress)
     }
-    
+
     func hideLoading() {
         HUD.hide()
     }
 }
 
-extension SongsListViewController:  UITableViewDataSource, UITableViewDelegate  {
+extension SongsListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return songList.count
+        return songList.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableViewSongs.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) as! SongTableViewCell
         let song = songList[indexPath.row]
         cell.set(forSong: song)
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.showSongDetail(forSong: songList[indexPath.row])
     }
 }
 
-extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate  {
+extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         print("oopps user signed out yoh")
 
-        guard let authentication = user.authentication else { return }
+        guard let authentication = user.authentication else {
+            return
+        }
 
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                 accessToken: authentication.accessToken)

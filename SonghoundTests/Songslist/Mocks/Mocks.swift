@@ -35,7 +35,8 @@ class MockTestSongListInteractor: SongsListInteratorInputProtocol, SongsListRemo
         onArtistSelected(artist: ArtistModel(name: "Taylor Swift", artistID: 200000))
     }
 }
-class MockTestSongListWireFrame: SongsListViewWireFrameProtocol  {
+
+class MockTestSongListWireFrame: SongsListViewWireFrameProtocol {
 
     var showSongDetailCalled = false
     var presentSongsListViewScreen = false
@@ -69,11 +70,12 @@ class MockTestSongListWireFrame: SongsListViewWireFrameProtocol  {
 
     }
 }
-class MockTestSongListRemoteDataManager:  SongsListRemoteDataManagerInputProtocol {
+
+class MockTestSongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
 
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol?
 
-    var songs: [SongModel]? =  [SongModel(id: 100, name: "Blank Space", artistName: "Taylor Swift", albumName: "Single", genre: "Hip Hop", popularity: 100, artworkURL: "exampleUrl.com/assets/image.jpg", artist: ArtistModel(name: "Taylor Swift", artistID: 200000))]
+    var songs: [SongModel]? = [SongModel(id: 100, name: "Blank Space", artistName: "Taylor Swift", albumName: "Single", genre: "Hip Hop", popularity: 100, artworkURL: "exampleUrl.com/assets/image.jpg", artist: ArtistModel(name: "Taylor Swift", artistID: 200000))]
 
     func retrieveSongsList() {
         // simulate network error
@@ -84,6 +86,7 @@ class MockTestSongListRemoteDataManager:  SongsListRemoteDataManagerInputProtoco
         }
     }
 }
+
 class MockSongsListViewController: SongsListViewProtocol {
 
     var isLoading = false
@@ -137,7 +140,7 @@ class MockSongsListViewPresenter: SongListPresenterProtocol, SongsListInteratorO
     }
 
     func didSelectArtist(artist: ArtistModel) {
-        wireframe?.presentSongsListViewScreen(from:  view!, forArtist: artist)
+        wireframe?.presentSongsListViewScreen(from: view!, forArtist: artist)
 
     }
 

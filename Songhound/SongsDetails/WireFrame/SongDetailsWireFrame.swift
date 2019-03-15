@@ -18,7 +18,7 @@ class SongDetailsWireFrame: SongDetailWireFrameProtocol {
 //            view.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
 //            view.navigationController?.navigationBar.shadowImage = UIImage()
 //            view.navigationController?.navigationBar.isTranslucent = true
-    //        view.navigationController?.navigationBar.backgroundColor = .blue
+            //        view.navigationController?.navigationBar.backgroundColor = .blue
 
             view.presenter = presenter
             presenter.view = view
@@ -29,5 +29,5 @@ class SongDetailsWireFrame: SongDetailWireFrameProtocol {
         }
         return UIViewController()
     }
-    
+
 }

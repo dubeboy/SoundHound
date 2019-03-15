@@ -13,8 +13,8 @@ class Song {
     var genre: String
     var popularity: Int
     var artworkURL: String
-    
-    init( name: String,  artistName: String, genre: String, popularity: Int, albumName: String,  artworkURL: String) {
+
+    init(name: String, artistName: String, genre: String, popularity: Int, albumName: String, artworkURL: String) {
         self.name = name
         self.artistName = artistName
         self.genre = genre  // TODO change spelling

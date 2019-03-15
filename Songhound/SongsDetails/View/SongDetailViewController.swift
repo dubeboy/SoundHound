@@ -16,13 +16,13 @@ class SongDetailViewController: UIViewController {
     @IBOutlet weak var songAlbumName: UILabel!
     @IBOutlet weak var songNumPlayes: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
-    
+
     var presenter: SongDetailPresenterProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-    //    makeUIImageViewCircle(imageView: artistImageView, imgSize: 300)
+        //    makeUIImageViewCircle(imageView: artistImageView, imgSize: 300)
         makeBGImageBlur(view: backgroundImage)
 
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
