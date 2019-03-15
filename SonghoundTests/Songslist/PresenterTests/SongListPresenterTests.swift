@@ -63,7 +63,15 @@ class SongListPresenterTests: XCTestCase {
 
     func testDidShowDetailScreen() {
         //presenter.sho(from: view, forArtist: ArtistModel(name: "Taylor Swift", artistID: 200000))
-        presenter.showSongDetail(forSong: SongModel(id: 100, name: "UOK", artistName: "Nasty C", albumName: "Single", genre: "Hip Hop", popularity: 100, artworkURL: "exmpleUrl.com/assets/image.jpg", artist: ArtistModel(name: "Taylor Swift", artistID: 200000)))
+        presenter.showSongDetail(forSong: SongModel(id: 100,
+                name: "UOK",
+                artistName: "Nasty C", 
+                albumName: "Single", 
+                genre: "Hip Hop",
+                popularity: 100,
+                artworkURL: "exmpleUrl.com/assets/image.jpg", 
+                artist: ArtistModel(name: "Taylor Swift", artistID: 200000)))
+
         XCTAssert(wireFrame.showSongDetailCalled)
     }
 
@@ -71,9 +79,6 @@ class SongListPresenterTests: XCTestCase {
         presenter.showSongs(forSelectedArtistId: 0)
         XCTAssertNotNil(wireFrame.artist)
     }
-
-    // could also test if the
-    // need to test the error cases!!
 
     func testShowsErrorOnError() {
         // simulate network error
@@ -88,7 +93,4 @@ class SongListPresenterTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
-
 }
-

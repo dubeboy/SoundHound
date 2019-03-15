@@ -81,7 +81,8 @@ class SongsListViewController: UIViewController {
 
 
     func addTapGestureToAnImageView(imageView: UIImageView) {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SongsListViewController.imageTapped(gesture:)))
+        let tapGesture = UITapGestureRecognizer(target: self,
+                action: #selector(SongsListViewController.imageTapped(gesture:)))
         imageView.addGestureRecognizer(tapGesture)
         imageView.isUserInteractionEnabled = true
 
@@ -171,10 +172,13 @@ extension SongsListViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableViewSongs.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) as! SongTableViewCell
-        let song = songList[indexPath.row]
-        cell.set(forSong: song)
-        return cell
+        let cell = self.tableViewSongs.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) 
+        if let cell = cell as? SongTableViewCell {
+            let song = songList[indexPath.row]
+            cell.set(forSong: song)
+            return cell
+        }
+        return UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -254,20 +258,17 @@ extension SongsListViewController: CLLocationManagerDelegate {
             return
         }
         print("we know the current location yoh \(location)")
-        // MY OWN CLOSURE
         reverseGeocoderCoordinates(location.coordinate) { fullAddressResponse in
-            // do something with the response
-            // baddd
-            self.currentLocation.text = "\(String(describing: fullAddressResponse.components(separatedBy: ",").first!)), \(fullAddressResponse.components(separatedBy: ",")[1]) "
+            let fullAddressFirstComponent = fullAddressResponse.components(separatedBy: ",")[0]
+            let fullAddressSecondComponent = fullAddressResponse.components(separatedBy: ",")[1]
+            self.currentLocation.text = "\(fullAddressFirstComponent), \(fullAddressSecondComponent) "
         }
         // use GMSGeocoder to get the address of the user yeah?
         locationManager.stopUpdatingLocation()
     }
 
     private func reverseGeocoderCoordinates(_ coordinates: CLLocationCoordinate2D, _ didRespond: @escaping (_ response: String) -> Void) {
-
         let geocoder = GMSGeocoder()
-
         //the closure is a callback because this does niot exec in the main thread
         geocoder.reverseGeocodeCoordinate(coordinates) { response, error in
             // powerful stuff yoh
