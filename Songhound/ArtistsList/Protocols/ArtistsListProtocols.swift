@@ -31,16 +31,14 @@ protocol ArtistListRemoteDataManagerInputProtocol2 {
     var remoteRequestHandler: ArtistListRemoteDataManagerOutputProtocol? { get set }
     func retrieveArtists()
     func searchForArtist(artistName: String)
-
 }
 
 protocol ArtistListInteractorInputProtocol {
     var presenter: ArtistsListInteractorOutputProtocol? { get set }
-    var remoteDataManager:  ArtistListRemoteDataManagerInputProtocol2? { get set }
+    var remoteDataManager: ArtistListRemoteDataManagerInputProtocol2? { get set }
 
     func retrieveArtists()
     func searchForArtist(artistName: String)
-
 }
 
 protocol ArtistListPresenterProtocol {
@@ -51,18 +49,14 @@ protocol ArtistListPresenterProtocol {
     var wireFrame: ArtistListWireFrameProtocol? { get set }
 
     // wireframe
-
     func presentArtistsSongs(artist: ArtistModel)
     func viewDidLoad()
     func searchForArtists(by name: String)
 }
 
 protocol  ArtistListViewProtocol: CommonNetworkProtocol {
-    
     // reference to the intermediator
     var presenter: ArtistListPresenterProtocol? { get set }
     func showLoading()
     func showArtists(artists: [ArtistModel])
-
-    
 }

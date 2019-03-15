@@ -6,9 +6,9 @@
 import Foundation
 
 class ArtistListPresenter: ArtistListPresenterProtocol {
-    var view: ArtistListViewProtocol? = nil
-    var interactor: ArtistListInteractorInputProtocol? = nil
-    var wireFrame: ArtistListWireFrameProtocol? = nil
+    var view: ArtistListViewProtocol?
+    var interactor: ArtistListInteractorInputProtocol?
+    var wireFrame: ArtistListWireFrameProtocol?
 
     func presentArtistsSongs(artist: ArtistModel) {
        wireFrame?.presentArtistSongView(from: view!, forArtist: artist)
@@ -24,7 +24,7 @@ class ArtistListPresenter: ArtistListPresenterProtocol {
     }
 }
 
-extension ArtistListPresenter : ArtistsListInteractorOutputProtocol {
+extension ArtistListPresenter: ArtistsListInteractorOutputProtocol {
 
     func didRetrieveArtists(artists: [ArtistModel]) {
         view?.hideLoading()

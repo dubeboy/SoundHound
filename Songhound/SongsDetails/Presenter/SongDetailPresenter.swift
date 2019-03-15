@@ -5,7 +5,7 @@
 
 import Foundation
 
-class SongDetailPresenter : SongDetailPresenterProtocol{
+class SongDetailPresenter: SongDetailPresenterProtocol{
     var view: SongDetailsViewProtocol?
     var wireframe: SongDetailWireFrameProtocol?
     var song: SongModel?

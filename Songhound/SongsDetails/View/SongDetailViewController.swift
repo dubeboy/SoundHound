@@ -50,5 +50,4 @@ extension SongDetailViewController: SongDetailsViewProtocol {
         songNumPlayes.text = "100 Playes in Joburg"
         songAlbumName.text = song.albumName
     }
-
 }

@@ -6,12 +6,19 @@
 import UIKit
 
 class ArtistListWireFrame: ArtistListWireFrameProtocol {
+
+    typealias PresenterInputInteratorOutput = (ArtistListPresenterProtocol &
+                                               ArtistsListInteractorOutputProtocol)
+
+    typealias InteractorInputRemoteDataManagerOutput = (ArtistListInteractorInputProtocol &
+                                                        ArtistListRemoteDataManagerOutputProtocol)
+
     class func createArtistListModule() -> UIViewController {
         let viewController = mainStoryboard.instantiateViewController(withIdentifier: "ArtistListViewController")
         if let view = viewController as? ArtistListViewController {
-            var presenter: (ArtistListPresenterProtocol & ArtistsListInteractorOutputProtocol) = ArtistListPresenter()
+            var presenter: PresenterInputInteratorOutput = ArtistListPresenter()
             let wireframe: ArtistListWireFrame = ArtistListWireFrame()
-            var interactor: (ArtistListInteractorInputProtocol & ArtistListRemoteDataManagerOutputProtocol) = ArtistListInteractor()
+            var interactor: InteractorInputRemoteDataManagerOutput = ArtistListInteractor()
             var remoteDataManager: ArtistListRemoteDataManagerInputProtocol2 = ArtistListRemoteDataManager()
 
             view.presenter = presenter
@@ -21,7 +28,6 @@ class ArtistListWireFrame: ArtistListWireFrameProtocol {
             interactor.presenter = presenter
             interactor.remoteDataManager = remoteDataManager
             remoteDataManager.remoteRequestHandler = interactor
-
 
             return view
         }
