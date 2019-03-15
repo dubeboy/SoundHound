@@ -75,7 +75,14 @@ class MockTestSongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol
 
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol?
 
-    var songs: [SongModel]? = [SongModel(id: 100, name: "Blank Space", artistName: "Taylor Swift", albumName: "Single", genre: "Hip Hop", popularity: 100, artworkURL: "exampleUrl.com/assets/image.jpg", artist: ArtistModel(name: "Taylor Swift", artistID: 200000))]
+    var songs: [SongModel]? =  [SongModel(id: 100,
+            name: "Blank Space",
+            artistName: "Taylor Swift",
+            albumName: "Single",
+            genre: "Hip Hop",
+            popularity: 100,
+            artworkURL: "exampleUrl.com/assets/image.jpg",
+            artist: ArtistModel(name: "Taylor Swift", artistID: 200000))]
 
     func retrieveSongsList() {
         // simulate network error
@@ -131,7 +138,7 @@ class MockSongsListViewPresenter: SongListPresenterProtocol, SongsListInteratorO
     var interactor: SongsListInteratorInputProtocol?
     var wireframe: SongsListViewWireFrameProtocol?
 
-    var cache: [SongModel]? = nil
+    var cache: [SongModel]?
 
     func didRetrieveSongs(_ songs: [SongModel]) {
         cache = songs
@@ -163,8 +170,4 @@ class MockSongsListViewPresenter: SongListPresenterProtocol, SongsListInteratorO
     func presentMoreArtists() {
 
     }
-
-
 }
-
-
