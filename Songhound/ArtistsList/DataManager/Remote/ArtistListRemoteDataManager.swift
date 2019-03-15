@@ -29,13 +29,13 @@ class ArtistListRemoteDataManager: ArtistListRemoteDataManagerInputProtocol2 {
                 .request(Endpoints.Artists.fetch(artistName: artistName).url)
                 .responseObject { (response: DataResponse<ModelResponse<ArtistModel>>) in
                     switch response.result {
-                        case .success(let res):
-                            let artists = res.entityList
-                            self.remoteRequestHandler?.didRetrieveArtists(artists: artists!)
-                        case .failure(let error):
-                            self.remoteRequestHandler?.onError()
-                            print(error)
-                        }
+                    case .success(let res):
+                        let artists = res.entityList
+                        self.remoteRequestHandler?.didRetrieveArtists(artists: artists!)
+                    case .failure(let error):
+                        self.remoteRequestHandler?.onError()
+                        print(error)
+                    }
                 }
     }
 }

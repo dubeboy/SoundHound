@@ -5,11 +5,12 @@
 
 import Foundation
 
-class ArtistListInteractor : ArtistListInteractorInputProtocol{
+class ArtistListInteractor: ArtistListInteractorInputProtocol {
 
     var presenter: ArtistsListInteractorOutputProtocol?
     var remoteDataManager: ArtistListRemoteDataManagerInputProtocol2?
     var cache: [ArtistModel] = []
+
     func retrieveArtists() {
         // do logic here bro!
         remoteDataManager?.retrieveArtists()

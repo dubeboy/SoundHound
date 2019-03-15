@@ -52,17 +52,15 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.artistTableView.dequeueReusableCell(withIdentifier: "artistTableViewCell", for: indexPath) as! ArtistTableViewCell
+        let cell = self
+                .artistTableView
+                .dequeueReusableCell(withIdentifier: "artistTableViewCell", for: indexPath)
 
-        cell.lblArtistName.text = artists[indexPath.row].name
-       // cell.imgArtist.dowloadFromServer(link: )
-        //cell.lblNumHits.text = "\(artists[indexPath.row].numHits) hot songs"
-        //  let str = artists[indexPath.row].isHot ? "🔥" :  "";
-        //  cell.lblEmoji.text = str
-
-//        cell.imgArtist. = // set the artist image
-
-        return cell
+        if let cell = cell as? ArtistTableViewCell  {
+            cell.lblArtistName.text = artists[indexPath.row].name
+            return cell
+        }
+        return UITableViewCell()
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -87,6 +85,3 @@ extension ArtistListViewController: UISearchBarDelegate {
         //populateArtists()
     }
 }
-
-
-

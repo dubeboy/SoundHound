@@ -22,6 +22,4 @@ extension ArtistModel: Mappable {
         name <- map["artistName"]
         artistID <- map["artistId"]
     }
-
-
 }

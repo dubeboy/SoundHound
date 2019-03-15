@@ -19,8 +19,10 @@ class SongsListWireFrame: SongsListViewWireFrameProtocol {
         
         if let view = navController.children.first as? SongsListViewController {
             // instatiate the presenter here bro
-            var presenter: SongListPresenterProtocol & SongsListInteratorOutputProtocol = SongsListViewPresenter()
-            var interactor: SongsListInteratorInputProtocol & SongsListRemoteDataManagerOutputProtocol = SongsListInterator()
+            var presenter: SongListPresenterProtocol &
+                           SongsListInteratorOutputProtocol = SongsListViewPresenter()
+            var interactor: SongsListInteratorInputProtocol &
+                            SongsListRemoteDataManagerOutputProtocol = SongsListInterator()
           //  let localDataManager: SongsListDataManagerInputProtocol = No local data manager not as of yet bro
             let remoteDataManager: SongsListRemoteDataManagerInputProtocol = SongListRemoteDataManager()
             let wireframe: SongsListWireFrame = SongsListWireFrame()
