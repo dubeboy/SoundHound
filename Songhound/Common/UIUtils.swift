@@ -18,8 +18,8 @@ let PROFILE_URL = "profile_url"
 
 
 func makeUIImageViewCircle(imageView: UIImageView, imgSize: Int) {
-        imageView.layer.cornerRadius = CGFloat(imgSize / 2)
-        imageView.layer.masksToBounds = true;
+    imageView.layer.cornerRadius = CGFloat(imgSize / 2)
+    imageView.layer.masksToBounds = true;
 }
 
 
@@ -30,23 +30,25 @@ func getSignedInUser() -> User? {
 
     let userId = pref.string(forKey: USER_ID) ?? ""
     // this means a user is not signed in yoh
-    guard !userId.isEmpty else { return nil}
-    
-    let idToken = pref.string(forKey:  ID_TOKEN)
-    let fullName = pref.string(forKey:  FULL_NAME)
-    let givenName = pref.string(forKey:  GIVEN_NAME)
-    let familyName = pref.string(forKey:  FAMILY_NAME)
-    let email = pref.string(forKey:  EMAIL)
-    let profileURL = pref.string(forKey:  PROFILE_URL)
-    
+    guard !userId.isEmpty else {
+        return nil
+    }
+
+    let idToken = pref.string(forKey: ID_TOKEN)
+    let fullName = pref.string(forKey: FULL_NAME)
+    let givenName = pref.string(forKey: GIVEN_NAME)
+    let familyName = pref.string(forKey: FAMILY_NAME)
+    let email = pref.string(forKey: EMAIL)
+    let profileURL = pref.string(forKey: PROFILE_URL)
+
     let user = User(userId: userId,
-                            idToken: idToken,
-                            fullName: fullName,
-                            givenName: givenName,
-                            familyName: familyName,
-                            email: email,
-                            profileURL: profileURL)
-    
+            idToken: idToken,
+            fullName: fullName,
+            givenName: givenName,
+            familyName: familyName,
+            email: email,
+            profileURL: profileURL)
+
     return user
 }
 

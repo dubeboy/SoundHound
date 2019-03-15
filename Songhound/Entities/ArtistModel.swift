@@ -16,7 +16,8 @@ struct ArtistModel {
 }
 
 extension ArtistModel: Mappable {
-    init?(map: Map) {}
+    init?(map: Map) {
+    }
 
     mutating func mapping(map: Map) {
         name <- map["artistName"]

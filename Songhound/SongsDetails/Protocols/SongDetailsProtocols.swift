@@ -10,7 +10,7 @@ import UIKit
 
 // this will be implemented by the VIEW CONTROLLER
 protocol SongDetailsViewProtocol {
-    var presenter: SongDetailPresenterProtocol? {get set}
+    var presenter: SongDetailPresenterProtocol? { get set }
 
     func showSongsDetail(forSong song: SongModel)
 }

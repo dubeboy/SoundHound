@@ -12,7 +12,7 @@ import UIKit
 class ArtistsListViewWireFrame: ArtistsListViewWireFrameProtocol {
     class func createArtistListViewModule(forArtist artist: ArtistModel) -> UIViewController {
         let viewController = mainStoryboard.instantiateViewController(withIdentifier: "ArtistSongsListViewController")
-        
+
         if let view = viewController as? ArtistsListViewController {
             var presenter: (ArtistSongsListViewPresenterProtocol &
                             ArtistSongsListViewInteractorOutputProtocol) = ArtistSongListViewPresenter()
@@ -34,7 +34,7 @@ class ArtistsListViewWireFrame: ArtistsListViewWireFrameProtocol {
 
             presenter.artist = artist
             return viewController
-            
+
         }
         return UIViewController()
     }

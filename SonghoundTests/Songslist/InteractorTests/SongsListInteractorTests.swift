@@ -6,7 +6,7 @@
 import XCTest
 @testable import Songhound
 
-class SongsListInteractorTest : XCTestCase {
+class SongsListInteractorTest: XCTestCase {
 
     var presenter: MockSongsListViewPresenter!
     var interactor: (SongsListInteratorInputProtocol & SongsListRemoteDataManagerOutputProtocol)!

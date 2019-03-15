@@ -10,16 +10,16 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
-class SongListRemoteDataManager : SongsListRemoteDataManagerInputProtocol {
+class SongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
     // this protocol is the one responsible for sending data the presenter
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol?
-    
+
     func retrieveSongsList() {
         Alamofire
-            .request(Endpoints.Songs.fetch(songName: "swift").url, method: .get)
-//            .validate() // no need for this but anyway..
-            .responseObject { (response: DataResponse<ModelResponse<SongModel>>) in
-                switch response.result {
+                .request(Endpoints.Songs.fetch(songName: "swift").url, method: .get)
+                //            .validate() // no need for this but anyway..
+                .responseObject { (response: DataResponse<ModelResponse<SongModel>>) in
+                    switch response.result {
                     case .success(let res):
                         if let songs = res.entityList {
                             self.remoteRequestHandler?.onSongsRetrieved(songs)
@@ -31,6 +31,6 @@ class SongListRemoteDataManager : SongsListRemoteDataManagerInputProtocol {
                         print(error)
                         self.remoteRequestHandler?.onError()
                     }
-            }
+                }
     }
 }

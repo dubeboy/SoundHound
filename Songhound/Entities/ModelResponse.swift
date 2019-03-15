@@ -5,6 +5,7 @@
 //  Created by Divine Dube on 2019/03/03.
 //  Copyright © 2019 Divine Dube. All rights reserved.
 //
+
 import Foundation
 import ObjectMapper
 
@@ -14,13 +15,13 @@ struct ModelResponse<T: Mappable> {
 }
 
 extension ModelResponse: Mappable {
-    
+
     init?(map: Map) {
-        
+
     }
-    
+
     mutating func mapping(map: Map) {
-        resultCount     <- map["resultCount"]
-        entityList       <- map["results"]
+        resultCount <- map["resultCount"]
+        entityList <- map["results"]
     }
 }

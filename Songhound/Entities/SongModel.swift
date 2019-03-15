@@ -29,17 +29,18 @@ struct SongModel {
  */
 
 extension SongModel: Mappable {
-    init?(map: Map) {}
-    
+    init?(map: Map) {
+    }
+
     mutating func mapping(map: Map) {
-        id      <- map["collectionId"]
-        name       <- map["trackName"]
-        artworkURL      <- map["artworkUrl100"]
-        artistName      <- map["artistName"]
-        albumName       <- map["collectionName"]
-        genre       <- map["genre"]
+        id <- map["collectionId"]
+        name <- map["trackName"]
+        artworkURL <- map["artworkUrl100"]
+        artistName <- map["artistName"]
+        albumName <- map["collectionName"]
+        genre <- map["genre"]
         // initialise the artist also
-        artist.name     <-  map["artistName"]
-        artist.artistID     <- map["artistId"]
+        artist.name <- map["artistName"]
+        artist.artistID <- map["artistId"]
     }
 }

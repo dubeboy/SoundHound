@@ -9,15 +9,15 @@
 import UIKit
 
 class SongTableViewCell: UITableViewCell {
-    
+
 
     @IBOutlet weak var lblSongName: UILabel!
     @IBOutlet weak var lblArtistName: UILabel!
     @IBOutlet weak var lblAlbumName: UILabel!
     @IBOutlet weak var lblGenre: UILabel!
     @IBOutlet weak var imgAlbumCover: UIImageView!
-    
-    
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,7 +28,7 @@ class SongTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func set(forSong song: SongModel) {
         self.selectionStyle = .none
         self.lblArtistName.text = song.artistName

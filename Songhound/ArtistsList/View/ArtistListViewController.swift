@@ -44,6 +44,7 @@ extension ArtistListViewController: ArtistListViewProtocol {
         HUD.hide()
     }
 }
+
 // UITable extenstion
 extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
 
@@ -56,7 +57,7 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
                 .artistTableView
                 .dequeueReusableCell(withIdentifier: "artistTableViewCell", for: indexPath)
 
-        if let cell = cell as? ArtistTableViewCell  {
+        if let cell = cell as? ArtistTableViewCell {
             cell.lblArtistName.text = artists[indexPath.row].name
             return cell
         }
@@ -70,7 +71,7 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ArtistListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-       presenter?.searchForArtists(by: searchText)
+        presenter?.searchForArtists(by: searchText)
     }
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {

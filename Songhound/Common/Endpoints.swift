@@ -26,13 +26,13 @@ enum Endpoints {
         // these are functions of this enum!
         public var path: String {
             switch self {
-             case .fetch(let songName): return "&entity=song&term=\(songName)"
+            case .fetch(let songName): return "&entity=song&term=\(songName)"
             }
         }
 
         public var url: String {
             switch self {
-             case .fetch: return "\(API.baseURL)\(path)"
+            case .fetch: return "\(API.baseURL)\(path)"
             }
         }
 

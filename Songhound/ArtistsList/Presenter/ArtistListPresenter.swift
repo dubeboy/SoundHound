@@ -11,7 +11,7 @@ class ArtistListPresenter: ArtistListPresenterProtocol {
     var wireFrame: ArtistListWireFrameProtocol?
 
     func presentArtistsSongs(artist: ArtistModel) {
-       wireFrame?.presentArtistSongView(from: view!, forArtist: artist)
+        wireFrame?.presentArtistSongView(from: view!, forArtist: artist)
     }
 
     func viewDidLoad() {

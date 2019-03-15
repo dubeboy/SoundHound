@@ -19,13 +19,15 @@ class SongsListInterator: SongsListInteratorInputProtocol {
     var remoteDataManager: SongsListRemoteDataManagerInputProtocol?
     // this is our cache of all the data that we get from the model!
     var cache: [SongModel]? = nil
-    
+
     func retrieveSongsList() {
         remoteDataManager?.retrieveSongsList()
     }
 
     func getArtist(top selectedId: Int) {
-        guard cache != nil, selectedId < cache!.count else { return }
+        guard cache != nil, selectedId < cache!.count else {
+            return
+        }
         // TODO elegant way to force unwrap using the guard statement
         onArtistSelected(artist: cache![selectedId].artist)
     }
