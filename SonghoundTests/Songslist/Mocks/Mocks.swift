@@ -8,7 +8,6 @@ import UIKit
 
 class MockTestSongListInteractor: SongsListInteratorInputProtocol, SongsListRemoteDataManagerOutputProtocol {
 
-
     var presenter: SongsListInteratorOutputProtocol?
     var localDataManager: SongsListLocalDataManagerInputProtocol?
     var remoteDataManager: SongsListRemoteDataManagerInputProtocol?
@@ -75,14 +74,10 @@ class MockTestSongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol
 
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol?
 
-    var songs: [SongModel]? =  [SongModel(id: 100,
-            name: "Blank Space",
-            artistName: "Taylor Swift",
-            albumName: "Single",
-            genre: "Hip Hop",
-            popularity: 100,
-            artworkURL: "exampleUrl.com/assets/image.jpg",
-            artist: ArtistModel(name: "Taylor Swift", artistID: 200000))]
+    var songs: [SongModel]? =  [
+        SongModel(id: 100, name: "Blank Space", artistName: "Taylor Swift", albumName: "Single", genre: "Hip Hop", 
+                popularity: 100, artworkURL: "exampleUrl.com/assets/image.jpg", artist: 
+                ArtistModel(name: "Taylor Swift", artistID: 200000))git]
 
     func retrieveSongsList() {
         // simulate network error
@@ -129,7 +124,6 @@ class MockSongsListViewController: SongsListViewProtocol {
         songs = nil
     }
 }
-
 
 class MockSongsListViewPresenter: SongListPresenterProtocol, SongsListInteratorOutputProtocol {
     var view: SongsListViewProtocol?

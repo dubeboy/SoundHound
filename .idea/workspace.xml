@@ -6,17 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2eee9e1-9dc2-454d-9a1e-894351fabda3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songhound/ArtistsList/Protocols/ArtistsListProtocols.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/ArtistsList/Protocols/ArtistsListProtocols.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistListViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistListViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songhound/ArtistsList/View/SongTableViewCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/ArtistsList/View/SongTableViewCell.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songhound/ArtistsList/View/TopSongsByArtistViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/ArtistsList/View/TopSongsByArtistViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songhound/SongsDetails/View/SongDetailViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/SongsDetails/View/SongDetailViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songhound/SongsList/WireFrame/SongsListWireFrame.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/SongsList/WireFrame/SongsListWireFrame.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SonghoundTests/Songslist/InteractorTests/SongsListInteractorTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SonghoundTests/Songslist/InteractorTests/SongsListInteractorTests.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SonghoundTests/Songslist/Mocks/Mocks.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SonghoundTests/Songslist/Mocks/Mocks.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SonghoundTests/Songslist/PresenterTests/SongListPresenterTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/SonghoundTests/Songslist/PresenterTests/SongListPresenterTests.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2018.3/DerivedData/Songhound-elqamlmfncjwytfemhsofhaxastt/" />
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/Songhound-elqamlmfncjwytfemhsofhaxastt/Build/Intermediates.noindex/" />
@@ -70,11 +60,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/PresenterTests/SongListPresenterTests.swift">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="594">
-                  <caret line="90" selection-start-line="90" selection-end-line="90" />
+                <state relative-caret-position="174">
+                  <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
                   <folding>
                     <element signature="e#175#192#0" expanded="true" />
                   </folding>
@@ -94,8 +84,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistListViewController.swift">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="82" column="26" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+                <state relative-caret-position="505">
+                  <caret line="83" column="40" lean-forward="true" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="40" />
                   <folding>
                     <element signature="e#156#168#0" expanded="true" />
                   </folding>
@@ -124,11 +114,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/Mocks/Mocks.swift">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="637">
-                  <caret line="170" column="1" lean-forward="true" selection-start-line="170" selection-start-column="1" selection-end-line="170" selection-end-column="1" />
+                <state relative-caret-position="356">
+                  <caret line="79" column="68" selection-start-line="79" selection-start-column="68" selection-end-line="79" selection-end-column="68" />
                   <folding>
                     <element signature="e#104#116#0" expanded="true" />
                   </folding>
@@ -148,8 +138,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Songhound/SongsDetails/View/SongDetailViewController.swift">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="467">
-                  <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+                <state relative-caret-position="580">
+                  <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
                 </state>
               </provider>
             </entry>
@@ -258,15 +248,15 @@
         <option value="$PROJECT_DIR$/Podfile" />
         <option value="$PROJECT_DIR$/Songhound/ArtistsSongsList/View/ArtistTableViewCell.swift" />
         <option value="$PROJECT_DIR$/Songhound/ArtistsList/Protocols/ArtistsListProtocols.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistListViewController.swift" />
         <option value="$PROJECT_DIR$/Songhound/ArtistsList/View/SongTableViewCell.swift" />
         <option value="$PROJECT_DIR$/Songhound/ArtistsList/View/TopSongsByArtistViewController.swift" />
-        <option value="$PROJECT_DIR$/Songhound/SongsDetails/View/SongDetailViewController.swift" />
         <option value="$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift" />
         <option value="$PROJECT_DIR$/Songhound/SongsList/WireFrame/SongsListWireFrame.swift" />
         <option value="$PROJECT_DIR$/SonghoundTests/Songslist/InteractorTests/SongsListInteractorTests.swift" />
-        <option value="$PROJECT_DIR$/SonghoundTests/Songslist/Mocks/Mocks.swift" />
         <option value="$PROJECT_DIR$/SonghoundTests/Songslist/PresenterTests/SongListPresenterTests.swift" />
+        <option value="$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistListViewController.swift" />
+        <option value="$PROJECT_DIR$/Songhound/SongsDetails/View/SongDetailViewController.swift" />
+        <option value="$PROJECT_DIR$/SonghoundTests/Songslist/Mocks/Mocks.swift" />
       </list>
     </option>
   </component>
@@ -500,7 +490,7 @@
       <workItem from="1552632754369" duration="80000" />
       <workItem from="1552632873915" duration="4392000" />
       <workItem from="1552758838019" duration="291000" />
-      <workItem from="1552891904881" duration="2021000" />
+      <workItem from="1552891904881" duration="2492000" />
     </task>
     <servers />
   </component>
@@ -537,7 +527,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129270000" />
+    <option name="totallyTimeSpent" value="129741000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -978,16 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistListViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="82" column="26" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
-          <folding>
-            <element signature="e#156#168#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/View/SongTableViewCell.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -999,13 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/SongsDetails/View/SongDetailViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
@@ -1036,22 +1009,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/Mocks/Mocks.swift">
+    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/PresenterTests/SongListPresenterTests.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="170" column="1" lean-forward="true" selection-start-line="170" selection-start-column="1" selection-end-line="170" selection-end-column="1" />
+        <state relative-caret-position="174">
+          <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
           <folding>
-            <element signature="e#104#116#0" expanded="true" />
+            <element signature="e#175#192#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/PresenterTests/SongListPresenterTests.swift">
+    <entry file="file://$PROJECT_DIR$/Songhound/SongsDetails/View/SongDetailViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        <state relative-caret-position="580">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistListViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="83" column="40" lean-forward="true" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="40" />
           <folding>
-            <element signature="e#175#192#0" expanded="true" />
+            <element signature="e#156#168#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/Mocks/Mocks.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="79" column="68" selection-start-line="79" selection-start-column="68" selection-end-line="79" selection-end-column="68" />
+          <folding>
+            <element signature="e#104#116#0" expanded="true" />
           </folding>
         </state>
       </provider>
