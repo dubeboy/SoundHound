@@ -61,6 +61,7 @@ class SongListPresenterTests: XCTestCase {
 
     func testDidShowDetailScreen() {
         //presenter.sho(from: view, forArtist: ArtistModel(name: "Taylor Swift", artistID: 200000))
+        //swiftlint:disable:next trailing_whitespace
         presenter.showSongDetail(
                 forSong: SongModel(id: 100, name: "UOK", artistName: "Nasty C", albumName: "Single", genre: "Hip Hop",
                         popularity: 100, artworkURL: "exmpleUrl.com/assets/image.jpg", 

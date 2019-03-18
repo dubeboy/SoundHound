@@ -42,7 +42,6 @@ class SongsListInteractorTest: XCTestCase {
 
     }
 
-
     func testInputRetrieveSongsList() {
         presenter.viewDidLoad()
         XCTAssertNotNil(presenter.cache)
