@@ -31,7 +31,8 @@ class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, U
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.artistsTableView.dequeueReusableCell(withIdentifier: "artistTableViewCell", for: indexPath) as! ArtistTableViewCell
+        let cell = self.artistsTableView
+                .dequeueReusableCell(withIdentifier: "artistTableViewCell", for: indexPath) as! ArtistTableViewCell
 
         cell.lblArtistName.text = artists[indexPath.row].name
         //cell.lblNumHits.text = "\(artists[indexPath.row].numHits) hot songs"
