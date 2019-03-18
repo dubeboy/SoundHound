@@ -7,8 +7,6 @@
 //
 
 import Foundation
-
-
 // the buss logic goes here
 // this protocol can do output input
 class SongsListInterator: SongsListInteratorInputProtocol {
@@ -18,7 +16,7 @@ class SongsListInterator: SongsListInteratorInputProtocol {
     var localDataManager: SongsListLocalDataManagerInputProtocol?
     var remoteDataManager: SongsListRemoteDataManagerInputProtocol?
     // this is our cache of all the data that we get from the model!
-    var cache: [SongModel]? = nil
+    var cache: [SongModel]?
 
     func retrieveSongsList() {
         remoteDataManager?.retrieveSongsList()

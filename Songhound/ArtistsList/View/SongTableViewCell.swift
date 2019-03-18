@@ -10,7 +10,6 @@ import UIKit
 
 class SongTableViewCell: UITableViewCell {
 
-
     @IBOutlet weak var lblSongName: UILabel!
     @IBOutlet weak var lblArtistName: UILabel!
     @IBOutlet weak var lblAlbumName: UILabel!
@@ -36,5 +35,4 @@ class SongTableViewCell: UITableViewCell {
         self.lblAlbumName.text = song.albumName
         self.imgAlbumCover.dowloadFromServer(link: song.artworkURL)
     }
-
 }

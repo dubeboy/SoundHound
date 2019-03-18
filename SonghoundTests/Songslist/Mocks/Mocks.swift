@@ -78,8 +78,8 @@ class MockTestSongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol
 
     var songs: [SongModel]? =  [
         SongModel(id: 100, name: "Blank Space", artistName: "Taylor Swift", albumName: "Single", genre: "Hip Hop", 
-                popularity: 100, artworkURL: "exampleUrl.com/assets/image.jpg", artist: 
-                ArtistModel(name: "Taylor Swift", artistID: 200000))]
+                popularity: 100, artworkURL: "exampleUrl.com/assets/image.jpg",
+                artist: ArtistModel(name: "Taylor Swift", artistID: 200000))]
 
     func retrieveSongsList() {
         // simulate network error
