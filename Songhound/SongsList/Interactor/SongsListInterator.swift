@@ -1,5 +1,5 @@
 //
-//  SongsListInteractor.swift
+//  SongsListInterator.swift
 //  Songhound
 //
 //  Created by Divine Dube on 2019/03/01.
@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 
 // the buss logic goes here
 // this protocol can do output input
@@ -18,14 +17,16 @@ class SongsListInterator: SongsListInteratorInputProtocol {
     var localDataManager: SongsListLocalDataManagerInputProtocol?
     var remoteDataManager: SongsListRemoteDataManagerInputProtocol?
     // this is our cache of all the data that we get from the model!
-    var cache: [SongModel]? = nil
-    
+    var cache: [SongModel]?
+
     func retrieveSongsList() {
         remoteDataManager?.retrieveSongsList()
     }
 
     func getArtist(top selectedId: Int) {
-        guard cache != nil, selectedId < cache!.count else {return}
+        guard cache != nil, selectedId < cache!.count else {
+            return
+        }
         // TODO elegant way to force unwrap using the guard statement
         onArtistSelected(artist: cache![selectedId].artist)
     }

@@ -14,7 +14,7 @@ import UIKit
 protocol ArtistsListViewProtocol: CommonNetworkProtocol {
 
     var presenter: ArtistSongsListViewPresenterProtocol? { get set }
-    
+
     // PRESENTER -> VIEW
     func showSongs(with songs: [SongModel])
     func showLoading(forArtist artist: ArtistModel)
@@ -23,9 +23,10 @@ protocol ArtistsListViewProtocol: CommonNetworkProtocol {
 // TODO a bit of inconsitencey this module is called the ArtistsList
 protocol ArtistsListViewWireFrameProtocol {
     // bootstrapper
-    static func createArtistListViewModule(forArtist artist: ArtistModel)  -> UIViewController
-    
+    static func createArtistListViewModule(forArtist artist: ArtistModel) -> UIViewController
+
     // any routing that I need should be stated here!
+    func presentSongDetailsScreen(from view: ArtistsListViewProtocol, forSong song: SongModel)
 }
 
 protocol ArtistSongsListViewPresenterProtocol {
@@ -36,9 +37,13 @@ protocol ArtistSongsListViewPresenterProtocol {
     var interactor: ArtistSongsListViewInteractorInputProtocol? { get set }
     var wireFrame: ArtistsListViewWireFrameProtocol? { get set }
     var artist: ArtistModel? { get set }
-    
+
     //VIEW -> PRESENT
     func viewDidLoad()
+
+    func showSongDetail(forSong song: SongModel)
+
+
 }
 
 
@@ -46,7 +51,7 @@ protocol ArtistSongsListViewPresenterProtocol {
 protocol ArtistSongsListViewInteractorInputProtocol: class {
     var presenter: ArtistSongsListViewInteractorOutputProtocol? { get set }
     var remoteDataManager: ArtistListRemoteDataManagerInputProtocol? { get set }
-    
+
     // From PRESENTER -> INTERACTOR asking for input
     // will callback presenter when its done
     func retriveSongsList(artistName: String)
@@ -54,7 +59,7 @@ protocol ArtistSongsListViewInteractorInputProtocol: class {
 
 // this protocol defines what happens to the data that goes out of the interactor
 // define how the data goes out of the interactor
-protocol ArtistSongsListViewInteractorOutputProtocol  {
+protocol ArtistSongsListViewInteractorOutputProtocol {
     // from the interactor -> Presenter
     // this is how the interactor responds to the presenter
     func didRetrieveSongs(_ songs: [SongModel])
@@ -62,10 +67,10 @@ protocol ArtistSongsListViewInteractorOutputProtocol  {
 }
 
 protocol ArtistListRemoteDataManagerInputProtocol {
-    
+
     var remoteRequestHandler: ArtistSongsListDataManagerOutputProtocol? { get set }
     // RemoteData manager -> Interactor
-    func retriveSongsList(artistName: String)
+    func retrieveSongsList(artistName: String)
 }
 
 protocol ArtistSongsListDataManagerOutputProtocol {

@@ -1,0 +1,6 @@
+#AHHHHHHHHHHHHHhhhhhhh disable dumb swiftlint errors
+disabled_rules: # rule identifiers to exclude from running
+  - trailing_whitespace
+  - trailing_newline
+  - force_cast
+  - todo

@@ -28,11 +28,12 @@ protocol SongListPresenterProtocol {
     var view: SongsListViewProtocol? { get set }
     var interactor: SongsListInteratorInputProtocol? { get set }
     var wireframe: SongsListViewWireFrameProtocol? { get set }
-    
+
     // VIEW -> Presenter
     func viewDidLoad()
     func showSongDetail(forSong song: SongModel)
     func showSongs(forSelectedArtistId: Int)
+    func presentMoreArtists()
     //TODO show awesome stuff
 }
 
@@ -44,6 +45,8 @@ protocol SongsListViewWireFrameProtocol: class {
     // also give it the required data
     func presentSongDetailsScreen(from view: SongsListViewProtocol, forSong song: SongModel)
     func presentSongsListViewScreen(from view: SongsListViewProtocol, forArtist artist: ArtistModel)
+    func presentMoreArtists(from view: SongsListViewProtocol)
+
 }
 
 protocol SongsListInteratorOutputProtocol: class {
@@ -56,7 +59,7 @@ protocol SongsListInteratorInputProtocol {
     var presenter: SongsListInteratorOutputProtocol? { get set }
     var localDataManager: SongsListLocalDataManagerInputProtocol? { get set }
     var remoteDataManager: SongsListRemoteDataManagerInputProtocol? { get set }
-    
+
     // PRESENTER - INTERACTOR
     func retrieveSongsList()
     func getArtist(top selectedId: Int)
@@ -64,8 +67,9 @@ protocol SongsListInteratorInputProtocol {
 
 protocol SongsListDataManagerInputProtocol {
     //INTERATOR -> DATAMANAGER
-    
+
 }
+
 protocol SongsListRemoteDataManagerInputProtocol: class {
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol? { get set }
     //REMOTEDATA MANAGER -> INTETRACTOR

@@ -8,13 +8,14 @@
 
 import UIKit
 
-class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
-    
+class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,
+        UISearchBarDelegate {
+
     @IBOutlet weak var artistsTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
+
     var artists: [Artist] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,33 +26,33 @@ class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, U
         // Do any additional setup after loading the view.
     }
 
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return artists.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.artistsTableView.dequeueReusableCell(withIdentifier: "artistTableViewCell", for: indexPath) as! ArtistTableViewCell
-        
+        let cell = self.artistsTableView
+                .dequeueReusableCell(withIdentifier: "artistTableViewCell", for: indexPath) as! ArtistTableViewCell
+
         cell.lblArtistName.text = artists[indexPath.row].name
         //cell.lblNumHits.text = "\(artists[indexPath.row].numHits) hot songs"
-      //  let str = artists[indexPath.row].isHot ? "🔥" :  "";
-      //  cell.lblEmoji.text = str
-        
+        //  let str = artists[indexPath.row].isHot ? "🔥" :  "";
+        //  cell.lblEmoji.text = str
+
 //        cell.imgArtist. = // set the artist image 
-        
+
         return cell
     }
 
     @IBAction func onBackButtonClick(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("clicked bro")
-        performSegue(withIdentifier: "viewSongsOfArtist", sender: self )
+        performSegue(withIdentifier: "viewSongsOfArtist", sender: self)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("called bro")
         if segue.identifier == "viewSongsOfArtist" {
@@ -69,7 +70,7 @@ class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, U
                 return artist.name.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
             }
         } else {
-           // populateArtists()
+            // populateArtists()
         }
 
         artistsTableView.reloadData()
@@ -85,15 +86,4 @@ class TopSongsByArtistViewController: UIViewController, UITableViewDataSource, U
         searchBar.resignFirstResponder()
         //populateArtists()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

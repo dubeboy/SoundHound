@@ -9,11 +9,11 @@
 import Foundation
 
 // this does all the busines logic of our APP
-class ArtistSongsListInteractor : ArtistSongsListViewInteractorInputProtocol {
-   
+class ArtistSongsListInteractor: ArtistSongsListViewInteractorInputProtocol {
+
     var presenter: ArtistSongsListViewInteractorOutputProtocol?
     var remoteDataManager: ArtistListRemoteDataManagerInputProtocol?
-    
+
     func retriveSongsList(artistName: String) {
         //All logic goes here
 
@@ -21,14 +21,13 @@ class ArtistSongsListInteractor : ArtistSongsListViewInteractorInputProtocol {
         let encodedArtistName = artistName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ??
                 String(artistName.split(separator: " ").first!)
 
-        remoteDataManager?.retriveSongsList(artistName: encodedArtistName)
-
+        remoteDataManager?.retrieveSongsList(artistName: encodedArtistName)
 
 
     }
 }
 
-extension ArtistSongsListInteractor : ArtistSongsListDataManagerOutputProtocol {
+extension ArtistSongsListInteractor: ArtistSongsListDataManagerOutputProtocol {
 
     func onArtistSongsListRetrieved(_ songs: [SongModel]) {
         presenter?.didRetrieveSongs(songs)

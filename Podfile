@@ -13,10 +13,10 @@ target 'Songhound' do
     # Pods for testing
   end
 
-#  target 'SonghoundUITests' do
-#    inherit! :search_paths
-#    # Pods for testing
-#  end
+  #  target 'SonghoundUITests' do
+  #    inherit! :search_paths
+  #    # Pods for testing
+  #  end
 
   # google pods
 
