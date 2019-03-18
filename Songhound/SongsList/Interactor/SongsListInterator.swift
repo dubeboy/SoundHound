@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 // the buss logic goes here
 // this protocol can do output input
 class SongsListInterator: SongsListInteratorInputProtocol {
