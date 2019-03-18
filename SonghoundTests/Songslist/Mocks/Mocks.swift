@@ -27,7 +27,6 @@ class MockTestSongListInteractor: SongsListInteratorInputProtocol, SongsListRemo
         presenter?.onError()
     }
 
-
     func retrieveSongsList() {
         remoteDataManager?.retrieveSongsList()
     }
@@ -120,7 +119,6 @@ class MockSongsListViewController: SongsListViewProtocol {
         isHidden = false
     }
 
-
     deinit {
         print("deinit TestSongsListViewController")
         songs = nil
@@ -142,7 +140,6 @@ class MockSongsListViewPresenter: SongListPresenterProtocol, SongsListInteratorO
 
     func didSelectArtist(artist: ArtistModel) {
         wireframe?.presentSongsListViewScreen(from: view!, forArtist: artist)
-
     }
 
     func onError() {
