@@ -490,7 +490,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover" translatesAutoresizingMaskIntoConstraints="NO" id="bpl-fa-Viq">
-                                                    <rect key="frame" x="285" y="31" width="47" height="47"/>
+                                                    <rect key="frame" x="285" y="31.333333333333329" width="47" height="47"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="47" id="euT-AS-Ol7"/>
                                                         <constraint firstAttribute="width" constant="47" id="knF-zt-qfa"/>
@@ -506,7 +506,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljv-0P-iI0">
-                                                    <rect key="frame" x="290.33333333333331" y="4" width="41.666666666666686" height="21"/>
+                                                    <rect key="frame" x="290.33333333333331" y="4.3333333333333321" width="41.666666666666686" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="vhm-47-qdX"/>
                                                     </constraints>
@@ -528,7 +528,6 @@
                                                 <constraint firstItem="zM0-Jv-XIc" firstAttribute="top" secondItem="CiV-Fx-CqF" secondAttribute="top" id="gSn-VT-iaS"/>
                                                 <constraint firstAttribute="trailing" secondItem="ljv-0P-iI0" secondAttribute="trailing" constant="11" id="i8o-ig-kz2"/>
                                                 <constraint firstItem="ljv-0P-iI0" firstAttribute="leading" secondItem="zM0-Jv-XIc" secondAttribute="trailing" constant="8" id="koZ-cM-4fO"/>
-                                                <constraint firstItem="ljv-0P-iI0" firstAttribute="top" secondItem="CiV-Fx-CqF" secondAttribute="top" constant="4" id="sMn-yw-5bP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

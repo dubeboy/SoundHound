@@ -8,9 +8,9 @@
             buildForTesting = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F336DDC52216B6DE0079B05D"
-               BuildableName = "SonghoundTests.xctest"
-               BlueprintName = "SonghoundTests"
+               BlueprintIdentifier = "F31BB454223F994700E986AF"
+               BuildableName = "SonghoundUITests.xctest"
+               BlueprintName = "SonghoundUITests"
                ReferencedContainer = "container:Songhound.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -22,9 +22,9 @@
          <TestableReference>
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F336DDC52216B6DE0079B05D"
-               BuildableName = "SonghoundTests.xctest"
-               BlueprintName = "SonghoundTests"
+               BlueprintIdentifier = "F31BB454223F994700E986AF"
+               BuildableName = "SonghoundUITests.xctest"
+               BlueprintName = "SonghoundUITests"
                ReferencedContainer = "container:Songhound.xcodeproj">
             </BuildableReference>
          </TestableReference>

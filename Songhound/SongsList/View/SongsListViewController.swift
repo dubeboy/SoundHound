@@ -51,7 +51,7 @@ class SongsListViewController: UIViewController {
         print("assigning the self to the delegate")
         // showCurrentPlayingSong()
 
-        locationManager.requestWhenInUseAuthorization()
+     //   locationManager.requestWhenInUseAuthorization()
 
         let user = getSignedInUser()
         if let user = user {
@@ -61,8 +61,6 @@ class SongsListViewController: UIViewController {
             print("the profile is \(prof)")
             imgProfilePicture.dowloadFromServer(link: prof)
         }
-
-
         // Do any additional setup after loading the view.
         setUpTopThreeImages()
     }
@@ -90,40 +88,44 @@ class SongsListViewController: UIViewController {
     }
 
     @objc func imageTapped(gesture: UIGestureRecognizer) {
-        if let imageView = gesture.view as? UIImageView {
-            print("Hello ")
-            // niot sure if this is a good idea on getting by tag
-            let tag = imageView.tag
-            print("the tag is \(tag)")
+        if gesture.numberOfTouches > 0 {
+            if let imageView = gesture.view as? UIImageView {
+                print("Hello ")
+                print( gesture.numberOfTouches)
+                // niot sure if this is a good idea on getting by tag
+                let tag = imageView.tag
+                print("the tag is \(tag)")
 
-            switch tag {
-            case 0:
-                print("img one openi")
-                selectedImage = 0
-                presenter?.showSongs(forSelectedArtistId: selectedImage)
-                    //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
-                    // will perform segue on the presenter since its the only one which can do so
-            case 1:
-                print("img one open")
-                selectedImage = 1
-                presenter?.showSongs(forSelectedArtistId: selectedImage)
-                    // performSegue(withIdentifier: "viewSongsForArtist", sender: self)
-            case 2:
-                print("img one opennn")
-                selectedImage = 2
-                presenter?.showSongs(forSelectedArtistId: selectedImage)
-                    //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
-            case 3:
-                print("profile picture selected bro ")
-                selectedImage = 3
-                GIDSignIn.sharedInstance().delegate = self
-                GIDSignIn.sharedInstance().uiDelegate = self
-                GIDSignIn.sharedInstance().signIn()
+                switch tag {
+                case 0:
+                    print("img one openi")
+                    selectedImage = 0
+                    presenter?.showSongs(forSelectedArtistId: selectedImage)
+                        //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+                        // will perform segue on the presenter since its the only one which can do so
+                case 1:
+                    print("img one open")
+                    selectedImage = 1
+                    presenter?.showSongs(forSelectedArtistId: selectedImage)
+                        // performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+                case 2:
+                    print("img one opennn")
+                    selectedImage = 2
+                    presenter?.showSongs(forSelectedArtistId: selectedImage)
+                        //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+                case 3:
+                    print("profile picture selected bro ")
+                    selectedImage = 3
+                    GIDSignIn.sharedInstance().delegate = self
+                    GIDSignIn.sharedInstance().uiDelegate = self
+                    GIDSignIn.sharedInstance().signIn()
 
-            default:
-                print("ooops")
+                default:
+                    print("ooops")
 
+                }
             }
+
         }
     }
 
@@ -187,10 +189,10 @@ extension SongsListViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser?, withError error: Error!) {
         print("oopps user signed out yoh")
 
-        guard let authentication = user.authentication else {
+        guard let user = user, let authentication = user.authentication else {
             return
         }
 
@@ -203,7 +205,7 @@ extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
             }
             print("Yey user signed in bro")
             self.saveGoogleUserInfo(user: user)
-            print("the user is \(String(describing: user?.userID))")
+            print("the user is \(String(describing: user.userID))")
             if let user = getSignedInUser() {
                 self.lblUserName.text = user.fullName
                 if let profileUrl = user.profileURL {
