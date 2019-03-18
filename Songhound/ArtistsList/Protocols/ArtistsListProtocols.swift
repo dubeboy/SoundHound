@@ -21,7 +21,6 @@ protocol ArtistsListInteractorOutputProtocol {
     func onError()
 }
 
-
 protocol ArtistListRemoteDataManagerOutputProtocol {
     func didRetrieveArtists(artists: [ArtistModel])
     func onError()

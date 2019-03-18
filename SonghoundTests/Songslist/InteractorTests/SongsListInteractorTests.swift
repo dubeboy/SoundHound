@@ -59,6 +59,4 @@ class SongsListInteractorTest: XCTestCase {
         presenter.viewDidLoad()
         XCTAssertTrue(view.isShowingError)
     }
-
-
 }

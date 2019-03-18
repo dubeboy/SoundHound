@@ -172,7 +172,7 @@ extension SongsListViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableViewSongs.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) 
+        let cell = self.tableViewSongs.dequeueReusableCell(withIdentifier: "songCell", for: indexPath)
         if let cell = cell as? SongTableViewCell {
             let song = songList[indexPath.row]
             cell.set(forSong: song)
