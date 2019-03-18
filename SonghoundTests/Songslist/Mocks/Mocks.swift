@@ -132,8 +132,6 @@ class MockSongsListViewController: SongsListViewProtocol {
 
 
 class MockSongsListViewPresenter: SongListPresenterProtocol, SongsListInteratorOutputProtocol {
-
-
     var view: SongsListViewProtocol?
     var interactor: SongsListInteratorInputProtocol?
     var wireframe: SongsListViewWireFrameProtocol?

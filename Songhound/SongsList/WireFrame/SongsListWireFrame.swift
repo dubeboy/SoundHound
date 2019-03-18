@@ -9,8 +9,6 @@
 import UIKit
 
 class SongsListWireFrame: SongsListViewWireFrameProtocol {
-
-
     // some how this is static yoh
     class func createSongsListModule() -> UIViewController {
         // instatiate the main view controller

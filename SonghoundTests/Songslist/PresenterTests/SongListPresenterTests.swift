@@ -2,8 +2,6 @@
 // Created by Divine Dube on 2019-03-08.
 // Copyright (c) 2019 Divine Dube. All rights reserved.
 //
-
-
 // So here we testing the presenter! and we mock out the other parts
 
 import Foundation
@@ -63,14 +61,10 @@ class SongListPresenterTests: XCTestCase {
 
     func testDidShowDetailScreen() {
         //presenter.sho(from: view, forArtist: ArtistModel(name: "Taylor Swift", artistID: 200000))
-        presenter.showSongDetail(forSong: SongModel(id: 100,
-                name: "UOK",
-                artistName: "Nasty C", 
-                albumName: "Single", 
-                genre: "Hip Hop",
-                popularity: 100,
-                artworkURL: "exmpleUrl.com/assets/image.jpg", 
-                artist: ArtistModel(name: "Taylor Swift", artistID: 200000)))
+        presenter.showSongDetail(
+                forSong: SongModel(id: 100, name: "UOK", artistName: "Nasty C", albumName: "Single", genre: "Hip Hop",
+                        popularity: 100, artworkURL: "exmpleUrl.com/assets/image.jpg", 
+                        artist: ArtistModel(name: "Taylor Swift", artistID: 200000)))
 
         XCTAssert(wireFrame.showSongDetailCalled)
     }

@@ -17,7 +17,6 @@ class SongTableViewCell: UITableViewCell {
     @IBOutlet weak var lblGenre: UILabel!
     @IBOutlet weak var imgAlbumCover: UIImageView!
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
