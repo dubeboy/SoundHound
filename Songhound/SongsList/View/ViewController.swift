@@ -97,7 +97,7 @@ class ViewController: UIViewController,
 
         lblArtistName1.text = name
         lblArtistName2.text = name1
-        lblArtistName3.text = name2
+        lblArtistName3.text = name
     }
 
 //    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {

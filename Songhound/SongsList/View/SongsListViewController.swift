@@ -13,11 +13,7 @@ import MediaPlayer
 import GoogleSignIn
 import Firebase
 import GoogleSignIn
-
-// TODO must be able to mod the navigation controller
-
-// TODO GET APP back to the state that it was before VIPER
-
+// TODO Modify change Controller window background
 class SongsListViewController: UIViewController {
 
     //top Items for the songs list view controller
@@ -38,20 +34,16 @@ class SongsListViewController: UIViewController {
     //-1 means no image was selected
     private var selectedImage = -1
     private let locationManager = CLLocationManager()
+    private let ifff = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-        // TODO: Investigate this please why does it not show list with out this
-        // also why does it not show the cell separators
         self.tableViewSongs.delegate = self
         self.tableViewSongs.dataSource = self
-        // tableViewSongs.tableFooterView = UIView()
+        locationManager.delegate = self
 
-        print("assigning the self to the delegate")
-        // showCurrentPlayingSong()
-
-     //   locationManager.requestWhenInUseAuthorization()
+        locationManager.requestWhenInUseAuthorization()
 
         let user = getSignedInUser()
         if let user = user {
@@ -217,8 +209,7 @@ extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
             } else {
                 print("failed to load user man")
                 self.lblUserName.text = ""
-            }
-        }
+            } }
     }
 
     private func saveGoogleUserInfo(user: GIDGoogleUser) {
@@ -245,7 +236,27 @@ extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
     }
 }
 
-extension SongsListViewController: CLLocationManagerDelegate {
+extension SongsListViewController: LocationManagerProtocol {
+    func reverseGeocoderCoordinates(_ coordinates: UnsafeMutablePointer<CLLocationCoordinate2D>) {
+        let geocoder = GMSGeocoder()
+        //the closure is a callback because this does niot exec in the main thread
+        geocoder.reverseGeocodeCoordinate(coordinates.pointee) { response, error in
+            // powerful stuff yoh
+            guard let address = response?.firstResult(), let lines = address.lines else {
+                return
+            }
+            let fullAddress = lines.joined(separator: "\n")
+            self.onReverseCoordinatesReceived(fullAddress)
+            print("the full address is \(fullAddress)")
+        }
+    }
+
+    func onReverseCoordinatesReceived(_ fullAddress: String) {
+        let fullAddressFirstComponent = fullAddress.components(separatedBy: ",")[0]
+        let fullAddressSecondComponent = fullAddress.components(separatedBy: ",")[1]
+        self.currentLocation.text = "\(fullAddressFirstComponent), \(fullAddressSecondComponent) "
+    }
+
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         guard status == .authorizedWhenInUse else {
             return
@@ -260,27 +271,10 @@ extension SongsListViewController: CLLocationManagerDelegate {
             return
         }
         print("we know the current location yoh \(location)")
-        reverseGeocoderCoordinates(location.coordinate) { fullAddressResponse in
-            let fullAddressFirstComponent = fullAddressResponse.components(separatedBy: ",")[0]
-            let fullAddressSecondComponent = fullAddressResponse.components(separatedBy: ",")[1]
-            self.currentLocation.text = "\(fullAddressFirstComponent), \(fullAddressSecondComponent) "
-        }
+        var coor = location.coordinate
+        reverseGeocoderCoordinates(&coor)
         // use GMSGeocoder to get the address of the user yeah?
         locationManager.stopUpdatingLocation()
-    }
-
-    private func reverseGeocoderCoordinates(_ coordinates: CLLocationCoordinate2D, _ didRespond: @escaping (_ response: String) -> Void) {
-        let geocoder = GMSGeocoder()
-        //the closure is a callback because this does niot exec in the main thread
-        geocoder.reverseGeocodeCoordinate(coordinates) { response, error in
-            // powerful stuff yoh
-            guard let address = response?.firstResult(), let lines = address.lines else {
-                return
-            }
-            let fullAddress = lines.joined(separator: "\n")
-            didRespond(fullAddress)
-            print("the full address is \(fullAddress)")
-        }
     }
 }
 
