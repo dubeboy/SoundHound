@@ -24,13 +24,6 @@ class SongsListUITest: XCTestCase {
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
         
         app = XCUIApplication()
-       // checkIfTheUserIsGoogleSignedIn()
-    }
-    
-    private func checkIfTheUserIsGoogleSignedIn() {
-        if(XCUIApplication().alerts["“Songhound” Wants to Use “google.com” to Sign In"].buttons["Cancel"].exists) {
-            XCUIApplication().alerts["“Songhound” Wants to Use “google.com” to Sign In"].buttons["Cancel"].tap()
-        }
     }
 
     override func tearDown() {
@@ -83,8 +76,6 @@ class SongsListUITest: XCTestCase {
         XCTAssert(app.staticTexts["100 Playes in Joburg"].exists)
     }
     
-
-
     func testSongDetailsScreen() {
         XCUIApplication().tables.cells.containing(.staticText, identifier:"Wildest Dreams").staticTexts["Taylor Swift"].tap()
         XCTAssert(app.staticTexts["Wildest Dreams"].exists)

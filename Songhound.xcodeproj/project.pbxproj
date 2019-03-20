@@ -113,6 +113,8 @@
 		F31BB457223F994700E986AF /* SonghoundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonghoundUITests.swift; sourceTree = "<group>"; };
 		F31BB459223F994700E986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F31BB45F223F9AA900E986AF /* SongsListUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListUITest.swift; sourceTree = "<group>"; };
+		F31BB4612242492A00E986AF /* Songhound-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Songhound-Bridging-Header.h"; sourceTree = "<group>"; };
+		F31BB4622242492A00E986AF /* LocationManagerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManagerProtocol.h; sourceTree = "<group>"; };
 		F325AB6722365CB700C3E344 /* SongDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
 		F325AB6922365F5000C3E344 /* SongDetailsWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailsWireFrame.swift; sourceTree = "<group>"; };
 		F336DDB22216B6DC0079B05D /* Songhound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Songhound.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,6 +295,8 @@
 				F336DDBE2216B6DE0079B05D /* LaunchScreen.storyboard */,
 				F336DDC12216B6DE0079B05D /* Info.plist */,
 				3DEEAA013A8E2F14973CB22A /* GoogleService-Info.plist */,
+				F31BB4622242492A00E986AF /* LocationManagerProtocol.h */,
+				F31BB4612242492A00E986AF /* Songhound-Bridging-Header.h */,
 			);
 			path = Songhound;
 			sourceTree = "<group>";
@@ -657,6 +661,7 @@
 					};
 					F336DDB12216B6DB0079B05D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 0;
@@ -953,6 +958,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FA8D45S82T;
 				INFOPLIST_FILE = SonghoundUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -972,6 +978,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FA8D45S82T;
 				INFOPLIST_FILE = SonghoundUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1108,6 +1115,7 @@
 			baseConfigurationReference = E7D85EBB81430C08D32CCBD8 /* Pods-Songhound.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FA8D45S82T;
 				INFOPLIST_FILE = Songhound/Info.plist;
@@ -1117,6 +1125,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.Songhound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Songhound/Songhound-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1127,6 +1137,7 @@
 			baseConfigurationReference = B478303C652C5DEA866E0B01 /* Pods-Songhound.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FA8D45S82T;
 				INFOPLIST_FILE = Songhound/Info.plist;
@@ -1136,6 +1147,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.Songhound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Songhound/Songhound-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
