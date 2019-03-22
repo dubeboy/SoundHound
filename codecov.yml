@@ -28,4 +28,6 @@ comment:
 ignore:
   - "Pods"  # ignore Pods folders and all its contents
   - "SonghoundTests" # i means you wanna go into an infinite loop
+  - "AppDelegate.swift"
+  - "Common/Endpoints.swift" #We not gonna test this file yet
 

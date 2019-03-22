@@ -14,14 +14,14 @@ class SongsListInteractorTest: XCTestCase {
     var remoteDataManager: MockTestSongListRemoteDataManager!
     var view: MockSongsListViewController!
 
+
+    //TODO some instantiation is not really required
     override func setUp() {
         super.setUp()
-
-        interactor = MockTestSongListInteractor()
+        interactor = SongsListInterator()
         wireFrame = MockTestSongListWireFrame()
         remoteDataManager = MockTestSongListRemoteDataManager()
         view = MockSongsListViewController()
-        // since we testing the presenter it makes sense to have a concrete class of the presenter
         presenter = MockSongsListViewPresenter()
         view.presenter = presenter
         presenter.view = view
@@ -39,7 +39,6 @@ class SongsListInteractorTest: XCTestCase {
         remoteDataManager = nil
         view = nil
         presenter = nil
-
     }
 
     func testInputRetrieveSongsList() {
