@@ -19,8 +19,9 @@ protocol Endpoint {
 }
 
 // these are all my end points
-enum Endpoints {
-    enum Songs: Endpoint {
+class Endpoints {
+
+    enum SongsEnumEndpoints: Endpoint {
         case fetch(songName: String)
 
         // these are functions of this enum!
@@ -38,8 +39,7 @@ enum Endpoints {
 
     }
 
-    enum Artists: Endpoint {
-
+    enum ArtistsEnumEndpoints: Endpoint {
         case fetch(artistName: String)
         public var path: String {
             switch self {
@@ -51,7 +51,6 @@ enum Endpoints {
 
         public var url: String {
             switch self {
-
             case .fetch: return "\(API.baseURL)\(path)"
             }
         }

@@ -73,7 +73,7 @@ protocol SongsListDataManagerInputProtocol {
 protocol SongsListRemoteDataManagerInputProtocol: class {
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol? { get set }
     //REMOTEDATA MANAGER -> INTETRACTOR
-    func retrieveSongsList()
+    func retrieveSongsList(path: String)
 }
 
 protocol SongsListRemoteDataManagerOutputProtocol: class {
