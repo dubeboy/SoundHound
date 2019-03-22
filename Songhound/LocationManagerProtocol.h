@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol LocationManagerProtocol <CLLocationManagerDelegate>
- - (void) reverseGeocoderCoordinates:  ( nonnull CLLocationCoordinate2D * )coordinates;
+ - (void) reverseGeocoderCoordinates:  (nonnull CLLocationCoordinate2D * )coordinates;
  - (void) onReverseCoordinatesReceived: (nonnull NSString *) fullAddress;
 @end
 
