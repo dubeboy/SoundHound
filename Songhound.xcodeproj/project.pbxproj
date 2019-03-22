@@ -17,6 +17,7 @@
 		3DEEA76CD49126F2C8067DA6 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEAFB13A5F76BA0B9FFF60 /* Mocks.swift */; };
 		3DEEA78A48252B1B213C57A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DEEAA013A8E2F14973CB22A /* GoogleService-Info.plist */; };
 		3DEEA8656BE2BED91F653AE1 /* ArtistListRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEAD78D920FD77ED0CFAB1 /* ArtistListRemoteDataManager.swift */; };
+		3DEEA9E055B2EF5554A39A41 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEABC289CC7D1DA9FB92BD /* Server.swift */; };
 		3DEEAB0EA2AE6CA6208CBC27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEAEC37B554FECEBB2749F /* User.swift */; };
 		3DEEAC1085D2738D777A54FF /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA681AF5B42104EA229E4 /* RESTClient.swift */; };
 		3DEEAC28D16A7E489B24D262 /* SongListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA5FDD4AE0A2AF5E160D6 /* SongListPresenterTests.swift */; };
@@ -90,12 +91,15 @@
 		3DEEA5FDD4AE0A2AF5E160D6 /* SongListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListPresenterTests.swift; sourceTree = "<group>"; };
 		3DEEA681AF5B42104EA229E4 /* RESTClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTClient.swift; sourceTree = "<group>"; };
 		3DEEA70E8C8E12EDA2235294 /* ArtistListWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistListWireFrame.swift; sourceTree = "<group>"; };
+		3DEEA8C8B224B2A637C744A1 /* LocationManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManagerProtocol.h; sourceTree = "<group>"; };
 		3DEEA90E5FC965572DBE6A97 /* SongDetailsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailsProtocols.swift; sourceTree = "<group>"; };
 		3DEEA9A4A963D2A744B98069 /* ArtistListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistListPresenter.swift; sourceTree = "<group>"; };
 		3DEEAA013A8E2F14973CB22A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3DEEABC289CC7D1DA9FB92BD /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		3DEEAD78D920FD77ED0CFAB1 /* ArtistListRemoteDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistListRemoteDataManager.swift; sourceTree = "<group>"; };
 		3DEEAE5FF26EB3EC23EE200D /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		3DEEAEC37B554FECEBB2749F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3DEEAF711A4474FA4F274C26 /* Songhound-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Songhound-Bridging-Header.h"; sourceTree = "<group>"; };
 		3DEEAFB13A5F76BA0B9FFF60 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		3F8C8DE05285C4A9B94D2D0B /* Pods-SonghoundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonghoundUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SonghoundUITests/Pods-SonghoundUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5BD6616F14749191B222BD7E /* Pods-SonghoundUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonghoundUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SonghoundUITests/Pods-SonghoundUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,8 +117,6 @@
 		F31BB457223F994700E986AF /* SonghoundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonghoundUITests.swift; sourceTree = "<group>"; };
 		F31BB459223F994700E986AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F31BB45F223F9AA900E986AF /* SongsListUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListUITest.swift; sourceTree = "<group>"; };
-		F31BB4612242492A00E986AF /* Songhound-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Songhound-Bridging-Header.h"; sourceTree = "<group>"; };
-		F31BB4622242492A00E986AF /* LocationManagerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManagerProtocol.h; sourceTree = "<group>"; };
 		F325AB6722365CB700C3E344 /* SongDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
 		F325AB6922365F5000C3E344 /* SongDetailsWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailsWireFrame.swift; sourceTree = "<group>"; };
 		F336DDB22216B6DC0079B05D /* Songhound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Songhound.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +222,14 @@
 			path = PresenterTests;
 			sourceTree = "<group>";
 		};
+		3DEEA8F5F2E9755C55CD4027 /* ServerMocker */ = {
+			isa = PBXGroup;
+			children = (
+				3DEEABC289CC7D1DA9FB92BD /* Server.swift */,
+			);
+			path = ServerMocker;
+			sourceTree = "<group>";
+		};
 		AA34D13C9F725FF30AA10255 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,8 +305,8 @@
 				F336DDBE2216B6DE0079B05D /* LaunchScreen.storyboard */,
 				F336DDC12216B6DE0079B05D /* Info.plist */,
 				3DEEAA013A8E2F14973CB22A /* GoogleService-Info.plist */,
-				F31BB4622242492A00E986AF /* LocationManagerProtocol.h */,
-				F31BB4612242492A00E986AF /* Songhound-Bridging-Header.h */,
+				3DEEAF711A4474FA4F274C26 /* Songhound-Bridging-Header.h */,
+				3DEEA8C8B224B2A637C744A1 /* LocationManagerProtocol.h */,
 			);
 			path = Songhound;
 			sourceTree = "<group>";
@@ -307,6 +317,7 @@
 				F325AB6B22369F9300C3E344 /* Songslist */,
 				F336DDCC2216B6DE0079B05D /* Info.plist */,
 				3DEEA55DB13DB618F6D1E0CB /* SongListFeatureTests.swift */,
+				3DEEA8F5F2E9755C55CD4027 /* ServerMocker */,
 			);
 			path = SonghoundTests;
 			sourceTree = "<group>";
@@ -739,6 +750,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Swifter/Swifter.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -753,6 +765,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swifter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -820,8 +833,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\n";
 		};
 		FAAA36D89E16A8B253200C1F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -905,6 +917,7 @@
 				3DEEA8656BE2BED91F653AE1 /* ArtistListRemoteDataManager.swift in Sources */,
 				3DEEA111347B126E3B430038 /* ArtistListWireFrame.swift in Sources */,
 				3DEEA55BAD2385E63DF93465 /* SongTableViewCell.swift in Sources */,
+				3DEEA9E055B2EF5554A39A41 /* Server.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

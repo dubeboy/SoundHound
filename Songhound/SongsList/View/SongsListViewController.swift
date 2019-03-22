@@ -34,7 +34,6 @@ class SongsListViewController: UIViewController {
     //-1 means no image was selected
     private var selectedImage = -1
     private let locationManager = CLLocationManager()
-    private let ifff = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
