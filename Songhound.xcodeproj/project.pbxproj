@@ -22,7 +22,6 @@
 		3DEEA823CF91481FAAEEA8BB /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA98EDCA558A56E44996E /* Server.swift */; };
 		3DEEA8656BE2BED91F653AE1 /* ArtistListRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEAD78D920FD77ED0CFAB1 /* ArtistListRemoteDataManager.swift */; };
 		3DEEAB0EA2AE6CA6208CBC27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEAEC37B554FECEBB2749F /* User.swift */; };
-		3DEEAC1085D2738D777A54FF /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA681AF5B42104EA229E4 /* RESTClient.swift */; };
 		3DEEAC28D16A7E489B24D262 /* SongListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA5FDD4AE0A2AF5E160D6 /* SongListPresenterTests.swift */; };
 		3DEEAD0DB1A7C753C1BE2BBA /* ArtistListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA1BE49DB22FC0488807D /* ArtistListViewController.swift */; };
 		3DEEAD9FBFF03A54D1589247 /* artsits.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DEEA497246AA534897D91E5 /* artsits.json */; };
@@ -39,7 +38,6 @@
 		F325AB6822365CB700C3E344 /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325AB6722365CB700C3E344 /* SongDetailViewController.swift */; };
 		F325AB6A22365F5000C3E344 /* SongDetailsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325AB6922365F5000C3E344 /* SongDetailsWireFrame.swift */; };
 		F336DDB62216B6DC0079B05D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDB52216B6DC0079B05D /* AppDelegate.swift */; };
-		F336DDB82216B6DC0079B05D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336DDB72216B6DC0079B05D /* ViewController.swift */; };
 		F336DDBB2216B6DC0079B05D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F336DDB92216B6DC0079B05D /* Main.storyboard */; };
 		F336DDBD2216B6DE0079B05D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F336DDBC2216B6DE0079B05D /* Assets.xcassets */; };
 		F336DDC02216B6DE0079B05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F336DDBE2216B6DE0079B05D /* LaunchScreen.storyboard */; };
@@ -96,7 +94,6 @@
 		3DEEA55DB13DB618F6D1E0CB /* SongListFeatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListFeatureTests.swift; sourceTree = "<group>"; };
 		3DEEA5F8487ED1CF1432BDDA /* SongsListInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsListInteractorTests.swift; sourceTree = "<group>"; };
 		3DEEA5FDD4AE0A2AF5E160D6 /* SongListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListPresenterTests.swift; sourceTree = "<group>"; };
-		3DEEA681AF5B42104EA229E4 /* RESTClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTClient.swift; sourceTree = "<group>"; };
 		3DEEA70E8C8E12EDA2235294 /* ArtistListWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistListWireFrame.swift; sourceTree = "<group>"; };
 		3DEEA8C8B224B2A637C744A1 /* LocationManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManagerProtocol.h; sourceTree = "<group>"; };
 		3DEEA90E5FC965572DBE6A97 /* SongDetailsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailsProtocols.swift; sourceTree = "<group>"; };
@@ -129,7 +126,6 @@
 		F325AB6922365F5000C3E344 /* SongDetailsWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailsWireFrame.swift; sourceTree = "<group>"; };
 		F336DDB22216B6DC0079B05D /* Songhound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Songhound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F336DDB52216B6DC0079B05D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F336DDB72216B6DC0079B05D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F336DDBA2216B6DC0079B05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F336DDBC2216B6DE0079B05D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F336DDBF2216B6DE0079B05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -466,7 +462,6 @@
 				F365F154222D2A2400F447A6 /* WireFrame */,
 				F365F14F222D228500F447A6 /* Protocol */,
 				F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */,
-				3DEEA681AF5B42104EA229E4 /* RESTClient.swift */,
 				F30FDB692229CC7600D48E96 /* Extensions.swift */,
 				F30FDB6F222A1F1300D48E96 /* Endpoints.swift */,
 			);
@@ -554,7 +549,6 @@
 		F36EE49922292CE00083B2B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F336DDB72216B6DC0079B05D /* ViewController.swift */,
 				F36EE4A2222970690083B2B8 /* SongsListViewController.swift */,
 			);
 			path = View;
@@ -871,7 +865,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n";
+			shellScript = "
+";
 		};
 		FAAA36D89E16A8B253200C1F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -925,7 +920,6 @@
 				F397DD87221A02B500D28E3C /* Song.swift in Sources */,
 				F36EE49D222938930083B2B8 /* SongsListViewPresenter.swift in Sources */,
 				F365F13E222D0BBB00F447A6 /* ArtistModel.swift in Sources */,
-				F336DDB82216B6DC0079B05D /* ViewController.swift in Sources */,
 				F33E6CF3221BF07F00CFBB23 /* ArtistTableViewCell.swift in Sources */,
 				F336DDB62216B6DC0079B05D /* AppDelegate.swift in Sources */,
 				F33E6CF5221BF3A300CFBB23 /* Artist.swift in Sources */,
@@ -940,7 +934,6 @@
 				F30FDB72222BCA7300D48E96 /* ModelResponse.swift in Sources */,
 				F30FDB6A2229CC7600D48E96 /* Extensions.swift in Sources */,
 				F30FDB6C2229E39300D48E96 /* SongsListWireFrame.swift in Sources */,
-				3DEEAC1085D2738D777A54FF /* RESTClient.swift in Sources */,
 				F365F156222D2A3D00F447A6 /* WireFrameUtils.swift in Sources */,
 				3DEEAB0EA2AE6CA6208CBC27 /* User.swift in Sources */,
 				F3F91CCC2237E8EA006C0D6D /* ArtistsListProtocols.swift in Sources */,
