@@ -54,6 +54,11 @@ class SongsListViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
         setUpTopThreeImages()
+
+        let filePath = Bundle.main.path(forResource: "songs", ofType: "json")
+        let filePath1 = Bundle.main.path(forResource: "AppDelegate", ofType: "swift")
+        let filePath3 = Bundle.main.path(forResource: "me", ofType: nil)
+        print("the file path \(filePath)")
     }
 
     private func setUpTopThreeImages() {

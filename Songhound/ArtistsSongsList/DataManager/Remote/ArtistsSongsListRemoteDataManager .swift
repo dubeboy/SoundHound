@@ -15,7 +15,7 @@ class ArtistsSongsListRemoteDataManager: ArtistListRemoteDataManagerInputProtoco
 
     func retrieveSongsList(artistName: String) {
         Alamofire
-                .request(Endpoints.Songs.fetch(songName: artistName).url, method: .get)
+                .request(Endpoints.SongsEnumEndpoints.fetch(songName: artistName).url, method: .get)
                 .responseObject { (response: DataResponse<ModelResponse<SongModel>>) in
                     switch response.result {
                     case .success(let res):

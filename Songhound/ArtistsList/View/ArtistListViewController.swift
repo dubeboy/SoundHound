@@ -22,7 +22,6 @@ class ArtistListViewController: UIViewController {
         artistTableView.delegate = self
         artistTableView.dataSource = self
         artistsSearchbar.delegate = self
-
     }
 }
 

@@ -20,7 +20,7 @@ class SongsListInterator: SongsListInteratorInputProtocol {
     var cache: [SongModel]?
 
     func retrieveSongsList() {
-        remoteDataManager?.retrieveSongsList()
+        remoteDataManager?.retrieveSongsList(path: Endpoints.SongsEnumEndpoints.fetch(songName: "swift").url)
     }
 
     func getArtist(top selectedId: Int) {

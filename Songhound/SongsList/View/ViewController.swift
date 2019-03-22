@@ -83,6 +83,9 @@ class ViewController: UIViewController,
             self.setupTopThreeArtists(songs: songs)
             self.tableViewSongs.reloadData()
         })
+
+
+
     }
 
 
