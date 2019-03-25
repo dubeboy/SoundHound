@@ -44,6 +44,18 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/DataManagerMocks/SongsListDataManagerTest.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+              <folding>
+                <element signature="e#104#117#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SonghoundTests/Common/ServerMocker/Server.swift">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/Mocks/Mocks.swift">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
@@ -163,7 +175,7 @@
       <scope name="Tests" />
     </order>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="809" />
@@ -209,6 +221,11 @@
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
             </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
+              <item name="SonghoundUITests" type="fcab9f18:XcodeViewNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -242,7 +259,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="XCTest.SonghoundUITests">
+  <component name="RunManager" selected="XCTest.SonghoundTests">
     <configuration name="Songhound" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="Songhound" CONFIG_NAME="Debug" SCHEME_NAME="Songhound" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="Songhound" RUN_TARGET_NAME="Songhound" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="true" autoInstall="true" askToEnableAutoInstall="true" />
@@ -317,20 +334,11 @@
       <workItem from="1553100951219" duration="1362000" />
       <workItem from="1553110511935" duration="568000" />
       <workItem from="1553243730704" duration="28990000" />
-      <workItem from="1553496679394" duration="3481000" />
+      <workItem from="1553496679394" duration="4704000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SongsListDataManagerTest - 2019.03.22 at 23h 59m 14s.xml">
-      <configuration name="SongsListDataManagerTest" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="SongsListDataManagerTest - 2019.03.23 at 00h 00m 01s.xml">
-      <configuration name="SongsListDataManagerTest" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="SongsListDataManagerTest - 2019.03.23 at 00h 00m 39s.xml">
-      <configuration name="SongsListDataManagerTest" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
     <history-entry file="SongsListDataManagerTest_testDidGetData - 2019.03.23 at 00h 00m 58s.xml">
       <configuration name="SongsListDataManagerTest.testDidGetData" configurationId="OCUnitRunConfiguration" />
     </history-entry>
@@ -352,9 +360,18 @@
     <history-entry file="SonghoundUITests - 2019.03.25 at 14h 02m 27s.xml">
       <configuration name="SonghoundUITests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
+    <history-entry file="SonghoundTests - 2019.03.25 at 14h 38m 52s.xml">
+      <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="SonghoundTests - 2019.03.25 at 14h 42m 23s.xml">
+      <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="SonghoundTests - 2019.03.25 at 14h 42m 35s.xml">
+      <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51867000" />
+    <option name="totallyTimeSpent" value="53090000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,8 +383,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="809" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="809" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.24034335" />
       <window_info id="Structure" order="1" sideWeight="0.5011494" side_tool="true" weight="0.24821173" />
@@ -375,14 +391,14 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5209497" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.52022314" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38687152" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32914925" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32914925" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.29567644" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32914925" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.52793294" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3282123" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32681563" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -426,6 +442,32 @@
         <option value="3" />
         <option value="1" />
       </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
   <component name="debuggerHistoryManager">
@@ -834,22 +876,22 @@ task.resume()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/DataManagerMocks/SongsListDataManagerTest.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="69" column="52" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
-          <folding>
-            <element signature="e#104#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/Mocks/Mocks.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
           <folding>
             <element signature="e#145#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/DataManagerMocks/SongsListDataManagerTest.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding>
+            <element signature="e#104#117#0" expanded="true" />
           </folding>
         </state>
       </provider>

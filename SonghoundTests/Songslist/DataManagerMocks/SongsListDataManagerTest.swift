@@ -56,7 +56,7 @@ class SongsListDataManagerTest: XCTestCase, ExpectationFulFillerProtocol{
         let expectation = XCTestExpectation(description: "Retrieve Songs List")
         mockTestSongListInteractor.expectation = expectation
         mockTestSongListInteractor.retrieveSongsList()
-        wait(for: [expectation], timeout: 5)
+        wait(for: [expectation], timeout: 10)
         let songs = mockTestSongListInteractor.songs
         XCTAssertNotNil(songs)
     }
@@ -66,7 +66,7 @@ class SongsListDataManagerTest: XCTestCase, ExpectationFulFillerProtocol{
         mockTestSongListInteractor.expectation = expectation
         mockTestSongListInteractor.endpoit = MockEndpoints.MockEmptySongsEnumEndpoints.fetch().url
         mockTestSongListInteractor.retrieveSongsList()
-        wait(for: [expectation], timeout: 5)
+        wait(for: [expectation], timeout: 10)
         let songs = mockTestSongListInteractor.songs
         XCTAssertNotNil(songs) // but empty
     }
