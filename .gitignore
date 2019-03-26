@@ -20,3 +20,4 @@ SonghoundTests.xctest.coverage.txt
 SwiftyJSON.framework.coverage.txt
 XCTest.framework.coverage.txt
 nanopb.framework.coverage.txt
+Pods
