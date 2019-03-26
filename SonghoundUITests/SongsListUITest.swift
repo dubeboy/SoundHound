@@ -18,10 +18,12 @@ class SongsListUITest: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
 
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+        // UI tests must launch the application that they test. Doing this in setup will make sure it
+        // happens for each test method.
         XCUIApplication().launch()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        // In UI tests it’s important to set the initial state - such as interface orientation - required for your
+        // tests before they run. The setUp method is a good place to do this.
         
         app = XCUIApplication()
     }
@@ -55,8 +57,8 @@ class SongsListUITest: XCTestCase {
         let tablesQuery = app.tables
         let searchField = tablesQuery.children(matching: .searchField).element
         searchField.tap()
-        tablesQuery.cells.containing(.staticText, identifier:"Taylor Swift").staticTexts["6 Hits in your area"].tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Delicate"]/*[[".cells.staticTexts[\"Delicate\"]",".staticTexts[\"Delicate\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery.cells.containing(.staticText, identifier: "Taylor Swift").staticTexts["6 Hits in your area"].tap()
+        tablesQuery.staticTexts["Delicate"].tap()
         app.staticTexts["Delicate"].tap()
         app.staticTexts["reputation"].tap()
         app.staticTexts["100 Playes in Joburg"].tap()
@@ -68,8 +70,12 @@ class SongsListUITest: XCTestCase {
 
     func testOnTopThreeArtistsClicked() {
         
-        app.otherElements.containing(.navigationBar, identifier:"🔥Hot Songs & Artists🔥").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .image).element(boundBy: 0).tap()
-        app.tables.cells.containing(.staticText, identifier:"Delicate").staticTexts["Taylor Swift"].tap()
+        app.otherElements
+                .containing(.navigationBar, identifier: "🔥Hot Songs & Artists🔥")
+                .children(matching: .other).element.children(matching: .other).element
+                .children(matching: .other).element.children(matching: .other)
+                .element(boundBy: 1).children(matching: .image).element(boundBy: 0).tap()
+        app.tables.cells.containing(.staticText, identifier: "Delicate").staticTexts["Taylor Swift"].tap()
        
         XCTAssert(app.staticTexts["Delicate"].exists)
         XCTAssert(app.staticTexts["reputation"].exists)
@@ -77,13 +83,10 @@ class SongsListUITest: XCTestCase {
     }
     
     func testSongDetailsScreen() {
-        XCUIApplication().tables.cells.containing(.staticText, identifier:"Wildest Dreams").staticTexts["Taylor Swift"].tap()
+        XCUIApplication().tables.cells
+                .containing(.staticText, identifier: "Wildest Dreams").staticTexts["Taylor Swift"].tap()
         XCTAssert(app.staticTexts["Wildest Dreams"].exists)
         XCTAssert(app.staticTexts["1989"].exists)
         XCTAssert(app.staticTexts["100 Playes in Joburg"].exists)
     }
-
-//    func testUserIsGoogleSignedIn() {
-//        XCTAssertFalse(app.staticTexts["Sam Smith"].exists)
-//    }
 }

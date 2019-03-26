@@ -134,7 +134,6 @@ class SongsListViewController: UIViewController {
         }
     }
 }
-
 //Song list view protocol
 extension SongsListViewController: SongsListViewProtocol {
     func onTopThreeArtistClicked() {
@@ -249,7 +248,7 @@ extension SongsListViewController: LocationManagerProtocol {
     func reverseGeocoderCoordinates(_ coordinates: UnsafeMutablePointer<CLLocationCoordinate2D>) {
         let geocoder = GMSGeocoder()
         //the closure is a callback because this does niot exec in the main thread
-        geocoder.reverseGeocodeCoordinate(coordinates.pointee) { response, error in
+        geocoder.reverseGeocodeCoordinate(coordinates.pointee) { response, _ in
             // powerful stuff yoh
             guard let address = response?.firstResult(), let lines = address.lines else {
                 return

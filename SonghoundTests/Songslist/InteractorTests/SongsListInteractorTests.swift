@@ -14,7 +14,6 @@ class SongsListInteractorTest: XCTestCase {
     var remoteDataManager: MockTestSongListRemoteDataManager!
     var view: MockSongsListViewController!
 
-
     //TODO some instantiation is not really required
     override func setUp() {
         super.setUp()

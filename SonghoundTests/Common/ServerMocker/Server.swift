@@ -11,7 +11,7 @@ import Swifter
 */
 class Server {
 
-    private static var serverInstance: Server? = nil
+    private static var serverInstance: Server?
     private var server: HttpServer!
 
     // it would be expensive to recreate a server for each request
