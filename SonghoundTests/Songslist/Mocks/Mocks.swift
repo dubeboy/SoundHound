@@ -14,7 +14,7 @@ class MockTestSongListInteractor: SongsListInteratorInputProtocol, SongsListRemo
     var presenter: SongsListInteratorOutputProtocol?
     var localDataManager: SongsListLocalDataManagerInputProtocol?
     var remoteDataManager: SongsListRemoteDataManagerInputProtocol?
-    var endpoit: String = MockEndpoints.MockSongsEnumEndpoints.fetch().url
+    var endpoit: String = MockEndpoints.MockSongsEnumEndpoints.fetch.url
     var expectation: XCTestExpectation?
     var expectationFulFiller: ExpectationFulFillerProtocol?
 

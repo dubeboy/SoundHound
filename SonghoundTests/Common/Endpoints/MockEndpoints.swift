@@ -18,12 +18,12 @@ struct MockAPI {
 class MockEndpoints {
 
     enum MockSongsEnumEndpoints: Endpoint {
-        case fetch()
+        case fetch
 
         // these are functions of this enum!
         public var path: String {
             switch self {
-            case .fetch(): return "get_songs"
+            case .fetch: return "get_songs"
             }
         }
 
@@ -36,12 +36,12 @@ class MockEndpoints {
 
 
     enum MockErrorSongsEnumEndpoints: Endpoint {
-        case fetch()
+        case fetch
 
         // these are functions of this enum!
         public var path: String {
             switch self {
-            case .fetch(): return "error"
+            case .fetch: return "error"
             }
         }
 
@@ -53,12 +53,12 @@ class MockEndpoints {
     }
 
     enum MockEmptySongsEnumEndpoints: Endpoint {
-        case fetch()
+        case fetch
 
         // these are functions of this enum!
         public var path: String {
             switch self {
-            case .fetch(): return "get_empty"
+            case .fetch: return "get_empty"
             }
         }
 
@@ -70,12 +70,12 @@ class MockEndpoints {
     }
 
     enum MockEmptyMalformedSongsEnumEndpoints: Endpoint {
-        case fetch()
+        case fetch
 
         // these are functions of this enum!
         public var path: String {
             switch self {
-            case .fetch(): return "get_empty_object"
+            case .fetch: return "get_empty_object"
             }
         }
 
@@ -86,12 +86,11 @@ class MockEndpoints {
         }
     }
 
-
     enum MockArtistsEnumEndpoints: Endpoint {
-        case fetch()
+        case fetch
         public var path: String {
             switch self {
-            case .fetch():
+            case .fetch:
                 return "get_artists"
             }
         }

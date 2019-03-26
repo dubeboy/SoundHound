@@ -15,7 +15,7 @@ class SongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol?
 
     func retrieveSongsList(path: String) {
-        print("the path in big bos \(path)")
+        print("the path in big boss \(path)")
         Alamofire
                 .request(path, method: .get)
                 .responseObject { (response: DataResponse<ModelResponse<SongModel>>) in

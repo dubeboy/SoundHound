@@ -11,7 +11,7 @@ protocol ExpectationFulFillerProtocol {
     func fulFill(expectation: XCTestExpectation)
 }
 
-class SongsListDataManagerTest: XCTestCase, ExpectationFulFillerProtocol{
+class SongsListDataManagerTest: XCTestCase, ExpectationFulFillerProtocol {
 
     var songsListDataManager: SongListRemoteDataManager!
     var mockTestSongListInteractor: MockTestSongListInteractor!
@@ -64,7 +64,7 @@ class SongsListDataManagerTest: XCTestCase, ExpectationFulFillerProtocol{
     func testEmptySongsList() {
         let expectation = XCTestExpectation(description: "Retrieve Empty Songs List")
         mockTestSongListInteractor.expectation = expectation
-        mockTestSongListInteractor.endpoit = MockEndpoints.MockEmptySongsEnumEndpoints.fetch().url
+        mockTestSongListInteractor.endpoit = MockEndpoints.MockEmptySongsEnumEndpoints.fetch.url
         mockTestSongListInteractor.retrieveSongsList()
         wait(for: [expectation], timeout: 10)
         let songs = mockTestSongListInteractor.songs
@@ -72,14 +72,14 @@ class SongsListDataManagerTest: XCTestCase, ExpectationFulFillerProtocol{
     }
 
     func testOnSongsReturnError() {
-        mockTestSongListInteractor.endpoit = MockEndpoints.MockErrorSongsEnumEndpoints.fetch().url
+        mockTestSongListInteractor.endpoit = MockEndpoints.MockErrorSongsEnumEndpoints.fetch.url
         mockTestSongListInteractor.retrieveSongsList()
         let songs = mockTestSongListInteractor.songs
         XCTAssertNil(songs)
     }
 
     func testMalformedRequest() {
-        mockTestSongListInteractor.endpoit = MockEndpoints.MockEmptyMalformedSongsEnumEndpoints.fetch().url
+        mockTestSongListInteractor.endpoit = MockEndpoints.MockEmptyMalformedSongsEnumEndpoints.fetch.url
         mockTestSongListInteractor.retrieveSongsList()
         let songs = mockTestSongListInteractor.songs
         XCTAssertNil(songs)
