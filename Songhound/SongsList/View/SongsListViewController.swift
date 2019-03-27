@@ -34,6 +34,7 @@ class SongsListViewController: UIViewController {
     //-1 means no image was selected
     private var selectedImage = -1
     private let locationManager = CLLocationManager()
+    private var viewFromNib: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,14 +53,8 @@ class SongsListViewController: UIViewController {
             print("the profile is \(prof)")
             imgProfilePicture.dowloadFromServer(link: prof)
         }
-        // Do any additional setup after loading the view.
-        let windowWidth = view.bounds.width
-        let topThreePeople: CustomArtistsView = CustomArtistsView(frame:
-                                                                  CGRect(x: 0, y: 20, width: windowWidth, height: 0))
-        tableViewSongs.tableHeaderView = topThreePeople
-
         setUpTopThreeImages()
-
+        viewFromNib = view
     }
 
     private func setUpTopThreeImages() {
@@ -130,15 +125,25 @@ class SongsListViewController: UIViewController {
         presenter?.presentMoreArtists()
     }
 
-    override func willTransition(to newCollection: UITraitCollection,
-                                 with coordinator: UIViewControllerTransitionCoordinator) {
+
+
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
         if UIApplication.shared.statusBarOrientation.isLandscape {
-            lblPlaying?.isHidden = true
-            currentLocation?.isHidden = true
+            print("Screen rotated  UP")
+//            view = viewFromNib
         } else {
-            lblPlaying?.isHidden = false
-            currentLocation?.isHidden = false
+            print("Screen rotated  DOWN")
+//            view = UIView(frame: .zero)
         }
+    }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: { context in
+            // This is called during the animation
+        }, completion: { context in
+            // This is called after the rotation is finished. Equal to deprecated `didRotate`
+        })
     }
 }
 //Song list view protocol
