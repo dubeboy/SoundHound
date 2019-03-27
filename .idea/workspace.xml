@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="480dffd8-445a-4c75-a4ff-5e78e020705c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Songhound/SongsList/View/CustomArtistsView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/SongsList/View/CustomArtistsView.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
@@ -33,14 +32,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+            <state relative-caret-position="146">
+              <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
               <folding>
                 <element signature="e#159#171#0" expanded="true" />
-                <element signature="e#2797#4559#0" />
                 <element signature="e#5092#6001#0" />
                 <element signature="e#6783#9182#0" />
               </folding>
@@ -60,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SonghoundTests/Common/Endpoints/MockEndpoints.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="56" column="6" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
+            <state relative-caret-position="221">
+              <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
             </state>
           </provider>
         </entry>
@@ -97,7 +95,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Songhound/SongsList/View/CustomArtistsView.swift">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
@@ -132,6 +130,7 @@
       <find>the</find>
       <find>the path in</find>
       <find>Start</find>
+      <find>willTra</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,10 +165,10 @@
         <option value="$PROJECT_DIR$/SonghoundTests/Songslist/InteractorTests/SongsListInteractorTests.swift" />
         <option value="$PROJECT_DIR$/SonghoundUITests/SonghoundUITests.swift" />
         <option value="$PROJECT_DIR$/SonghoundUITests/SongsListUITest.swift" />
-        <option value="$PROJECT_DIR$/SonghoundTests/Common/Endpoints/MockEndpoints.swift" />
         <option value="$PROJECT_DIR$/SonghoundTests/Common/ServerMocker/Server.swift" />
-        <option value="$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift" />
         <option value="$PROJECT_DIR$/Songhound/SongsList/View/CustomArtistsView.swift" />
+        <option value="$PROJECT_DIR$/SonghoundTests/Common/Endpoints/MockEndpoints.swift" />
+        <option value="$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift" />
       </list>
     </option>
   </component>
@@ -415,9 +414,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SonghoundTests - 2019.03.25 at 14h 38m 52s.xml">
-      <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
     <history-entry file="SonghoundTests - 2019.03.25 at 14h 42m 23s.xml">
       <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
@@ -445,9 +441,12 @@
     <history-entry file="SonghoundTests - 2019.03.27 at 09h 05m 59s.xml">
       <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
+    <history-entry file="SonghoundTests - 2019.03.27 at 09h 45m 41s.xml">
+      <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66776000" />
+    <option name="totallyTimeSpent" value="67059000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,20 +461,20 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.54393303" visible="true" weight="0.25107297" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.54393303" visible="true" weight="0.25107297" />
       <window_info id="Structure" order="1" sideWeight="0.45606694" side_tool="true" weight="0.25107297" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.51325303" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.51266587" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38687152" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32914925" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.55927473" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.40240964" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.40240964" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50080776" side_tool="true" weight="0.51882845" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32448733" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -968,13 +967,6 @@ task.resume()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SonghoundTests/Common/Endpoints/MockEndpoints.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="56" column="6" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/Interactor/ArtistSongsListInteractor.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1005,23 +997,29 @@ task.resume()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-          <folding>
-            <element signature="e#159#171#0" expanded="true" />
-            <element signature="e#2797#4559#0" />
-            <element signature="e#5092#6001#0" />
-            <element signature="e#6783#9182#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Songhound/SongsList/View/CustomArtistsView.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SonghoundTests/Common/Endpoints/MockEndpoints.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
+          <folding>
+            <element signature="e#159#171#0" expanded="true" />
+            <element signature="e#5092#6001#0" />
+            <element signature="e#6783#9182#0" />
+          </folding>
         </state>
       </provider>
     </entry>

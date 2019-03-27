@@ -54,7 +54,8 @@ class SongsListViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
         let windowWidth = view.bounds.width
-        let topThreePeople: CustomArtistsView = CustomArtistsView(frame: CGRect(x: 0, y: 20, width: windowWidth, height: 0))
+        let topThreePeople: CustomArtistsView = CustomArtistsView(frame:
+                                                                  CGRect(x: 0, y: 20, width: windowWidth, height: 0))
         tableViewSongs.tableHeaderView = topThreePeople
 
         setUpTopThreeImages()
