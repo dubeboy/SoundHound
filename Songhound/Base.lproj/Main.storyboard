@@ -63,7 +63,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Pe8-rJ-QlH" secondAttribute="trailing" constant="8" id="oOM-Nt-rxe"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dhB-dh-b0D">
+                            <stackView opaque="NO" tag="100" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dhB-dh-b0D">
                                 <rect key="frame" x="16" y="198" width="342" height="100"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="eOp-gc-GaD">

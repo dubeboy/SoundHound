@@ -34,7 +34,6 @@ class MockEndpoints {
         }
     }
 
-
     enum MockErrorSongsEnumEndpoints: Endpoint {
         case fetch
 

@@ -9,6 +9,9 @@ import Swifter
 /*
     create a singleton of this server object
 */
+
+// swiftlint:disable line_length
+
 class Server {
 
     private static var serverInstance: Server?
@@ -16,6 +19,7 @@ class Server {
 
     // it would be expensive to recreate a server for each request
     private init() {
+        self.getResource(withName: "songs")
         print("Starting server")
         server = HttpServer()
         fetchArtists()
@@ -64,6 +68,23 @@ class Server {
         server["/error"] = { request in
             return HttpResponse.badRequest(.text("bad request"))
         }
+    }
+
+    private func getResource(withName name: String) -> String? {
+        if let path = Bundle.main.path(forResource: "AppDelegate", ofType: "swift") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+                print("the data is \(data.count)")
+                let jsonString = try String(contentsOf: URL(fileURLWithPath: path), encoding: .utf8)
+                print("the string is \(jsonString)")
+                return jsonString
+            } catch let error {
+                print("parse error: \(error.localizedDescription)")
+            }
+        } else {
+            print("Invalid filename/path.")
+        }
+        return nil
     }
 
     static func getServerInstance() -> Server {
