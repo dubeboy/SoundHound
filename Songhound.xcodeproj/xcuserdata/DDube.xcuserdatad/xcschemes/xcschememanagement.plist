@@ -17,35 +17,35 @@
 		<key>SongsListDataManagerTest.test.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>21</integer>
 		</dict>
 		<key>SongsListDataManagerTest.testDidGetData.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>18</integer>
 		</dict>
 		<key>SongsListDataManagerTest.testDidNotGetData.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>19</integer>
 		</dict>
 		<key>SongsListDataManagerTest.testServer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>20</integer>
 		</dict>
 		<key>SongsListDataManagerTest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>17</integer>
 		</dict>
