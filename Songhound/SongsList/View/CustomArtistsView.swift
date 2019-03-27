@@ -30,9 +30,6 @@ class CustomArtistsView: UIView {
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
         addSubview(contentView)
-
-
         // modify the constraints here
     }
-
 }

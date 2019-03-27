@@ -53,8 +53,9 @@ class SongsListViewController: UIViewController {
             imgProfilePicture.dowloadFromServer(link: prof)
         }
         // Do any additional setup after loading the view.
-        let h = view.bounds.width
-        let topThreePeople: CustomArtistsView = CustomArtistsView(frame: CGRect(x: 0, y: 20, width: h, height: 0))
+        let windowWidth = view.bounds.width
+        let topThreePeople: CustomArtistsView = CustomArtistsView(frame: CGRect(x: 0, y: 20, width: windowWidth, height: 0))
+        tableViewSongs.tableHeaderView = topThreePeople
 
         setUpTopThreeImages()
 
@@ -128,7 +129,8 @@ class SongsListViewController: UIViewController {
         presenter?.presentMoreArtists()
     }
 
-    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+    override func willTransition(to newCollection: UITraitCollection,
+                                 with coordinator: UIViewControllerTransitionCoordinator) {
         if UIApplication.shared.statusBarOrientation.isLandscape {
             lblPlaying?.isHidden = true
             currentLocation?.isHidden = true
