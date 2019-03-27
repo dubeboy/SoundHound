@@ -7,14 +7,14 @@
 		<key>SongListPresenterTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
 		<key>Songhound.app.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
@@ -36,63 +36,63 @@
 		<key>SongsListDataManagerTest.test.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>28</integer>
 		</dict>
 		<key>SongsListDataManagerTest.testDidGetData.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>25</integer>
 		</dict>
 		<key>SongsListDataManagerTest.testDidNotGetData.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>26</integer>
 		</dict>
 		<key>SongsListDataManagerTest.testServer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>27</integer>
 		</dict>
 		<key>SongsListDataManagerTest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>24</integer>
 		</dict>
 		<key>SongsListInteractorTest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
 		<key>SongsListUITest.testDemoTest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
 		<key>SongsListUITest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
 		<key>Unnamed.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
@@ -102,17 +102,17 @@
 		<key>F31BB454223F994700E986AF</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
 		</dict>
 		<key>F336DDB12216B6DB0079B05D</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
 		</dict>
 		<key>F336DDC52216B6DE0079B05D</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
 		</dict>
 	</dict>
 </dict>
