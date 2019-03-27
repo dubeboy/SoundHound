@@ -141,7 +141,10 @@ class SongsListViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         coordinator.animate(alongsideTransition: { context in
             // This is called during the animation
+            print("Not Broken")
+
         }, completion: { context in
+            print("Broken")
             // This is called after the rotation is finished. Equal to deprecated `didRotate`
         })
     }
