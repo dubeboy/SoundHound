@@ -53,7 +53,11 @@ class SongsListViewController: UIViewController {
             imgProfilePicture.dowloadFromServer(link: prof)
         }
         // Do any additional setup after loading the view.
+        let h = view.bounds.width
+        let topThreePeople: CustomArtistsView = CustomArtistsView(frame: CGRect(x: 0, y: 20, width: h, height: 0))
+
         setUpTopThreeImages()
+
     }
 
     private func setUpTopThreeImages() {
