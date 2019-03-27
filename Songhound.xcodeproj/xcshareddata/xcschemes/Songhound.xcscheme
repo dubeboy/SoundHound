@@ -56,6 +56,26 @@
       codeCoverageEnabled = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F336DDC52216B6DE0079B05D"
+               BuildableName = "SonghoundTests.xctest"
+               BlueprintName = "SonghoundTests"
+               ReferencedContainer = "container:Songhound.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F31BB454223F994700E986AF"
+               BuildableName = "SonghoundUITests.xctest"
+               BlueprintName = "SonghoundUITests"
+               ReferencedContainer = "container:Songhound.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
