@@ -6,6 +6,7 @@
 //swiftlint:disable trailing_whitespace
 
 import UIKit
+import XCTest
 @testable import Songhound
 
 class MockTestSongListInteractor: SongsListInteratorInputProtocol, SongsListRemoteDataManagerOutputProtocol {
@@ -13,9 +14,19 @@ class MockTestSongListInteractor: SongsListInteratorInputProtocol, SongsListRemo
     var presenter: SongsListInteratorOutputProtocol?
     var localDataManager: SongsListLocalDataManagerInputProtocol?
     var remoteDataManager: SongsListRemoteDataManagerInputProtocol?
+    var endpoit: String = MockEndpoints.MockSongsEnumEndpoints.fetch.url
+    var expectation: XCTestExpectation?
+    var expectationFulFiller: ExpectationFulFillerProtocol?
 
+    var songs: [SongModel]? = nil {
+        didSet {
+            expectationFulFiller?.fulFill(expectation: expectation!)
+        }
+
+    }
 
     func onSongsRetrieved(_ songs: [SongModel]) {
+        self.songs = songs
         presenter?.didRetrieveSongs(songs)
     }
 
@@ -28,11 +39,12 @@ class MockTestSongListInteractor: SongsListInteratorInputProtocol, SongsListRemo
     }
 
     func retrieveSongsList() {
-        remoteDataManager?.retrieveSongsList()
+        print("the path is : \(endpoit)")
+        remoteDataManager?.retrieveSongsList(path: endpoit)
     }
 
     func getArtist(top selectedId: Int) {
-        onArtistSelected(artist: ArtistModel(name: "Taylor Swift", artistID: 200000))
+        onArtistSelected(artist: ArtistModel(name: songs?[selectedId].name ?? "", artistID: 00))
     }
 }
 
@@ -80,7 +92,7 @@ class MockTestSongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol
                 popularity: 100, artworkURL: "exampleUrl.com/assets/image.jpg",
                 artist: ArtistModel(name: "Taylor Swift", artistID: 200000))]
 
-    func retrieveSongsList() {
+    func retrieveSongsList(path: String) {
         // simulate network error
         if let songs = songs {
             remoteRequestHandler?.onSongsRetrieved(songs)
@@ -89,6 +101,8 @@ class MockTestSongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol
         }
     }
 }
+
+
 
 class MockSongsListViewController: SongsListViewProtocol {
 

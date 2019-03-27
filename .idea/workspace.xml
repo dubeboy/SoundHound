@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="8" />
-    <option name="CUSTOM_SCOPE_NAME" value="Project Source Filez" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2eee9e1-9dc2-454d-9a1e-894351fabda3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/scopes/Project_Source_Filez.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scopes/Project_Source_Filez.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songhound/CardView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/CardView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songhound/MyCollectioTableCellCollectionViewCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/MyCollectioTableCellCollectionViewCell.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Songhound/SongsList/Interactor/SongsListInterator.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/SongsList/Interactor/SongsListInterator.swift" afterDir="false" />
+    <list default="true" id="480dffd8-445a-4c75-a4ff-5e78e020705c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift" afterDir="false" />
     </list>
-    <ignored path="$USER_HOME$/Library/Caches/AppCode2018.3/DerivedData/Songhound-elqamlmfncjwytfemhsofhaxastt/" />
+    <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/Songhound-elqamlmfncjwytfemhsofhaxastt/Build/Intermediates.noindex/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,217 +26,160 @@
     <expand />
     <select />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_BD104209-F22D-45C7-920C-8EB544017781" />
-  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$/../.." userTempatePath="" />
-  <component name="FavoritesManager">
-    <favorites_list name="Songhound" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_8865485C-EABB-4BC7-B142-E7B283E981B1" />
+  <component name="FileColors">
+    <fileColor scope="Tests" color="Green" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8546932">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/View/TopSongsByArtistViewController.swift">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="549">
-                  <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/song1.png">
-              <provider selected="true" editor-type-id="images" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/song2.png">
-              <provider selected="true" editor-type-id="images" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Podfile">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/Mocks/Mocks.swift">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="16" selection-start-line="16" selection-end-line="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Songhound/MyCollectioTableCellCollectionViewCell.swift">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="36">
-                  <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.swiftlint.yml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Songhound/SongsList/Interactor/SongsListInterator.swift">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="193">
-                  <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.idea/scopes/Project_Source_Filez.xml">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Songhound/SongsList/DataManager/SongListRemoteDataManager.swift">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Songhound/Entities/ModelResponse.swift">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="27" selection-start-line="27" selection-end-line="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Songhound/Base.lproj/Main.storyboard">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="46">
-                  <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
+              <folding>
+                <element signature="e#159#171#0" expanded="true" />
+                <element signature="e#5092#6001#0" />
+                <element signature="e#6783#9182#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/Protocol/ArtistListViewProtocol.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SonghoundTests/Common/Endpoints/MockEndpoints.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SonghoundTests/Common/ServerMocker/Server.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#104#121#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Songhound/Assets.xcassets/me.imageset/1338.jpeg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Songhound/Assets.xcassets/kim.imageset/kim.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Podfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Songhound/SongsList/View/CustomArtistsView.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/View/ArtistsListViewController.swift">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SonghoundUITests/SongsListUITest.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>arti</find>
-      <find>url</find>
-      <find>reverseGeocoderCoordinates</find>
-      <find>the pro</find>
-      <find>the user is</find>
-      <find>imgArtist3</find>
-      <find>songList</find>
-      <find>topThreeArtists</find>
-      <find>SongsListInteratorOutputProtocol</find>
-      <find>SongsListViewProtocol</find>
-      <find>UITabl</find>
-      <find>§</find>
-      <find>SongDetailViewController</find>
-      <find>ArtistListInteractorInputProtocol</find>
-      <find>presenter</find>
-      <find>SongListPresenterTests</find>
-      <find>SongsListInteractorTests</find>
+      <find>SongsListViewWireFrameProtocol</find>
+      <find>SongsListLocalDataManagerInputProtocol</find>
+      <find>SongsListRemoteDataManagerInputProtocol</find>
+      <find>SongsListRemoteDataManagerOutputProtocol</find>
+      <find>path</find>
+      <find>the</find>
+      <find>the path in</find>
+      <find>Start</find>
+      <find>willTra</find>
     </findStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/Songhound/ArtistsList</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/add_size_clases" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Songhound/Common/UIUtils.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsSongsList/View/TopSongsByArtistViewController.swift" />
-        <option value="$PROJECT_DIR$/Songhound/AppDelegate.swift" />
-        <option value="$PROJECT_DIR$/SonghoundTests/SongListFeatureTests.swift" />
-        <option value="$PROJECT_DIR$/SonghoundTests/PresenterTests/TestSongListWireFrame.swift" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsSongsList/Interactor/ArtistSongsListInteractor.swift" />
-        <option value="$PROJECT_DIR$/Songhound/SongsDetails/Protocols/SongDetailsProtocols.swift" />
-        <option value="$PROJECT_DIR$/Songhound/SongsDetails/WireFrame/SongDetailsWireFrame.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsSongsList/View/ArtistsListViewController.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsSongsList/Presenter/ArtistSongListViewPresenter.swift" />
-        <option value="$PROJECT_DIR$/SonghoundTests/PresenterTests/SongListPresenterTests.swift" />
-        <option value="$PROJECT_DIR$/SonghoundTests/InteractorTests/SongsListnteractor.swift" />
-        <option value="$PROJECT_DIR$/SonghoundTests/InteractorTests/SongsListIteractorTests.swift" />
-        <option value="$PROJECT_DIR$/Songhound/SongsList/Interactor/SongsListInteractor.swift" />
-        <option value="$PROJECT_DIR$/SonghoundTests/InteractorTests/SongsListInteractorTests.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsSongsList/Protocol/ArtistListViewProtocol.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistsListViewController.h" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistsListViewController.swift" />
-        <option value="$PROJECT_DIR$/Songhound/SongsList/View/ViewController.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsList/ArtistListInteractor.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsList/DataManager/local/ArtistListRemoteDataManager.swift" />
-        <option value="$PROJECT_DIR$/Songhound/Common/Endpoints.swift" />
-        <option value="$PROJECT_DIR$/Songhound/Entities/SongModelResponse.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsSongsList/DataManager/Remote/ArtistsSongsListRemoteDataManager .swift" />
-        <option value="$PROJECT_DIR$/Songhound/SongsList/Protocols/SongsListViewProtocols.swift" />
-        <option value="$PROJECT_DIR$/Songhound/SongsList/Presenter/SongsListViewPresenter.swift" />
-        <option value="$PROJECT_DIR$/Songhound/SongsList/DataManager/SongListRemoteDataManager.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsList/DataManager/Remote/ArtistListRemoteDataManager.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsList/Interactor/ArtistListInteractor.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsList/Presenter/ArtistListPresenter.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsList/WireFrame/ArtistListWireFrame.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsSongsList/WireFrame/ArtistsListViewWireFrame.swift" />
-        <option value="$PROJECT_DIR$/Songhound/Entities/ArtistModel.swift" />
-        <option value="$PROJECT_DIR$/Songhound/Entities/ModelResponse.swift" />
-        <option value="$PROJECT_DIR$/Songhound/SongsDetails/Presenter/SongDetailPresenter.swift" />
+        <option value="$PROJECT_DIR$/Songhound/Songhound-Bridging-Header.h" />
+        <option value="$PROJECT_DIR$/Songhound/LocationManagerProtocol.h" />
         <option value="$PROJECT_DIR$/Podfile" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsSongsList/View/ArtistTableViewCell.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsList/Protocols/ArtistsListProtocols.swift" />
-        <option value="$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift" />
-        <option value="$PROJECT_DIR$/Songhound/SongsList/WireFrame/SongsListWireFrame.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistListViewController.swift" />
-        <option value="$PROJECT_DIR$/Songhound/SongsDetails/View/SongDetailViewController.swift" />
-        <option value="$PROJECT_DIR$/SonghoundTests/Songslist/InteractorTests/SongsListInteractorTests.swift" />
-        <option value="$PROJECT_DIR$/SonghoundTests/Songslist/PresenterTests/SongListPresenterTests.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsList/View/SongTableViewCell.swift" />
-        <option value="$PROJECT_DIR$/Songhound/ArtistsList/View/TopSongsByArtistViewController.swift" />
+        <option value="$PROJECT_DIR$/SonghoundTests/ServerMocker/Server.swift" />
+        <option value="$PROJECT_DIR$/Songhound/SongsList/Protocols/SongsListViewProtocols.swift" />
         <option value="$PROJECT_DIR$/Songhound/SongsList/Interactor/SongsListInterator.swift" />
-        <option value="$PROJECT_DIR$/.swiftlint.yml" />
+        <option value="$PROJECT_DIR$/Songhound/Common/Endpoints.swift" />
+        <option value="$PROJECT_DIR$/SonghoundTests/Songslist/DataManagerMocks/songs.json" />
+        <option value="$PROJECT_DIR$/SonghoundTests/Songslist/DataManagerMocks/artsits.json" />
+        <option value="$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistListViewController.swift" />
+        <option value="$PROJECT_DIR$/Songhound/SongsList/View/ViewController.swift" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/codecov.yml" />
+        <option value="$PROJECT_DIR$/.codacy.yml" />
+        <option value="$PROJECT_DIR$/Songhound/SongsList/DataManager/SongListRemoteDataManager.swift" />
         <option value="$PROJECT_DIR$/SonghoundTests/Songslist/Mocks/Mocks.swift" />
-        <option value="$PROJECT_DIR$/Songhound/MyCollectioTableCellCollectionViewCell.swift" />
+        <option value="$PROJECT_DIR$/SonghoundTests/Songslist/DataManagerMocks/SongsListDataManagerTest.swift" />
+        <option value="$PROJECT_DIR$/SonghoundTests/Songslist/InteractorTests/SongsListInteractorTests.swift" />
+        <option value="$PROJECT_DIR$/SonghoundUITests/SonghoundUITests.swift" />
+        <option value="$PROJECT_DIR$/SonghoundUITests/SongsListUITest.swift" />
+        <option value="$PROJECT_DIR$/SonghoundTests/Common/ServerMocker/Server.swift" />
+        <option value="$PROJECT_DIR$/Songhound/SongsList/View/CustomArtistsView.swift" />
+        <option value="$PROJECT_DIR$/SonghoundTests/Common/Endpoints/MockEndpoints.swift" />
+        <option value="$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift" />
       </list>
     </option>
   </component>
   <component name="NamedScopeManager">
     <order>
-      <scope name="Project Source Filez" />
+      <scope name="Tests" />
     </order>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
-    <option name="height" value="809" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -254,69 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Songhound" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Songhound" type="47feb1d3:ProjectViewModuleNode" />
-            </path>
-            <path>
-              <item name="Songhound" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Songhound" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Songhound" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Pods" type="1d218c8b:XcodeProjectNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-              <item name="SonghoundTests" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-              <item name="SonghoundTests" type="fcab9f18:XcodeViewNode" />
-              <item name="Songslist" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-              <item name="SonghoundTests" type="fcab9f18:XcodeViewNode" />
-              <item name="Songslist" type="fcab9f18:XcodeViewNode" />
-              <item name="InteractorTests" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-              <item name="SonghoundTests" type="fcab9f18:XcodeViewNode" />
-              <item name="Songslist" type="fcab9f18:XcodeViewNode" />
-              <item name="Mocks" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
-              <item name="SonghoundTests" type="fcab9f18:XcodeViewNode" />
-              <item name="Songslist" type="fcab9f18:XcodeViewNode" />
-              <item name="PresenterTests" type="fcab9f18:XcodeViewNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Cidr.FilesView" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Non-Source Files'; set:Project Non-Source Files; class com.jetbrains.cidr.lang.search.scopes.ProjectSourcesScopeProvider$NonSourceFilesScope">
           <expand>
@@ -327,7 +200,7 @@
             <path>
               <item name="Songhound" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Developer/iOS/Songhound" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="Songhound" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Songhound.xcodeproj" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -338,10 +211,77 @@
               <item name="Songhound" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Developer/iOS/Songhound" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
             <path>
-              <item name="Songhound" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Developer/iOS/Songhound" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="Songhound" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
+              <item name="Songhound" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
+              <item name="Songhound" type="fcab9f18:XcodeViewNode" />
+              <item name="SongsList" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
+              <item name="Songhound" type="fcab9f18:XcodeViewNode" />
+              <item name="SongsList" type="fcab9f18:XcodeViewNode" />
+              <item name="View" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
+              <item name="SonghoundTests" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
+              <item name="SonghoundTests" type="fcab9f18:XcodeViewNode" />
+              <item name="Common" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
+              <item name="SonghoundTests" type="fcab9f18:XcodeViewNode" />
+              <item name="Common" type="fcab9f18:XcodeViewNode" />
+              <item name="Endpoints" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
+              <item name="SonghoundTests" type="fcab9f18:XcodeViewNode" />
+              <item name="Common" type="fcab9f18:XcodeViewNode" />
+              <item name="ServerMocker" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
+              <item name="SonghoundTests" type="fcab9f18:XcodeViewNode" />
+              <item name="Songslist" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
+              <item name="SonghoundTests" type="fcab9f18:XcodeViewNode" />
+              <item name="Songslist" type="fcab9f18:XcodeViewNode" />
+              <item name="DataManagerMocks" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Songhound" type="1d218c8b:XcodeProjectNode" />
+              <item name="SonghoundUITests" type="fcab9f18:XcodeViewNode" />
             </path>
           </expand>
           <select />
@@ -350,27 +290,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Songhound" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="TODO_SCOPE" value="Project Source Files" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Songhound,,,SonghoundTests" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Swift" />
-    <property name="js.buildTools.grunt.grunt-cli.package" value="" />
-    <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Songhound/ArtistsList" />
-    <property name="nodejs.jest.jest_package" value="" />
-    <property name="nodejs.protractor.protractor_package" value="" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Songhound/Common" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="coverage" />
-    </option>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Songhound/Common" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -384,144 +316,139 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Songhound">
-    <configuration name="Songhound" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="Songhound" CONFIG_NAME="Debug" SCHEME_NAME="Songhound" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" RUN_TARGET_PROJECT_NAME="Songhound" RUN_TARGET_NAME="Songhound" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+  <component name="RunManager" selected="XCTest.SonghoundTests">
+    <configuration name="Songhound" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="Songhound" CONFIG_NAME="Debug" SCHEME_NAME="Songhound" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="Songhound" RUN_TARGET_NAME="Songhound" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+        <REVEAL_SETTINGS autoInject="true" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
       <embedded_app_extension_list />
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongListFeatureTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="SonghoundTests" CONFIG_NAME="Debug" SCHEME_NAME="SongListFeatureTests" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="SongListFeatureTests" TEST_MODE="SUITE_TEST">
+    <configuration name="SonghoundTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="SonghoundTests" CONFIG_NAME="Debug" SCHEME_NAME="SonghoundTests" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" TEST_MODE="SUITE_TEST" XCODE_TESTS_HASH_CODE="0">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongListPresenterTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="SonghoundTests" CONFIG_NAME="Debug" SCHEME_NAME="SongListPresenterTests" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="SongListPresenterTests" TEST_MODE="SUITE_TEST">
+    <configuration name="SongsListDataManagerTest" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="SonghoundTests" CONFIG_NAME="Debug" SCHEME_NAME="SongsListDataManagerTest" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" TEST_CLASS="SongsListDataManagerTest" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongListPresenterTests.testViewDidLoad" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="SonghoundTests" CONFIG_NAME="Debug" SCHEME_NAME="SongListPresenterTests.testViewDidLoad" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="SongListPresenterTests" TEST_METHOD="testViewDidLoad" TEST_MODE="SUITE_TEST">
+    <configuration name="SongsListDataManagerTest.test" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="SonghoundTests" CONFIG_NAME="Debug" SCHEME_NAME="SongsListDataManagerTest.test" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" TEST_CLASS="SongsListDataManagerTest" TEST_METHOD="test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SonghoundTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="SonghoundTests" CONFIG_NAME="Debug" SCHEME_NAME="SonghoundTests" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_MODE="SUITE_TEST" XCODE_TESTS_HASH_CODE="0">
+    <configuration name="SongsListDataManagerTest.testDidGetData" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="SonghoundTests" CONFIG_NAME="Debug" SCHEME_NAME="SongsListDataManagerTest.testDidGetData" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" TEST_CLASS="SongsListDataManagerTest" TEST_METHOD="testDidGetData" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongsListInteractorTest" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="SonghoundTests" CONFIG_NAME="Debug" SCHEME_NAME="SongsListInteractorTest" IS_LOCATION_SIMULATION_ALLOWED="true" LOCATION_SCENARIO_ID="com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier" LOCATION_SCENARIO_TYPE="1" TEST_CLASS="SongsListInteractorTest" TEST_MODE="SUITE_TEST">
+    <configuration name="SongsListDataManagerTest.testDidNotGetData" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="SonghoundTests" CONFIG_NAME="Debug" SCHEME_NAME="SongsListDataManagerTest.testDidNotGetData" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" TEST_CLASS="SongsListDataManagerTest" TEST_METHOD="testDidNotGetData" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="js.build_tools.grunt">
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method v="2" />
+    <configuration name="SongsListDataManagerTest.testServer" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Songhound" TARGET_NAME="SonghoundTests" CONFIG_NAME="Debug" SCHEME_NAME="SongsListDataManagerTest.testServer" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" TEST_CLASS="SongsListDataManagerTest" TEST_METHOD="testServer" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="Application.Songhound" />
+      <item itemvalue="XCTest.SonghoundUITests" />
       <item itemvalue="XCTest.SonghoundTests" />
-      <item itemvalue="XCTest.SongListFeatureTests" />
-      <item itemvalue="XCTest.SongListPresenterTests" />
-      <item itemvalue="XCTest.SongListPresenterTests.testViewDidLoad" />
-      <item itemvalue="XCTest.SongsListInteractorTest" />
+      <item itemvalue="XCTest.SongsListDataManagerTest" />
+      <item itemvalue="XCTest.SongsListDataManagerTest.testDidGetData" />
+      <item itemvalue="XCTest.SongsListDataManagerTest.testDidNotGetData" />
+      <item itemvalue="XCTest.SongsListDataManagerTest.testServer" />
+      <item itemvalue="XCTest.SongsListDataManagerTest.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="XCTest.SongsListInteractorTest" />
-        <item itemvalue="XCTest.SongListPresenterTests" />
-        <item itemvalue="XCTest.SongListPresenterTests.testViewDidLoad" />
-        <item itemvalue="XCTest.SongListFeatureTests" />
+        <item itemvalue="XCTest.SongsListDataManagerTest" />
+        <item itemvalue="XCTest.SongsListDataManagerTest.testDidGetData" />
+        <item itemvalue="XCTest.SongsListDataManagerTest.testServer" />
+        <item itemvalue="XCTest.SongsListDataManagerTest.testDidNotGetData" />
+        <item itemvalue="XCTest.SongsListDataManagerTest.test" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b2eee9e1-9dc2-454d-9a1e-894351fabda3" name="Default Changelist" comment="" />
-      <created>1551619465422</created>
+      <changelist id="480dffd8-445a-4c75-a4ff-5e78e020705c" name="Default Changelist" comment="" />
+      <created>1552995395979</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1551619465422</updated>
-      <workItem from="1551619470336" duration="1615000" />
-      <workItem from="1551621714718" duration="187000" />
-      <workItem from="1551621923557" duration="548000" />
-      <workItem from="1551869732327" duration="422000" />
-      <workItem from="1551881905259" duration="17974000" />
-      <workItem from="1552026358891" duration="377000" />
-      <workItem from="1552029239767" duration="14141000" />
-      <workItem from="1552119711880" duration="53000" />
-      <workItem from="1552120000523" duration="2896000" />
-      <workItem from="1552147967146" duration="11000" />
-      <workItem from="1552152614071" duration="42688000" />
-      <workItem from="1552379046156" duration="1733000" />
-      <workItem from="1552389853763" duration="9616000" />
-      <workItem from="1552458921073" duration="15457000" />
-      <workItem from="1552545541724" duration="14768000" />
-      <workItem from="1552632754369" duration="80000" />
-      <workItem from="1552632873915" duration="4392000" />
-      <workItem from="1552758838019" duration="291000" />
-      <workItem from="1552891904881" duration="2933000" />
-      <workItem from="1552895342942" duration="2845000" />
+      <updated>1552995395979</updated>
+      <workItem from="1552995400502" duration="17069000" />
+      <workItem from="1553100504228" duration="397000" />
+      <workItem from="1553100951219" duration="1362000" />
+      <workItem from="1553110511935" duration="568000" />
+      <workItem from="1553243730704" duration="28990000" />
+      <workItem from="1553496679394" duration="4704000" />
+      <workItem from="1553584988277" duration="919000" />
+      <workItem from="1553591267829" duration="1419000" />
+      <workItem from="1553595327239" duration="1110000" />
     </task>
+    <task id="LOCAL-00001" summary="Remove logging lins">
+      <created>1553583371543</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553583371543</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add Pods to my git ignore">
+      <created>1553583442446</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1553583442446</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SongListPresenterTests - 2019.03.09 at 17h 56m 01s.xml">
-      <configuration name="SongListPresenterTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="SonghoundTests - 2019.03.10 at 15h 35m 33s.xml">
+    <history-entry file="SonghoundTests - 2019.03.25 at 14h 42m 23s.xml">
       <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="SonghoundTests - 2019.03.11 at 09h 18m 32s.xml">
+    <history-entry file="SonghoundTests - 2019.03.25 at 14h 42m 35s.xml">
       <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="SonghoundTests - 2019.03.11 at 15h 13m 42s.xml">
+    <history-entry file="SonghoundTests - 2019.03.26 at 10h 24m 17s.xml">
       <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="SonghoundTests - 2019.03.11 at 15h 20m 24s.xml">
+    <history-entry file="SonghoundUITests - 2019.03.26 at 10h 36m 09s.xml">
+      <configuration name="SonghoundUITests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="SonghoundUITests - 2019.03.26 at 11h 10m 03s.xml">
+      <configuration name="SonghoundUITests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="SonghoundTests - 2019.03.27 at 09h 00m 16s.xml">
       <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="SonghoundTests - 2019.03.11 at 16h 09m 41s.xml">
+    <history-entry file="SonghoundTests - 2019.03.27 at 09h 02m 13s.xml">
       <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="SonghoundTests - 2019.03.12 at 10h 14m 35s.xml">
+    <history-entry file="SonghoundTests - 2019.03.27 at 09h 05m 07s.xml">
       <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="SonghoundTests - 2019.03.12 at 10h 15m 14s.xml">
+    <history-entry file="SonghoundTests - 2019.03.27 at 09h 05m 59s.xml">
       <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="SonghoundTests - 2019.03.13 at 08h 55m 11s.xml">
-      <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="SonghoundTests - 2019.03.13 at 19h 41m 26s.xml">
+    <history-entry file="SonghoundTests - 2019.03.27 at 09h 45m 41s.xml">
       <configuration name="SonghoundTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133027000" />
+    <option name="totallyTimeSpent" value="67059000" />
   </component>
-  <component name="TodoView" selected-index="2">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -531,31 +458,54 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="809" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49790794" visible="true" weight="0.21816881" />
-      <window_info id="Structure" order="1" sideWeight="0.50209206" side_tool="true" weight="0.2067239" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.54393303" visible="true" weight="0.25107297" />
+      <window_info id="Structure" order="1" sideWeight="0.45606694" side_tool="true" weight="0.25107297" />
       <window_info id="Designer" order="2" />
-      <window_info id="Favorites" order="3" sideWeight="0.5023474" side_tool="true" weight="0.22889842" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32775453" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.44351465" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.44211996" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.51266587" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38687152" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32914925" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32914925" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49928468" weight="0.57043236" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.44351465" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.7796374" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.5293296" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.55927473" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.40240964" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50080776" side_tool="true" weight="0.51882845" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32448733" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.2353362" />
+      <window_info id="Structure" order="1" sideWeight="0.5011494" side_tool="true" weight="0.24821173" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31799164" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3896648" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32914925" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32914925" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.55421686" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3282123" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3282123" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -610,424 +560,466 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Songhound/ArtistsSongsList/Presenter/ArtistSongListViewPresenter.swift</url>
-          <line>31</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Songhound/ArtistsSongsList/Presenter/ArtistSongListViewPresenter.swift</url>
-          <line>36</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Songhound/ArtistsSongsList/Presenter/ArtistSongListViewPresenter.swift</url>
-          <line>20</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Songhound/SongsDetails/WireFrame/SongDetailsWireFrame.swift</url>
-          <line>20</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistListViewController.swift</url>
-          <line>30</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Songhound/ArtistsList/DataManager/Remote/ArtistListRemoteDataManager.swift</url>
-          <line>32</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Songhound/ArtistsList/Interactor/ArtistListInteractor.swift</url>
-          <line>26</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="AppleRunConfiguration">
-        <watch expression="cache" language="Swift" />
-      </configuration>
-    </watches-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Remove logging lins" />
+    <MESSAGE value="Add Pods to my git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Pods to my git ignore" />
   </component>
   <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>let url = MockEndpoints.MockSongsEnumEndpoints.fetch().url
+//let task: URLSessionDataTask = URLSession.shared.dataTask(with: url!) {(data, response, error) in
+////    guard let data = data else { print(&quot;ooops&quot;) }
+////    print(String(data: data, encoding: .utf8)!)
+//}
+
+task.resume()</expression-string>
+        <language-id>Swift</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>let url = MockEndpoints.MockSongsEnumEndpoints.fetch().url
+let task: URLSessionDataTask = URLSession.shared.dataTask(with: url!) {(data, response, error) in
+//    guard let data = data else { print(&quot;ooops&quot;) }
+//    print(String(data: data, encoding: .utf8)!)
+}
+
+task.resume()</expression-string>
+        <language-id>Swift</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>let url = MockEndpoints.MockSongsEnumEndpoints.fetch().url
+let task: URLSessionDataTask = URLSession.shared.dataTask(with: url!) {(data, response, error) in
+    guard let data = data else { print(&quot;ooops&quot;) }
+//    print(String(data: data, encoding: .utf8)!)
+}
+
+task.resume()</expression-string>
+        <language-id>Swift</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>let url = MockEndpoints.MockSongsEnumEndpoints.fetch().url
+let task: URLSessionDataTask = URLSession.shared.dataTask(with: url!) {(data, response, error) in
+    guard let data = data else { print(&quot;ooops&quot;) }
+    print(String(data: data, encoding: .utf8)!)
+}
+
+task.resume()</expression-string>
+        <language-id>Swift</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>MockEndpoints.MockSongsEnumEndpoints.fetch().url</expression-string>
+        <language-id>Swift</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>let url = URL(string: MockEndpoints.MockSongsEnumEndpoints.fetch().url)</expression-string>
+        <language-id>Swift</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="watch">
       <expression>
-        <expression-string>cache</expression-string>
+        <expression-string>let songs = mockTestSongListInteractor.songs</expression-string>
         <language-id>Swift</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>artistName</expression-string>
+        <expression-string>songs == nil</expression-string>
         <language-id>Swift</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>response</expression-string>
+        <expression-string>path</expression-string>
         <language-id>Swift</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self</expression-string>
+        <expression-string>Bundle.main.bundlePath</expression-string>
         <language-id>Swift</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>(response.result.success as! Songhound.ModelResponse&lt;Songhound.SongModel&gt;).entityList</expression-string>
+        <expression-string>Bundle.main.bundleIdentifier</expression-string>
         <language-id>Swift</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>res</expression-string>
+        <expression-string>Bundle.main.path(forResource: &quot;Hello&quot;, ofType: &quot;swift&quot;,Directory: &quot;SongsList&quot;)</expression-string>
         <language-id>Swift</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>view.navigationController</expression-string>
+        <expression-string>Bundle.main.path(forResource: &quot;Hello&quot;, ofType: &quot;swift&quot;,nDirectory: &quot;SongsList&quot;)</expression-string>
         <language-id>Swift</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>view.navigationItem</expression-string>
+        <expression-string>Bundle.main.path(forResource: &quot;Hello&quot;, ofType: &quot;swift&quot;, i,nDirectory: &quot;SongsList&quot;)</expression-string>
         <language-id>Swift</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>view</expression-string>
+        <expression-string>Bundle.main.path(forResource: &quot;Hello&quot;, ofType: &quot;swift&quot;, inDirectory: &quot;SongsList&quot;)</expression-string>
         <language-id>Swift</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>}</expression-string>
+        <expression-string>Bundle.main.path(forResource: &quot;me&quot;, ofType: nil, inDirectory: &quot;Sio&quot;)</expression-string>
         <language-id>Swift</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SonghoundTests/PresenterTests/SongListPresenterTests.swift" />
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistsListViewController.m" />
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistsListViewController.h" />
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/Presenter/ArtistSongListViewPresenter.swift">
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocation.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        <state relative-caret-position="213">
+          <caret line="60" column="7" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/View/ViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-          <folding>
-            <element signature="e#146#158#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/Entities/Artist.swift">
+    <entry file="file://$PROJECT_DIR$/Songhound.xcworkspace/contents.xcworkspacedata">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/Entities/Song.swift">
+    <entry file="file://$PROJECT_DIR$/Songhound.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/Entities/User.swift">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/Entities/SongModel.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding>
-            <element signature="e#141#158#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/Entities/ArtistModelResponse.swift" />
-    <entry file="file://$PROJECT_DIR$/Songhound/Common/Endpoints.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/DataManager/Remote/ArtistsSongsListRemoteDataManager .swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="77" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/Protocols/SongsListViewProtocols.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/Presenter/SongsListViewPresenter.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/Interactor/ArtistSongsListInteractor.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="20" column="103" selection-start-line="20" selection-start-column="89" selection-end-line="20" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10B61.zip!/4.2.1/x86_64/iphonesimulator12.1/Foundation/Foundation.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="914" column="82" lean-forward="true" selection-start-line="913" selection-end-line="914" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/View/ArtistsListViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-          <folding>
-            <element signature="e#156#168#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/Protocol/ArtistListViewProtocol.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="28" column="33" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/DataManager/Remote/ArtistListRemoteDataManager.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/Interactor/ArtistListInteractor.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="120">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/Presenter/ArtistListPresenter.swift">
+    <entry file="file://$PROJECT_DIR$/Songhound/Songhound-Bridging-Header.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/Entities/ArtistModel.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#143#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/WireFrame/ArtistListWireFrame.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/WireFrame/ArtistsListViewWireFrame.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10B61.zip!/4.2.1/x86_64/iphonesimulator12.1/Swift/Math.Integers.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="1848" lean-forward="true" selection-start-line="1819" selection-start-column="14" selection-end-line="1848" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/SongsDetails/Presenter/SongDetailPresenter.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/AppDelegate.swift">
+    <entry file="file://$PROJECT_DIR$/Songhound/GoogleService-Info.plist">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/View/ArtistTableViewCell.swift">
+    <entry file="file://$PROJECT_DIR$/SonghoundTests/SongListFeatureTests.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2610">
-          <caret line="180" column="32" selection-start-line="180" selection-start-column="32" selection-end-line="180" selection-end-column="32" />
-          <folding>
-            <element signature="e#159#171#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Songhound/SongsList/WireFrame/SongsListWireFrame.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+        <state relative-caret-position="445">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/DataManager/SongListRemoteDataManager.swift">
+    <entry file="file://$PROJECT_DIR$/Songhound/Common/Endpoints.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
+        <state relative-caret-position="585">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/Entities/ModelResponse.swift">
+    <entry file="appcode.project-settings://a3658ebb">
+      <provider selected="true" editor-type-id="AppCode.ProjectSettings" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/Swifter/Sources/Files.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="165">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/Base.lproj/Main.storyboard">
+    <entry file="file://$PROJECT_DIR$/Pods/Swifter/Sources/String+File.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        <state relative-caret-position="324">
+          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/Protocols/ArtistsListProtocols.swift">
+    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/View/ViewController.swift" />
+    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/Hello.swift" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state>
+          <caret selection-end-line="70" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/View/ArtistListViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="80" column="65" lean-forward="true" selection-start-line="80" selection-start-column="65" selection-end-line="80" selection-end-column="65" />
+        <state relative-caret-position="270">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding>
             <element signature="e#156#168#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/SongsDetails/View/SongDetailViewController.swift">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.swift">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/DataManager/Remote/ArtistListRemoteDataManager.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="313">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/InteractorTests/SongsListInteractorTests.swift">
+    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/Protocols/SongsListViewProtocols.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="129">
+          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/Presenter/SongsListViewPresenter.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/Alamofire/Source/ResponseSerialization.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="166" selection-start-line="166" selection-end-line="166" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/AppDelegate.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/appcode.vmoptions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/Interactor/SongsListInterator.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/PresenterTests/SongListPresenterTests.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codecov.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.codacy.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/LocationManagerProtocol.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding>
+            <element signature="e#151#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/Protocols/ArtistsListProtocols.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/Entities/ModelResponse.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="e#145#162#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/DataManagerMocks/artsits.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/DataManagerMocks/songs.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/DataManager/Remote/ArtistsSongsListRemoteDataManager .swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding>
+            <element signature="e#166#183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/DataManager/SongListRemoteDataManager.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding>
+            <element signature="e#157#174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/Mocks/Mocks.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+          <folding>
+            <element signature="e#145#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/DataManagerMocks/SongsListDataManagerTest.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#104#117#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/PresenterTests/SongListPresenterTests.swift">
+    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/InteractorTests/SongsListInteractorTests.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="62" column="99" selection-start-line="62" selection-start-column="99" selection-end-line="62" selection-end-column="99" />
+        <state relative-caret-position="440">
+          <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+          <folding>
+            <element signature="e#104#117#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/View/SongTableViewCell.swift">
+    <entry file="file://$PROJECT_DIR$/SonghoundUITests/SonghoundUITests.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        <state relative-caret-position="495">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/SonghoundUITests/SongsListUITest.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/View/ArtistsListViewController.swift">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/song1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/song2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsList/View/TopSongsByArtistViewController.swift">
+    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/Protocol/ArtistListViewProtocol.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+        <state relative-caret-position="345">
+          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.swiftlint.yml">
+    <entry file="file://$PROJECT_DIR$/Songhound/ArtistsSongsList/Interactor/ArtistSongsListInteractor.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        <state relative-caret-position="315">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SonghoundTests/Songslist/Mocks/Mocks.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound.app.coverage.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Podfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="375">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/Interactor/SongsListInterator.swift">
+    <entry file="file://$PROJECT_DIR$/Songhound/Assets.xcassets/me.imageset/1338.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/Assets.xcassets/kim.imageset/kim.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SonghoundTests/Common/ServerMocker/Server.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#104#121#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/scopes/Project_Source_Filez.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Songhound/MyCollectioTableCellCollectionViewCell.swift">
+    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/View/CustomArtistsView.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="495">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SonghoundTests/Common/Endpoints/MockEndpoints.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Songhound/SongsList/View/SongsListViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
+          <folding>
+            <element signature="e#159#171#0" expanded="true" />
+            <element signature="e#5092#6001#0" />
+            <element signature="e#6783#9182#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,7 +1028,7 @@
     <states>
       <state key="ScopeChooserConfigurable.UI">
         <settings>
-          <last-edited>Project Source Filez</last-edited>
+          <last-edited>Tests</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1045,7 +1037,7 @@
             </option>
           </splitter-proportions>
           <order>
-            <scope name="Project Source Filez" />
+            <scope name="Tests" />
           </order>
         </settings>
       </state>

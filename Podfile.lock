@@ -83,6 +83,7 @@ PODS:
   - nanopb/encode (0.3.901)
   - ObjectMapper (3.4.2)
   - PKHUD (5.2.1)
+  - Swifter (1.4.5)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
@@ -95,6 +96,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - ObjectMapper (~> 3.4)
   - PKHUD (~> 5.0)
+  - Swifter (~> 1.4.5)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
@@ -117,6 +119,7 @@ SPEC REPOS:
     - nanopb
     - ObjectMapper
     - PKHUD
+    - Swifter
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -138,8 +141,9 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
+  Swifter: eb2bc1d192a1c09169c7fefd01971565fa940521
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: bec7c5eac45cc6f6b38f0e98a9b2b02b1db09133
+PODFILE CHECKSUM: 5f465807bd75f46a245aa2ac9970121f18c15761
 
 COCOAPODS: 1.5.3

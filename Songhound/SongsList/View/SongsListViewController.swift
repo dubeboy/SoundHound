@@ -13,11 +13,7 @@ import MediaPlayer
 import GoogleSignIn
 import Firebase
 import GoogleSignIn
-
-// TODO must be able to mod the navigation controller
-
-// TODO GET APP back to the state that it was before VIPER
-
+// TODO Modify change Controller window background
 class SongsListViewController: UIViewController {
 
     //top Items for the songs list view controller
@@ -42,14 +38,9 @@ class SongsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-        // TODO: Investigate this please why does it not show list with out this
-        // also why does it not show the cell separators
         self.tableViewSongs.delegate = self
         self.tableViewSongs.dataSource = self
-        // tableViewSongs.tableFooterView = UIView()
-
-        print("assigning the self to the delegate")
-        // showCurrentPlayingSong()
+        locationManager.delegate = self
 
         locationManager.requestWhenInUseAuthorization()
 
@@ -61,10 +52,14 @@ class SongsListViewController: UIViewController {
             print("the profile is \(prof)")
             imgProfilePicture.dowloadFromServer(link: prof)
         }
-
-
         // Do any additional setup after loading the view.
+        let windowWidth = view.bounds.width
+        let topThreePeople: CustomArtistsView = CustomArtistsView(frame:
+                                                                  CGRect(x: 0, y: 20, width: windowWidth, height: 0))
+        tableViewSongs.tableHeaderView = topThreePeople
+
         setUpTopThreeImages()
+
     }
 
     private func setUpTopThreeImages() {
@@ -90,48 +85,62 @@ class SongsListViewController: UIViewController {
     }
 
     @objc func imageTapped(gesture: UIGestureRecognizer) {
-        if let imageView = gesture.view as? UIImageView {
-            print("Hello ")
-            // niot sure if this is a good idea on getting by tag
-            let tag = imageView.tag
-            print("the tag is \(tag)")
+        if gesture.numberOfTouches > 0 {
+            if let imageView = gesture.view as? UIImageView {
+                print("Hello ")
+                print( gesture.numberOfTouches)
+                // niot sure if this is a good idea on getting by tag
+                let tag = imageView.tag
+                print("the tag is \(tag)")
 
-            switch tag {
-            case 0:
-                print("img one openi")
-                selectedImage = 0
-                presenter?.showSongs(forSelectedArtistId: selectedImage)
-                    //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
-                    // will perform segue on the presenter since its the only one which can do so
-            case 1:
-                print("img one open")
-                selectedImage = 1
-                presenter?.showSongs(forSelectedArtistId: selectedImage)
-                    // performSegue(withIdentifier: "viewSongsForArtist", sender: self)
-            case 2:
-                print("img one opennn")
-                selectedImage = 2
-                presenter?.showSongs(forSelectedArtistId: selectedImage)
-                    //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
-            case 3:
-                print("profile picture selected bro ")
-                selectedImage = 3
-                GIDSignIn.sharedInstance().delegate = self
-                GIDSignIn.sharedInstance().uiDelegate = self
-                GIDSignIn.sharedInstance().signIn()
+                switch tag {
+                case 0:
+                    print("img one openi")
+                    selectedImage = 0
+                    presenter?.showSongs(forSelectedArtistId: selectedImage)
+                        //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+                        // will perform segue on the presenter since its the only one which can do so
+                case 1:
+                    print("img one open")
+                    selectedImage = 1
+                    presenter?.showSongs(forSelectedArtistId: selectedImage)
+                        // performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+                case 2:
+                    print("img one opennn")
+                    selectedImage = 2
+                    presenter?.showSongs(forSelectedArtistId: selectedImage)
+                        //  performSegue(withIdentifier: "viewSongsForArtist", sender: self)
+                case 3:
+                    print("profile picture selected bro ")
+                    selectedImage = 3
+                    GIDSignIn.sharedInstance().delegate = self
+                    GIDSignIn.sharedInstance().uiDelegate = self
+                    GIDSignIn.sharedInstance().signIn()
 
-            default:
-                print("ooops")
+                default:
+                    print("ooops")
 
+                }
             }
+
         }
     }
 
     @IBAction func onMoreArtistsClick(_ sender: Any) {
         presenter?.presentMoreArtists()
     }
-}
 
+    override func willTransition(to newCollection: UITraitCollection,
+                                 with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIApplication.shared.statusBarOrientation.isLandscape {
+            lblPlaying?.isHidden = true
+            currentLocation?.isHidden = true
+        } else {
+            lblPlaying?.isHidden = false
+            currentLocation?.isHidden = false
+        }
+    }
+}
 //Song list view protocol
 extension SongsListViewController: SongsListViewProtocol {
     func onTopThreeArtistClicked() {
@@ -187,10 +196,10 @@ extension SongsListViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser?, withError error: Error!) {
         print("oopps user signed out yoh")
 
-        guard let authentication = user.authentication else {
+        guard let user = user, let authentication = user.authentication else {
             return
         }
 
@@ -203,7 +212,7 @@ extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
             }
             print("Yey user signed in bro")
             self.saveGoogleUserInfo(user: user)
-            print("the user is \(String(describing: user?.userID))")
+            print("the user is \(String(describing: user.userID))")
             if let user = getSignedInUser() {
                 self.lblUserName.text = user.fullName
                 if let profileUrl = user.profileURL {
@@ -215,8 +224,7 @@ extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
             } else {
                 print("failed to load user man")
                 self.lblUserName.text = ""
-            }
-        }
+            } }
     }
 
     private func saveGoogleUserInfo(user: GIDGoogleUser) {
@@ -243,7 +251,27 @@ extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
     }
 }
 
-extension SongsListViewController: CLLocationManagerDelegate {
+extension SongsListViewController: LocationManagerProtocol {
+    func reverseGeocoderCoordinates(_ coordinates: UnsafeMutablePointer<CLLocationCoordinate2D>) {
+        let geocoder = GMSGeocoder()
+        //the closure is a callback because this does niot exec in the main thread
+        geocoder.reverseGeocodeCoordinate(coordinates.pointee) { response, _ in
+            // powerful stuff yoh
+            guard let address = response?.firstResult(), let lines = address.lines else {
+                return
+            }
+            let fullAddress = lines.joined(separator: "\n")
+            self.onReverseCoordinatesReceived(fullAddress)
+            print("the full address is \(fullAddress)")
+        }
+    }
+
+    func onReverseCoordinatesReceived(_ fullAddress: String) {
+        let fullAddressFirstComponent = fullAddress.components(separatedBy: ",")[0]
+        let fullAddressSecondComponent = fullAddress.components(separatedBy: ",")[1]
+        self.currentLocation.text = "\(fullAddressFirstComponent), \(fullAddressSecondComponent) "
+    }
+
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         guard status == .authorizedWhenInUse else {
             return
@@ -258,27 +286,10 @@ extension SongsListViewController: CLLocationManagerDelegate {
             return
         }
         print("we know the current location yoh \(location)")
-        reverseGeocoderCoordinates(location.coordinate) { fullAddressResponse in
-            let fullAddressFirstComponent = fullAddressResponse.components(separatedBy: ",")[0]
-            let fullAddressSecondComponent = fullAddressResponse.components(separatedBy: ",")[1]
-            self.currentLocation.text = "\(fullAddressFirstComponent), \(fullAddressSecondComponent) "
-        }
+        var coor = location.coordinate
+        reverseGeocoderCoordinates(&coor)
         // use GMSGeocoder to get the address of the user yeah?
         locationManager.stopUpdatingLocation()
-    }
-
-    private func reverseGeocoderCoordinates(_ coordinates: CLLocationCoordinate2D, _ didRespond: @escaping (_ response: String) -> Void) {
-        let geocoder = GMSGeocoder()
-        //the closure is a callback because this does niot exec in the main thread
-        geocoder.reverseGeocodeCoordinate(coordinates) { response, error in
-            // powerful stuff yoh
-            guard let address = response?.firstResult(), let lines = address.lines else {
-                return
-            }
-            let fullAddress = lines.joined(separator: "\n")
-            didRespond(fullAddress)
-            print("the full address is \(fullAddress)")
-        }
     }
 }
 

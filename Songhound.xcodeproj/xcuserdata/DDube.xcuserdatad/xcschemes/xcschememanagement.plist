@@ -4,20 +4,24 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Songhound.xcscheme</key>
+		<key>SongListPresenterTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>SonghoundUITests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Songhound.xcscheme_^#shared#^_</key>
+		<key>SongsListInteractorTest.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false />
 			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>SonghoundTests.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>5</integer>
 		</dict>
 		<key>Unnamed.xcscheme</key>
 		<dict>
@@ -26,37 +30,80 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>SongListFeatureTests.xcscheme</key>
+		<key>SongsListUITest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>6</integer>
 		</dict>
-		<key>SongListPresenterTests.xcscheme</key>
+		<key>SongsListUITest.testDemoTest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>7</integer>
 		</dict>
-		<key>SongListPresenterTests.testViewDidLoad.xcscheme</key>
+		<key>Songhound.app.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>3</integer>
 		</dict>
-		<key>SongsListInteractorTest.xcscheme</key>
+		<key>Songhound.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>SonghoundTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>23</integer>
+		</dict>
+		<key>SongsListDataManagerTest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>24</integer>
+		</dict>
+		<key>SongsListDataManagerTest.testDidGetData.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>25</integer>
+		</dict>
+		<key>SongsListDataManagerTest.testDidNotGetData.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>26</integer>
+		</dict>
+		<key>SongsListDataManagerTest.testServer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>27</integer>
+		</dict>
+		<key>SongsListDataManagerTest.test.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>28</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>F31BB454223F994700E986AF</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
 		<key>F336DDB12216B6DB0079B05D</key>
 		<dict>
 			<key>primary</key>

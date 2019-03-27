@@ -14,10 +14,10 @@ class SongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
     // this protocol is the one responsible for sending data the presenter
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol?
 
-    func retrieveSongsList() {
+    func retrieveSongsList(path: String) {
+        print("the path in big boss \(path)")
         Alamofire
-                .request(Endpoints.Songs.fetch(songName: "swift").url, method: .get)
-                //            .validate() // no need for this but anyway..
+                .request(path, method: .get)
                 .responseObject { (response: DataResponse<ModelResponse<SongModel>>) in
                     switch response.result {
                     case .success(let res):
