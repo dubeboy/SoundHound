@@ -13,6 +13,7 @@ import MediaPlayer
 import GoogleSignIn
 import Firebase
 import GoogleSignIn
+
 // TODO Modify change Controller window background
 class SongsListViewController: UIViewController {
 
@@ -83,7 +84,7 @@ class SongsListViewController: UIViewController {
         if gesture.numberOfTouches > 0 {
             if let imageView = gesture.view as? UIImageView {
                 print("Hello ")
-                print( gesture.numberOfTouches)
+                print(gesture.numberOfTouches)
                 // niot sure if this is a good idea on getting by tag
                 let tag = imageView.tag
                 print("the tag is \(tag)")
@@ -125,30 +126,25 @@ class SongsListViewController: UIViewController {
         presenter?.presentMoreArtists()
     }
 
-
-
-    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-        if UIApplication.shared.statusBarOrientation.isLandscape {
-            print("Screen rotated  UP")
-//            view = viewFromNib
-        } else {
-            print("Screen rotated  DOWN")
-//            view = UIView(frame: .zero)
-        }
-    }
-
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         coordinator.animate(alongsideTransition: { context in
             // This is called during the animation
             print("Not Broken")
-
         }, completion: { context in
             print("Broken")
             // This is called after the rotation is finished. Equal to deprecated `didRotate`
+            if UIApplication.shared.statusBarOrientation.isPortrait {
+                print("Screen rotated  UP")
+                self.view = self.viewFromNib
+            } else {
+                print("Screen rotated  DOWN")
+               self.view = UIView(frame: .zero)
+            }
         })
     }
 }
+
 //Song list view protocol
 extension SongsListViewController: SongsListViewProtocol {
     func onTopThreeArtistClicked() {
@@ -166,8 +162,6 @@ extension SongsListViewController: SongsListViewProtocol {
         lblArtistName1.text = songList.first?.artistName
         lblArtistName2.text = songList[1].artistName
         lblArtistName3.text = songList[2].artistName
-
-
     }
 
     func showError() {
@@ -232,7 +226,8 @@ extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
             } else {
                 print("failed to load user man")
                 self.lblUserName.text = ""
-            } }
+            }
+        }
     }
 
     private func saveGoogleUserInfo(user: GIDGoogleUser) {

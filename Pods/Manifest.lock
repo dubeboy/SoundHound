@@ -3,6 +3,14 @@ PODS:
   - AlamofireObjectMapper (5.2.0):
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
+  - AppCenter (1.13.1):
+    - AppCenter/Analytics (= 1.13.1)
+    - AppCenter/Crashes (= 1.13.1)
+  - AppCenter/Analytics (1.13.1):
+    - AppCenter/Core
+  - AppCenter/Core (1.13.1)
+  - AppCenter/Crashes (1.13.1):
+    - AppCenter/Core
   - Firebase/Auth (5.16.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.3.0)
@@ -89,6 +97,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 4.8.1)
   - AlamofireObjectMapper (~> 5.2)
+  - AppCenter
   - Firebase/Auth
   - Firebase/Core
   - GoogleMaps
@@ -103,6 +112,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireObjectMapper
+    - AppCenter
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -125,6 +135,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  AppCenter: c41422e3d69220d17a622e48edebb8c1e0d06ec9
   Firebase: 749a8ff4962f9d8c79dda1966de20f6f77583d67
   FirebaseAnalytics: d35d47c03c50c73c14a7fd31463c5775843e78a9
   FirebaseAuth: c9b3ff063c223d2841d97240af547ce511bce19a
@@ -144,6 +155,6 @@ SPEC CHECKSUMS:
   Swifter: eb2bc1d192a1c09169c7fefd01971565fa940521
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 5f465807bd75f46a245aa2ac9970121f18c15761
+PODFILE CHECKSUM: d3410174a2ace286a5ec79537a9aac7546056a11
 
 COCOAPODS: 1.5.3
