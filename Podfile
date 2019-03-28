@@ -31,5 +31,6 @@ target 'Songhound' do
   pod 'PKHUD', '~> 5.0'
   pod 'AlamofireObjectMapper', '~> 5.2'
   pod 'Swifter', '~> 1.4.5'
+  pod 'AppCenter'
 
 end
