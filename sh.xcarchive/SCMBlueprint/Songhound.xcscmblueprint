@@ -1,0 +1,26 @@
+{
+  "DVTSourceControlWorkspaceBlueprintLocationsKey" : {
+    "A05CAA671566CB4809DEA086FE966E6F88910C80" : {
+      "DVTSourceControlBranchIdentifierKey" : "develop",
+      "DVTSourceControlLocationRevisionKey" : "1d01377cd873d3705efa9891a91603358be4998c",
+      "DVTSourceControlBranchOptionsKey" : 4,
+      "DVTSourceControlBranchRemoteNameKey" : "origin",
+      "DVTSourceControlWorkspaceBlueprintLocationTypeKey" : "DVTSourceControlBranch"
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A05CAA671566CB4809DEA086FE966E6F88910C80",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3E5942B7-8F5F-4960-A3BF-D1DCB4CC84C5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A05CAA671566CB4809DEA086FE966E6F88910C80" : "Songhound\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Songhound",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Songhound.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git@github.com:dubeboy\/SoundHound.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A05CAA671566CB4809DEA086FE966E6F88910C80"
+    }
+  ]
+}
