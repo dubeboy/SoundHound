@@ -1178,6 +1178,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CODE_SIGN_FLAGS = allowProvisioningUpdates;
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.Songhound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Songhound/Songhound-Bridging-Header.h";
@@ -1200,6 +1201,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CODE_SIGN_FLAGS = allowProvisioningUpdates;
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dubedivine.ios.Songhound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Songhound/Songhound-Bridging-Header.h";
