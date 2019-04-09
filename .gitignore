@@ -21,3 +21,4 @@ SwiftyJSON.framework.coverage.txt
 XCTest.framework.coverage.txt
 nanopb.framework.coverage.txt
 Pods
+codesigndoc_exports
