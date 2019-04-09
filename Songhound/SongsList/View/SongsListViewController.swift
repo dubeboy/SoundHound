@@ -13,6 +13,7 @@ import MediaPlayer
 import GoogleSignIn
 import Firebase
 import GoogleSignIn
+
 // TODO Modify change Controller window background
 class SongsListViewController: UIViewController {
 
@@ -34,6 +35,7 @@ class SongsListViewController: UIViewController {
     //-1 means no image was selected
     private var selectedImage = -1
     private let locationManager = CLLocationManager()
+    private var viewFromNib: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,14 +54,8 @@ class SongsListViewController: UIViewController {
             print("the profile is \(prof)")
             imgProfilePicture.dowloadFromServer(link: prof)
         }
-        // Do any additional setup after loading the view.
-        let windowWidth = view.bounds.width
-        let topThreePeople: CustomArtistsView = CustomArtistsView(frame:
-                                                                  CGRect(x: 0, y: 20, width: windowWidth, height: 0))
-        tableViewSongs.tableHeaderView = topThreePeople
-
         setUpTopThreeImages()
-
+        viewFromNib = view
     }
 
     private func setUpTopThreeImages() {
@@ -88,7 +84,7 @@ class SongsListViewController: UIViewController {
         if gesture.numberOfTouches > 0 {
             if let imageView = gesture.view as? UIImageView {
                 print("Hello ")
-                print( gesture.numberOfTouches)
+                print(gesture.numberOfTouches)
                 // niot sure if this is a good idea on getting by tag
                 let tag = imageView.tag
                 print("the tag is \(tag)")
@@ -130,17 +126,25 @@ class SongsListViewController: UIViewController {
         presenter?.presentMoreArtists()
     }
 
-    override func willTransition(to newCollection: UITraitCollection,
-                                 with coordinator: UIViewControllerTransitionCoordinator) {
-        if UIApplication.shared.statusBarOrientation.isLandscape {
-            lblPlaying?.isHidden = true
-            currentLocation?.isHidden = true
-        } else {
-            lblPlaying?.isHidden = false
-            currentLocation?.isHidden = false
-        }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: { _ in
+            // This is called during the animation
+            print("Not Broken")
+        }, completion: { _ in
+            print("Broken")
+            // This is called after the rotation is finished. Equal to deprecated `didRotate`
+            if UIApplication.shared.statusBarOrientation.isPortrait {
+                print("Screen rotated  UP")
+                self.view = self.viewFromNib
+            } else {
+                print("Screen rotated  DOWN")
+               self.view = UIView(frame: .zero)
+            }
+        })
     }
 }
+
 //Song list view protocol
 extension SongsListViewController: SongsListViewProtocol {
     func onTopThreeArtistClicked() {
@@ -158,8 +162,6 @@ extension SongsListViewController: SongsListViewProtocol {
         lblArtistName1.text = songList.first?.artistName
         lblArtistName2.text = songList[1].artistName
         lblArtistName3.text = songList[2].artistName
-
-
     }
 
     func showError() {
@@ -224,7 +226,8 @@ extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
             } else {
                 print("failed to load user man")
                 self.lblUserName.text = ""
-            } }
+            }
+        }
     }
 
     private func saveGoogleUserInfo(user: GIDGoogleUser) {
