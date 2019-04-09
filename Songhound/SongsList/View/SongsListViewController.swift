@@ -131,7 +131,7 @@ class SongsListViewController: UIViewController {
         coordinator.animate(alongsideTransition: { context in
             // This is called during the animation
             print("Not Broken")
-        }, completion: { context in
+        }, completion: { _ in
             print("Broken")
             // This is called after the rotation is finished. Equal to deprecated `didRotate`
             if UIApplication.shared.statusBarOrientation.isPortrait {
