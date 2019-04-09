@@ -56,6 +56,16 @@ class SongsListViewController: UIViewController {
         }
         setUpTopThreeImages()
         viewFromNib = view
+        
+        // music stuff
+        getCurrentPlayingSong()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getCurrentPlayingSong()
+        
     }
 
     private func setUpTopThreeImages() {
@@ -142,6 +152,19 @@ class SongsListViewController: UIViewController {
                self.view = UIView(frame: .zero)
             }
         })
+    }
+    
+    
+    private func getCurrentPlayingSong() {
+        print("####### calling the music player#####")
+        let player = MPMusicPlayerController.systemMusicPlayer
+        if let mediaItem = player.nowPlayingItem {
+            let title: String = mediaItem.value(forProperty: MPMediaItemPropertyTitle) as! String
+            let albumTitle: String = mediaItem.value(forProperty: MPMediaItemPropertyAlbumTitle) as! String
+            let artist: String = mediaItem.value(forProperty: MPMediaItemPropertyArtist) as! String
+            
+            print("\(title) on \(albumTitle) by \(artist)")
+        }
     }
 }
 
