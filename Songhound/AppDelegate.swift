@@ -10,6 +10,7 @@ import UIKit
 import GoogleMaps
 import Firebase
 import GoogleSignIn
+import Firebase
 
 
 @UIApplicationMain
@@ -24,9 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyBqwX1XCTzvEdNZH-WydmpTf3dVgUgUhes")
         GIDSignIn.sharedInstance().clientID = "288110944258-ridgqi0r03ttme394kd3ch2s7toggpa9.apps.googleusercontent.com"
 
-        // activate firebase core
-        FirebaseApp.configure()
-
         // init our 
         let songsList = SongsListWireFrame.createSongsListModule()
         // I guess this is where we set the windows size when we open apps for iPhone on iPad ie. Instagram
@@ -34,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = songsList
         // what is a key window is it the laucher screen?
         window?.makeKeyAndVisible()
+        FirebaseApp.configure()
         return true
     }
 
