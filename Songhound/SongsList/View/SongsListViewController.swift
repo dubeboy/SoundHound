@@ -162,8 +162,14 @@ class SongsListViewController: UIViewController {
             let title: String = mediaItem.value(forProperty: MPMediaItemPropertyTitle) as! String
             let albumTitle: String = mediaItem.value(forProperty: MPMediaItemPropertyAlbumTitle) as! String
             let artist: String = mediaItem.value(forProperty: MPMediaItemPropertyArtist) as! String
+        
             
             print("\(title) on \(albumTitle) by \(artist)")
+            // get ID OF SONG ON ITUNES
+            // check if the song exists on firebase then append the number of playes
+            // if not
+            // UPLOAD THE SONG ON FIREBASE
+            //
         }
     }
 }
@@ -308,7 +314,7 @@ extension SongsListViewController: LocationManagerProtocol {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             // could not get the current location
-            print("sorry man could not get the current location")
+          //  print("sorry man could not get the current location\(i)")
             return
         }
         print("we know the current location yoh \(location)")
