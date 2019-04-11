@@ -33,4 +33,23 @@ class SongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
                     }
                 }
     }
+
+    func retrieveSongID(path: String) {
+        Alamofire
+                .request(path, method: .get)
+                .responseObject { (response: DataResponse<ModelResponse<SongModel>>) in
+                    switch response.result {
+                    case .success(let res):
+                        if let songs = res.entityList {
+                            self.remoteRequestHandler?.onSongIDReceived(song: songs.first!)
+                        } else {
+                            // should probably pass back an error type yoh
+                            self.remoteRequestHandler?.onError()
+                        }
+                    case .failure(let error):
+                        print(error)
+                        self.remoteRequestHandler?.onError()
+                    }
+                }
+    }
 }

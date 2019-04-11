@@ -37,7 +37,6 @@ class SongsListViewPresenter: SongListPresenterProtocol {
 
 extension SongsListViewPresenter: SongsListInteratorOutputProtocol {
 
-
     func didRetrieveSongs(_ songs: [SongModel]) {
         view?.hideLoading()
         view?.showSongsList(songs: songs)
@@ -50,5 +49,9 @@ extension SongsListViewPresenter: SongsListInteratorOutputProtocol {
 
     func didSelectArtist(artist: ArtistModel) {
         wireframe?.presentSongsListViewScreen(from: view!, forArtist: artist)
+    }
+
+    func onSongIDReceived(song: SongModel) {
+        view.onSongIDReceived(song: song)
     }
 }

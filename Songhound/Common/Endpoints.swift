@@ -9,7 +9,7 @@
 import Foundation
 
 struct API {
-    static let baseURL = "https://itunes.apple.com/search?media=music"
+    static let baseURL = "https://itunes.apple.com/search?media=music&country=ZA"
 }
 
 // this is the structure of how a any url should look like
@@ -23,17 +23,19 @@ class Endpoints {
 
     enum SongsEnumEndpoints: Endpoint {
         case fetch(songName: String)
+        case fetchSongID(songName: String, artistsName: String)
 
         // these are functions of this enum!
         public var path: String {
             switch self {
             case .fetch(let songName): return "&entity=song&term=\(songName)"
+            case .fetchSongID(let songName, let artistsName): return "limit=1&entity=song&term=\(songName)+\(artistsName)"
             }
         }
 
         public var url: String {
             switch self {
-            case .fetch: return "\(API.baseURL)\(path)"
+            default: return "\(API.baseURL)\(path)"
             }
         }
 
