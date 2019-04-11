@@ -21,6 +21,7 @@ protocol SongsListViewProtocol: CommonNetworkProtocol {
     //onTopThreeTopArtistsClicked
     func onTopThreeArtistClicked()
     func showLoading()
+    func onSongIDReceived(song: SongModel)
 }
 
 //Song List presenter protocol
@@ -53,6 +54,7 @@ protocol SongsListInteratorOutputProtocol: class {
     func didRetrieveSongs(_ songs: [SongModel])
     func didSelectArtist(artist: ArtistModel)
     func onError()
+    func onSongIDReceived(song: SongModel)
 }
 
 protocol SongsListInteratorInputProtocol {
@@ -62,6 +64,7 @@ protocol SongsListInteratorInputProtocol {
 
     // PRESENTER - INTERACTOR
     func retrieveSongsList()
+    func getSongIDFromiTunes(songName: String, artistsName: String)
     func getArtist(top selectedId: Int)
 }
 
@@ -74,9 +77,11 @@ protocol SongsListRemoteDataManagerInputProtocol: class {
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol? { get set }
     //REMOTEDATA MANAGER -> INTETRACTOR
     func retrieveSongsList(path: String)
+    func retrieveSongID(path: String)
 }
 
 protocol SongsListRemoteDataManagerOutputProtocol: class {
+    func onSongIDReceived(song: SongModel)
     //REMOTEDATAMODEEL -> INTERACTOR
     func onSongsRetrieved(_ songs: [SongModel])
     func onArtistSelected(artist: ArtistModel)

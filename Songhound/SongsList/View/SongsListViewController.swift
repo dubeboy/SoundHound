@@ -32,10 +32,11 @@ class SongsListViewController: UIViewController {
 
     var presenter: SongListPresenterProtocol?
     var songList: [SongModel] = []
-    //-1 means no image was selected
-    private var selectedImage = -1
+    private var selectedImage = -1  //-1 means no image was selected
     private let locationManager = CLLocationManager()
     private var viewFromNib: UIView!
+    private var placeNameString: String = ""
+ //   private let ref: DatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,9 +57,7 @@ class SongsListViewController: UIViewController {
         }
         setUpTopThreeImages()
         viewFromNib = view
-        
-        // music stuff
-        getCurrentPlayingSong()
+
     }
     
     
@@ -154,7 +153,6 @@ class SongsListViewController: UIViewController {
         })
     }
     
-    
     private func getCurrentPlayingSong() {
         print("####### calling the music player#####")
         let player = MPMusicPlayerController.systemMusicPlayer
@@ -173,9 +171,9 @@ class SongsListViewController: UIViewController {
         }
     }
 }
-
 //Song list view protocol
 extension SongsListViewController: SongsListViewProtocol {
+
     func onTopThreeArtistClicked() {
     }
 
@@ -204,6 +202,14 @@ extension SongsListViewController: SongsListViewProtocol {
     func hideLoading() {
         HUD.hide()
     }
+
+    // TODO this is very ambigious this will take the location and song ID
+    func onSongIDReceived(song: SongModel) {
+        let ref = Database.database().reference()
+        print("the place name is this")
+            ref.child(placeNameString).setValue(["songID": song.id])
+    }
+
 }
 
 extension SongsListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -302,6 +308,9 @@ extension SongsListViewController: LocationManagerProtocol {
         let fullAddressFirstComponent = fullAddress.components(separatedBy: ",")[0]
         let fullAddressSecondComponent = fullAddress.components(separatedBy: ",")[1]
         self.currentLocation.text = "\(fullAddressFirstComponent), \(fullAddressSecondComponent) "
+        placeNameString = fullAddressSecondComponent
+        // music stuff get song after setting up location
+        getCurrentPlayingSong()
     }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
