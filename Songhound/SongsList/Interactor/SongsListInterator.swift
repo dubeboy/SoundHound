@@ -27,9 +27,10 @@ class SongsListInterator: SongsListInteratorInputProtocol {
     }
     
     func getSongIDFromiTunes(songName: String, artistsName: String) {
-        remoteDataManager?.retrieveSongID(path: Endpoints
-                .SongsEnumEndpoints
-                .fetchSongID(songName: "swift", artistsName: artistsName).url)
+        let songPath = Endpoints
+            .SongsEnumEndpoints
+            .fetchSongID(songName: songName, artistsName: artistsName).url
+        remoteDataManager?.retrieveSongID(path: songPath)
     }
 
     func getArtist(top selectedId: Int) {
@@ -62,17 +63,30 @@ extension SongsListInterator: SongsListRemoteDataManagerOutputProtocol {
         // create a parent node with id of the song
         let songParentNode = ref.child("\(song.id)")
         songParentNode.observeSingleEvent(of: DataEventType.value) { snap, error in
-            if error !=  nil {
-                // this means there is an error| meaning ID does not exist
+
+            print()
+            if error ==  nil {
+                // this means there is an error| meaning ID does not exist and song does not exist
                 self.sendSongModelToFirebase(songParentNode: songParentNode, song: song)
+                 self.presenter?.didReceivePlayingSong(song: song)  // needs refactoring
             } else {
-                let retrievedSong = snap.value as! [String : String]
-                var songModel: SongModel!
+                // song exits we should get the song
+                let retrievedSong = snap.value as! [String : AnyObject]
+                var songModel: SongModel! = SongModel(
+                        id: song.id,
+                        name: song.name,
+                        artistName: song.artistName,
+                        albumName: song.albumName,
+                        genre: song.genre,
+                        popularity: retrievedSong["popularity"] as! Int,
+                        artworkURL: song.artworkURL,
+                        artist: song.artist)
+                // inc popularity
                 songModel.popularity += 1
                 self.sendSongModelToFirebase(songParentNode: songParentNode, song: songModel)
+                self.presenter?.didReceivePlayingSong(song: songModel) // needs good refactoring
             }
         }
-        presenter?.didReceivePlayingSong(song: song)
     }
 
     private func sendSongModelToFirebase(songParentNode: DatabaseReference, song: SongModel) {
