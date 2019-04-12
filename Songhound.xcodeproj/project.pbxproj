@@ -108,6 +108,7 @@
 		3DEEAD78D920FD77ED0CFAB1 /* ArtistListRemoteDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistListRemoteDataManager.swift; sourceTree = "<group>"; };
 		3DEEAE5FF26EB3EC23EE200D /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		3DEEAEC37B554FECEBB2749F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3DEEAF24EE3FB0A53495DA5A /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3DEEAF711A4474FA4F274C26 /* Songhound-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Songhound-Bridging-Header.h"; sourceTree = "<group>"; };
 		3DEEAFB13A5F76BA0B9FFF60 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		3F8C8DE05285C4A9B94D2D0B /* Pods-SonghoundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonghoundUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SonghoundUITests/Pods-SonghoundUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -469,6 +470,7 @@
 				F33E6CF6221BFBD100CFBB23 /* UIUtils.swift */,
 				F30FDB692229CC7600D48E96 /* Extensions.swift */,
 				F30FDB6F222A1F1300D48E96 /* Endpoints.swift */,
+				3DEEAF24EE3FB0A53495DA5A /* Utils.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";

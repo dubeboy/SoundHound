@@ -30,12 +30,14 @@ class SongsListViewController: UIViewController {
     @IBOutlet weak var tableViewSongs: UITableView!
     @IBOutlet weak var imgProfilePicture: UIImageView!
 
+
     var presenter: SongListPresenterProtocol?
     var songList: [SongModel] = []
     private var selectedImage = -1  //-1 means no image was selected
     private let locationManager = CLLocationManager()
     private var viewFromNib: UIView!
     private var placeNameString: String = ""
+    private let TAG
  //   private let ref: DatabaseReference!
 
     override func viewDidLoad() {
@@ -63,6 +65,7 @@ class SongsListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        print("")
         getCurrentPlayingSong()
         
     }
@@ -153,7 +156,7 @@ class SongsListViewController: UIViewController {
         })
     }
     
-    private func getCurrentPlayingSong() {
+    private func getCurrentPlayingSong() -> [String: String] {
         print("####### calling the music player#####")
         let player = MPMusicPlayerController.systemMusicPlayer
         if let mediaItem = player.nowPlayingItem {
@@ -169,6 +172,8 @@ class SongsListViewController: UIViewController {
             // UPLOAD THE SONG ON FIREBASE
             //
         }
+        // mock song being listened to man
+        return ["title": "Blank Space", "albumTitle": "1989", "artist": "Taylor Swift"]
     }
 }
 //Song list view protocol
