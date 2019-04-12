@@ -72,7 +72,7 @@ extension SongsListInterator: SongsListRemoteDataManagerOutputProtocol {
                 self.sendSongModelToFirebase(songParentNode: songParentNode, song: songModel)
             }
         }
-        presenter?.onSongIDReceived(song: song)
+        presenter?.didReceivePlayingSong(song: song)
     }
 
     private func sendSongModelToFirebase(songParentNode: DatabaseReference, song: SongModel) {
