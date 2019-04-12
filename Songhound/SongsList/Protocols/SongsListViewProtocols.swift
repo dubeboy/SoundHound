@@ -35,6 +35,7 @@ protocol SongListPresenterProtocol {
     func showSongDetail(forSong song: SongModel)
     func showSongs(forSelectedArtistId: Int)
     func presentMoreArtists()
+    func updateCurrentPlayingSong(songName: String, artistsName: String)
     //TODO show awesome stuff
 }
 
@@ -54,7 +55,7 @@ protocol SongsListInteratorOutputProtocol: class {
     func didRetrieveSongs(_ songs: [SongModel])
     func didSelectArtist(artist: ArtistModel)
     func onError()
-    func onSongIDReceived(song: SongModel)
+    func didReceivePlayingSong(song: SongModel)
 }
 
 protocol SongsListInteratorInputProtocol {
