@@ -32,7 +32,7 @@
                             <rect key="frame" x="128.5" y="0.0" width="118" height="100"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swift" translatesAutoresizingMaskIntoConstraints="NO" id="h0R-kG-ASp">
-                            <rect key="frame" x="256.5" y="0.0" width="118.5" height="100.00000000000011"/>
+                            <rect key="frame" x="256.5" y="0.0" width="118.5" height="100"/>
                             <gestureRecognizers/>
                         </imageView>
                     </subviews>
