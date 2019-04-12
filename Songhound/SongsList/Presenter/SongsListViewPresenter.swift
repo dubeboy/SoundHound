@@ -52,6 +52,6 @@ extension SongsListViewPresenter: SongsListInteratorOutputProtocol {
     }
 
     func onSongIDReceived(song: SongModel) {
-        view.onSongIDReceived(song: song)
+        view?.onSongIDReceived(song: song)
     }
 }
