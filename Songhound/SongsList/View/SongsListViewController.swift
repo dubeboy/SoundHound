@@ -12,7 +12,6 @@ import GoogleMaps
 import MediaPlayer
 import GoogleSignIn
 import Firebase
-import GoogleSignIn
 
 // TODO Modify change Controller window background
 class SongsListViewController: UIViewController {
@@ -32,10 +31,12 @@ class SongsListViewController: UIViewController {
 
     var presenter: SongListPresenterProtocol?
     var songList: [SongModel] = []
-    //-1 means no image was selected
-    private var selectedImage = -1
-    private let locationManager = CLLocationManager()
-    private var viewFromNib: UIView!
+    private var selectedImage = -1  //-1 means no image was selected
+    let locationManager = CLLocationManager()
+    var viewFromNib: UIView!
+    var placeNameString: String = ""
+    let TAG = "SongsListViewController"
+ //   private let ref: DatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,16 @@ class SongsListViewController: UIViewController {
         }
         setUpTopThreeImages()
         viewFromNib = view
+
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NSLog(TAG, "VIEW DID APPEAR")
+     //  getCurrentPlayingSong()
+
+        
     }
 
     private func setUpTopThreeImages() {
@@ -143,156 +154,28 @@ class SongsListViewController: UIViewController {
             }
         })
     }
-}
+    
+    func getCurrentPlayingSong() {
+        print("####### calling the music player#####")
+        let player = MPMusicPlayerController.systemMusicPlayer
+        if let mediaItem = player.nowPlayingItem {
+            let title: String = mediaItem.value(forProperty: MPMediaItemPropertyTitle) as! String
+            let albumTitle: String = mediaItem.value(forProperty: MPMediaItemPropertyAlbumTitle) as! String
+            let artist: String = mediaItem.value(forProperty: MPMediaItemPropertyArtist) as! String
+        
+            
+            print("\(title) on \(albumTitle) by \(artist)")
+            // get ID OF SONG ON ITUNES
+            // check if the song exists on firebase then append the number of playes
+            // if not
+            // UPLOAD THE SONG ON FIREBASE
+            //
+        }
+        // mock song being listened to man
+        let currentPlayingSong = ["title": "Blank Space", "albumTitle": "1989", "artist": "Taylor Swift"]
+        presenter?.updateCurrentPlayingSong(songName: currentPlayingSong["title"]!, artistsName: currentPlayingSong["artist"]!)
 
-//Song list view protocol
-extension SongsListViewController: SongsListViewProtocol {
-    func onTopThreeArtistClicked() {
-    }
-
-    func showSongsList(songs: [SongModel]) {
-        songList = songs
-        tableViewSongs.reloadData()
-        // we want to also load the top three images
-        imgArtist1.dowloadFromServer(link: songList.first?.artworkURL ?? "")
-        imgArtist2.dowloadFromServer(link: songList[1].artworkURL)
-        imgArtist3.dowloadFromServer(link: songList[2].artworkURL)
-        // we also want to set the names of the images here
-
-        lblArtistName1.text = songList.first?.artistName
-        lblArtistName2.text = songList[1].artistName
-        lblArtistName3.text = songList[2].artistName
-    }
-
-    func showError() {
-        HUD.flash(.label("Internet not connect"), delay: 2.0)
-    }
-
-    func showLoading() {
-        HUD.show(.progress)
-    }
-
-    func hideLoading() {
-        HUD.hide()
     }
 }
 
-extension SongsListViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songList.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableViewSongs.dequeueReusableCell(withIdentifier: "songCell", for: indexPath)
-        if let cell = cell as? SongTableViewCell {
-            let song = songList[indexPath.row]
-            cell.set(forSong: song)
-            return cell
-        }
-        return UITableViewCell()
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.showSongDetail(forSong: songList[indexPath.row])
-    }
-}
-
-extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser?, withError error: Error!) {
-        print("oopps user signed out yoh")
-
-        guard let user = user, let authentication = user.authentication else {
-            return
-        }
-
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                accessToken: authentication.accessToken)
-        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
-            if let error = error {
-                print("user not signed in there was an error bro \(error)")
-                return
-            }
-            print("Yey user signed in bro")
-            self.saveGoogleUserInfo(user: user)
-            print("the user is \(String(describing: user.userID))")
-            if let user = getSignedInUser() {
-                self.lblUserName.text = user.fullName
-                if let profileUrl = user.profileURL {
-                    self.imgProfilePicture.dowloadFromServer(link: profileUrl)
-                } else {
-                    // TODO: I want to set a default image
-                    // leave it as is the defualt image will be set  ie wont change
-                }
-            } else {
-                print("failed to load user man")
-                self.lblUserName.text = ""
-            }
-        }
-    }
-
-    private func saveGoogleUserInfo(user: GIDGoogleUser) {
-        let userId = user.userID
-        let idToken = user.authentication.idToken
-        let fullName = user.profile.name
-        let givenName = user.profile.givenName
-        let familyName = user.profile.familyName
-        let email = user.profile.email
-        print("this user has profile picture \(user.profile.hasImage)")
-        let profileURL = user.profile.imageURL(withDimension: 0).absoluteString
-        let preferences = UserDefaults.standard
-
-        preferences.set(userId, forKey: USER_ID)
-        preferences.set(idToken, forKey: ID_TOKEN)
-        preferences.set(fullName, forKey: FULL_NAME)
-        preferences.set(givenName, forKey: GIVEN_NAME)
-        preferences.set(familyName, forKey: FAMILY_NAME)
-        preferences.set(email, forKey: EMAIL)
-        preferences.set(profileURL, forKey: PROFILE_URL)
-
-        let sync = preferences.synchronize()
-        print("it sycned \(sync)")
-    }
-}
-
-extension SongsListViewController: LocationManagerProtocol {
-    func reverseGeocoderCoordinates(_ coordinates: UnsafeMutablePointer<CLLocationCoordinate2D>) {
-        let geocoder = GMSGeocoder()
-        //the closure is a callback because this does niot exec in the main thread
-        geocoder.reverseGeocodeCoordinate(coordinates.pointee) { response, _ in
-            // powerful stuff yoh
-            guard let address = response?.firstResult(), let lines = address.lines else {
-                return
-            }
-            let fullAddress = lines.joined(separator: "\n")
-            self.onReverseCoordinatesReceived(fullAddress)
-            print("the full address is \(fullAddress)")
-        }
-    }
-
-    func onReverseCoordinatesReceived(_ fullAddress: String) {
-        let fullAddressFirstComponent = fullAddress.components(separatedBy: ",")[0]
-        let fullAddressSecondComponent = fullAddress.components(separatedBy: ",")[1]
-        self.currentLocation.text = "\(fullAddressFirstComponent), \(fullAddressSecondComponent) "
-    }
-
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        guard status == .authorizedWhenInUse else {
-            return
-        }
-        locationManager.startUpdatingLocation()
-    }
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else {
-            // could not get the current location
-            print("sorry man could not get the current location")
-            return
-        }
-        print("we know the current location yoh \(location)")
-        var coor = location.coordinate
-        reverseGeocoderCoordinates(&coor)
-        // use GMSGeocoder to get the address of the user yeah?
-        locationManager.stopUpdatingLocation()
-    }
-}
 

@@ -33,10 +33,13 @@ class SongsListViewPresenter: SongListPresenterProtocol {
     func presentMoreArtists() {
         wireframe?.presentMoreArtists(from: view!)
     }
+
+    func updateCurrentPlayingSong(songName: String, artistsName: String) {
+        interactor?.getSongIDFromiTunes(songName: songName, artistsName: artistsName)
+    }
 }
 
 extension SongsListViewPresenter: SongsListInteratorOutputProtocol {
-
 
     func didRetrieveSongs(_ songs: [SongModel]) {
         view?.hideLoading()
@@ -50,5 +53,10 @@ extension SongsListViewPresenter: SongsListInteratorOutputProtocol {
 
     func didSelectArtist(artist: ArtistModel) {
         wireframe?.presentSongsListViewScreen(from: view!, forArtist: artist)
+    }
+
+    // should rename to didUpdate current playing song
+    func didReceivePlayingSong(song: SongModel) {
+        view?.onSongIDReceived(song: song)
     }
 }

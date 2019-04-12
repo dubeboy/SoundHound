@@ -32,5 +32,5 @@ target 'Songhound' do
   pod 'AlamofireObjectMapper', '~> 5.2'
   pod 'Swifter', '~> 1.4.5'
   pod 'AppCenter'
-
+  pod 'Firebase/Database'
 end
