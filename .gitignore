@@ -22,3 +22,4 @@ XCTest.framework.coverage.txt
 nanopb.framework.coverage.txt
 Pods
 codesigndoc_exports
+.idea/workspace.xml
