@@ -29,7 +29,7 @@ class Endpoints {
         public var path: String {
             switch self {
             case .fetch(let songName): return "&entity=song&term=\(songName)"
-            case .fetchSongID(let songName, let artistsName): return "limit=1&entity=song&term=\(songName)+\(artistsName)"
+            case .fetchSongID(let songName, let artistsName): return "&limit=1&entity=song&term=\(songName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)+\(artistsName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)"
             }
         }
 

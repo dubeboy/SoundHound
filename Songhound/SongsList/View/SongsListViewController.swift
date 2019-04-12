@@ -64,7 +64,7 @@ class SongsListViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         NSLog(TAG, "VIEW DID APPEAR")
-       getCurrentPlayingSong()
+     //  getCurrentPlayingSong()
 
         
     }
