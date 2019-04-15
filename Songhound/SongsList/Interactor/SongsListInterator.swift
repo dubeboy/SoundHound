@@ -59,6 +59,8 @@ extension SongsListInterator: SongsListRemoteDataManagerOutputProtocol {
         presenter?.didSelectArtist(artist: artist)
     }
 
+    // TODO: the updating is not working yoh
+
     func onSongIDReceived(song: SongModel) {
         // when we receive one one we should upload it to firebase yoh
         ref = Database.database().reference()

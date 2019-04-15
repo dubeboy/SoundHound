@@ -38,23 +38,25 @@ class SongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
             //todo uplosd `genre
             for child in snap.children  {
                 let songIDDictSnap = child as! DataSnapshot
-                let songIDDict = songIDDictSnap.value as! [String: UInt]
+                print()
+                let songIDDict = songIDDictSnap.value as! UInt
                 // now we need to look for songs with this ID
-                ref.child("\(songIDDict["songID"]!)").observeSingleEvent(of: DataEventType.value) { songSnap, error in
+                ref.child("\(songIDDict)").observeSingleEvent(of: DataEventType.value) { songSnap, error in
                     let songDict = songSnap.value as! [String : AnyObject]
                     let songModel = SongModel(id: songDict["ArtistID"] as! UInt,
                             name: songDict["name"] as! String,
                             artistName: songDict["artistName"] as! String,
-                            albumName: songDict["albumName"] as! String,
+                            albumName: songDict["AlbumName"] as! String,
                             genre: "",
                             popularity: songDict["popularity"] as! Int,
                             artworkURL: songDict["artworkURL"] as! String,
                             artist: ArtistModel(name: "T", artistID: songDict["ArtistID"] as! UInt ))
                     songs.append(songModel)
-                    if songs.count == songSnap.childrenCount {
+                    if songs.count == snap.childrenCount {
                         // call up the stack
                         self.remoteRequestHandler?.onSongsRetrieved(songs)
                     }
+                    print("ohh kay")
                 }
             }
         }

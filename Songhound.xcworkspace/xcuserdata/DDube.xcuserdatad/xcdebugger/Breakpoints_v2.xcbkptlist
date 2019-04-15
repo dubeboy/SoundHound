@@ -343,11 +343,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/View/SongsListViewController+SongsListViewProtocol.swift"
-            timestampString = "576760364.705233"
+            timestampString = "577025757.1692801"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "onSongIDReceived(song:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -359,12 +359,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/DataManager/SongListRemoteDataManager.swift"
-            timestampString = "576759803.340181"
+            timestampString = "577024120.993899"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "retrieveSongID(path:)"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "retrieveSongsList(location:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -375,28 +375,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/DataManager/SongListRemoteDataManager.swift"
-            timestampString = "576759803.340225"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "retrieveSongID(path:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Songhound/SongsList/DataManager/SongListRemoteDataManager.swift"
-            timestampString = "576759803.340284"
+            timestampString = "577024120.9942729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "retrieveSongID(path:)"
+            landmarkName = "retrieveSongsList(location:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Songhound/SongsList/DataManager/SongListRemoteDataManager.swift"
+            timestampString = "577024120.9944789"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "retrieveSongsList(location:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -412,8 +412,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
-            landmarkName = "getSongIDFromiTunes(songName:artistsName:)"
-            landmarkType = "7">
+            landmarkName = "SongsListInterator"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
