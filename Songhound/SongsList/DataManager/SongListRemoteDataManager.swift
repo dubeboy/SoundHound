@@ -35,7 +35,7 @@ class SongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
 
             var songs: [SongModel] = []
 
-            //todo uplosd `genre
+            //todo upload genre
             for child in snap.children  {
                 let songIDDictSnap = child as! DataSnapshot
                 print()
@@ -50,7 +50,7 @@ class SongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
                             genre: "",
                             popularity: songDict["popularity"] as! Int,
                             artworkURL: songDict["artworkURL"] as! String,
-                            artist: ArtistModel(name: "T", artistID: songDict["ArtistID"] as! UInt ))
+                            artist: ArtistModel(name: songDict["artistName"] as! String, artistID: songDict["ArtistID"] as! UInt ))
                     songs.append(songModel)
                     if songs.count == snap.childrenCount {
                         // call up the stack
