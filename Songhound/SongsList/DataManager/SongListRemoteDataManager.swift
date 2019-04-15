@@ -32,9 +32,7 @@ class SongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
                 self.remoteRequestHandler?.onError()
                 return
             }
-
             var songs: [SongModel] = []
-
             //todo upload genre
             for child in snap.children  {
                 let songIDDictSnap = child as! DataSnapshot
