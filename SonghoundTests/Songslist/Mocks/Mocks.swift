@@ -40,7 +40,7 @@ class MockTestSongListInteractor: SongsListInteratorInputProtocol, SongsListRemo
 
     func retrieveSongsList() {
         print("the path is : \(endpoit)")
-        remoteDataManager?.retrieveSongsList(path: endpoit)
+        remoteDataManager?.retrieveSongsList(location: endpoit)
     }
 
     func getArtist(top selectedId: Int) {
@@ -92,7 +92,7 @@ class MockTestSongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol
                 popularity: 100, artworkURL: "exampleUrl.com/assets/image.jpg",
                 artist: ArtistModel(name: "Taylor Swift", artistID: 200000))]
 
-    func retrieveSongsList(path: String) {
+    func retrieveSongsList(location: String) {
         // simulate network error
         if let songs = songs {
             remoteRequestHandler?.onSongsRetrieved(songs)

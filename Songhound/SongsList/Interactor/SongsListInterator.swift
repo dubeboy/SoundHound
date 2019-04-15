@@ -23,7 +23,9 @@ class SongsListInterator: SongsListInteratorInputProtocol {
     var ref: DatabaseReference!
 
     func retrieveSongsList() {
-        remoteDataManager?.retrieveSongsList(path: Endpoints.SongsEnumEndpoints.fetch(songName: "swift").url)
+        remoteDataManager?.retrieveSongsList(location: Endpoints.SongsEnumEndpoints.fetch(songName: "swift").url)
+        //should be retrieve songs list for location
+      //  remoteDataManager?.retrieveSongsList(for location: location)
     }
     
     func getSongIDFromiTunes(songName: String, artistsName: String) {
