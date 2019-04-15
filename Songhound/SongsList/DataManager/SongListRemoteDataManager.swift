@@ -17,24 +17,6 @@ class SongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol?
 
     func retrieveSongsList(location: String) {
-//        print("the path in big boss \(location)")
-//        Alamofire
-//                .request(location, method: .get)
-//                .responseObject { (response: DataResponse<ModelResponse<SongModel>>) in
-//                    switch response.result {
-//                    case .success(let res):
-//                        if let songs = res.entityList {
-//                            self.remoteRequestHandler?.onSongsRetrieved(songs)
-//                        } else {
-//                            // should probably pass back an error type yoh
-//                            self.remoteRequestHandler?.onError()
-//                        }
-//                    case .failure(let error):
-//                        print(error)
-//                        self.remoteRequestHandler?.onError()
-//                    }
-//                }
-
         // first retrieve all the nodes with the current location
         // then look into their IDs then use that to download the song node off of firebase
         // add that to a tableview list

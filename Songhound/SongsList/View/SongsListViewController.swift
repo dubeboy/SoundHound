@@ -34,9 +34,17 @@ class SongsListViewController: UIViewController {
     private var selectedImage = -1  //-1 means no image was selected
     let locationManager = CLLocationManager()
     var viewFromNib: UIView!
-    var placeNameString: String = ""
+
     let TAG = "SongsListViewController"
  //   private let ref: DatabaseReference!
+
+    // the above is being set in the location manager
+    var placeNameString: String = "" {
+        didSet {
+            presenter?.retrieveSongsList(for: placeNameString)
+            getCurrentPlayingSong()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -162,7 +170,6 @@ class SongsListViewController: UIViewController {
             let title: String = mediaItem.value(forProperty: MPMediaItemPropertyTitle) as! String
             let albumTitle: String = mediaItem.value(forProperty: MPMediaItemPropertyAlbumTitle) as! String
             let artist: String = mediaItem.value(forProperty: MPMediaItemPropertyArtist) as! String
-        
             
             print("\(title) on \(albumTitle) by \(artist)")
             // get ID OF SONG ON ITUNES
@@ -175,6 +182,10 @@ class SongsListViewController: UIViewController {
         let currentPlayingSong = ["title": "Blank Space", "albumTitle": "1989", "artist": "Taylor Swift"]
         presenter?.updateCurrentPlayingSong(songName: currentPlayingSong["title"]!, artistsName: currentPlayingSong["artist"]!)
 
+    }
+
+    func showError(errorMessage: String ) {
+        HUD.flash(.label(errorMessage), delay: 2.0)
     }
 }
 

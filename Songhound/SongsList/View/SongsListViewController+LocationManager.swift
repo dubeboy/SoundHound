@@ -29,11 +29,13 @@ extension SongsListViewController: LocationManagerProtocol {
         self.currentLocation.text = "\(fullAddressFirstComponent), \(fullAddressSecondComponent) "
         placeNameString = fullAddressSecondComponent
         // music stuff get song after setting up location
-        getCurrentPlayingSong()
+       // getCurrentPlayingSong()
     }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         guard status == .authorizedWhenInUse else {
+            hideLoading()
+            showError(errorMessage: "Please enable location to fully benefit from this app.")
             return
         }
         locationManager.startUpdatingLocation()

@@ -36,6 +36,7 @@ protocol SongListPresenterProtocol {
     func showSongs(forSelectedArtistId: Int)
     func presentMoreArtists()
     func updateCurrentPlayingSong(songName: String, artistsName: String)
+    func retrieveSongsList(for location: String)
     //TODO show awesome stuff
 }
 
@@ -64,7 +65,7 @@ protocol SongsListInteratorInputProtocol {
     var remoteDataManager: SongsListRemoteDataManagerInputProtocol? { get set }
 
     // PRESENTER - INTERACTOR
-    func retrieveSongsList()
+    func retrieveSongsList(location: String)
     func getSongIDFromiTunes(songName: String, artistsName: String)
     func getArtist(top selectedId: Int)
 }

@@ -22,8 +22,8 @@ class SongsListInterator: SongsListInteratorInputProtocol {
     var cache: [SongModel]?
     var ref: DatabaseReference!
 
-    func retrieveSongsList() {
-        remoteDataManager?.retrieveSongsList(location: Endpoints.SongsEnumEndpoints.fetch(songName: "swift").url)
+    func retrieveSongsList(location: String) {
+        remoteDataManager?.retrieveSongsList(location: location)
         //should be retrieve songs list for location
       //  remoteDataManager?.retrieveSongsList(for location: location)
     }
