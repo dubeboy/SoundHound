@@ -93,7 +93,6 @@ extension SongsListInterator: SongsListRemoteDataManagerOutputProtocol {
     }
 
     private func sendSongModelToFirebase(songParentNode: DatabaseReference, song: SongModel) {
-
         songParentNode.setValue(["songID": song.id,
                                  "AlbumName": song.albumName,
                                  "ArtistID": song.artist.artistID,

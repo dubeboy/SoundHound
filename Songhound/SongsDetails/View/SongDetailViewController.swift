@@ -22,7 +22,6 @@ class SongDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-        //    makeUIImageViewCircle(imageView: artistImageView, imgSize: 300)
         makeBGImageBlur(view: backgroundImage)
 
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -47,7 +46,7 @@ extension SongDetailViewController: SongDetailsViewProtocol {
         backgroundImage.dowloadFromServer(link: song.artworkURL)
         songNameLabel.text = song.name
         songGenre.text = song.genre
-        songNumPlayes.text = "100 Playes in Joburg"
+        songNumPlayes.text = "Played \(song.popularity) time your current location"
         songAlbumName.text = song.albumName
     }
 }
