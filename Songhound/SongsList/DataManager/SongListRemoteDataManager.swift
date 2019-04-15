@@ -56,7 +56,6 @@ class SongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
                         // call up the stack
                         self.remoteRequestHandler?.onSongsRetrieved(songs)
                     }
-                    print("ohh kay")
                 }
             }
         }
