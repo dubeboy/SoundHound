@@ -41,7 +41,9 @@ class SongsListViewController: UIViewController {
     // the above is being set in the location manager
     var placeNameString: String = "" {
         didSet {
-            presenter?.retrieveSongsList(for: placeNameString)
+            let nameOfPlaceName = placeNameString.trimmingCharacters(in: .whitespacesAndNewlines)
+            print("the place name is \(nameOfPlaceName)")
+            presenter?.retrieveSongsList(for: nameOfPlaceName)
             getCurrentPlayingSong()
         }
     }
@@ -179,7 +181,10 @@ class SongsListViewController: UIViewController {
             //
         }
         // mock song being listened to man
-        let currentPlayingSong = ["title": "Blank Space", "albumTitle": "1989", "artist": "Taylor Swift"]
+        let currentPlayingSong = ["title": "Spirit", "albumTitle": "Single", "artist": "Kwesta"]
+       // let currentPlayingSong = ["title": "Blank Space", "albumTitle": "Single", "artist": "Taylor Swift"]
+      //  let currentPlayingSong = ["title": "Spirit", "albumTitle": "Single", "artist": "Kwesta"]
+
         presenter?.updateCurrentPlayingSong(songName: currentPlayingSong["title"]!, artistsName: currentPlayingSong["artist"]!)
 
     }

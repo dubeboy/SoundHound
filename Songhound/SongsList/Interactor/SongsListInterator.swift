@@ -68,13 +68,14 @@ extension SongsListInterator: SongsListRemoteDataManagerOutputProtocol {
         // create a parent node with id of the song
         let songParentNode = ref.child("\(song.id)")
         songParentNode.observeSingleEvent(of: DataEventType.value) { snap, error in
-            if error != nil { // if an error exists
-                // this means there is an error| meaning ID does not exist and song does not exist
-                self.sendSongModelToFirebase(songParentNode: songParentNode, song: song)
-                self.presenter?.didReceivePlayingSong(song: song)  // needs refactoring
-            } else { // The case that the song exists
+//         / The case that the song exists
                 // song exits we should get the song
-                let retrievedSong = snap.value as! [String: AnyObject]
+                guard let retrievedSong = snap.value as? [String: AnyObject] else {
+                        self.sendSongModelToFirebase(songParentNode: songParentNode, song: song)
+                        self.presenter?.didReceivePlayingSong(song: song)  // needs refactoring
+                        return
+                }
+                
                 var songModel: SongModel! = SongModel(
                         id: song.id,
                         name: song.name,
@@ -88,7 +89,7 @@ extension SongsListInterator: SongsListRemoteDataManagerOutputProtocol {
                 songModel.popularity += 1
                 self.sendSongModelToFirebase(songParentNode: songParentNode, song: songModel)
                 self.presenter?.didReceivePlayingSong(song: songModel) // needs good refactoring
-            }
+            
         }
     }
 

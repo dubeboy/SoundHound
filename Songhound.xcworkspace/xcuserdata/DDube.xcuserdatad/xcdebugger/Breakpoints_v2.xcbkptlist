@@ -295,7 +295,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/View/SongsListViewController.swift"
-            timestampString = "576757762.647061"
+            timestampString = "577273518.889192"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "176"
@@ -316,8 +316,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
             endingLineNumber = "38"
-            landmarkName = "updateCurrentPlayingSong(songName:artistsName:)"
-            landmarkType = "7">
+            landmarkName = "SongsListViewPresenter"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -327,7 +327,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/Interactor/SongsListInterator.swift"
-            timestampString = "576760364.705132"
+            timestampString = "577273518.889937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -343,7 +343,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/View/SongsListViewController+SongsListViewProtocol.swift"
-            timestampString = "577026998.503042"
+            timestampString = "577273518.890083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
@@ -407,13 +407,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/Interactor/SongsListInterator.swift"
-            timestampString = "576760364.70576"
+            timestampString = "577273518.890343"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
-            landmarkName = "SongsListInterator"
-            landmarkType = "3">
+            landmarkName = "retrieveSongsList(location:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -423,7 +423,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/Interactor/SongsListInterator.swift"
-            timestampString = "576760364.705826"
+            timestampString = "577273518.890407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -439,27 +439,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/Interactor/SongsListInterator.swift"
-            timestampString = "576760364.705883"
+            timestampString = "577273518.890456"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "onSongIDReceived(song:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Songhound/SongsList/Interactor/SongsListInterator.swift"
-            timestampString = "576760364.705966"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "onSongIDReceived(song:)"
             landmarkType = "7">
          </BreakpointContent>
