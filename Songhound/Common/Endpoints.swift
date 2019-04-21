@@ -10,6 +10,8 @@ import Foundation
 
 struct API {
     static let baseURL = "https://itunes.apple.com/search?media=music&country=ZA"
+    static let vaporCloudAPI = "http://localhost:8080"
+
 }
 
 // this is the structure of how a any url should look like
@@ -45,7 +47,6 @@ class Endpoints {
         case fetch(artistName: String)
         public var path: String {
             switch self {
-
             case .fetch(let artistName):
                 return "&entity=musicArtist&term=\(artistName)"
             }

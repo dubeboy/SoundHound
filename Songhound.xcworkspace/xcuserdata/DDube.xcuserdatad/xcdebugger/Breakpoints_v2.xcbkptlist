@@ -295,7 +295,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/View/SongsListViewController.swift"
-            timestampString = "577273518.889192"
+            timestampString = "577455581.7856981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "176"
@@ -359,11 +359,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/DataManager/SongListRemoteDataManager.swift"
-            timestampString = "577024120.993899"
+            timestampString = "577456671.703678"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "retrieveSongsList(location:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -375,11 +375,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/DataManager/SongListRemoteDataManager.swift"
-            timestampString = "577024120.9942729"
+            timestampString = "577456671.706679"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "retrieveSongsList(location:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -391,11 +391,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/DataManager/SongListRemoteDataManager.swift"
-            timestampString = "577024120.9944789"
+            timestampString = "577456671.706935"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "retrieveSongsList(location:)"
             landmarkType = "7">
          </BreakpointContent>

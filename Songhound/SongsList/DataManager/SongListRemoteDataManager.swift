@@ -27,6 +27,7 @@ class SongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
         // todo: change this to just observe
         locationParentNode.observeSingleEvent(of: DataEventType.value) { snap, error in
             // these snaps are songs id snaps so
+            // todo: evaluate this yoh
             guard error == nil else {
                 print("SLDataManager: There was an error peeps, trying to get song for location")
                 self.remoteRequestHandler?.onError()
@@ -35,11 +36,12 @@ class SongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
             var songs: [SongModel] = []
             //todo upload genre
             for child in snap.children  {
+                // force unwrap becuase I know the type that would be returned from the server
                 let songIDDictSnap = child as! DataSnapshot
-                print()
-                let songIDDict = songIDDictSnap.value as! UInt
+                let songLocationDict = songIDDictSnap.value as! [String: AnyObject] //  map has these types string | UINt
+                let songID = songLocationDict["songID"] as! UInt
                 // now we need to look for songs with this ID
-                ref.child("\(songIDDict)").observeSingleEvent(of: DataEventType.value) { songSnap, error in
+                ref.child("\(songID)").observeSingleEvent(of: DataEventType.value) { songSnap, error in
                     let songDict = songSnap.value as! [String : AnyObject]
                     let songModel = SongModel(id: songDict["ArtistID"] as! UInt,
                             name: songDict["name"] as! String,

@@ -41,9 +41,7 @@ class SongsListViewController: UIViewController {
     // the above is being set in the location manager
     var placeNameString: String = "" {
         didSet {
-            let nameOfPlaceName = placeNameString.trimmingCharacters(in: .whitespacesAndNewlines)
-            print("the place name is \(nameOfPlaceName)")
-            presenter?.retrieveSongsList(for: nameOfPlaceName)
+            presenter?.retrieveSongsList(for: placeNameString)
             getCurrentPlayingSong()
         }
     }
@@ -67,16 +65,6 @@ class SongsListViewController: UIViewController {
         }
         setUpTopThreeImages()
         viewFromNib = view
-
-    }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        NSLog(TAG, "VIEW DID APPEAR")
-     //  getCurrentPlayingSong()
-
-        
     }
 
     private func setUpTopThreeImages() {
@@ -181,8 +169,8 @@ class SongsListViewController: UIViewController {
             //
         }
         // mock song being listened to man
-        let currentPlayingSong = ["title": "Spirit", "albumTitle": "Single", "artist": "Kwesta"]
-       // let currentPlayingSong = ["title": "Blank Space", "albumTitle": "Single", "artist": "Taylor Swift"]
+//        let currentPlayingSong = ["title": "Spirit", "albumTitle": "Single", "artist": "Kwesta"]
+        let currentPlayingSong = ["title": "Blank Space", "albumTitle": "Single", "artist": "Taylor Swift"]
       //  let currentPlayingSong = ["title": "Spirit", "albumTitle": "Single", "artist": "Kwesta"]
 
         presenter?.updateCurrentPlayingSong(songName: currentPlayingSong["title"]!, artistsName: currentPlayingSong["artist"]!)

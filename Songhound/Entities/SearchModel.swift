@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+typealias SearchModel = [String: SearchModelValue]
+
+struct SearchModelValue: Codable {
+    var id: Int?
+    var name: String
+    var songID: Int
+}

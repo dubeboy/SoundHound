@@ -27,7 +27,7 @@ extension SongsListViewController: LocationManagerProtocol {
         let fullAddressFirstComponent = fullAddress.components(separatedBy: ",")[0]
         let fullAddressSecondComponent = fullAddress.components(separatedBy: ",")[1]
         self.currentLocation.text = "\(fullAddressFirstComponent), \(fullAddressSecondComponent) "
-        placeNameString = fullAddressSecondComponent
+        placeNameString = fullAddressSecondComponent.trimmingCharacters(in: .whitespaces)
         // music stuff get song after setting up location
        // getCurrentPlayingSong()
     }
