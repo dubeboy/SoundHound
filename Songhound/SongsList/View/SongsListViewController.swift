@@ -34,15 +34,15 @@ class SongsListViewController: UIViewController {
     private var selectedImage = -1  //-1 means no image was selected
     let locationManager = CLLocationManager()
     var viewFromNib: UIView!
+    static let TAG = "SongsListViewController"
+    let pref =  UserDefaults.standard
 
-    let TAG = "SongsListViewController"
- //   private let ref: DatabaseReference!
-
-    // the above is being set in the location manager
     var placeNameString: String = "" {
         didSet {
             presenter?.retrieveSongsList(for: placeNameString)
             getCurrentPlayingSong()
+            // save the location the current location on every value change it makes sense yoh
+            pref.set(placeNameString, forKey: "location")
         }
     }
 
@@ -54,7 +54,6 @@ class SongsListViewController: UIViewController {
         locationManager.delegate = self
 
         locationManager.requestWhenInUseAuthorization()
-
         let user = getSignedInUser()
         if let user = user {
             lblUserName.text = user.fullName
@@ -171,7 +170,6 @@ class SongsListViewController: UIViewController {
         // mock song being listened to man
 //        let currentPlayingSong = ["title": "Spirit", "albumTitle": "Single", "artist": "Kwesta"]
         let currentPlayingSong = ["title": "Blank Space", "albumTitle": "Single", "artist": "Taylor Swift"]
-      //  let currentPlayingSong = ["title": "Spirit", "albumTitle": "Single", "artist": "Kwesta"]
 
         presenter?.updateCurrentPlayingSong(songName: currentPlayingSong["title"]!, artistsName: currentPlayingSong["artist"]!)
 

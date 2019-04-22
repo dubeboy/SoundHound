@@ -11,10 +11,11 @@ import PKHUD
 
 class ArtistListViewController: UIViewController {
 
-    var artists: [ArtistModel] = []
+    var searchResults: [SearchModelValue] = []
     var presenter: ArtistListPresenterProtocol?
     @IBOutlet weak var artistTableView: UITableView!
     @IBOutlet weak var artistsSearchbar: UISearchBar!
+    var locationString: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +23,15 @@ class ArtistListViewController: UIViewController {
         artistTableView.delegate = self
         artistTableView.dataSource = self
         artistsSearchbar.delegate = self
+        locationString = UserDefaults.standard.string(forKey: "location")!
     }
 }
 
 extension ArtistListViewController: ArtistListViewProtocol {
-    func showArtists(artists: [ArtistModel]) {
-        self.artists = artists
+    func showArtists(searchResults: SearchModel) {
+        self.searchResults = searchResults.map({ (key, modelValue) in
+            return modelValue
+        })
         artistTableView.reloadData()
     }
 
@@ -42,13 +46,14 @@ extension ArtistListViewController: ArtistListViewProtocol {
     func hideLoading() {
         HUD.hide()
     }
+
 }
 
 // UITable extenstion
 extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return artists.count
+        return searchResults.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,20 +62,20 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
                 .dequeueReusableCell(withIdentifier: "artistTableViewCell", for: indexPath)
 
         if let cell = cell as? ArtistTableViewCell {
-            cell.lblArtistName.text = artists[indexPath.row].name
+            cell.lblArtistName.text = searchResults[indexPath.row].name
             return cell
         }
         return UITableViewCell()
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.presentArtistsSongs(artist: artists[indexPath.row])
+        presenter?.presentSongDetails(song: searchResults[indexPath.row])
     }
 }
 
 extension ArtistListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        presenter?.searchForArtists(by: searchText)
+        presenter?.searchForSongs(songName: searchText, location:  locationString)
     }
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -81,7 +86,7 @@ extension ArtistListViewController: UISearchBarDelegate {
         searchBar.showsCancelButton = false
         searchBar.text = ""
         searchBar.resignFirstResponder()
-        presenter?.searchForArtists(by: "")
+        presenter?.searchForSongs(songName: "", location: "")
         //populateArtists()
     }
 }

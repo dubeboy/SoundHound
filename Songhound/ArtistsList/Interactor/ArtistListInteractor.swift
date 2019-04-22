@@ -9,7 +9,7 @@ class ArtistListInteractor: ArtistListInteractorInputProtocol {
 
     var presenter: ArtistsListInteractorOutputProtocol?
     var remoteDataManager: ArtistListRemoteDataManagerInputProtocol2?
-    var cache: [ArtistModel] = []
+    var cache: SearchModel = [:]
 
     func retrieveArtists() {
         // do logic here bro!
@@ -17,14 +17,16 @@ class ArtistListInteractor: ArtistListInteractorInputProtocol {
     }
 
     // all the logic should be done here man
-    func searchForArtist(artistName: String) {
-        if !artistName.isEmpty && artistName.count >= 3 {
+    func searchForArtist(songName: String, location: String) {
+        // NB: debounce
+        if !songName.isEmpty && songName.count >= 2 {
             // we dont want to actually do many searches
-            let name = artistName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-            remoteDataManager?.searchForArtist(artistName: name)
+            let name = songName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+            let location = location.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+            remoteDataManager?.searchForSongName(songName: name, location: location)
         } else {
             // short circuit
-            presenter?.didRetrieveArtists(artists: cache)
+            presenter?.didRetrieveArtists(searchResults: cache)
         }
     }
 
@@ -32,9 +34,9 @@ class ArtistListInteractor: ArtistListInteractorInputProtocol {
 
 extension ArtistListInteractor: ArtistListRemoteDataManagerOutputProtocol {
 
-    func didRetrieveArtists(artists: [ArtistModel]) {
-        presenter?.didRetrieveArtists(artists: artists)
-        cache = artists
+    func didRetrieveArtists(searchResults: SearchModel) {
+        presenter?.didRetrieveArtists(searchResults: searchResults)
+        cache = searchResults
     }
 
     func onError() {

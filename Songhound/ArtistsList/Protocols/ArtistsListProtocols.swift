@@ -13,23 +13,23 @@ protocol ArtistListWireFrameProtocol {
     static func createArtistListModule() -> UIViewController
 
     // this is where we do the rourtng
-    func presentArtistSongView(from view: ArtistListViewProtocol, forArtist artist: ArtistModel)
+    func presentSongDetailView(from view: ArtistListViewProtocol, forSong song: SearchModelValue)
 }
 
 protocol ArtistsListInteractorOutputProtocol {
-    func didRetrieveArtists(artists: [ArtistModel])
+    func didRetrieveArtists(searchResults: SearchModel)
     func onError()
 }
 
 protocol ArtistListRemoteDataManagerOutputProtocol {
-    func didRetrieveArtists(artists: [ArtistModel])
+    func didRetrieveArtists(searchResults: SearchModel)
     func onError()
 }
 
 protocol ArtistListRemoteDataManagerInputProtocol2 {
     var remoteRequestHandler: ArtistListRemoteDataManagerOutputProtocol? { get set }
     func retrieveArtists()
-    func searchForArtist(artistName: String)
+    func searchForSongName(songName: String, location: String)
 }
 
 protocol ArtistListInteractorInputProtocol {
@@ -37,7 +37,7 @@ protocol ArtistListInteractorInputProtocol {
     var remoteDataManager: ArtistListRemoteDataManagerInputProtocol2? { get set }
 
     func retrieveArtists()
-    func searchForArtist(artistName: String)
+    func searchForArtist(songName: String, location: String)
 }
 
 protocol ArtistListPresenterProtocol {
@@ -48,14 +48,14 @@ protocol ArtistListPresenterProtocol {
     var wireFrame: ArtistListWireFrameProtocol? { get set }
 
     // wireframe
-    func presentArtistsSongs(artist: ArtistModel)
+    func presentSongDetails(song: SearchModelValue)
     func viewDidLoad()
-    func searchForArtists(by name: String)
+        func searchForSongs(songName: String, location: String)
 }
 
 protocol ArtistListViewProtocol: CommonNetworkProtocol {
     // reference to the intermediator
     var presenter: ArtistListPresenterProtocol? { get set }
     func showLoading()
-    func showArtists(artists: [ArtistModel])
+    func showArtists(searchResults: SearchModel)
 }

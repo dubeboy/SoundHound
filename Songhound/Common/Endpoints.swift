@@ -44,11 +44,11 @@ class Endpoints {
     }
 
     enum ArtistsEnumEndpoints: Endpoint {
-        case fetch(artistName: String)
+        case fetch(songName: String, location: String)
         public var path: String {
             switch self {
-            case .fetch(let artistName):
-                return "&entity=musicArtist&term=\(artistName)"
+            case .fetch(let songName, let location):
+                return "/fire?location=\(location)&songName=\(songName)"
             }
         }
 

@@ -10,7 +10,7 @@ import Foundation
 typealias SearchModel = [String: SearchModelValue]
 
 struct SearchModelValue: Codable {
-    var id: Int?
+    var id: UInt?
     var name: String
     var songID: Int
 }
