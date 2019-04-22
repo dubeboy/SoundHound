@@ -36,7 +36,7 @@ extension SongsListViewController: SongsListViewProtocol {
     }
 
     func showError() {
-        HUD.flash(.label("Internet not connect"), delay: 2.0)
+        HUD.flash(.label("Oops an error occurred!"), delay: 2.0)
     }
 
     func showLoading() {
