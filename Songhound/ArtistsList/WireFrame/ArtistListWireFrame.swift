@@ -36,7 +36,7 @@ class ArtistListWireFrame: ArtistListWireFrameProtocol {
 
     // will have a func that actually routes to the artist page for song by that artist
     func presentSongDetailView(from view: ArtistListViewProtocol, forSong song: SearchModelValue) {
-        let artistSongsList = SongDetailsWireFrame.createSongDetailModule(forSong: SongModel(id: song.id!,
+        let artistSongsList = SongDetailsWireFrame.createSongDetailModule(forSong: SongModel(id: song.songID,
                 name: song.name,
                 artistName: "",
                 albumName: "",

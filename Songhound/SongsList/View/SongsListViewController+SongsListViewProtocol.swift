@@ -51,7 +51,7 @@ extension SongsListViewController: SongsListViewProtocol {
     func onSongIDReceived(song: SongModel) {
         let ref = Database.database().reference()
         print("SLVP: the placename  is;\(placeNameString)")
-        ref.child(placeNameString).childByAutoId().setValue(["songID": song.id, "name": song.name])
+        ref.child(placeNameString).child("\(song.id)").setValue(["songID": song.id, "name": song.name])
     }
 
 }

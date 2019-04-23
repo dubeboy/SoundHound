@@ -17,8 +17,8 @@ class ArtistListPresenter: ArtistListPresenterProtocol {
     }
 
     func viewDidLoad() {
-        view?.showLoading()
-        interactor?.retrieveArtists()
+//        view?.showLoading()
+//        interactor?.retrieveArtists()
     }
 
     func searchForSongs(songName: String, location: String) {

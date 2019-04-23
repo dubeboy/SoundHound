@@ -19,11 +19,11 @@ class ArtistListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationString = UserDefaults.standard.string(forKey: "location")!
         presenter?.viewDidLoad()
         artistTableView.delegate = self
         artistTableView.dataSource = self
         artistsSearchbar.delegate = self
-        locationString = UserDefaults.standard.string(forKey: "location")!
     }
 }
 

@@ -54,7 +54,7 @@ class Endpoints {
 
         public var url: String {
             switch self {
-            case .fetch: return "\(API.baseURL)\(path)"
+            case .fetch: return "\(API.vaporCloudAPI)\(path)"
             }
         }
     }

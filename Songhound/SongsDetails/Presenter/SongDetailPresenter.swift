@@ -15,7 +15,7 @@ class SongDetailPresenter: SongDetailPresenterProtocol {
     func viewDidLoad() {
         // we should be showing a loading indicator
         view?.showLoading()
-        if (song!.name.isEmpty) { // empty when coming from a search view
+        if (song!.artistName.isEmpty) { // empty when coming from a search view
             // so we need to fetch from the firebase database
             ref = Database.database().reference()
             ref.child("\(song!.id)").observeSingleEvent(of: DataEventType.value) { snap, error in
@@ -26,14 +26,13 @@ class SongDetailPresenter: SongDetailPresenterProtocol {
                 let song = snap.value as! [String: AnyObject]
                 let songModel = SongModel(id: song["songID"] as! UInt,
                         name: song["name"] as! String,
-                        artistName: song["artistsName"] as! String,
-                        albumName: song["albumName"] as! String,
+                        artistName: song["artistName"] as! String,
+                        albumName: song["AlbumName"] as! String,
                         genre: song["genre"] as! String,
                         popularity: song["popularity"] as! Int,
                         artworkURL: song["artworkURL"] as! String,
                         artist: ArtistModel(name: song["artistName"] as! String, artistID: 0))
                self.showSongsOnView(song: songModel)
-
             }
         } else {
             showSongsOnView(song: song!)
