@@ -29,7 +29,6 @@
 		3DEEA823CF91481FAAEEA8BB /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA98EDCA558A56E44996E /* Server.swift */; };
 		3DEEA8656BE2BED91F653AE1 /* ArtistListRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEAD78D920FD77ED0CFAB1 /* ArtistListRemoteDataManager.swift */; };
 		3DEEA8AEB11A7DCF65C552CF /* SongsListViewController+SongsListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA463397D8AD54D212B61 /* SongsListViewController+SongsListViewProtocol.swift */; };
-		3DEEA93541687D4E4F96C3C0 /* UICollectionViewHorizontal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA793DBC9A8257D36262F /* UICollectionViewHorizontal.m */; };
 		3DEEA996372F353A9B4F445B /* SongsListViewController+GoogleSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA19EE1F2B56101EC18AD /* SongsListViewController+GoogleSignInDelegate.swift */; };
 		3DEEAB0EA2AE6CA6208CBC27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEAEC37B554FECEBB2749F /* User.swift */; };
 		3DEEAC28D16A7E489B24D262 /* SongListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEEA5FDD4AE0A2AF5E160D6 /* SongListPresenterTests.swift */; };
@@ -72,6 +71,7 @@
 		F38D20E8222FA051002BD13D /* ArtistSongsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38D20E7222FA051002BD13D /* ArtistSongsListInteractor.swift */; };
 		F38D20EC222FAA38002BD13D /* ArtistsSongsListRemoteDataManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = F38D20EB222FAA38002BD13D /* ArtistsSongsListRemoteDataManager .swift */; };
 		F397DD87221A02B500D28E3C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397DD86221A02B500D28E3C /* Song.swift */; };
+		F3A44AB8226F025E003D4DBF /* SongCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A44AB7226F025E003D4DBF /* SongCollectionViewController.swift */; };
 		F3F91CCC2237E8EA006C0D6D /* ArtistsListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F91CCB2237E8EA006C0D6D /* ArtistsListProtocols.swift */; };
 		F8E5BC3BAF256DE7CD755BEE /* Pods_SonghoundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D14AE6B7E5F0876C64E3747 /* Pods_SonghoundTests.framework */; };
 /* End PBXBuildFile section */
@@ -111,9 +111,7 @@
 		3DEEA5F8487ED1CF1432BDDA /* SongsListInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsListInteractorTests.swift; sourceTree = "<group>"; };
 		3DEEA5FDD4AE0A2AF5E160D6 /* SongListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListPresenterTests.swift; sourceTree = "<group>"; };
 		3DEEA70E8C8E12EDA2235294 /* ArtistListWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistListWireFrame.swift; sourceTree = "<group>"; };
-		3DEEA793DBC9A8257D36262F /* UICollectionViewHorizontal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewHorizontal.m; sourceTree = "<group>"; };
 		3DEEA7D80709413E7879E3B1 /* SongsListViewController+LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SongsListViewController+LocationManager.swift"; sourceTree = "<group>"; };
-		3DEEA8188B2B85AC9D50EFB4 /* UICollectionViewHorizontal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewHorizontal.h; sourceTree = "<group>"; };
 		3DEEA8C8B224B2A637C744A1 /* LocationManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManagerProtocol.h; sourceTree = "<group>"; };
 		3DEEA90E5FC965572DBE6A97 /* SongDetailsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailsProtocols.swift; sourceTree = "<group>"; };
 		3DEEA98EDCA558A56E44996E /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
@@ -173,6 +171,7 @@
 		F38D20E7222FA051002BD13D /* ArtistSongsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSongsListInteractor.swift; sourceTree = "<group>"; };
 		F38D20EB222FAA38002BD13D /* ArtistsSongsListRemoteDataManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistsSongsListRemoteDataManager .swift"; sourceTree = "<group>"; };
 		F397DD86221A02B500D28E3C /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		F3A44AB7226F025E003D4DBF /* SongCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCollectionViewController.swift; sourceTree = "<group>"; };
 		F3F91CCB2237E8EA006C0D6D /* ArtistsListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsListProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -580,8 +579,7 @@
 				3DEEA0470632E06F8490744D /* SongsListViewController+UITableViewDelegate.swift */,
 				3DEEA19EE1F2B56101EC18AD /* SongsListViewController+GoogleSignInDelegate.swift */,
 				3DEEA7D80709413E7879E3B1 /* SongsListViewController+LocationManager.swift */,
-				3DEEA793DBC9A8257D36262F /* UICollectionViewHorizontal.m */,
-				3DEEA8188B2B85AC9D50EFB4 /* UICollectionViewHorizontal.h */,
+				F3A44AB7226F025E003D4DBF /* SongCollectionViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -900,7 +898,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n";
+			shellScript = "
+";
 		};
 		FAAA36D89E16A8B253200C1F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -951,6 +950,7 @@
 				F365F149222D1E5C00F447A6 /* ArtistsListViewController.swift in Sources */,
 				F36EE4A1222956C20083B2B8 /* SongsListInterator.swift in Sources */,
 				F36EE4A3222970690083B2B8 /* SongsListViewController.swift in Sources */,
+				F3A44AB8226F025E003D4DBF /* SongCollectionViewController.swift in Sources */,
 				F397DD87221A02B500D28E3C /* Song.swift in Sources */,
 				F36EE49D222938930083B2B8 /* SongsListViewPresenter.swift in Sources */,
 				F365F13E222D0BBB00F447A6 /* ArtistModel.swift in Sources */,
@@ -990,7 +990,6 @@
 				3DEEA506C462AEF16C441926 /* SongsListViewController+UITableViewDelegate.swift in Sources */,
 				3DEEA5FB3BBDF00FF43E903E /* SongsListViewController+GoogleSignInDelegate.swift in Sources */,
 				3DEEA1D0EF97E5CAA30EFCF0 /* SongsListViewController+LocationManager.swift in Sources */,
-				3DEEA93541687D4E4F96C3C0 /* UICollectionViewHorizontal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1209,6 +1208,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GLK7J5PP82;
 				INFOPLIST_FILE = Songhound/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1233,6 +1233,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GLK7J5PP82;
 				INFOPLIST_FILE = Songhound/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
