@@ -17,12 +17,12 @@ class MockTestSongListInteractor: SongsListInteratorInputProtocol, SongsListRemo
     var endpoit: String = MockEndpoints.MockSongsEnumEndpoints.fetch.url
     var expectation: XCTestExpectation?
     var expectationFulFiller: ExpectationFulFillerProtocol?
+    var song: SongModel?
 
     var songs: [SongModel]? = nil {
         didSet {
             expectationFulFiller?.fulFill(expectation: expectation!)
         }
-
     }
 
     func onSongsRetrieved(_ songs: [SongModel]) {
@@ -46,6 +46,21 @@ class MockTestSongListInteractor: SongsListInteratorInputProtocol, SongsListRemo
     func getArtist(top selectedId: Int) {
         onArtistSelected(artist: ArtistModel(name: songs?[selectedId].name ?? "", artistID: 00))
     }
+    
+    func retrieveSongsList(location: String) {
+        remoteDataManager?.retrieveSongsList(location: location)
+
+    }
+    
+    func getSongIDFromiTunes(songName: String, artistsName: String) {
+        remoteDataManager?.retrieveSongID(path: "http://tunes.com/1.mp3")
+    }
+    
+    func onSongIDReceived(song: SongModel) {
+         self.song = song
+         self.presenter?.didReceivePlayingSong(song: song) // needs good refactoring
+    }
+    
 }
 
 class MockTestSongListWireFrame: SongsListViewWireFrameProtocol {
@@ -84,6 +99,7 @@ class MockTestSongListWireFrame: SongsListViewWireFrameProtocol {
 }
 
 class MockTestSongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
+ 
 
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol?
 
@@ -100,16 +116,28 @@ class MockTestSongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol
             remoteRequestHandler?.onError()
         }
     }
+    
+    func retrieveSongID(path: String) {
+        if(path.isEmpty) {
+            self.remoteRequestHandler?.onError()
+        }  else {
+            self.remoteRequestHandler?.onSongIDReceived(song: songs!.first!)
+        }
+    }
 }
 
 
 
 class MockSongsListViewController: SongsListViewProtocol {
+  
 
     var isLoading = false
     var isHidden = false
     var isShowingError = false
+    var songIDRecieved = false
     var songs: [SongModel]?
+    var songModel: SongModel? = nil
+    
 
     var presenter: SongListPresenterProtocol?
 
@@ -118,7 +146,7 @@ class MockSongsListViewController: SongsListViewProtocol {
     }
 
     func onTopThreeArtistClicked() {
-
+        
     }
 
     func showLoading() {
@@ -128,6 +156,11 @@ class MockSongsListViewController: SongsListViewProtocol {
     func showError() {
         isShowingError = true
     }
+    
+    func onSongIDReceived(song: SongModel) {
+        songIDRecieved = true
+        songModel = song
+    }
 
     func hideLoading() {
         isHidden = false
@@ -136,10 +169,13 @@ class MockSongsListViewController: SongsListViewProtocol {
     deinit {
         print("deinit TestSongsListViewController")
         songs = nil
+        songModel = nil
     }
 }
 
 class MockSongsListViewPresenter: SongListPresenterProtocol, SongsListInteratorOutputProtocol {
+    
+    
     var view: SongsListViewProtocol?
     var interactor: SongsListInteratorInputProtocol?
     var wireframe: SongsListViewWireFrameProtocol?
@@ -161,7 +197,7 @@ class MockSongsListViewPresenter: SongListPresenterProtocol, SongsListInteratorO
     }
 
     func viewDidLoad() {
-        interactor?.retrieveSongsList()
+        interactor?.retrieveSongsList(location: "AppleSeed")
     }
 
     func showSongDetail(forSong song: SongModel) {
@@ -174,5 +210,17 @@ class MockSongsListViewPresenter: SongListPresenterProtocol, SongsListInteratorO
 
     func presentMoreArtists() {
 
+    }
+    
+    func updateCurrentPlayingSong(songName: String, artistsName: String) {
+         interactor?.getSongIDFromiTunes(songName: songName, artistsName: artistsName)
+    }
+    
+    func retrieveSongsList(for location: String) {
+        interactor?.retrieveSongsList(location: location)
+    }
+    
+    func didReceivePlayingSong(song: SongModel) {
+        view?.onSongIDReceived(song: song)
     }
 }
