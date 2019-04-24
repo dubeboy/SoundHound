@@ -172,8 +172,8 @@ class SongsListViewController: UIViewController {
             //
         }
         // mock song being listened to man
-//        let currentPlayingSong = ["title": "Spirit", "albumTitle": "Single", "artist": "Kwesta"]
-        let currentPlayingSong = ["title": "Blank Space", "albumTitle": "Single", "artist": "Taylor Swift"]
+        let currentPlayingSong = ["title": "Drive", "albumTitle": "Single", "artist": "Black Coffee"]
+      //  let currentPlayingSong = ["title": "Blank Space", "albumTitle": "Single", "artist": "Taylor Swift"]
 
         presenter?.updateCurrentPlayingSong(songName: currentPlayingSong["title"]!, artistsName: currentPlayingSong["artist"]!)
 
