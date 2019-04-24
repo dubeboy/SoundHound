@@ -278,28 +278,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Songhound/SongsList/View/SongsListViewController+LocationManager.swift"
-            timestampString = "576760364.704933"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "onReverseCoordinatesReceived(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Songhound/SongsList/View/SongsListViewController.swift"
-            timestampString = "577455581.7856981"
+            timestampString = "577799430.56841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "getCurrentPlayingSong()"
             landmarkType = "7">
          </BreakpointContent>
@@ -317,22 +301,6 @@
             startingLineNumber = "33"
             endingLineNumber = "33"
             landmarkName = "getSongIDFromiTunes(songName:artistsName:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Songhound/SongsList/View/SongsListViewController+SongsListViewProtocol.swift"
-            timestampString = "577715999.3797849"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "onSongIDReceived(song:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
