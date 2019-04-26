@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // init our 
         let songsList = SongsListWireFrame.createSongsListModule()
         // I guess this is where we set the windows size when we open apps for iPhone on iPad ie. Instagram
+        window?.backgroundColor = .white // set the default color for the window
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = songsList
         // what is a key window is it the laucher screen?

@@ -32,15 +32,20 @@ class SongsListViewController: UIViewController {
     @IBOutlet weak var currentLocation: UILabel!
     @IBOutlet weak var tableViewSongs: UITableView!
     @IBOutlet weak var imgProfilePicture: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
 
     var presenter: SongListPresenterProtocol?
     var songList: [SongModel] = []
     private var selectedImage = -1  //-1 means no image was selected
     let locationManager = CLLocationManager()
-    var viewFromNib: UIView!
     static let TAG = "SongsListViewController"
     let pref =  UserDefaults.standard
-
+    // this will never be null because we instatiate this after songList has been initliased
+    // before that we lock the screen to potrait orirntation
+    let cellSpacing: CGFloat = 0.6
+    private let reuseIdentifier = "songCollectionCell"
+    
+    
     var placeNameString: String = "" {
         didSet {
             presenter?.retrieveSongsList(for: placeNameString)
@@ -67,7 +72,9 @@ class SongsListViewController: UIViewController {
             imgProfilePicture.dowloadFromServer(link: prof)
         }
         setUpTopThreeImages()
-        viewFromNib = view
+        setUpCollectionView(collectionView: collectionView)
+//        collectionView.backgroundColor = .gray
+        //store the view hieracy for this file
     }
 
     private func setUpTopThreeImages() {
@@ -124,7 +131,6 @@ class SongsListViewController: UIViewController {
                     GIDSignIn.sharedInstance().delegate = self
                     GIDSignIn.sharedInstance().uiDelegate = self
                     GIDSignIn.sharedInstance().signIn()
-
                 default:
                     print("ooops")
 
@@ -140,18 +146,18 @@ class SongsListViewController: UIViewController {
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
+          print("BEGIN  viewWillTransition")
         coordinator.animate(alongsideTransition: { _ in
             // This is called during the animation
-            print("Not Broken")
+            print("in viewWillTransition: alongsideTransition")
         }, completion: { _ in
-            print("Broken")
+            print("in viewWillTransition: completion")
             // This is called after the rotation is finished. Equal to deprecated `didRotate`
             if UIApplication.shared.statusBarOrientation.isPortrait {
-                print("Screen rotated  UP")
-                self.view = self.viewFromNib
+             
             } else {
-                print("Screen rotated  DOWN")
-               self.view = UIView(frame: .zero)
+                print("in viewWillTransition: landscape")
+                self.collectionView.reloadData()
             }
         })
     }
@@ -165,27 +171,38 @@ class SongsListViewController: UIViewController {
             let artist: String = mediaItem.value(forProperty: MPMediaItemPropertyArtist) as! String
             
             print("\(title) on \(albumTitle) by \(artist)")
-            // get ID OF SONG ON ITUNES
-            // check if the song exists on firebase then append the number of playes
-            // if not
-            // UPLOAD THE SONG ON FIREBASE
-            //
         }
         // mock song being listened to man
         let currentPlayingSong = ["title": "Drive", "albumTitle": "Single", "artist": "Black Coffee"]
       //  let currentPlayingSong = ["title": "Blank Space", "albumTitle": "Single", "artist": "Taylor Swift"]
-
         presenter?.updateCurrentPlayingSong(songName: currentPlayingSong["title"]!, artistsName: currentPlayingSong["artist"]!)
-
     }
 
     func showError(errorMessage: String ) {
         HUD.flash(.label(errorMessage), delay: 2.0)
     }
+
+    
+    private func setUpCollectionView(collectionView: UICollectionView) {
+        
+        let screenSize = UIScreen.main.bounds.size
+        let cellWidth = floor(screenSize.width * cellSpacing)
+        let cellHeight = floor(screenSize.height * cellSpacing)
+        
+        let insetX = (view.bounds.width - cellWidth) / 2.0
+        let insertY = (view.bounds.height - cellHeight) / 2.0
+        
+       // let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+//        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+        
+        collectionView.contentInset = UIEdgeInsets(top: insertY, left: insetX, bottom: insertY, right: insetX)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
 }
 
 // END OF CLASS //
-
+// shoukld look for a better way to expresss the below concepts
 //
 // SONGSLIST VIEW PROTOCOL
 //
@@ -193,11 +210,14 @@ class SongsListViewController: UIViewController {
 extension SongsListViewController: SongsListViewProtocol {
     
     func onTopThreeArtistClicked() {
+        // MARK: to be completed
     }
     
     func showSongsList(songs: [SongModel]) {
         songList = songs
         tableViewSongs.reloadData()
+        collectionView.reloadData()
+
         
         for (i , song ) in songList.enumerated() {
             // gangstar stuff here bro
@@ -217,6 +237,8 @@ extension SongsListViewController: SongsListViewProtocol {
                 break
             }
         }
+        //Mark: iniatlise the collection view
+      // songsCollectionViewXib = loadViewFromXib(songs: songList)
     }
     
     func showError() {
@@ -225,9 +247,12 @@ extension SongsListViewController: SongsListViewProtocol {
     
     func showLoading() {
         HUD.show(.progress)
+        
+        //MARK: disable changing orientation
     }
     
     func hideLoading() {
+        // MARK CHANGE ENABLE ORRIENTATION
         HUD.hide()
     }
     
@@ -235,6 +260,7 @@ extension SongsListViewController: SongsListViewProtocol {
     func onSongIDReceived(song: SongModel) {
         let ref = Database.database().reference()
         print("SLVP: the placename  is;\(placeNameString)")
+        //save song to firebase
         ref.child(placeNameString).child("\(song.id)").setValue(["songID": song.id, "name": song.name])
     }
     
@@ -376,3 +402,53 @@ extension SongsListViewController: LocationManagerProtocol {
         locationManager.stopUpdatingLocation()
     }
 }
+
+//
+// collection view
+//
+extension SongsListViewController: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        print("colectiobV: numberOfSections")
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return songList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("colectiobV: cell init")
+
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SongCollectionViewControllerCell
+        cell.song = songList[indexPath.item]
+        
+
+        return cell
+    }
+    
+    
+}
+
+extension SongsListViewController : UIScrollViewDelegate, UICollectionViewDelegate {
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
+        
+        var offset = targetContentOffset.pointee
+        let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
+        let roundedIndex = round(index)
+        
+        offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left,y: -scrollView.contentInset.top)
+        targetContentOffset.pointee = offset
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         presenter?.showSongDetail(forSong: songList[indexPath.row])
+    }
+}
+
+
+
+
+
