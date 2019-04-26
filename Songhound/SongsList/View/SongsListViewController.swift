@@ -158,6 +158,7 @@ class SongsListViewController: UIViewController {
             } else {
                 print("in viewWillTransition: landscape")
                 self.collectionView.reloadData()
+                self.collectionView.layoutIfNeeded()
             }
         })
     }
@@ -414,11 +415,13 @@ extension SongsListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("colectiobV: numberOfItemsInSection\(songList.count)")
+
         return songList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("colectiobV: cell init")
+        print("colectionV: cell init")
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SongCollectionViewControllerCell
         cell.song = songList[indexPath.item]
