@@ -72,6 +72,8 @@ class SongsListViewController: UIViewController {
             imgProfilePicture.dowloadFromServer(link: prof)
         }
         setUpTopThreeImages()
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
         setUpCollectionView(collectionView: collectionView)
 //        collectionView.backgroundColor = .gray
         //store the view hieracy for this file
@@ -157,9 +159,13 @@ class SongsListViewController: UIViewController {
              
             } else {
                 print("in viewWillTransition: landscape")
-                self.collectionView.reloadData()
+                DispatchQueue.main.async {
+                    
+                }
             }
         })
+        
+        collectionView.reloadData()
     }
     
     func getCurrentPlayingSong() {
@@ -192,12 +198,7 @@ class SongsListViewController: UIViewController {
         let insetX = (view.bounds.width - cellWidth) / 2.0
         let insertY = (view.bounds.height - cellHeight) / 2.0
         
-       // let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-//        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
-        
         collectionView.contentInset = UIEdgeInsets(top: insertY, left: insetX, bottom: insertY, right: insetX)
-        collectionView.delegate = self
-        collectionView.dataSource = self
     }
 }
 
@@ -216,7 +217,7 @@ extension SongsListViewController: SongsListViewProtocol {
     func showSongsList(songs: [SongModel]) {
         songList = songs
         tableViewSongs.reloadData()
-        collectionView.reloadData()
+      //  collectionView.reloadData()
 
         
         for (i , song ) in songList.enumerated() {
@@ -407,24 +408,22 @@ extension SongsListViewController: LocationManagerProtocol {
 // collection view
 //
 extension SongsListViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("colectiobV: cell init")
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SongCollectionViewControllerCell
+        cell.song = songList[indexPath.item]
+        return cell
+    }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        print("colectiobV: numberOfSections")
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return songList.count
-    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("colectiobV: cell init")
-
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SongCollectionViewControllerCell
-        cell.song = songList[indexPath.item]
-        
-
-        return cell
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("the number of songs is\(songList.count)")
+        return songList.count
     }
     
     
