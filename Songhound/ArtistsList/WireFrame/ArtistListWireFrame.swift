@@ -19,7 +19,7 @@ class ArtistListWireFrame: ArtistListWireFrameProtocol {
             var presenter: PresenterInputInteratorOutput = ArtistListPresenter()
             let wireframe: ArtistListWireFrame = ArtistListWireFrame()
             var interactor: InteractorInputRemoteDataManagerOutput = ArtistListInteractor()
-            var remoteDataManager: ArtistListRemoteDataManagerInputProtocol2 = ArtistListRemoteDataManager()
+            var remoteDataManager: ArtistListRemoteDataManagerInputProtocolTwo = ArtistListRemoteDataManager()
 
             view.presenter = presenter
             presenter.view = view

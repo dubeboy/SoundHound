@@ -27,6 +27,11 @@
                BlueprintName = "SonghoundTests"
                ReferencedContainer = "container:Songhound.xcodeproj">
             </BuildableReference>
+            <SelectedTests>
+               <Test
+                  Identifier = "SongListFeatureTests">
+               </Test>
+            </SelectedTests>
          </TestableReference>
       </Testables>
    </TestAction>

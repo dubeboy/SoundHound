@@ -26,15 +26,19 @@ protocol ArtistListRemoteDataManagerOutputProtocol {
     func onError()
 }
 
-protocol ArtistListRemoteDataManagerInputProtocol2 {
-    var remoteRequestHandler: ArtistListRemoteDataManagerOutputProtocol? { get set }
+protocol ArtistListRemoteDataManagerInputProtocolTwo {
+   var remoteRequestHandler: ArtistListRemoteDataManagerOutputProtocol? { get set }
     func retrieveArtists()
     func searchForSongName(songName: String, location: String)
 }
 
+protocol ArtistListRemoteDataManagerInputProtocolThree: ArtistListRemoteDataManagerInputProtocolTwo {
+
+}
+
 protocol ArtistListInteractorInputProtocol {
     var presenter: ArtistsListInteractorOutputProtocol? { get set }
-    var remoteDataManager: ArtistListRemoteDataManagerInputProtocol2? { get set }
+    var remoteDataManager: ArtistListRemoteDataManagerInputProtocolTwo? { get set }
 
     func retrieveArtists()
     func searchForArtist(songName: String, location: String)

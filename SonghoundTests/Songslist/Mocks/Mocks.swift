@@ -18,6 +18,11 @@ class MockTestSongListInteractor: SongsListInteratorInputProtocol, SongsListRemo
     var expectation: XCTestExpectation?
     var expectationFulFiller: ExpectationFulFillerProtocol?
     var song: SongModel?
+    
+    var songName: String?
+    var artistsName: String?
+    
+    var location: String? = nil
 
     var songs: [SongModel]? = nil {
         didSet {
@@ -48,11 +53,14 @@ class MockTestSongListInteractor: SongsListInteratorInputProtocol, SongsListRemo
     }
     
     func retrieveSongsList(location: String) {
+        self.location = location
         remoteDataManager?.retrieveSongsList(location: location)
 
     }
     
     func getSongIDFromiTunes(songName: String, artistsName: String) {
+        self.songName = songName
+        self.artistsName = artistsName
         remoteDataManager?.retrieveSongID(path: "http://tunes.com/1.mp3")
     }
     
@@ -70,6 +78,8 @@ class MockTestSongListWireFrame: SongsListViewWireFrameProtocol {
     var view: SongsListViewProtocol!
     var song: SongModel!
     var artist: ArtistModel!
+    
+    var didPresentMoreArtists: Bool?
 
     static func createSongsListModule() -> UIViewController {
         return UIViewController()
@@ -94,7 +104,7 @@ class MockTestSongListWireFrame: SongsListViewWireFrameProtocol {
     }
 
     func presentMoreArtists(from view: SongsListViewProtocol) {
-
+        self.didPresentMoreArtists = true
     }
 }
 
@@ -102,7 +112,7 @@ class MockTestSongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol
  
 
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol?
-
+    var path: String = ""
     var songs: [SongModel]? =  [
         SongModel(id: 100, name: "Blank Space", artistName: "Taylor Swift", albumName: "Single", genre: "Hip Hop", 
                 popularity: 100, artworkURL: "exampleUrl.com/assets/image.jpg",
@@ -118,6 +128,7 @@ class MockTestSongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol
     }
     
     func retrieveSongID(path: String) {
+        self.path = path
         if(path.isEmpty) {
             self.remoteRequestHandler?.onError()
         }  else {
@@ -179,6 +190,8 @@ class MockSongsListViewPresenter: SongListPresenterProtocol, SongsListInteratorO
     var view: SongsListViewProtocol?
     var interactor: SongsListInteratorInputProtocol?
     var wireframe: SongsListViewWireFrameProtocol?
+    
+    var selectedArtist: ArtistModel? = nil
 
     var cache: [SongModel]?
 
@@ -189,6 +202,7 @@ class MockSongsListViewPresenter: SongListPresenterProtocol, SongsListInteratorO
     }
 
     func didSelectArtist(artist: ArtistModel) {
+        self.selectedArtist = artist
         wireframe?.presentSongsListViewScreen(from: view!, forArtist: artist)
     }
 
