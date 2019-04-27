@@ -56,4 +56,37 @@ class SongsListInteractorTest: XCTestCase {
         presenter.viewDidLoad()
         XCTAssertTrue(view.isShowingError)
     }
+    
+    func testGetSongIDFromItunesWithSpace() {
+        presenter.viewDidLoad()
+        interactor.getSongIDFromiTunes(songName: "Blank Space", artistsName: "Taylor Swift")
+        let songPathWithSpace = Endpoints
+            .SongsEnumEndpoints
+            .fetchSongID(songName: "Blank Space", artistsName: "Taylor Swift").url
+        XCTAssert(remoteDataManager.path == songPathWithSpace)
+       
+       }
+    
+    func testGetSongIDFromItunesWithoutSpace() {
+        presenter.viewDidLoad()
+        interactor.getSongIDFromiTunes(songName: "Blank", artistsName: "Taylor")
+        let songPathWithoutSpace = Endpoints
+            .SongsEnumEndpoints
+            .fetchSongID(songName: "Blank", artistsName: "Taylor").url
+        
+        XCTAssert(remoteDataManager.path == songPathWithoutSpace)
+
+    }
+    
+    func testGetArtists() {
+         presenter.viewDidLoad()
+         interactor.getArtist(top: 0)
+         XCTAssert(presenter.selectedArtist != nil)
+    }
+    
+    func testGetArtistsWhenNoSuchArtistDoesNotExist() {
+        presenter.viewDidLoad()
+        interactor.getArtist(top: 1)
+        XCTAssert(presenter.selectedArtist == nil)
+    }
 }

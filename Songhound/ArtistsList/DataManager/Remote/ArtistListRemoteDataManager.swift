@@ -6,7 +6,7 @@
 import Alamofire
 
 
-class ArtistListRemoteDataManager: ArtistListRemoteDataManagerInputProtocol2 {
+class ArtistListRemoteDataManager: ArtistListRemoteDataManagerInputProtocolTwo {
 
     var remoteRequestHandler: ArtistListRemoteDataManagerOutputProtocol?
 

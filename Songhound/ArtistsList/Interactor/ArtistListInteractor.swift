@@ -8,7 +8,7 @@ import Foundation
 class ArtistListInteractor: ArtistListInteractorInputProtocol {
 
     var presenter: ArtistsListInteractorOutputProtocol?
-    var remoteDataManager: ArtistListRemoteDataManagerInputProtocol2?
+    var remoteDataManager: ArtistListRemoteDataManagerInputProtocolTwo?
     var cache: SearchModel = [:]
 
     func retrieveArtists() {
@@ -25,7 +25,7 @@ class ArtistListInteractor: ArtistListInteractorInputProtocol {
             let location = location.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
             remoteDataManager?.searchForSongName(songName: name, location: location)
         } else {
-            // short circuit
+            // short circuit suppose to just return a zero sum
             presenter?.didRetrieveArtists(searchResults: cache)
         }
     }
