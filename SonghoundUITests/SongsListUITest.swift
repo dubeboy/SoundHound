@@ -26,7 +26,7 @@ class SongsListUITest: XCTestCase {
         // tests before they run. The setUp method is a good place to do this.
         
         app = XCUIApplication()
-        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 15)
+        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 6)
     }
 
     override func tearDown() {
@@ -66,9 +66,9 @@ class SongsListUITest: XCTestCase {
         searchField.tap()
         searchField.typeText("Bla")
         
-        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 10)
+        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 6)
     
-        XCUIApplication().tables/*@START_MENU_TOKEN@*/.staticTexts["Blank Space"]/*[[".cells.staticTexts[\"Blank Space\"]",".staticTexts[\"Blank Space\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        XCUIApplication().tables.staticTexts["Blank Space"].tap()
         
         
         var x =  app.otherElements.containing(.navigationBar, identifier:"Songhound.SongDetailView").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.exists
