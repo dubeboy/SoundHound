@@ -42,10 +42,10 @@ class SongsListViewController: UIViewController {
     let pref =  UserDefaults.standard
     // this will never be null because we instatiate this after songList has been initliased
     // before that we lock the screen to potrait orirntation
+    var delegateCollectionView: SongCollectionViewControllerDelegate!
     let cellSpacing: CGFloat = 0.6
-    private let reuseIdentifier = "songCollectionCell"
-    
-    
+
+
     var placeNameString: String = "" {
         didSet {
             presenter?.retrieveSongsList(for: placeNameString)
@@ -73,8 +73,6 @@ class SongsListViewController: UIViewController {
         }
         setUpTopThreeImages()
         setUpCollectionView(collectionView: collectionView)
-//        collectionView.backgroundColor = .gray
-        //store the view hieracy for this file
     }
 
     private func setUpTopThreeImages() {
@@ -157,10 +155,6 @@ class SongsListViewController: UIViewController {
              
             } else {
                 print("in viewWillTransition: landscape")
-
-//                self.collectionView.layoutIfNeeded()
-//                self.collectionView.reloadData()
-//                self.collectionView.layoutIfNeeded()
             }
         })
     }
@@ -187,20 +181,23 @@ class SongsListViewController: UIViewController {
 
     
     private func setUpCollectionView(collectionView: UICollectionView) {
+        delegateCollectionView = SongCollectionViewControllerDelegate(presenter: presenter, collectionView: collectionView)
         
-        let screenSize = UIScreen.main.bounds.size
-        let cellWidth = floor(screenSize.width * cellSpacing)
-        let cellHeight = floor(screenSize.height * cellSpacing)
+        collectionView.delegate = delegateCollectionView
+        collectionView.dataSource = delegateCollectionView
         
-        let insetX = (view.bounds.width - cellWidth) / 2.0
-        let insertY = (view.bounds.height - cellHeight) / 2.0
-        
-       // let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-//        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
-        
-        collectionView.contentInset = UIEdgeInsets(top: insertY, left: insetX, bottom: insertY, right: insetX)
-      //  collectionView.delegate = self
-        collectionView.dataSource = self
+//        let screenSize = UIScreen.main.bounds.size
+//        let cellWidth = floor(screenSize.width * cellSpacing)
+//        let cellHeight = floor(screenSize.height * cellSpacing)
+//
+//        let insetX = (view.bounds.width - cellWidth) / 2.0
+//        let insertY = (view.bounds.height - cellHeight) / 2.0
+//
+//       // let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+////        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+//
+//        collectionView.contentInset = UIEdgeInsets(top: insertY, left: insetX, bottom: insertY, right: insetX)
+
     }
 }
 
@@ -219,7 +216,7 @@ extension SongsListViewController: SongsListViewProtocol {
     func showSongsList(songs: [SongModel]) {
         songList = songs
         tableViewSongs.reloadData()
-        collectionView.reloadData()
+        delegateCollectionView.reload(songList: songList)
         
         for (i , song ) in songList.enumerated() {
             // gangstar stuff here bro
@@ -405,22 +402,25 @@ extension SongsListViewController: LocationManagerProtocol {
     }
 }
 
+
+
+
 //
 // MARK TODO: collection view
 //
 extension SongsListViewController: UICollectionViewDataSource {
-    
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         print("colectiobV: numberOfSections")
         return 1
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("colectiobV: numberOfItemsInSection\(songList.count)")
 
         return songList.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         print("colectionV: cell init")
 
@@ -429,8 +429,6 @@ extension SongsListViewController: UICollectionViewDataSource {
 
         return cell
     }
-    
-    
 }
 
 
@@ -452,8 +450,5 @@ extension SongsListViewController: UICollectionViewDataSource {
 //         presenter?.showSongDetail(forSong: songList[indexPath.row])
 //    }
 //}
-
-
-
 
 
