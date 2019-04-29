@@ -179,10 +179,14 @@ class SongsListViewController: UIViewController {
             let artist: String = mediaItem.value(forProperty: MPMediaItemPropertyArtist) as! String
             
             print("\(title) on \(albumTitle) by \(artist)")
+            lblPlaying.text = "\(title)・\(artist)"
+            presenter?.updateCurrentPlayingSong(songName: title, artistsName: artist)
+            return
         }
         // mock song being listened to man
        // let currentPlayingSong = ["title": "Me", "albumTitle": "Single", "artist": "Taylor Swift"]
         let currentPlayingSong = ["title": "Blank Space", "albumTitle": "Single", "artist": "Taylor Swift"]
+        
         presenter?.updateCurrentPlayingSong(songName: currentPlayingSong["title"]!, artistsName: currentPlayingSong["artist"]!)
     }
 

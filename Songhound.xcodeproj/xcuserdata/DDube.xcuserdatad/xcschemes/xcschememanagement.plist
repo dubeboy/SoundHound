@@ -52,6 +52,11 @@
 		<key>SongListFeatureTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>25</integer>
+		</dict>
+		<key>SonghoundUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>24</integer>
 		</dict>
 	</dict>
