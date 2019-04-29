@@ -157,8 +157,10 @@ class SongsListViewController: UIViewController {
              
             } else {
                 print("in viewWillTransition: landscape")
-                self.collectionView.reloadData()
-                self.collectionView.layoutIfNeeded()
+
+//                self.collectionView.layoutIfNeeded()
+//                self.collectionView.reloadData()
+//                self.collectionView.layoutIfNeeded()
             }
         })
     }
@@ -197,7 +199,7 @@ class SongsListViewController: UIViewController {
 //        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         
         collectionView.contentInset = UIEdgeInsets(top: insertY, left: insetX, bottom: insertY, right: insetX)
-        collectionView.delegate = self
+      //  collectionView.delegate = self
         collectionView.dataSource = self
     }
 }
@@ -205,7 +207,7 @@ class SongsListViewController: UIViewController {
 // END OF CLASS //
 // shoukld look for a better way to expresss the below concepts
 //
-// SONGSLIST VIEW PROTOCOL
+// MARK TODO: SONGSLIST VIEW PROTOCOL
 //
 
 extension SongsListViewController: SongsListViewProtocol {
@@ -218,7 +220,6 @@ extension SongsListViewController: SongsListViewProtocol {
         songList = songs
         tableViewSongs.reloadData()
         collectionView.reloadData()
-
         
         for (i , song ) in songList.enumerated() {
             // gangstar stuff here bro
@@ -269,7 +270,7 @@ extension SongsListViewController: SongsListViewProtocol {
 
 
 //
-// UI TABLE VIEW DELEGATE
+// MARK TODO: UI TABLE VIEW DELEGATE
 //
 
 extension SongsListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -293,7 +294,7 @@ extension SongsListViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 //
-//Google Sign in delegate
+//MARK TODO: Google Sign in delegate
 //
 
 extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
@@ -354,7 +355,7 @@ extension SongsListViewController: GIDSignInUIDelegate, GIDSignInDelegate {
 }
 
 //
-// LocationManagerProtocol
+//Mark TODO  LocationManagerProtocol
 //
 
 extension SongsListViewController: LocationManagerProtocol {
@@ -405,7 +406,7 @@ extension SongsListViewController: LocationManagerProtocol {
 }
 
 //
-// collection view
+// MARK TODO: collection view
 //
 extension SongsListViewController: UICollectionViewDataSource {
     
@@ -425,7 +426,6 @@ extension SongsListViewController: UICollectionViewDataSource {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SongCollectionViewControllerCell
         cell.song = songList[indexPath.item]
-        
 
         return cell
     }
@@ -433,23 +433,25 @@ extension SongsListViewController: UICollectionViewDataSource {
     
 }
 
-extension SongsListViewController : UIScrollViewDelegate, UICollectionViewDelegate {
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
-        
-        var offset = targetContentOffset.pointee
-        let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
-        let roundedIndex = round(index)
-        
-        offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left,y: -scrollView.contentInset.top)
-        targetContentOffset.pointee = offset
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-         presenter?.showSongDetail(forSong: songList[indexPath.row])
-    }
-}
+
+
+//extension SongsListViewController : UIScrollViewDelegate, UICollectionViewDelegate {
+////    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+////        let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+////        let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
+////
+////        var offset = targetContentOffset.pointee
+////        let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
+////        let roundedIndex = round(index)
+////
+////        offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left,y: -scrollView.contentInset.top)
+////        targetContentOffset.pointee = offset
+////    }
+//
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//         presenter?.showSongDetail(forSong: songList[indexPath.row])
+//    }
+//}
 
 
 
