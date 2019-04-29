@@ -14,10 +14,16 @@ class SongListPresenterTests: XCTestCase {
     private var wireFrame: MockTestSongListWireFrame!
     private var remoteDataManager: MockTestSongListRemoteDataManager!
     private var view: MockSongsListViewController!
+    
+    var song: SongModel!
 
     // begin unit genesis
     override func setUp() {
         super.setUp()
+        song = SongModel(id: 100, name: "UOK", artistName: "Nasty C", albumName: "Single", genre: "Hip Hop",
+                         popularity: 100, artworkURL: "exmpleUrl.com/assets/image.jpg",
+                         artist: ArtistModel(name: "Taylor Swift", artistID: 200000))
+        
         interactor = MockTestSongListInteractor()
         wireFrame = MockTestSongListWireFrame()
         remoteDataManager = MockTestSongListRemoteDataManager()
@@ -33,6 +39,8 @@ class SongListPresenterTests: XCTestCase {
         remoteDataManager.remoteRequestHandler = interactor
 
         presenter.viewDidLoad()
+        
+
 
     }
 
@@ -52,7 +60,8 @@ class SongListPresenterTests: XCTestCase {
         wireFrame = nil
         remoteDataManager = nil
         presenter = nil // since we testing the presenter it makes sense to have a concrete class of the presenter
-
+        
+        song = nil
     }
 
     func testViewDidLoad() {
@@ -62,9 +71,7 @@ class SongListPresenterTests: XCTestCase {
     func testDidShowDetailScreen() {
         //presenter.sho(from: view, forArtist: ArtistModel(name: "Taylor Swift", artistID: 200000))
         presenter.showSongDetail(
-                forSong: SongModel(id: 100, name: "UOK", artistName: "Nasty C", albumName: "Single", genre: "Hip Hop",
-                        popularity: 100, artworkURL: "exmpleUrl.com/assets/image.jpg", 
-                        artist: ArtistModel(name: "Taylor Swift", artistID: 200000)))
+                forSong: song)
 
         XCTAssert(wireFrame.showSongDetailCalled)
     }
@@ -74,17 +81,36 @@ class SongListPresenterTests: XCTestCase {
         XCTAssertNotNil(wireFrame.artist)
     }
 
-    func testShowsErrorOnError() {
-        // simulate network error
-        remoteDataManager.songs = nil
-        presenter.viewDidLoad() // initiaste all the seqence of getting the data
-        XCTAssertTrue(view.isShowingError)
+    func testPresenterShowMoreArtistsScreen() {
+        presenter.presentMoreArtists()
+        XCTAssert(wireFrame.didPresentMoreArtists == true)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testupdateCurrentPlayingSong() {
+        presenter.updateCurrentPlayingSong(songName: "Blank", artistsName: "Swift")
+        XCTAssert(interactor.songName != nil)
+        XCTAssert(interactor.artistsName != nil)
+    }
+    
+    func testRetrieveSongsListForLocation() {
+        presenter.retrieveSongsList(for: "JHB")
+        XCTAssert(interactor.location == "JHB")
+    }
+    
+    func testOnError() {
+        presenter.onError()
+        XCTAssert(view.isLoading == true)
+        XCTAssert(view.isHidden == false)
+    }
+    
+    func testIfDidSelectetArtist() {
+        presenter.didSelectArtist(artist: ArtistModel(name: "Swift", artistID: 0))
+        XCTAssert(wireFrame.presentSongsListViewScreen == true)
+    }
+    
+    func testOnSongsIDRecieved() {
+        presenter.didReceivePlayingSong(song: song)
+        XCTAssert(view.songIDRecieved == true)
     }
 }
+

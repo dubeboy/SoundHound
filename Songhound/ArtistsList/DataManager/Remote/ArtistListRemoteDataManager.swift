@@ -5,33 +5,38 @@
 
 import Alamofire
 
-class ArtistListRemoteDataManager: ArtistListRemoteDataManagerInputProtocol2 {
+
+class ArtistListRemoteDataManager: ArtistListRemoteDataManagerInputProtocolTwo {
 
     var remoteRequestHandler: ArtistListRemoteDataManagerOutputProtocol?
 
     func retrieveArtists() {
-        Alamofire
-                .request(Endpoints.ArtistsEnumEndpoints.fetch(artistName: "Swift").url)
-                .responseObject { (response: DataResponse<ModelResponse<ArtistModel>>) in
-                    switch response.result {
-                    case .success(let res):
-                        let artists = res.entityList
-                        self.remoteRequestHandler?.didRetrieveArtists(artists: artists!)
-                    case .failure(let error):
-                        self.remoteRequestHandler?.onError()
-                        print(error)
-                    }
-                }
+       // Alamofire
+//                .request(Endpoints.ArtistsEnumEndpoints.fetch(artistName: "Swift").url)
+//                .responseObject { (response: DataResponse<ModelResponse<ArtistModel>>) in
+//                    switch response.result {
+//                    case .success(let res):
+//                        let artists = res.entityList
+//                        self.remoteRequestHandler?.didRetrieveArtists(artists: artists!)
+//                    case .failure(let error):
+//                        self.remoteRequestHandler?.onError()
+//                        print(error)
+//                    }
+//                }
     }
 
-    func searchForArtist(artistName: String) {
+    func searchForSongName(songName: String, location: String) {
         Alamofire
-                .request(Endpoints.ArtistsEnumEndpoints.fetch(artistName: artistName).url)
-                .responseObject { (response: DataResponse<ModelResponse<ArtistModel>>) in
+                .request(Endpoints.ArtistsEnumEndpoints.fetch(songName: songName, location: location).url)
+                .responseJSON { response in
                     switch response.result {
-                    case .success(let res):
-                        let artists = res.entityList
-                        self.remoteRequestHandler?.didRetrieveArtists(artists: artists!)
+                    case .success:
+                        let searchResults = try? JSONDecoder().decode(SearchModel.self, from: response.data!)
+                         guard searchResults != nil else {
+                            self.remoteRequestHandler?.onError()
+                             return
+                         }
+                        self.remoteRequestHandler?.didRetrieveArtists(searchResults: searchResults!)
                     case .failure(let error):
                         self.remoteRequestHandler?.onError()
                         print(error)

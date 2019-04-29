@@ -6,29 +6,31 @@
 import Foundation
 
 class ArtistListPresenter: ArtistListPresenterProtocol {
+
+
     var view: ArtistListViewProtocol?
     var interactor: ArtistListInteractorInputProtocol?
     var wireFrame: ArtistListWireFrameProtocol?
 
-    func presentArtistsSongs(artist: ArtistModel) {
-        wireFrame?.presentArtistSongView(from: view!, forArtist: artist)
+    func presentSongDetails(song: SearchModelValue) {
+        wireFrame?.presentSongDetailView(from: view!, forSong: song)
     }
 
     func viewDidLoad() {
-        view?.showLoading()
-        interactor?.retrieveArtists()
+//        view?.showLoading()
+//        interactor?.retrieveArtists()
     }
 
-    func searchForArtists(by name: String) {
-        interactor?.searchForArtist(artistName: name)
+    func searchForSongs(songName: String, location: String) {
+        interactor?.searchForArtist(songName: songName, location: location)
     }
 }
 
 extension ArtistListPresenter: ArtistsListInteractorOutputProtocol {
 
-    func didRetrieveArtists(artists: [ArtistModel]) {
+    func didRetrieveArtists(searchResults: SearchModel) {
         view?.hideLoading()
-        view?.showArtists(artists: artists)
+        view?.showArtists(searchResults: searchResults)
     }
 
     func onError() {

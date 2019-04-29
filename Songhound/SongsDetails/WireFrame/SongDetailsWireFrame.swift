@@ -14,12 +14,6 @@ class SongDetailsWireFrame: SongDetailWireFrameProtocol {
         if let view = viewController as? SongDetailViewController {
             var presenter: SongDetailPresenterProtocol = SongDetailPresenter()
             let wireFrame: SongDetailWireFrameProtocol = SongDetailsWireFrame()
-//
-//            view.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//            view.navigationController?.navigationBar.shadowImage = UIImage()
-//            view.navigationController?.navigationBar.isTranslucent = true
-            //        view.navigationController?.navigationBar.backgroundColor = .blue
-
             view.presenter = presenter
             presenter.view = view
             presenter.song = song
@@ -29,5 +23,4 @@ class SongDetailsWireFrame: SongDetailWireFrameProtocol {
         }
         return UIViewController()
     }
-
 }

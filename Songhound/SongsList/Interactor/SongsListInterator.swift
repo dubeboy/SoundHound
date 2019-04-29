@@ -8,11 +8,12 @@
 
 import Foundation
 import FirebaseDatabase
+
 // the buss logic goes here
 // this protocol can do output input
 class SongsListInterator: SongsListInteratorInputProtocol {
-  
-    
+
+
 // this is the input Interator so its responsible for actually getting in the input
 
     var presenter: SongsListInteratorOutputProtocol?
@@ -22,14 +23,16 @@ class SongsListInterator: SongsListInteratorInputProtocol {
     var cache: [SongModel]?
     var ref: DatabaseReference!
 
-    func retrieveSongsList() {
-        remoteDataManager?.retrieveSongsList(path: Endpoints.SongsEnumEndpoints.fetch(songName: "swift").url)
+    func retrieveSongsList(location: String) {
+        remoteDataManager?.retrieveSongsList(location: location)
+        //should be retrieve songs list for location
+        //  remoteDataManager?.retrieveSongsList(for location: location)
     }
-    
+
     func getSongIDFromiTunes(songName: String, artistsName: String) {
         let songPath = Endpoints
-            .SongsEnumEndpoints
-            .fetchSongID(songName: songName, artistsName: artistsName).url
+                .SongsEnumEndpoints
+                .fetchSongID(songName: songName, artistsName: artistsName).url
         remoteDataManager?.retrieveSongID(path: songPath)
     }
 
@@ -57,21 +60,22 @@ extension SongsListInterator: SongsListRemoteDataManagerOutputProtocol {
         presenter?.didSelectArtist(artist: artist)
     }
 
+    // TODO: the updating is not working yoh
+
     func onSongIDReceived(song: SongModel) {
         // when we receive one one we should upload it to firebase yoh
         ref = Database.database().reference()
         // create a parent node with id of the song
         let songParentNode = ref.child("\(song.id)")
         songParentNode.observeSingleEvent(of: DataEventType.value) { snap, error in
-
-            print()
-            if error ==  nil {
-                // this means there is an error| meaning ID does not exist and song does not exist
-                self.sendSongModelToFirebase(songParentNode: songParentNode, song: song)
-                 self.presenter?.didReceivePlayingSong(song: song)  // needs refactoring
-            } else {
+//         / The case that the song exists
                 // song exits we should get the song
-                let retrievedSong = snap.value as! [String : AnyObject]
+                guard let retrievedSong = snap.value as? [String: AnyObject] else {
+                        self.sendSongModelToFirebase(songParentNode: songParentNode, song: song)
+                        self.presenter?.didReceivePlayingSong(song: song)  // needs refactoring
+                        return
+                }
+                
                 var songModel: SongModel! = SongModel(
                         id: song.id,
                         name: song.name,
@@ -85,17 +89,19 @@ extension SongsListInterator: SongsListRemoteDataManagerOutputProtocol {
                 songModel.popularity += 1
                 self.sendSongModelToFirebase(songParentNode: songParentNode, song: songModel)
                 self.presenter?.didReceivePlayingSong(song: songModel) // needs good refactoring
-            }
+            
         }
     }
 
     private func sendSongModelToFirebase(songParentNode: DatabaseReference, song: SongModel) {
-        songParentNode.setValue(["songID" : song.id,
+        songParentNode.setValue(["songID": song.id,
                                  "AlbumName": song.albumName,
                                  "ArtistID": song.artist.artistID,
                                  "artworkURL": song.artworkURL,
                                  "name": song.name,
                                  "artistName": song.artistName,
-                                 "popularity": song.popularity])
+                                 "popularity": song.popularity,
+                                 "genre": song.genre
+        ])
     }
 }

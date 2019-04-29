@@ -12,14 +12,12 @@
 // get the user response from the View
 class SongsListViewPresenter: SongListPresenterProtocol {
 
-
     weak var view: SongsListViewProtocol?
     var interactor: SongsListInteratorInputProtocol?
     var wireframe: SongsListViewWireFrameProtocol?
 
     func viewDidLoad() {
         view?.showLoading()
-        interactor?.retrieveSongsList()
     }
 
     func showSongDetail(forSong song: SongModel) {
@@ -36,6 +34,10 @@ class SongsListViewPresenter: SongListPresenterProtocol {
 
     func updateCurrentPlayingSong(songName: String, artistsName: String) {
         interactor?.getSongIDFromiTunes(songName: songName, artistsName: artistsName)
+    }
+
+    func retrieveSongsList(for location: String) {
+        interactor?.retrieveSongsList(location: location)
     }
 }
 

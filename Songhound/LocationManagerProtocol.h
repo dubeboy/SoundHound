@@ -12,6 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// the cool thing is that this is inheriting from that parent protocol
 @protocol LocationManagerProtocol <CLLocationManagerDelegate>
  - (void) reverseGeocoderCoordinates:  (nonnull CLLocationCoordinate2D * )coordinates;
  - (void) onReverseCoordinatesReceived: (nonnull NSString *) fullAddress;

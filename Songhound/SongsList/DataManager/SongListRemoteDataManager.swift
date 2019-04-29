@@ -9,29 +9,56 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
+import FirebaseDatabase
+
 
 class SongListRemoteDataManager: SongsListRemoteDataManagerInputProtocol {
     // this protocol is the one responsible for sending data the presenter
     var remoteRequestHandler: SongsListRemoteDataManagerOutputProtocol?
 
-    func retrieveSongsList(path: String) {
-        print("the path in big boss \(path)")
-        Alamofire
-                .request(path, method: .get)
-                .responseObject { (response: DataResponse<ModelResponse<SongModel>>) in
-                    switch response.result {
-                    case .success(let res):
-                        if let songs = res.entityList {
-                            self.remoteRequestHandler?.onSongsRetrieved(songs)
-                        } else {
-                            // should probably pass back an error type yoh
-                            self.remoteRequestHandler?.onError()
-                        }
-                    case .failure(let error):
-                        print(error)
-                        self.remoteRequestHandler?.onError()
+    func retrieveSongsList(location: String) {
+        // first retrieve all the nodes with the current location
+        // then look into their IDs then use that to download the song node off of firebase
+        // add that to a tableview list
+        //TODO injectable
+        let ref = Database.database().reference()
+        let locationParentNode = ref.child("\(location)")
+
+        // todo: change this to just observe
+        locationParentNode.observeSingleEvent(of: DataEventType.value) { snap, error in
+            // these snaps are songs id snaps so
+            // todo: evaluate this yoh
+            guard error == nil else {
+                print("SLDataManager: There was an error peeps, trying to get song for location")
+                self.remoteRequestHandler?.onError()
+                return
+            }
+            var songs: [SongModel] = []
+            //todo upload genre
+            for child in snap.children  {
+                // force unwrap becuase I know the type that would be returned from the server
+                let songIDDictSnap = child as! DataSnapshot
+                let songLocationDict = songIDDictSnap.value as! [String: AnyObject] //  map has these types string | UINt
+                let songID = songLocationDict["songID"] as! UInt
+                // now we need to look for songs with this ID
+                ref.child("\(songID)").observeSingleEvent(of: DataEventType.value) { songSnap, error in
+                    let songDict = songSnap.value as! [String : AnyObject]
+                    let songModel = SongModel(id: songDict["ArtistID"] as! UInt,
+                            name: songDict["name"] as! String,
+                            artistName: songDict["artistName"] as! String,
+                            albumName: songDict["AlbumName"] as! String,
+                            genre: "",
+                            popularity: songDict["popularity"] as! Int,
+                            artworkURL: songDict["artworkURL"] as! String,
+                            artist: ArtistModel(name: songDict["artistName"] as! String, artistID: songDict["ArtistID"] as! UInt ))
+                    songs.append(songModel)
+                    if songs.count == snap.childrenCount {
+                        // call up the stack
+                        self.remoteRequestHandler?.onSongsRetrieved(songs)
                     }
                 }
+            }
+        }
     }
 
     func retrieveSongID(path: String) {

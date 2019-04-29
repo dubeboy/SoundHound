@@ -9,10 +9,10 @@
 import UIKit
 
 // this will be implemented by the VIEW CONTROLLER
-protocol SongDetailsViewProtocol {
+protocol SongDetailsViewProtocol : CommonNetworkProtocol {
     var presenter: SongDetailPresenterProtocol? { get set }
-
     func showSongsDetail(forSong song: SongModel)
+    func showLoading()
 }
 
 // this will be inherited by the presnter

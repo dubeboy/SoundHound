@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class SongDetailViewController: UIViewController {
 
@@ -22,7 +23,6 @@ class SongDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-        //    makeUIImageViewCircle(imageView: artistImageView, imgSize: 300)
         makeBGImageBlur(view: backgroundImage)
 
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -42,12 +42,24 @@ class SongDetailViewController: UIViewController {
 
 extension SongDetailViewController: SongDetailsViewProtocol {
 
+    func showError() {
+        HUD.flash(.label("Oops an error occurred!"), delay: 2.0)
+    }
+
+    func showLoading() {
+        HUD.show(.progress)
+    }
+
+    func hideLoading() {
+        HUD.hide()
+    }
+
     func showSongsDetail(forSong song: SongModel) {
         artistImageView.dowloadFromServer(link: song.artworkURL)
         backgroundImage.dowloadFromServer(link: song.artworkURL)
         songNameLabel.text = song.name
         songGenre.text = song.genre
-        songNumPlayes.text = "100 Playes in Joburg"
+        songNumPlayes.text = "Played \(song.popularity) time your current location"
         songAlbumName.text = song.albumName
     }
 }
