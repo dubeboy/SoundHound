@@ -125,6 +125,7 @@
 		3DEEAA013A8E2F14973CB22A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3DEEAA899F6A576B1EC6FE77 /* songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
 		3DEEAAC205B6F5EA3C195849 /* CustomArtistsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomArtistsView.xib; sourceTree = "<group>"; };
+		3DEEACB4162D5E2228ABC557 /* song3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song3.png; sourceTree = "<group>"; };
 		3DEEAD78D920FD77ED0CFAB1 /* ArtistListRemoteDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistListRemoteDataManager.swift; sourceTree = "<group>"; };
 		3DEEAE5FF26EB3EC23EE200D /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		3DEEAEC37B554FECEBB2749F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -342,6 +343,7 @@
 				F336DDB32216B6DC0079B05D /* Products */,
 				02823C65958189E19B3E275B /* Pods */,
 				AA34D13C9F725FF30AA10255 /* Frameworks */,
+				3DEEACB4162D5E2228ABC557 /* song3.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1004,8 +1006,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\n";
 		};
 		FAAA36D89E16A8B253200C1F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
