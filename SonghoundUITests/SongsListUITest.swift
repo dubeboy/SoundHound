@@ -26,27 +26,29 @@ class SongsListUITest: XCTestCase {
         // tests before they run. The setUp method is a good place to do this.
         
         app = XCUIApplication()
-        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 6)
+        
+        
+        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 3)
+        
+        let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+        let allowBtn = springboard.buttons["Allow"]
+        if allowBtn.exists {
+            allowBtn.tap()
+        }
+        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 15)
+
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         app = nil
     }
+    
 
     func testMainScreen() {
        XCTAssert(app.navigationBars["🔥Hot Songs & Artists🔥"].exists)
     }
-
-    func testClickSongsArtists() {
-        
-        
-        let app = XCUIApplication()
-        app.otherElements.containing(.navigationBar, identifier:"🔥Hot Songs & Artists🔥").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .image).element(boundBy: 0).tap()
-        app.tables.staticTexts["Shake It Off"].tap()
-        var x  = app.otherElements.containing(.navigationBar, identifier:"Songhound.SongDetailView").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.exists
-        XCTAssert(x)
-    }
+    
 
     func testSongDetailsScreen() {
         
@@ -57,6 +59,17 @@ class SongsListUITest: XCTestCase {
         XCTAssert(x)
     }
     
+    func testClickSongsArtists() {
+        
+        
+        let app = XCUIApplication()
+        app.otherElements.containing(.navigationBar, identifier:"🔥Hot Songs & Artists🔥").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .image).element(boundBy: 0).tap()
+        app.tables.staticTexts["Shake It Off"].tap()
+        var x  = app.otherElements.containing(.navigationBar, identifier:"Songhound.SongDetailView").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.exists
+        XCTAssert(x)
+    }
+
+    
     func testOnClickMoreSongs() {
         
         let app = XCUIApplication()
@@ -66,7 +79,7 @@ class SongsListUITest: XCTestCase {
         searchField.tap()
         searchField.typeText("Bla")
         
-        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 6)
+        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 10)
     
         XCUIApplication().tables.staticTexts["Blank Space"].tap()
         

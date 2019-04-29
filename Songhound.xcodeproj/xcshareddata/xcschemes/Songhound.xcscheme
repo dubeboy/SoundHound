@@ -65,6 +65,10 @@
                BlueprintName = "SonghoundTests"
                ReferencedContainer = "container:Songhound.xcodeproj">
             </BuildableReference>
+            <LocationScenarioReference
+               identifier = "Tokyo, Japan"
+               referenceType = "1">
+            </LocationScenarioReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
