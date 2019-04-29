@@ -33,57 +33,46 @@ class SongsListUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         app = nil
     }
-//
-//    func testDemoTest() {
-//        //waitForExpectations(timeout: 5, handler: {})
-////        let goLabel = app.staticTexts["Go!"]
-////        XCTAssertFalse(goLabel.exists)
-////
-////        let exists = NSPredicate(format: "exists == true")
-////        expectation(for: exists, evaluatedWithObject: goLabel, handler: nil)
-////
-////        app.buttons["Ready, set..."].tap()
-////        waitForExpectations(timeout: 5, handler: nil)
-////        XCTAssert(goLabel.exists)
-//    }
 
     func testMainScreen() {
        XCTAssert(app.navigationBars["🔥Hot Songs & Artists🔥"].exists)
     }
-//
-//    func testClickSongsArtists() {
-//
-////
-////        let app = XCUIApplication()
-////        app.otherElements.containing(.navigationBar, identifier:"Songhound.ArtistListView").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).tap()
-////
-////        let searchField = app.tables["Empty list"].children(matching: .searchField).element
-////        searchField.tap()
-////
-//        // todo later
-//
-//
-//    }
 
-//    func testOnTopThreeArtistsClicked() {
-//
-////        app.otherElements
-////                .containing(.navigationBar, identifier: "🔥Hot Songs & Artists🔥")
-////                .children(matching: .other).element.children(matching: .other).element
-////                .children(matching: .other).element.children(matching: .other)
-////                .element(boundBy: 1).children(matching: .image).element(boundBy: 0).tap()
-////        app.tables.cells.containing(.staticText, identifier: "Delicate").staticTexts["Taylor Swift"].tap()
-////
-////        XCTAssert(app.staticTexts["Delicate"].exists)
-////        XCTAssert(app.staticTexts["reputation"].exists)
-////        XCTAssert(app.staticTexts["100 Playes in Joburg"].exists)
-//    }
-//
+    func testClickSongsArtists() {
+        
+        
+        let app = XCUIApplication()
+        app.otherElements.containing(.navigationBar, identifier:"🔥Hot Songs & Artists🔥").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .image).element(boundBy: 0).tap()
+        app.tables.staticTexts["Shake It Off"].tap()
+        var x  = app.otherElements.containing(.navigationBar, identifier:"Songhound.SongDetailView").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.exists
+        XCTAssert(x)
+    }
+
     func testSongDetailsScreen() {
         
-//        let app = XCUIApplication()
-//        app.tables.staticTexts["Taylor Swift"].tap()
-//        XCTAssert(app.staticTexts["Blank Space"].exists)
-//        XCTAssert(app.staticTexts["1989 (Deluxe)"].exists)
+        let app = XCUIApplication()
+        app.tables.staticTexts["Drive (feat. Delilah Montagu)"].tap()
+       let x =  app.otherElements.containing(.navigationBar, identifier:"Songhound.SongDetailView").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.exists
+   
+        XCTAssert(x)
+    }
+    
+    func testOnClickMoreSongs() {
+        
+        let app = XCUIApplication()
+        app.buttons["More Songs"].tap()
+        let tablesQuery = app.tables
+        let searchField = tablesQuery.children(matching: .searchField).element
+        searchField.tap()
+        searchField.typeText("Bla")
+        
+        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 10)
+    
+        XCUIApplication().tables/*@START_MENU_TOKEN@*/.staticTexts["Blank Space"]/*[[".cells.staticTexts[\"Blank Space\"]",".staticTexts[\"Blank Space\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        
+        var x =  app.otherElements.containing(.navigationBar, identifier:"Songhound.SongDetailView").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.exists
+     
+        XCTAssert(x)
     }
 }
