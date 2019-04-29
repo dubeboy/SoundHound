@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "songCollectionCell"
+private let reuseIdentifierTest = "songCollectionCell"
 
 class SongCollectionViewController: UIView {
     

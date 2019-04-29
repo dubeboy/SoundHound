@@ -10,7 +10,7 @@ import Foundation
 
 struct API {
     static let baseURL = "https://itunes.apple.com/search?media=music&country=ZA"
-    static let vaporCloudAPI = "http://localhost:8080"
+    static let vaporCloudAPI = "https://sh100xdivinedube33.vapor.cloud"
 
 }
 
