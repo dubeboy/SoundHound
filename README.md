@@ -22,7 +22,7 @@ You can also login using your google account and set your music preference.
 
 #### Future
  Build UI in code
- integrate local storage
+ integrate local storageArtistListViewController
 
 ### How it looks like(for now )
 

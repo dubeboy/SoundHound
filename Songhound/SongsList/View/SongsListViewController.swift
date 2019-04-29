@@ -33,25 +33,30 @@ class SongsListViewController: UIViewController {
     @IBOutlet weak var tableViewSongs: UITableView!
     @IBOutlet weak var imgProfilePicture: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var btnMoreSongs: UIButton!
+    
     var presenter: SongListPresenterProtocol?
     var songList: [SongModel] = []
     private var selectedImage = -1  //-1 means no image was selected
     let locationManager = CLLocationManager()
     static let TAG = "SongsListViewController"
     let pref =  UserDefaults.standard
-    // this will never be null because we instatiate this after songList has been initliased
-    // before that we lock the screen to potrait orirntation
+    // this will never be null because we instantiate this after songList has been initialised
+    // before that we lock the screen to portrait orientation
     var delegateCollectionView: SongCollectionViewControllerDelegate!
     let cellSpacing: CGFloat = 0.6
 
+    // this gets set in the location delegate
+    var placeNameString: String? {
+        didSet(value) {
+            if let placeNameString = placeNameString { // do something when the string is not nil
+                presenter?.retrieveSongsList(for: placeNameString)
+                getCurrentPlayingSong()
+                // save the location the current location on every value change it makes sense yoh
+                pref.set(placeNameString, forKey: "location")
 
-    var placeNameString: String = "" {
-        didSet {
-            presenter?.retrieveSongsList(for: placeNameString)
-            getCurrentPlayingSong()
-            // save the location the current location on every value change it makes sense yoh
-            pref.set(placeNameString, forKey: "location")
+                btnMoreSongs.isEnabled = true
+            }
         }
     }
 
@@ -61,6 +66,7 @@ class SongsListViewController: UIViewController {
         self.tableViewSongs.delegate = self
         self.tableViewSongs.dataSource = self
         locationManager.delegate = self
+
 
         locationManager.requestWhenInUseAuthorization()
         let user = getSignedInUser()
@@ -73,6 +79,7 @@ class SongsListViewController: UIViewController {
         }
         setUpTopThreeImages()
         setUpCollectionView(collectionView: collectionView)
+
     }
 
     private func setUpTopThreeImages() {
@@ -85,6 +92,7 @@ class SongsListViewController: UIViewController {
         addTapGestureToAnImageView(imageView: imgArtist1)
         addTapGestureToAnImageView(imageView: imgArtist2)
         addTapGestureToAnImageView(imageView: imgProfilePicture)
+
     }
 
 
@@ -139,6 +147,9 @@ class SongsListViewController: UIViewController {
     }
 
     @IBAction func onMoreArtistsClick(_ sender: Any) {
+        guard placeNameString != nil else {
+            return
+        }
         presenter?.presentMoreArtists()
     }
 
@@ -186,17 +197,6 @@ class SongsListViewController: UIViewController {
         collectionView.delegate = delegateCollectionView
         collectionView.dataSource = delegateCollectionView
         
-//        let screenSize = UIScreen.main.bounds.size
-//        let cellWidth = floor(screenSize.width * cellSpacing)
-//        let cellHeight = floor(screenSize.height * cellSpacing)
-//
-//        let insetX = (view.bounds.width - cellWidth) / 2.0
-//        let insertY = (view.bounds.height - cellHeight) / 2.0
-//
-//       // let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-////        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
-//
-//        collectionView.contentInset = UIEdgeInsets(top: insertY, left: insetX, bottom: insertY, right: insetX)
 
     }
 }
@@ -257,10 +257,15 @@ extension SongsListViewController: SongsListViewProtocol {
     
     // TODO this is very ambigious this will take the location and song ID
     func onSongIDReceived(song: SongModel) {
+
+        guard placeNameString != nil else {
+            return
+        }
+
         let ref = Database.database().reference()
-        print("SLVP: the placename  is;\(placeNameString)")
+        print("SLVP: the placename  is;\(placeNameString!)")
         //save song to firebase
-        ref.child(placeNameString).child("\(song.id)").setValue(["songID": song.id, "name": song.name])
+        ref.child(placeNameString!).child("\(song.id)").setValue(["songID": song.id, "name": song.name])
     }
     
 }
@@ -401,9 +406,6 @@ extension SongsListViewController: LocationManagerProtocol {
         locationManager.stopUpdatingLocation()
     }
 }
-
-
-
 
 //
 // MARK TODO: collection view

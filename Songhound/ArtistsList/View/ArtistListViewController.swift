@@ -15,7 +15,7 @@ class ArtistListViewController: UIViewController {
     var presenter: ArtistListPresenterProtocol?
     @IBOutlet weak var artistTableView: UITableView!
     @IBOutlet weak var artistsSearchbar: UISearchBar!
-    var locationString: String = ""
+    var locationString: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +75,10 @@ extension ArtistListViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ArtistListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard locationString != nil else {
+            print("ArtistListViewController: whoaaaa")
+            return
+        }
         presenter?.searchForSongs(songName: searchText, location:  locationString)
     }
 
