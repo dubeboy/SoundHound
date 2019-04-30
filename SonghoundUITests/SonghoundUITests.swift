@@ -25,13 +25,15 @@ class SonghoundUITests: XCTestCase {
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for
         // your tests before they run. The setUp method is a good place to do this.
-        
+        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 7)
+
         let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
         let allowBtn = springboard.buttons["Allow"]
         if allowBtn.exists {
             allowBtn.tap()
         }
-        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 15)
+        
+
     }
 
     override func tearDown() {
@@ -54,8 +56,8 @@ class SonghoundUITests: XCTestCase {
     
     
     func testSongDetailsScreen() {
-        
-        let app = XCUIApplication()
+        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 10)
+
         app.tables.staticTexts["Drive (feat. Delilah Montagu)"].tap()
         let x =  app.otherElements.containing(.navigationBar, identifier:"Songhound.SongDetailView").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.exists
         
@@ -63,9 +65,8 @@ class SonghoundUITests: XCTestCase {
     }
     
     func testClickSongsArtists() {
-        
-        
-        let app = XCUIApplication()
+        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 10)
+
         app.otherElements.containing(.navigationBar, identifier:"🔥Hot Songs & Artists🔥").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .image).element(boundBy: 0).tap()
         app.tables.staticTexts["Shake It Off"].tap()
         var x  = app.otherElements.containing(.navigationBar, identifier:"Songhound.SongDetailView").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.exists
@@ -74,15 +75,15 @@ class SonghoundUITests: XCTestCase {
     
     
     func testOnClickMoreSongs() {
-        
-        let app = XCUIApplication()
+        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 7)
+
         app.buttons["More Songs"].tap()
         let tablesQuery = app.tables
         let searchField = tablesQuery.children(matching: .searchField).element
         searchField.tap()
         searchField.typeText("Bla")
         
-        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 10)
+        XCTWaiter.wait(for: [XCTestExpectation(description:"")], timeout: 7)
         
         XCUIApplication().tables.staticTexts["Blank Space"].tap()
         
